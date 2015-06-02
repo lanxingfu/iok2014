@@ -1,0 +1,57 @@
+/* CSS Document */
+.tan-titale {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 5px solid #999999;
+	height: 200px;
+	padding: 15px;
+	position: absolute;
+	width: 500px;
+	z-index: 99999;
+}
+.tan-titale-top {
+	border-bottom: 1px solid #CAD1DD;
+	color: #888888;
+	font-size: 19px;
+	font-weight: bold;
+	height: 47px;
+	line-height: 40px;
+	padding-left: 10px;
+}
+.tan-left {
+	float: left;
+	width: 200px;
+}
+.tan-right {
+	float: right;
+	width: 70px;
+}
+.tan-right a {
+	color: #0ABBBD;
+	font-size: 14px;
+	font-weight: 100;
+	padding-bottom: 5px;
+	padding-left: 8px;
+	vertical-align: middle;
+}
+.tan-content {
+	line-height: 20px;
+	padding: 10px;
+	font-size: 14px;
+}
+.tan-content img {
+	height: 30px;
+	width: 30px;
+}
+.tan-tchaly {
+	padding: 10px;
+	text-align: center;
+}
+.tan-tchaly button {
+	line-height: 20px;
+}
+.tan-botton {
+	color: #0ABBBD;
+}
+.tan-titale a:hover {
+	color: #FF4802;
+}

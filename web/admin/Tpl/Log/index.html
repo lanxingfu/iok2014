@@ -1,0 +1,175 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<!-- content -->
+<div id="content">
+	{include file="Syscfg/leftmenu.inc.htm"}
+	<!-- content / right -->
+	<div id="right">
+		
+		<div id="box1-tabs" class="box">
+			<!-- box / title -->
+			<div class="title">
+				<!-- <h5>日志管理</h5> -->
+				<ul class="links">
+					<li class="ui-tabs-selected ui_state_active  ui_state_hover"><a href="?m=Log">登陆日志</a></li>
+					<li><a href="?m=Log&a=logaudit">审核日志</a></li>
+					<li><a href="?m=Log&a=logscore">积分流水</a></li>
+					<li><a href="?m=Log&a=logfinance">财务流水</a></li>
+					<li><a href="?m=Log&a=logactions">操作日志</a></li>
+				</ul>
+			</div>
+			<!-- box / title -->
+			<div id="box-messages">
+				<div class="box">
+					<!-- box / title -->
+					<!-- <div class="title">
+						<h5>登陆日志</h5>
+						<div class="search">
+							<form action="#" method="post">
+								<div class="input">
+									<input type="text" id="search" name="search" />
+								</div>
+								<div class="button">
+									<input type="submit" name="submit" value="Search" />
+								</div>
+							</form>
+						</div>
+					</div> -->
+					<!-- end box / title -->
+					
+					<div id="search_div">
+						<div style="padding:10px 20px;">
+							 &nbsp; &nbsp; 用户名:
+							<input id="search_account" name="search_account" type="text" style="width:120px;" value="{$search_key}" />
+							 &nbsp; &nbsp; 时间范围：
+							<input id="search_ds" type="text" size="8" name="search_ds" class="date" value="{$search_ds}" />
+							至
+							<input id="search_de" type="text" size="8" name="search_de" class="date" value="{$search_de}" />
+							 &nbsp; &nbsp; 
+							<span>						
+								<input type="submit" value="搜索" onclick="javascript:search();" />
+							</span>
+						</div>
+					</div>
+					<div class="table">
+						<form action="" method="post">
+						<table>
+							<thead>
+								<tr>
+									<th class="left">编号</th>
+									<th>用户类型</th>
+									<th>用户名</th>
+									<th>登陆IP</th>
+									<th>最后登录时间</th>
+									<th>登陆状态</th>
+									
+								</tr>
+							</thead>
+							<tbody>
+							{foreach from=$data item=v}
+								<tr>
+									<td class="category">{$v.id}</td>
+									<td class="category">{$v.logintype}</td>
+									<td class="category">{$v.account}</td>
+									<td class="category">{$v.ip}</td>
+									<td class="category">{$v.logintime}</td>
+									<td class="category">{$v.loginstate}</td>
+								</tr>
+							{/foreach}
+							</tbody>
+						</table>
+						{$page|default:''}
+						<!-- table action -->
+						<div class="action">
+							<select name="action">
+								<option value="" class="locked">Set status to Deleted</option>
+								<option value="" class="unlocked">Set status to Published</option>
+								<option value="" class="folder-open">Move to Category</option>
+							</select>
+							<div class="button">
+								<input type="submit" name="submit" value="Apply to Selected" />
+							</div>
+						</div>
+						<!-- end table action -->
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<!-- end box / left -->
+
+	<!-- end box / right -->
+	</div><!-- end content / right -->
+</div>
+{literal}
+<script type="text/javascript">
+function search()
+{
+	var search_account = $('#search_account').val();
+	var search_ds = $('#search_ds').val();
+	var search_de = $('#search_de').val();
+	
+	var qs = window.location.search;
+	if(search_account != undefined && search_account != '')
+	{
+	
+		if(qs.indexOf('search_account') > 0)
+		{
+			qs = qs.replace(/[\&]search_account=[^\&]*/,'&search_account='+search_account);
+		}else
+		{
+			qs += '&search_account='+search_account;	
+		}
+	}else
+	{
+		if(qs.indexOf('search_account') > 0)
+		{
+			qs = qs.replace(/[\&]search_account=[^\&]*/,'');
+		}
+	}
+	if(search_ds != undefined && search_ds != '')
+	{
+		if(qs.indexOf('search_ds') > 0)
+		{
+			qs = qs.replace(/[\&]search_ds=[^\&]*/,'&search_ds='+search_ds);
+		}else
+		{
+			qs += '&search_ds='+search_ds;
+		}
+	}else
+	{
+		if(qs.indexOf('search_ds') > 0)
+		{
+			qs = qs.replace(/[\&]search_ds=[^\&]*/,'');
+		}
+	}
+	if(search_de != undefined && search_de != '')
+	{
+		if(qs.indexOf('search_de') > 0)
+		{
+			qs = qs.replace(/[\&]search_de=[^\&]*/,'&search_de='+search_de);
+		}else
+		{
+			qs += '&search_de='+search_de;
+		}
+	}else
+	{
+		if(qs.indexOf('search_de') > 0)
+		{
+			qs = qs.replace(/[\&]search_de=[^\&]*/,'');
+		}
+	}
+	if(qs.indexOf('page') > 0)
+	{
+		qs = qs.replace(/[\&]page=[^\&]*/,'&page=1');
+	}else
+	{
+		qs += '&page=1';	
+	}
+	gotoUrl('/iokadmin.php'+qs);
+}
+</script>
+{/literal}
+<!-- end content -->
+{include file="footer.inc.htm"}

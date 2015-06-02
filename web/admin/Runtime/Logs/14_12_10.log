@@ -1,0 +1,1631 @@
+[ 2014-12-10T14:26:54+08:00 ] 127.0.0.1 /iokadmin.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001162s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001338s ]
+
+[ 2014-12-10T14:26:54+08:00 ] 127.0.0.1 /iokadmin.php?m=Misc&a=logout
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+
+[ 2014-12-10T14:26:54+08:00 ] 127.0.0.1 /iokadmin.php?m=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.164082s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.164214s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000789s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000833s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000519s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000629s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003061s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000727s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2014-12-10T14:26:55+08:00 ] 127.0.0.1 /iokadmin.php?m=Misc&a=captcha&t=1418192814
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001071s ]
+
+[ 2014-12-10T14:27:11+08:00 ] 127.0.0.1 /iokadmin.php?m=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001139s ]
+SQL: 
+				select
+					u.id,
+					u.account,
+					u.passhash,
+					u.saltcode,
+					u.webcode,
+					u.usergroupid,
+					u.logincount,
+					u.enabled,
+					u.logintime,
+					u.loginip,
+					u.addtime,
+					u.addip,
+					u.updatetime,
+					u.updateuserid,
+					ui.prettyname,
+					ui.email,
+					ui.mobile,
+					ui.qq,
+					ui.position,
+					ui.introduce,
+					aui.prettyname as adduser,
+					ug.prettyname as usergroup,
+					ug.departmentid,
+					ug.roleid,
+					d.prettyname as department,
+					r.prettyname as rolename
+				from 
+					iok_user u 
+						inner join iok_userinfo ui on u.id=ui.userid
+						inner join iok_userinfo aui on u.adduserid=aui.userid
+						inner join iok_usergroup ug on u.usergroupid=ug.id
+						inner join iok_department d on ug.departmentid=d.id
+						inner join iok_role r on ug.roleid=r.id
+				where 
+					u.account='admin' and
+					ug.enabled=1 and
+					d.enabled=1 and
+					r.enabled=1
+				limit 1 [ RunTime:0.337764s ]
+NOTIC: [8] Undefined variable: errcode D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\LoginAction.class.php 第 99 行.
+SQL: 
+					select
+						id,
+						code,
+						isloged
+					from 
+						iok_node 
+					order by 
+						parentid,
+						id [ RunTime:0.038168s ]
+NOTIC: [8] Undefined variable: errcode D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\LoginAction.class.php 第 139 行.
+SQL: insert into `iok_loglogin` (`logintype`,`account`,`ip`,`logintime`,`loginstate`) values ('2','admin','127.0.0.1','1418192831','1') [ RunTime:0.111706s ]
+SQL: select prettyname from iok_userinfo where userid='1' limit 1 [ RunTime:0.003310s ]
+SQL: 
+					update 
+						iok_user 
+					set 
+						webcode='zQ6a0ttLt22YEQOB',
+						logintime=1418192831, 
+						loginip='127.0.0.1', 
+						logincount=logincount+1 
+					where 
+						id='1' 
+					limit 1 [ RunTime:0.017111s ]
+
+[ 2014-12-10T14:27:11+08:00 ] 127.0.0.1 /iokadmin.php?m=Index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+SQL: SELECT webcode FROM iok_user WHERE id=1 and enabled=1 LIMIT 1; [ RunTime:0.000265s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.074477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.074608s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000617s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000679s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000385s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000607s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002553s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000622s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000714s ]
+
+[ 2014-12-10T14:27:15+08:00 ] 127.0.0.1 /iokadmin.php?m=profile
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+ERR: 无法加载模块:profile
+
+[ 2014-12-10T14:27:20+08:00 ] 127.0.0.1 /iokadmin.php?m=SchoolLecturer
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001034s ]
+ERR: 无法加载模块:SchoolLecturer
+
+[ 2014-12-10T14:27:23+08:00 ] 127.0.0.1 /iokadmin.php?m=Adplace
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+SQL: select
+					count(id)
+				from
+					iok_adplace
+				where
+					deleted=0 
+				 [ RunTime:0.014686s ]
+SQL: select
+					id,
+					prettyname,
+					name,
+					adtype,
+					height,
+					width,
+					introduce,
+					listorder,
+					enabled,
+					addtime,
+					adduserid
+				from
+					iok_adplace
+				where
+					deleted=0 
+				 order by id desc limit 0,10 [ RunTime:0.000403s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 25 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 27 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.138345s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.138462s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000549s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000610s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000353s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000574s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002336s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000604s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2014-12-10T14:27:26+08:00 ] 127.0.0.1 /iokadmin.php?m=Schedule
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000934s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001061s ]
+SQL: select
+					count(id)
+				from
+					iok_adschedule
+				where
+					enabled=1 
+				 [ RunTime:0.000303s ]
+SQL: select
+					id,
+					adplaceid,
+					adid,
+					title,
+					amount,
+					FROM_UNIXTIME(fromtime,'%Y-%m-%d') fromtime,
+					FROM_UNIXTIME(totime,'%Y-%m-%d') totime,
+					enabled,
+					addtime,
+					adduserid
+				from
+					iok_adschedule
+				where
+					enabled=1 
+				 order by id desc limit 0,10 [ RunTime:0.050605s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=5 [ RunTime:0.000568s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=5 [ RunTime:0.000587s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=5 [ RunTime:0.000461s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=5 [ RunTime:0.000428s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=5 [ RunTime:0.000422s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./admin/Runtime/Cache\ad5849d819e79f02ed7ff3209184932642c6541c.file.index.html.php D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 720 行.
+NOTIC: [2] unlink(./admin/Runtime/Cache\ad5849d819e79f02ed7ff3209184932642c6541c.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 57 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./admin/Runtime/Cache\4683cc1cd1c05ac9d30b69dac7c4dcd5499fba48.file.leftmenu.inc.html.php D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 720 行.
+NOTIC: [2] unlink(./admin/Runtime/Cache\4683cc1cd1c05ac9d30b69dac7c4dcd5499fba48.file.leftmenu.inc.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 57 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 25 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 27 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.212383s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.212624s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000636s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000577s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000321s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000577s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002376s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000647s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000747s ]
+
+[ 2014-12-10T14:27:28+08:00 ] 127.0.0.1 /iokadmin.php?m=Schedule
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+SQL: select
+					count(id)
+				from
+					iok_adschedule
+				where
+					enabled=1 
+				 [ RunTime:0.000274s ]
+SQL: select
+					id,
+					adplaceid,
+					adid,
+					title,
+					amount,
+					FROM_UNIXTIME(fromtime,'%Y-%m-%d') fromtime,
+					FROM_UNIXTIME(totime,'%Y-%m-%d') totime,
+					enabled,
+					addtime,
+					adduserid
+				from
+					iok_adschedule
+				where
+					enabled=1 
+				 order by id desc limit 0,10 [ RunTime:0.000309s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=5 [ RunTime:0.000200s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=5 [ RunTime:0.000191s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=5 [ RunTime:0.000187s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=5 [ RunTime:0.000157s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=5 [ RunTime:0.000155s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 25 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 27 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014632s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000379s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000503s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000235s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000477s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001850s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000508s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2014-12-10T14:27:32+08:00 ] 127.0.0.1 /iokadmin.php?m=Article
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+SQL: 
+			select
+				id,
+				prettyname
+			from
+				iok_category
+			where
+				categorytype=1
+			and
+				deleted=0
+		 [ RunTime:0.003103s ]
+SQL: select
+					count(id)
+				from
+					iok_article
+				where
+					deleted=0 and
+					categoryid in (8181,8185,8189,8786,10001,10002,10003,10004,10005,10006) [ RunTime:1.002412s ]
+SQL: 
+			select 
+				id,
+				categoryid,
+				title,
+				istop,
+				addtime,
+				adduserid,
+				enabled 
+			from 
+				iok_article 
+			where 
+				deleted=0 and categoryid in(8181,8185,8189,8786,10001,10002,10003,10004,10005,10006) order by addtime desc limit 0,10 [ RunTime:0.055013s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=1 [ RunTime:0.001007s ]
+SQL: 
+					select
+						prettyname
+					from 
+						iok_category
+					where
+						id=8181 [ RunTime:0.000477s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=1 [ RunTime:0.000485s ]
+SQL: 
+					select
+						prettyname
+					from 
+						iok_category
+					where
+						id=8181 [ RunTime:0.000460s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=1 [ RunTime:0.000471s ]
+SQL: 
+					select
+						prettyname
+					from 
+						iok_category
+					where
+						id=8181 [ RunTime:0.000499s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=1 [ RunTime:0.000411s ]
+SQL: 
+					select
+						prettyname
+					from 
+						iok_category
+					where
+						id=8181 [ RunTime:0.000167s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=1 [ RunTime:0.000162s ]
+SQL: 
+					select
+						prettyname
+					from 
+						iok_category
+					where
+						id=8181 [ RunTime:0.000163s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=1 [ RunTime:0.000163s ]
+SQL: 
+					select
+						prettyname
+					from 
+						iok_category
+					where
+						id=8181 [ RunTime:0.000210s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=1 [ RunTime:0.000159s ]
+SQL: 
+					select
+						prettyname
+					from 
+						iok_category
+					where
+						id=8181 [ RunTime:0.000157s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=1 [ RunTime:0.000142s ]
+SQL: 
+					select
+						prettyname
+					from 
+						iok_category
+					where
+						id=8181 [ RunTime:0.000133s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=1 [ RunTime:0.000167s ]
+SQL: 
+					select
+						prettyname
+					from 
+						iok_category
+					where
+						id=8181 [ RunTime:0.000170s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=1 [ RunTime:0.000167s ]
+SQL: 
+					select
+						prettyname
+					from 
+						iok_category
+					where
+						id=8181 [ RunTime:0.000164s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./admin/Runtime/Cache\9036dc496a82bfb3326521ebc5a45b269569bbf1.file.index.html.php D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 720 行.
+NOTIC: [2] unlink(./admin/Runtime/Cache\9036dc496a82bfb3326521ebc5a45b269569bbf1.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 57 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./admin/Runtime/Cache\efd8efe9d8cd9fb4744f5064878756592c2f34a2.file.leftmenu.inc.html.php D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 720 行.
+NOTIC: [2] unlink(./admin/Runtime/Cache\efd8efe9d8cd9fb4744f5064878756592c2f34a2.file.leftmenu.inc.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 57 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 25 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 27 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.194385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.194533s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000654s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000596s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000325s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000585s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002427s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000616s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000718s ]
+
+[ 2014-12-10T14:27:35+08:00 ] 127.0.0.1 /iokadmin.php?m=Subject
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+ERR: 无法加载模块:Subject
+
+[ 2014-12-10T14:27:39+08:00 ] 127.0.0.1 /iokadmin.php?m=Channel
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+SQL: SELECT webcode FROM iok_user WHERE id=1 and enabled=1 LIMIT 1; [ RunTime:0.000286s ]
+SQL: 
+			select 
+				count(m.id)
+			from 
+				iok_member m
+					left join iok_area a on m.areaid = a.id
+			where 
+				(m.gradeid = 1 or
+				m.gradeid = 2 or
+				m.gradeid = 3) and m.deleted=0 [ RunTime:0.162984s ]
+SQL: 
+				select
+					m.*,
+					a.prettyname
+				from
+					iok_member m
+						left join iok_area a on m.areaid = a.id
+				where
+					(m.gradeid = 1 or
+					m.gradeid = 2 or
+					m.gradeid = 3) and
+					m.deleted=0 
+				order by 
+					m.id desc,
+					m.id,m.registertime
+				limit 0, 10 [ RunTime:0.001447s ]
+SQL: select prettyname,parentid,pparentid from iok_area where id=1839 [ RunTime:0.000353s ]
+SQL: select prettyname from iok_area where id=193 [ RunTime:0.000299s ]
+SQL: select prettyname from iok_area where id=16 [ RunTime:0.000312s ]
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+SQL: select account from iok_member where id = '100022' [ RunTime:0.000313s ]
+NOTIC: [8] Undefined index: account D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\ChannelAction.class.php 第 102 行.
+SQL: select prettyname,parentid,pparentid from iok_area where id=393 [ RunTime:0.000318s ]
+SQL: select prettyname from iok_area where id=1 [ RunTime:0.000266s ]
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+SQL: select prettyname,parentid,pparentid from iok_area where id=393 [ RunTime:0.000272s ]
+SQL: select prettyname from iok_area where id=1 [ RunTime:0.000251s ]
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+SQL: select prettyname,parentid,pparentid from iok_area where id=393 [ RunTime:0.000291s ]
+SQL: select prettyname from iok_area where id=1 [ RunTime:0.000292s ]
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+SQL: select prettyname,parentid,pparentid from iok_area where id=129 [ RunTime:0.000261s ]
+SQL: select prettyname from iok_area where id=12 [ RunTime:0.000250s ]
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+SQL: select account from iok_member where id = '20832' [ RunTime:0.008459s ]
+SQL: select prettyname,parentid,pparentid from iok_area where id=1134 [ RunTime:0.000266s ]
+SQL: select prettyname from iok_area where id=106 [ RunTime:0.000228s ]
+SQL: select prettyname from iok_area where id=10 [ RunTime:0.000225s ]
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+SQL: select account from iok_member where id = '22174' [ RunTime:0.000244s ]
+SQL: select prettyname,parentid,pparentid from iok_area where id=2338 [ RunTime:0.000241s ]
+SQL: select prettyname from iok_area where id=260 [ RunTime:0.000224s ]
+SQL: select prettyname from iok_area where id=20 [ RunTime:0.000277s ]
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+SQL: select account from iok_member where id = '20849' [ RunTime:0.000239s ]
+SQL: select prettyname,parentid,pparentid from iok_area where id=408 [ RunTime:0.000252s ]
+SQL: select prettyname from iok_area where id=2 [ RunTime:0.000364s ]
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+SQL: select account from iok_member where id = '20611' [ RunTime:0.000287s ]
+SQL: select prettyname,parentid,pparentid from iok_area where id=1464 [ RunTime:0.000286s ]
+SQL: select prettyname from iok_area where id=150 [ RunTime:0.000262s ]
+SQL: select prettyname from iok_area where id=13 [ RunTime:0.000241s ]
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+SQL: select account from iok_member where id = '20944' [ RunTime:0.000276s ]
+SQL: select prettyname,parentid,pparentid from iok_area where id=2 [ RunTime:0.000284s ]
+NOTIC: [8] Undefined variable: pres D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+NOTIC: [8] Undefined variable: pres D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+NOTIC: [8] Undefined variable: pres D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+SQL: select account from iok_member where id = '20611' [ RunTime:0.000299s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 25 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 27 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.142584s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.142761s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000531s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000534s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000291s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000544s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002203s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000583s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000692s ]
+
+[ 2014-12-10T14:27:42+08:00 ] 127.0.0.1 /iokadmin.php?m=Company
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001352s ]
+SQL: SELECT webcode FROM iok_user WHERE id=1 and enabled=1 LIMIT 1; [ RunTime:0.000460s ]
+SQL: 
+			select 
+				count(id)
+			from 
+				iok_member m
+					left join iok_membercompany mc on m.id = mc.memberid
+					left join iok_memberinfo mi on m.id = mi.memberid
+			where 
+				(m.gradeid= 7 or m.gradeid = 8 or m.gradeid = 9 ) and m.deleted=0 [ RunTime:0.156499s ]
+SQL: 
+			select
+				*
+			from
+				iok_member m
+					left join iok_membercompany mc on m.id = mc.memberid
+					left join iok_memberinfo mi on m.id = mi.memberid
+			where
+				(m.gradeid = 7 or m.gradeid = 8 or m.gradeid = 9 ) and m.deleted=0 
+			order by 
+				id desc,
+				m.id,m.registertime
+			limit 0, 10 [ RunTime:0.001781s ]
+SQL: select prettyname,parentid,pparentid from iok_area where id=0 [ RunTime:0.000364s ]
+NOTIC: [8] Undefined offset: 0 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 142 行.
+NOTIC: [8] Undefined offset: 0 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 146 行.
+NOTIC: [8] Undefined variable: pres D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+NOTIC: [8] Undefined variable: pres D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+NOTIC: [8] Undefined variable: pres D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+NOTIC: [8] Undefined offset: 0 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+SQL: select account from iok_member where id = '0' [ RunTime:0.000321s ]
+SQL: select prettyname,parentid,pparentid from iok_area where id=0 [ RunTime:0.000324s ]
+NOTIC: [8] Undefined offset: 0 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 142 行.
+NOTIC: [8] Undefined offset: 0 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 146 行.
+NOTIC: [8] Undefined variable: pres D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+NOTIC: [8] Undefined variable: pres D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+NOTIC: [8] Undefined variable: pres D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+NOTIC: [8] Undefined offset: 0 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+SQL: select account from iok_member where id = '0' [ RunTime:0.000300s ]
+SQL: select prettyname,parentid,pparentid from iok_area where id=393 [ RunTime:0.000382s ]
+SQL: select prettyname from iok_area where id=1 [ RunTime:0.000306s ]
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+SQL: select account from iok_member where id = '0' [ RunTime:0.000294s ]
+SQL: select prettyname,parentid,pparentid from iok_area where id=393 [ RunTime:0.000383s ]
+SQL: select prettyname from iok_area where id=1 [ RunTime:0.000363s ]
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+NOTIC: [8] Undefined offset: 1 D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CommonAction.class.php 第 153 行.
+SQL: select account from iok_member where id = '100027' [ RunTime:0.000346s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./admin/Runtime/Cache\41fc10e85479103bca7d2922106d0bbb71520199.file.index.html.php D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 720 行.
+NOTIC: [2] unlink(./admin/Runtime/Cache\41fc10e85479103bca7d2922106d0bbb71520199.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 57 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 25 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 27 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 28 行.
+NOTIC: [8] Undefined index: account D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\41fc10e85479103bca7d2922106d0bbb71520199.file.index.html.php 第 92 行.
+NOTIC: [8] Undefined index: account D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\41fc10e85479103bca7d2922106d0bbb71520199.file.index.html.php 第 92 行.
+NOTIC: [8] Undefined index: account D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\41fc10e85479103bca7d2922106d0bbb71520199.file.index.html.php 第 92 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.171639s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.171821s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000602s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000506s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000326s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000545s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002242s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000603s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000700s ]
+
+[ 2014-12-10T14:27:45+08:00 ] 127.0.0.1 /iokadmin.php?m=User
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000900s ]
+SQL: SELECT webcode FROM iok_user WHERE id=1 and enabled=1 LIMIT 1; [ RunTime:0.000343s ]
+SQL: 
+			select 
+				count(u.id) as cnt 
+			from 
+				iok_user u 
+					inner join iok_userinfo ui on u.id=ui.userid
+					inner join iok_usergroup ug on u.usergroupid=ug.id
+					inner join iok_department d on ug.departmentid=d.id
+			where 
+				u.deleted=0 [ RunTime:0.000455s ]
+SQL: 
+			select 
+				u.id,
+				u.account,
+				u.usergroupid,
+				u.loginip,
+				u.logintime,
+				u.addtime,
+				u.enabled,
+				ui.prettyname,
+				ug.prettyname as usergroup,
+				ug.departmentid,
+				d.prettyname as department
+			from 
+				iok_user u 
+					inner join iok_userinfo ui on u.id=ui.userid
+					inner join iok_usergroup ug on u.usergroupid=ug.id
+					inner join iok_department d on ug.departmentid=d.id
+			where 
+				u.deleted=0 
+			order by 
+				u.addtime desc,
+				u.id 
+			limit 0, 10 [ RunTime:0.000661s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./admin/Runtime/Cache\a3e8a3d57089ef4cc87b1d9aa30ecf0647c7f5b0.file.index.html.php D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 720 行.
+NOTIC: [2] unlink(./admin/Runtime/Cache\a3e8a3d57089ef4cc87b1d9aa30ecf0647c7f5b0.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 57 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./admin/Runtime/Cache\01eab207f0e05dc629a995d153a59ac76e2c5d47.file.leftmenu.inc.htm.php D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 720 行.
+NOTIC: [2] unlink(./admin/Runtime/Cache\01eab207f0e05dc629a995d153a59ac76e2c5d47.file.leftmenu.inc.htm.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 57 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 25 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 27 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.201753s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.201900s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000649s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000510s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000325s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000549s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002317s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000575s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2014-12-10T14:27:49+08:00 ] 127.0.0.1 /iokadmin.php?m=Linkedin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+ERR: 无法加载模块:Linkedin
+
+[ 2014-12-10T14:27:54+08:00 ] 127.0.0.1 /iokadmin.php?m=Role
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+SQL: SELECT webcode FROM iok_user WHERE id=1 and enabled=1 LIMIT 1; [ RunTime:0.000541s ]
+SQL: 
+			select 
+				count(r.id) as cnt 
+			from 
+				iok_role r
+			where 
+				r.deleted=0 [ RunTime:0.000531s ]
+SQL: 
+			select 
+				r.id,
+				r.prettyname,
+				r.listorder,
+				r.addtime,
+				r.enabled,
+				ui.prettyname as adduser
+			from 
+				iok_role r
+					inner join iok_userinfo ui on r.adduserid=ui.userid
+			where 
+				r.deleted=0 
+			order by 
+				r.addtime desc,
+				r.listorder,r.id
+			limit 0, 10 [ RunTime:0.000758s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./admin/Runtime/Cache\47a4da050b3562942b8f2d2b4d5187cc8d73c705.file.index.html.php D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 720 行.
+NOTIC: [2] unlink(./admin/Runtime/Cache\47a4da050b3562942b8f2d2b4d5187cc8d73c705.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 57 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./admin/Runtime/Cache\476e2d6dc143b2ed8cd97a18f59e8f38ec77b838.file.leftmenu.inc.htm.php D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 720 行.
+NOTIC: [2] unlink(./admin/Runtime/Cache\476e2d6dc143b2ed8cd97a18f59e8f38ec77b838.file.leftmenu.inc.htm.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 57 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 25 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 27 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.132314s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.132610s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000581s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000482s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000296s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000543s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002201s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000568s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000655s ]
+
+[ 2014-12-10T14:27:56+08:00 ] 127.0.0.1 /iokadmin.php?m=Category
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001167s ]
+SQL: SELECT webcode FROM iok_user WHERE id=1 and enabled=1 LIMIT 1; [ RunTime:0.000225s ]
+NOTIC: [8] Undefined index: type D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\CategoryAction.class.php 第 7 行.
+SQL: 
+			select 
+				count(id)
+			from 
+				iok_loglogin [ RunTime:0.000133s ]
+SQL: 
+			select
+				*
+			from
+				iok_category
+			where
+				categorytype = '8'order by 
+				id desc
+			limit 0,8 [ RunTime:0.000392s ]
+SQL: 
+			select
+				name,
+				prettyname
+			from
+				iok_dictionary
+			where
+				tablename = 'iok_category' and
+				fieldname = 'categorytype' and 
+				enabled=1 [ RunTime:0.068756s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./admin/Runtime/Cache\38536e0de812d51b72e0e5c28e48fad73a1a42a9.file.index.html.php D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 720 行.
+NOTIC: [2] unlink(./admin/Runtime/Cache\38536e0de812d51b72e0e5c28e48fad73a1a42a9.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 57 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./admin/Runtime/Cache\82e66dd607b7f37b50a1aaf93c13b9b5e856331f.file.leftmenu.inc.htm.php D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 720 行.
+NOTIC: [2] unlink(./admin/Runtime/Cache\82e66dd607b7f37b50a1aaf93c13b9b5e856331f.file.leftmenu.inc.htm.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 57 行.
+NOTIC: [8] Undefined index: model D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\38536e0de812d51b72e0e5c28e48fad73a1a42a9.file.index.html.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\38536e0de812d51b72e0e5c28e48fad73a1a42a9.file.index.html.php 第 43 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 25 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 27 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 28 行.
+NOTIC: [8] Undefined index: items D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\66edd37aae2f51f649747d6460b42c1cc813bb43.file.search.inc.htm.php 第 31 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\66edd37aae2f51f649747d6460b42c1cc813bb43.file.search.inc.htm.php 第 31 行.
+NOTIC: [8] Undefined index: keyword D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\66edd37aae2f51f649747d6460b42c1cc813bb43.file.search.inc.htm.php 第 38 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\66edd37aae2f51f649747d6460b42c1cc813bb43.file.search.inc.htm.php 第 38 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.182745s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.182965s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000648s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000486s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000326s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000505s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002217s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000570s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000659s ]
+
+[ 2014-12-10T14:28:00+08:00 ] 127.0.0.1 /iokadmin.php?m=Banword
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+SQL: SELECT webcode FROM iok_user WHERE id=1 and enabled=1 LIMIT 1; [ RunTime:0.000308s ]
+SQL: 
+			select 
+				count(id)
+			from 
+				iok_banword [ RunTime:0.091090s ]
+SQL: select
+					*
+				from
+					iok_banword
+				order by 
+					id,addtime
+				limit 0,5 [ RunTime:0.000763s ]
+SQL: select account from iok_user where id = '1' [ RunTime:0.000502s ]
+SQL: select account from iok_user where id = '1' [ RunTime:0.000406s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./admin/Runtime/Cache\9b42e0e2e0f938489d1a908fa9240df6a99a36e9.file.index.html.php D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 720 行.
+NOTIC: [2] unlink(./admin/Runtime/Cache\9b42e0e2e0f938489d1a908fa9240df6a99a36e9.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\WorkSpace\PHP\iok2014\web\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 57 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 25 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 27 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 28 行.
+NOTIC: [8] Undefined index: items D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\66edd37aae2f51f649747d6460b42c1cc813bb43.file.search.inc.htm.php 第 31 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\66edd37aae2f51f649747d6460b42c1cc813bb43.file.search.inc.htm.php 第 31 行.
+NOTIC: [8] Undefined index: keyword D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\66edd37aae2f51f649747d6460b42c1cc813bb43.file.search.inc.htm.php 第 38 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\66edd37aae2f51f649747d6460b42c1cc813bb43.file.search.inc.htm.php 第 38 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.156445s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.156615s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000575s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000493s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000298s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002145s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000559s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000647s ]
+
+[ 2014-12-10T17:21:37+08:00 ] 127.0.0.1 /iokadmin.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001780s ]
+
+[ 2014-12-10T17:21:38+08:00 ] 127.0.0.1 /iokadmin.php?m=Misc&a=logout
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+
+[ 2014-12-10T17:21:38+08:00 ] 127.0.0.1 /iokadmin.php?m=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000823s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000971s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.171005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.171151s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000668s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000730s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000454s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000720s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002861s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000859s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000962s ]
+
+[ 2014-12-10T17:21:39+08:00 ] 127.0.0.1 /iokadmin.php?m=Misc&a=captcha&t=1418203298
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+
+[ 2014-12-10T17:21:46+08:00 ] 127.0.0.1 /iokadmin.php?m=Login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000852s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000981s ]
+SQL: 
+				select
+					u.id,
+					u.account,
+					u.passhash,
+					u.saltcode,
+					u.webcode,
+					u.usergroupid,
+					u.logincount,
+					u.enabled,
+					u.logintime,
+					u.loginip,
+					u.addtime,
+					u.addip,
+					u.updatetime,
+					u.updateuserid,
+					ui.prettyname,
+					ui.email,
+					ui.mobile,
+					ui.qq,
+					ui.position,
+					ui.introduce,
+					aui.prettyname as adduser,
+					ug.prettyname as usergroup,
+					ug.departmentid,
+					ug.roleid,
+					d.prettyname as department,
+					r.prettyname as rolename
+				from 
+					iok_user u 
+						inner join iok_userinfo ui on u.id=ui.userid
+						inner join iok_userinfo aui on u.adduserid=aui.userid
+						inner join iok_usergroup ug on u.usergroupid=ug.id
+						inner join iok_department d on ug.departmentid=d.id
+						inner join iok_role r on ug.roleid=r.id
+				where 
+					u.account='admin' and
+					ug.enabled=1 and
+					d.enabled=1 and
+					r.enabled=1
+				limit 1 [ RunTime:0.240849s ]
+NOTIC: [8] Undefined variable: errcode D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\LoginAction.class.php 第 99 行.
+SQL: 
+					select
+						id,
+						code,
+						isloged
+					from 
+						iok_node 
+					order by 
+						parentid,
+						id [ RunTime:0.035887s ]
+NOTIC: [8] Undefined variable: errcode D:\WorkSpace\PHP\iok2014\web\admin\Lib\Action\LoginAction.class.php 第 139 行.
+SQL: insert into `iok_loglogin` (`logintype`,`account`,`ip`,`logintime`,`loginstate`) values ('2','admin','127.0.0.1','1418203305','1') [ RunTime:0.154487s ]
+SQL: select prettyname from iok_userinfo where userid='1' limit 1 [ RunTime:0.000713s ]
+SQL: 
+					update 
+						iok_user 
+					set 
+						webcode='3RRlFxhK6sNq3v1W',
+						logintime=1418203306, 
+						loginip='127.0.0.1', 
+						logincount=logincount+1 
+					where 
+						id='1' 
+					limit 1 [ RunTime:0.033392s ]
+
+[ 2014-12-10T17:21:46+08:00 ] 127.0.0.1 /iokadmin.php?m=Index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000906s ]
+SQL: SELECT webcode FROM iok_user WHERE id=1 and enabled=1 LIMIT 1; [ RunTime:0.000291s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.111419s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.111576s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000707s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000703s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000334s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000613s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002626s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000585s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000674s ]
+
+[ 2014-12-10T17:21:52+08:00 ] 127.0.0.1 /iokadmin.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000836s ]
+SQL: SELECT webcode FROM iok_user WHERE id=1 and enabled=1 LIMIT 1; [ RunTime:0.000276s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016105s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016230s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000629s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000737s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000492s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000766s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002954s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000659s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000747s ]
+
+[ 2014-12-10T17:44:07+08:00 ] 127.0.0.1 /iokadmin.php?m=SchoolImage
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001033s ]
+ERR: 无法加载模块:SchoolImage
+
+[ 2014-12-10T17:44:12+08:00 ] 127.0.0.1 /iokadmin.php?m=Ad
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000925s ]
+SQL: select
+					count(id)
+				from
+					iok_ad
+				where
+					deleted=0 
+				 [ RunTime:0.057701s ]
+SQL: select
+					id,
+					prettyname,
+					adplaceid,
+					price,
+					introduce,
+					note,
+					listorder,
+					enabled,
+					addtime,
+					adduserid
+				from
+					iok_ad
+				where
+					deleted=0 
+				 order by id desc limit 0,10 [ RunTime:0.000952s ]
+SQL: 
+					select
+						prettyname
+					from
+						iok_userinfo
+					where
+						userid=5 [ RunTime:0.001732s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 32 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 34 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 36 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 37 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 39 行.
+NOTIC: [8] Undefined index: skin D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 40 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 43 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 45 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 48 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 50 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 52 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 55 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 59 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 61 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 63 行.
+NOTIC: [8] Undefined index: baseurl D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 65 行.
+NOTIC: [8] Undefined index: all D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Trying to get property of non-object D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\e0c10a379d95d4e6a2ba9e22bcbdee7ab9ac5030.file.header.inc.htm.php 第 67 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 25 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 27 行.
+NOTIC: [8] Undefined index: record D:\WorkSpace\PHP\iok2014\web\admin\Runtime\Cache\d20f9229ab9d4f70e606e16b7948f7d9ec5c90a4.file.record.inc.htm.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.153636s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.153771s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000667s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000704s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000452s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000559s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002916s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000737s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000838s ]
+
+[ 2014-12-10T18:28:49+08:00 ] 127.0.0.1 /iokadmin.php?m=Subject
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001596s ]
+ERR: 无法加载模块:Subject
+

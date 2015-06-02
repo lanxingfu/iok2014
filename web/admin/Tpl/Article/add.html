@@ -1,0 +1,219 @@
+﻿{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<!-- js 编辑器-->
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/script/admin/editor/kindeditor.js"></script>
+
+<script type="text/javascript">
+    KE.show({
+        id : 'infocontent' ,//TEXTAREA输入框的ID
+		minWidth:"650px",
+		minHeight:"400px",
+		resizeMode:0
+	});
+	<!-- js 编辑器-->
+	$(function(){
+		$("#istop-1").click(function(){
+			$("#uploaddiv").css("display","none");
+		});
+		$("#istop-2").click(function(){
+			var typeid=$("#categorytype option:selected").val();
+			
+			if(typeid == 8189 || typeid == 10002 || typeid == 10003 || typeid == 10004){
+				$("#uploaddiv").css("display","block");
+			}
+		});
+		$("#categorytype").change(function(){
+			var typeid=$(this).val();
+			if($("#istop-2").attr("checked") && (typeid == 8189 || typeid == 10002 || typeid == 10003 || typeid == 10004)){
+				$("#uploaddiv").css("display","block");
+			}else{
+				$("#uploaddiv").css("display","none");
+			}
+		});
+	});
+</script>
+<style>
+.ke-iframe {
+	width: 750px;
+}
+</style>
+
+		<!-- content -->
+		<div id="content">
+			<!-- end content / left -->
+			{include file="Article/leftmenu.inc.html"}
+			<!-- end content / left -->
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>增加信息</h5>
+					</div>
+					<!-- end box / title -->
+					<form id="form" action="/iokadmin.php/Article/submit" method="post" enctype="multipart/form-data">
+					<div class="form">
+						<div class="fields">
+							<div class="field  field-first">
+								<div class="label">
+									<label for="input-small">信息分类：</label>
+								</div>
+								<div class="select">
+									<select name="categoryid" id="categorytype">
+									{foreach from=$type item=t}
+										<option value="{$t['id']}">{$t['prettyname']}</option>
+									{/foreach}
+									</select>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label label-radio">
+									<label>是否启用：</label>
+								</div>
+								<div class="radios">
+									<div class="radio">
+										<input type="radio" id="radio-1" name="enabled" value="1" checked="checked"/>
+										<label for="radio-1">启用</label>
+									
+										<input type="radio" id="radio-2" name="enabled" value="0"/>
+										<label for="radio-2">关闭</label>
+									</div>
+								</div>
+							</div> 
+							
+							<div class="field">
+								<div class="label">
+									<label for="select">信息标题：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="title" class="small" />
+								</div>
+							</div>
+							
+							<div class="field">
+								<div class="label">
+									<label for="select">小标题：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="subtitle" class="small" />
+								</div>
+							</div>
+							
+							<div class="field">
+								<div class="label">
+									<label for="select">标签：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="tag" class="small" />
+								</div>
+							</div>
+							
+							<div class="field">
+								<div class="label">
+									<label for="select">作者：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="author" class="small" />
+								</div>
+							</div>
+							
+							<div class="field">
+								<div class="label">
+									<label for="select">文章来源：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="copyfrom" class="small" />
+								</div>
+							</div>
+							
+							<div class="field">
+								<div class="label">
+									<label for="select">来源地址：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="fromurl" class="small" />
+								</div>
+							</div>
+							
+							<div class="field">
+								<div class="label">
+									<label for="select">简介：</label>
+								</div>
+								<div class="input">
+									<textarea name="introduce" style="height:50px;" class="editor" cols="50" rows="12"></textarea>
+								</div>
+							</div>
+							
+							<div class="field">
+								<div class="label">
+									<label for="input-medium">文章内容：</label>
+								</div>
+								<div class="textarea textarea-editor">
+									<textarea id="infocontent" name="content"></textarea>
+								</div>
+							</div>
+							
+							<div class="field">
+								<div class="label label-radio">
+									<label>是否置顶：</label>
+								</div>
+								<div class="radios">
+									<div class="radio">
+										<input type="radio" id="istop-1" name="istop" value="0" checked="checked"/>
+										<label for="radio-1">不置顶</label>
+									
+										<input type="radio" id="istop-2" name="istop" value="1"/>
+										<label for="radio-2">置顶</label>
+										&nbsp;&nbsp;&nbsp;&nbsp;
+										(我行出品、研究报告、推荐展会、市场走势分类下咨询需要上传图片)
+									</div>
+								</div>
+							</div> 
+							
+							<div class="field" id="uploaddiv" style="display:none">
+								<div class="label">
+									<label for="file">上传图片：</label>
+								</div>
+								<div class="input">
+									<input type="file" name="imageurl" size="40"/>
+								</div>
+								<div class="input input-file">
+								{if $newarr['imageurl'] }
+									<img width="300" height="200" src="/file/upload/{$newarr['imageurl']}"> 
+								{/if}
+								</div>
+							</div>		
+							
+							<div class="field">
+								<div class="label label-radio">
+									<label>是否红体：</label>
+								</div>
+								<div class="radios">
+									<div class="radio">
+										<input type="radio" name="isred" value="0" checked="checked"/>
+										<label for="radio-1">非红体</label>
+									
+										<input type="radio" name="isred" value="1"/>
+										<label for="radio-2">红体</label>
+									</div>
+								</div>
+							</div> 
+							
+							
+							<div class="buttons">
+								<input type="reset" name="reset" value="Reset" />
+								<div class="highlight">
+									<input type="submit" name="submit.highlight" value="Submit" />
+								</div>
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

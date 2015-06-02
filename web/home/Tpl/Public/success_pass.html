@@ -1,0 +1,28 @@
+{include file="Public/header.html"}
+<!-- top -->
+{include file="Public/home_top.html"}
+<link href="__CSS__/home/register-com-men.css" rel="stylesheet" />
+<link href="__CSS__/home/sucess-a.css" rel="stylesheet" />
+<link href="__CSS__/home/sucess-b.css" rel="stylesheet" />
+<!-- 中间内容部分 -->
+<div class="content">
+<div class="content_qyzc">
+	<div class="content_qyzc_nr">
+		<div class="content_qyzc_nr_t">验证邮件</div>
+		<div class="content_qyzc_nr_b">
+			<div class="content_qyzc_nr_bb" style="padding-top:100px;padding-bottom:60px;width:680px;padding-left:115px">
+				<div class="feedback-success">
+					<div class="bd">
+						<i class="status-icon iconfont">~</i>
+						<p class="title">验证邮件发送成功！</p>
+						<p>验证邮件已发送至：<span id="J_userMail"><a href="http://{$goemail}" class="blue" target="_blank">{$emails}</a></span> ，您可以点击邮件里的激活链接来完成激活操作！</p>
+						<p><span id="J_gotoMail"><a href="http://{$goemail}" class="blue" target="_blank">立即访问邮箱&gt;&gt;</a></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- footer -->
+{include file='Public/footer.html'}

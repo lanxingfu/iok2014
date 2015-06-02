@@ -1,0 +1,118 @@
+﻿{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<!-- content -->
+<div id="content">
+	{include file="Category/leftmenu.inc.htm"}
+	<!-- content / right -->
+	<div id="right">
+		<div class="box">
+			<!-- box / title -->
+			<div class="title">
+				<h5>编辑分类</h5>
+			</div>
+			<form id="form" action="?m=Category&a=edit" method="post">
+				<input type="hidden" id="way" name="way" class="small" value="ok"/>
+				<input type="hidden" id="" name="id" class="small" value="{$data.id}"/>
+				<div class="form">
+					<div class="fields">
+						<div class="field  field-first">
+							<div class="label">
+								<label for="input-small">所属模块:</label>
+							</div>
+							<div class="select" name="select" id=''>
+								<select id="select" name="categorytype">
+									<option value="{$data.categorytype}">{$ctype.prettyname}</option>
+								<select/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">上级分类:</label>
+							</div>
+							<div class="select" name="select" id=''>
+								<select id="select" name="parentid">
+									<option value="{$data.parentid}">{$pdata.prettyname}</option>
+								</select>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">分类名称:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="input-small" name="prettyname" class="small" value="{$data['prettyname']}"/>{tip id='prettyname'}
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="select">级别:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="input-small" name="level" class="small" value="{$data['level']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label label-textarea" >
+								<label for="input-small">排序：</label>
+							</div>
+							<div class="input">
+								<input type="text" id="input-small" name="listorder" class="small" value="{$data['listorder']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label label-radio">
+								<label>是否启用:{$data['enabled']} </label>
+							</div>
+							<div class="radios">		
+								<div class="radio">
+									{if $data['enabled'] eq 1}
+										<input type="radio" value='1' name="enabled" checked /><label for="radio-2">启用</label>
+										<input type="radio" value='0' name="enabled" /><label for="radio-2">禁用</label>
+									{else}
+										<input type="radio" value='1' name="enabled" /><label for="radio-2">启用</label>
+										<input type="radio" value='0' name="enabled" checked /><label for="radio-2">禁用</label>
+									{/if}
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label label-textarea" >
+								<label for="input-small">Title(SEO标题)：</label>
+							</div>
+							<div class="input">
+								<input type="text" id="input-small" name="seo_title" class="small" value="{$data['seo_title']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label label-textarea" >
+								<label for="textarea">Meta Keywords(网页关键词)：</label>
+							</div>
+							<div class="textarea">
+								<textarea id="textarea1" name="seo_keywords"  style="height:50px;" cols="20" rows="4">{$data['seo_keywords']}</textarea>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label label-textarea" >
+								<label for="textarea">Meta Description (网页描述)：</label>
+							</div>
+							<div class="textarea">
+								<textarea id="textarea2" name="seo_description"  style="height:50px;" cols="20" rows="4">{$data['seo_description']}</textarea>
+							</div>
+						</div>
+						<div class="field">
+							<div class="buttons">
+								<div class="highlight">
+									<input type="submit" name="submit" value="保存" />
+								</div>
+								<input type="reset" name="reset" value="取消" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	<!-- end content / right -->
+	</div>
+</div>
+<!-- end content -->
+{include file="footer.inc.htm"}

@@ -1,0 +1,101 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+{literal}
+<script type="text/javascript">
+	function del(id){
+		var submit = function (v, h, f) {
+		if (v == 'ok')
+			window.location.href='/iokadmin.php?m=Channel&a=del&id='+id;
+			//jBox.tip(v, 'info');
+		else if (v == 'cancel')
+			jBox.tip('已取消', 'info');
+
+			return true; //close
+		};
+
+		$.jBox.confirm("确定删除吗？", "提示", submit);
+	}
+</script>
+{/literal}
+
+		<!-- content -->
+		<div id="content">
+			{include file="Channel/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- table -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title" style="margin-bottom:10px;">
+						<h5>渠道商列表</h5>
+						{include file="record.inc.htm"}
+					</div>
+					{include file="search.inc.htm"}
+					<!-- end box / title -->
+					<div class="table">
+						<table>
+							<thead>
+								<tr>
+									<th class="left">编号</th>
+									<th>用户名</th>
+									<th>代理级别</th>
+									<th>地区</th>
+									<th>推荐人</th>
+									<th>登陆次数</th>
+									<th>注册时间</th>
+									<th>注册IP</th>
+									<th>操作</th>
+									<th class="selected last"><input type="checkbox" class="checkall" /></th>
+								</tr>
+							</thead>
+							<tbody>
+							{foreach from=$data key=id item=item}
+								<tr>
+									<td>{$item.id}</td>
+									<td><a href="?m=Channel&a=detail&id={$item.id}">{$item.account}</a></td>
+									<td>{if $item.gradeid eq 1}省级代理
+										{elseif $item.gradeid eq 2}市级代理
+										{elseif $item.gradeid eq 3}县级代理
+										{else}未知级别{/if}
+									</td>
+									<td>{$item.areaid}</td>
+									<td>{$item.inviterid}
+										<!-- {if is_array($item.inviterid.account)}{$item.inviterid.account}
+										{elseif $item.inviterid neq ''}{$item.inviterid}
+										{else}未知{/if} -->
+									</td>
+									<td>{$item.logincount}</td>
+									<td>{$item.registertime}</td>
+									<td>{$item.registerip}</td>
+									<td class="category">
+										<a href="?m=Channel&a=cadd&id={$item.id}">编辑</a>/
+										<a href="javascript:del({$item.id});">删除</a>
+									</td>
+									<td class="selected last"><input type="checkbox" /></td>
+								</tr>
+							{/foreach}
+							</tbody>
+						</table>
+						<!-- pagination -->
+						{$page|default:''}
+						<!-- end pagination -->
+						<!-- table action -->
+						<div class="action">
+							<select id="action">
+								<option value="0">禁用</option>
+								<option value="1">启用</option>
+							</select>
+							<div class="button">
+								<input type="reset" value="执行操作" onclick="javascript:void(0);" />
+							</div>
+						</div>
+						
+						<!-- end table action -->
+					</div>
+				</div>
+				<!-- end table -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

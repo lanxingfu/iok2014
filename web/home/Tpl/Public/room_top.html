@@ -1,0 +1,55 @@
+<div class="header">
+<!-- 头部的头部  -->
+	{include file="Public/header_top.html"}
+<!-- 头部中间部分 -->
+    <div class="header_conter">
+    	<div class="header_conter_nr">
+        	<div class="header_conter_logo">
+            	<a href="/Index"><img src="/public/image/public/logo.png" alt="logo" /></a>
+            </div>
+            <div class="header_conter_zxgq">
+				{if $smarty.session.member.gradeid|in_array:array(1,2,3,7,8,9)}
+            	<h1>企业会员</h1>
+                <h3><a href="/Company">商务室</a></h3>
+				{else}
+				<h1>个人会员</h1>
+                <h3><a href="/Profile">商务室</a></h3>
+				{/if}
+            </div>
+            <div class="header_conter_ssk">
+               	<div class="header_C_ssk_input">
+					<div class="header_ssk_in">
+						<input type="text" id="search_keyword" name="search" value="{$keyword|default:'请输入要搜索的商品'}" {literal} onfocus="javascript:if(this.value=='请输入要搜索的商品'){this.value=''}" onblur="javascript:if(this.value==''){this.value='请输入要搜索的商品'}" {/literal} />
+						<div class="header_ssk_in_dh" id="search-val">
+							<div class="vall" id="search_html">
+							{if $type eq 'buy'}
+							求购
+							{elseif $type eq 'news'}
+							资讯
+							{else}
+							供应
+							{/if}
+							</div>
+							<ul class="header_ssk_in_dh_ul" style="display:none;" id="search-list">
+								<li><a href="javascript:void(0);" onclick="swaptype(this,'mall')">供应</a></li>
+								<li><a href="javascript:void(0);" onclick="swaptype(this,'buy')">求购</a></li>
+								<li><a href="javascript:void(0);" onclick="swaptype(this,'news')">资讯</a></li>
+							</ul>
+							<span><img src="/public/image/public/tubiao_4.png" alt="" /></span>
+						</div>
+					</div>
+					<a href="#" onclick="javascript:searchitem()"><img src="/public/image/public/img_3.png" alt="搜索" /></a>
+				</div>
+				<div class="header_C_ssk_rmss">
+					<span>热门搜索：</span>
+					<a href="/Search/listy/keyword/大红门">大红门</a>
+					<a href="/Search/listy/keyword/牛肉">牛肉</a>
+					<a href="/Search/listy/keyword/华誉黑兔">华誉黑兔</a>
+					<a href="/Search/listy/keyword/枸杞">枸杞</a>
+					<a href="/Search/listy/keyword/保险杠">保险杠</a>
+				</div>
+            </div>
+        </div>
+    </div>
+    </div>
+	

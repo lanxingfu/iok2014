@@ -1,0 +1,201 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Public/home_top.html'}
+<link href="/public/style/home/news.css" rel="stylesheet" />
+<div class="zxxb_14">
+	<div class="zxxb_14_box">
+    	<div class="zxxb_sy">
+        	<div class="zxxb_wzxq_l">
+            	<div class="zxxb_wzxq_l_nr">
+                	<div class="zxxb_wzxq_l_nr_h">
+                    	<h2>{$main.title}</h2>
+                        <p><span>日期：{$main.addtime}</span><span>来源：{$main.copyfrom}</span><span>作者：{$main.author}</span></p>
+                    </div>
+                    <div class="zxxb_wzxq_l_nr_dd">
+                    	<div class="zxxb_wzxq_l_nr_dd_t">
+                        	<h3>导读：</h3>
+                            <p>{$main.introduce}</p>
+                        </div>
+                        <div class="zxxb_wzxq_l_nr_dd_gjz">
+                        	<label><input type="checkbox" value="" /></label>
+                            <strong>关键字：</strong>
+								{$main.tag}
+                            <!-- <a href="#">夺命快递</a>
+                            <a href="#">快递</a>
+                            <a href="#">消费者</a>
+                            <a href="#">山东</a>
+                            <a href="#">验货</a> -->
+                        </div>
+                    </div>
+                    <div class="zxxb_wzxq_l_nr_text">
+                    	{$main.content}
+                    </div>
+                    <div class="zxxb_wzxq_l_nr_db">
+<!-- 						<div class="zxxb_wzxq_fy">
+							<div class="zxxb_wzxq_fy_nr">
+								<span>2/3</span>
+								<div class="fy_herf">
+									<a class="a_up" href="#">上一页</a>
+									<a href="#">1</a>
+									<a href="#">2</a>
+									<a href="#">3</a>
+									<a class="a_down" href="#">下一页</a>
+								</div>
+							</div>
+						</div>
+ -->                        <div class="zxxb_wzxq_l_nr_db_herf">
+                        	<p>
+                                <strong>关键字：</strong>
+                                {$main.tag}
+                            </p>
+                            <p><strong>上一篇：</strong>{$pre}</p>
+                            <p><strong>下一篇：</strong>{$next}</p>
+                        </div>
+                        <div class="zxxb_wzxq_l_nr_db_fx">
+                        	<p>您可以分享到：</p>
+							<script type="text/javascript">
+							bShareOpt = {
+								uuid: "6b1900b5-9617-4dd1-a75c-b85c0241df57", 
+							   url: "", //商品的永久链接
+							   title:"{$list.title}",
+							   summary: "非常不错的文章！《{$main.title}》{$fenxiang}", //商品描述
+							   pic: "{$list.thumb}", //商品图片链接
+							   vUid: "{$_SESSION['userdata']['userid']}", //用户id，为了让您能够知道您网站的注册用户分享、喜欢了哪些商品
+							   product: "{$list.title}", //商品名称
+							   price: "{$list.price}", //商品价格
+							   brand: "{$list.prettyname}", //商品品牌
+							   //tag: "{$list.tag}", //商品标签
+							   //category: "{$catename}", //商品分类
+							   template: "1" 
+							};
+							</script>
+                            <div class="zxxb_wzxq_l_nr_db_fx_tb" style="height:20px;overflow:hidden;">
+                            <a class="bsLikeDiv" href="http://static.bshare.cn"></a>
+								<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bsync.js#uuid=6b1900b5-9617-4dd1-a75c-b85c0241df576b1900b5-9617-4dd1-a75c-b85c0241df57"></script>
+								<div class="bshare-custom" style="float:left;padding:3px;">
+									<div class="bsPromo bsPromo2"></div>
+									<a title="分享到腾讯微博" class="bshare-qqmb"></a>
+									<a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+									<a title="分享到QQ空间" class="bshare-qzone"></a>
+									<a title="分享到搜狐微博" class="bshare-sohuminiblog"></a>
+									<a title="分享到网易微博" class="bshare-neteasemb"></a>
+									<a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);"></a>
+								</div>
+								<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=1&amp;lang=zh"></script>
+								<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="zxxb_wzxq_r_left_rdzx">
+                    <div class="zxxb_sy_l_bt">
+                        <h3>热点资讯</h3>
+                        <a href="#">更多…</a>
+                    </div>
+                    <div class="zxxb_wzxq_r_left_rdzx_nr">
+                        <h6><a href="/News/show/itemid/{$hottop.id}">{$hottop.title}</a></h6>
+                        <ul class="zxxb_wzxq_r_left_rdzx_nr_list">
+							{foreach from=$hotlist item=hotl key=hotk}
+								{if $hotk eq 6}
+									 <li style="border-bottom:none;"><a href="/News/show/itemid/{$hotl.id}">{$hotl.title}</a><span>{$hotl.addtime}</span></li>
+								{else}
+                            <li><a href="/News/show/itemid/{$hotl.id}">{$hotl.title}</a><span>{$hotl.addtime}</span></li>
+								{/if}
+							{/foreach}
+                        </ul>
+                    </div>
+                </div>
+                <div class="zxxb_wzxq_r_right_wxsd">
+                    <div class="zxxb_sy_l_bt">
+                        <h3>我行视点</h3>
+                        <a href="#">更多…</a>
+                    </div>
+                    <div class="zxxb_wzxq_r_right_wxsd_nr">
+                        <div class="zxxb_wzxq_r_left_ztpd_nr">
+                            <div class="zxxb_wzxq_r_left_ztpd_nr_l">
+                                <img src="{$wxsdtop.thumb}" alt="" />
+                            </div>
+                            <div class="zxxb_wzxq_r_left_ztpd_nr_r">
+                                <h4>{$wxsdtop.title}</h4>
+                                <p>{$wxsdtop.introduce}<a href="/News/show/itemid/{$wxsdtop.id}">[详情]</a></p>
+                            </div>
+                        </div>
+                        <ul class="zxxb_wzxq_r_right_wxsd_nr_li">
+							{foreach from=$wxsdlist item=wxsd}
+                            <li><a href="/News/show/itemid/{$wxsd.id}">{$wxsd.title}</a></li>
+                          {/foreach}
+                        </ul>
+                    </div>
+                </div>
+                <div class="zxxb_wzxq_r_right_wxsd">
+                    <div class="zxxb_sy_l_bt">
+                        <h3>专题频道</h3>
+                        <a href="#">更多…</a>
+                    </div>
+                    <div class="zxxb_wzxq_r_right_wxsd_nr">
+                        <div class="zxxb_wzxq_r_left_ztpd_nr">
+                            <div class="zxxb_wzxq_r_left_ztpd_nr_l">
+                                <img src="img/zx_img_2.jpg" alt="" />
+                            </div>
+                            <div class="zxxb_wzxq_r_left_ztpd_nr_r">
+                                <h4>双"蛋"活动即将开启</h4>
+                                <p>"双11"网上订车实际成交不足三成揭秘俄罗斯跨境网购：成人用品上演热水器市场明年500亿<a href="#">[详情]</a></p>
+                            </div>
+                        </div>
+                        <ul class="zxxb_wzxq_r_right_wxsd_nr_li">
+                            <li><a href="#">2014年热门技术前瞻 科技年</a></li>
+                            <li><a href="#">美沼泽鳄鱼捕杀外来巨蟒(图)</a></li>
+                            <li><a href="#">2014年热门技术前瞻 科技年</a></li>
+                            <li><a href="#">美沼泽鳄鱼捕杀外来巨蟒(图)</a></li>
+                            <li><a href="#">2014年热门技术前瞻 科技年</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="zxxb_wzxq_r_right_wxsd">
+                    <div class="zxxb_sy_l_bt">
+                        <h3>研究报告</h3>
+                        <a href="#">更多…</a>
+                    </div>
+                    <div class="zxxb_wzxq_r_right_wxsd_nr">
+                        <div class="zxxb_wzxq_r_left_ztpd_nr">
+                            <div class="zxxb_wzxq_r_left_ztpd_nr_l">
+                                <img src="{$yjbgtop.thumb}" alt="" />
+                            </div>
+                            <div class="zxxb_wzxq_r_left_ztpd_nr_r">
+                                <h4>{$yjbgtop.title}</h4>
+                                <p>{$yjbgtop.introduce}<a href="/News/show/itemid/{$yjbgtop.id}">[详情]</a></p>
+                            </div>
+                        </div>
+                        <ul class="zxxb_wzxq_r_right_wxsd_nr_li">
+							{foreach from=$yjbglist item=yjbg}
+                            <li><a href="/News/show/itemid/{$yjbg.id}">{$yjbg.title}</a></li>
+                          {/foreach}
+                        </ul>
+                    </div>
+                </div>
+                <div class="zxxb_wzxq_r_sczs">
+                	<div class="zxxb_sy_l_bt">
+                        <h3>市场走势</h3>
+                        <a href="#">更多…</a>
+                    </div>
+                    <div class="zxxb_wzxq_r_sczs_nr">
+                    	<div class="zxxb_wzxq_r_sczs_nr_top">
+                        	<div class="zxxb_wzxq_r_sczs_nr_t_img">
+                            	<img src="{$sczstop.thumb}" alt="" />
+                            </div>
+                            <h4>{$sczstop.title}</h4>
+                        </div>
+                        <ul class="zxxb_wzxq_r_sczs_nr_list">
+							{foreach from=$sczslist item=sczs}
+                        	<li><a href="/News/show/itemid/{$sczs.id}">{$sczs.title}</a></li>
+                          {/foreach}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{include file='Public/footer.html'}

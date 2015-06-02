@@ -1,0 +1,14 @@
+<div id="search_div">
+	<div style="padding:10px 20px;">
+		{if $items|default:''}
+		搜索项目：
+		<select id="searchitem">
+		{html_options options=$items selected=$item}
+		</select>
+		{/if}
+		关键字：<input id="keyword" type="text" style="width:200px;" value="{$keyword|escape:'html'|stripslashes|default:''}" />
+		<span>
+			<a style="padding:2px 15px;" title="搜索" onclick="javascript:searchkey();">搜索</a>
+		</span>
+	</div>
+</div>

@@ -1,0 +1,62 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<!-- content -->
+<div id="content">
+	{include file="Syscfg/leftmenu.inc.htm"}
+	<!-- content / right -->
+	<div id="right">
+		<div class="box">
+			<!-- box / title -->
+			<div class="title">
+				<h5>{if $rec['id']}编辑敏感词{else}添加敏感词{/if}</h5>
+			</div>
+			<form id="form" action="?m=Banword&a=submit" method="post">
+				<input type="hidden" id="id" name="id" class="small" value="{$rec['id']}"/>
+				<div class="form">
+					<div class="fields">
+						<div class="field">
+							<div class="label">
+								<label for="input-small">查找词语:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="input-small" name="replacefrom" class="small" value="{$rec['replacefrom']}"/>
+								{tip id='top0' default='请输入要查找的敏感词名'}
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">替换为:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="input-small" name="replaceto" class="small" value="{$rec['replaceto']}"/>
+								{tip id='top0' default=''}
+							</div>
+						</div>
+						<div class="field">
+							<div class="label label-radio">
+								<label>是否开启:</label>
+							</div>
+							<div class="radios">		
+								<div class="radio">
+										<input type="radio" value='0' name="enabled" {if $rec['enabled'] eq 0}checked{/if}/><label for="radio-2">启用</label>
+										<input type="radio" value='1' name="enabled" {if $rec['enabled'] eq 1}checked{/if} /><label for="radio-2">禁用</label>								
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="buttons">
+								<div class="highlight">
+									<input type="submit" name="submit" value="保存" />
+								</div>
+								<input type="reset" name="reset" onclick="javascript:gotoUrl('/iokadmin.php?m=Banword')"value="取消" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	<!-- end content / right -->
+	</div>
+</div>
+<!-- end content -->
+{include file="footer.inc.htm"}

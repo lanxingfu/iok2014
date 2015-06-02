@@ -1,0 +1,8 @@
+﻿/* 商务室 基本样式 */
+body,h1,h2,h3,h4,h5,ul,table,p,tbody,thead,tr,th,td,span,input,textarea,select,option{ margin:0; padding:0;}
+img{ border:none; overflow:hidden;}
+li{ list-style:none;}
+textarea{ resize:none;overflow-y:hidden;}
+table{ border:none;border-collapse:collapse; border-spacing:0; font-size:inherit;}
+a{ text-decoration:none; color:#6e6e6e;}
+a:hover {color:#c80e0e;}

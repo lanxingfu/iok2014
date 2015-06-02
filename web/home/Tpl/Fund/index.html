@@ -1,0 +1,90 @@
+{include file="Public/header_room.html"}
+<!-- top -->
+{include file="Public/room_top.html"}
+<link href="__PUBLIC__/style/home/room/table_form.css" rel="stylesheet" />
+<link href="__CSS__/home/sws_accounts.css" rel="stylesheet" />
+<link href="__PUBLIC__/style/home/room/reset.css" rel="stylesheet" />
+<link href="__PUBLIC__/style/home/room/common.css" rel="stylesheet" />
+<div class="content">
+	<div class="content_nr">
+		<div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html"}
+			</div>
+
+			<div class="content_sws_nr_right" >
+				<div class="content_sws_nr_right_lgrzl">
+					<div class="content_sws_nr_r_lgrzl_t">
+						{include file="Public/welcom.html"}
+					</div>
+				</div>
+				<ul class="content_sws_nr_right_t" >
+					<li><a href="/Fund/index/action/0" {if $smarty.get.action eq '0'} class="navigation" {/if}>全部</a></li>
+					<li><a href="/Fund/index/action/1" {if $smarty.get.action eq '1'} class="navigation" {/if}>充值</a></li>
+					<li><a href="/Fund/index/action/2" {if $smarty.get.action eq '2'} class="navigation" {/if}>转入</a></li>
+					<li><a href="/Fund/index/action/3" {if $smarty.get.action eq '3'} class="navigation" {/if}>转出</a></li>
+					<li><a href="/Fund/index/action/4" {if $smarty.get.action eq '4'} class="navigation" {/if}>提现</a></li>
+					<li><a href="/Fund/index/action/5" {if $smarty.get.action eq '5'} class="navigation" {/if}>支出</a></li>
+					<li><a href="/Fund/index/action/6" {if $smarty.get.action eq '6'} class="navigation" {/if}>收入</a></li>
+				</ul>
+				<div class="content_sws_nr_right_b" >
+					<div class="content_sws_nr_right_b_dlmm">
+						<div class="pad-lr-10">
+							{if $list}
+							<div class="table-list" >
+								<div class="table-list" style="height:auto; width:100%">
+									<table id="checkList" class="table-list" width="100%" cellspacing="0" cellpadding="0">
+										<thead>
+											<tr class="row">
+											
+											<th width="45">
+											<a>编号</a>
+											</th>
+											<th width="20px"> 
+											<a>发生时间</a>
+											</th>
+											<th style="width:40px">
+											<a>交易方式</a>
+											</th>
+											<th style="width:40px">
+											<a>金额</a>
+											</th>
+											<th width="20px">
+											<a>余额</a>
+											</th>
+											<th width="30px" style="text-align:center;">事由</th>
+											<th width="30px" style="text-align:center;">备注</th>
+											</tr>
+										</thead>
+										<tbody>
+											{foreach $list as $vo}
+											<tr class="out" onmouseout="outs(event)" onmouseover="overs(event)">
+												
+												<td>{$vo.id}</td>
+												<td>{if $vo.addtime eq '' }暂无{else}{$vo.addtime|date_format:'Y-m-d H:i:s'}{/if}</td>
+								
+												<td>{if $vo.bank eq ''}暂无{else}{$vo.bank}{/if}</td>
+												<td>{if $vo.amount gt '0' }暂无{else}{$vo.amount}{/if}</td>
+												<td>{if $vo.balance eq '0' }暂无{else}{$vo.balance}{/if}</td>
+												<td>{$vo.reason}</td>
+												<td>{$vo.note}</td>
+											</tr>
+											{/foreach}
+										</tbody>
+									</table>
+								</div>
+									
+							</div>
+							<div id="pages">{$showpage}</div>
+							
+							{else}
+							<div style="margin:10px auto;padding-top:15px;border:1px solid #bfbfbf;color:#bfbfbf;text-align:center;"><span>对不起，没有找到相应信息的资金流水！ </span></div>
+							{/if}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<include file="default:Public:footer" />

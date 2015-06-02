@@ -1,0 +1,221 @@
+{include file="Public/header_room.html"}
+{include file="Public/room_top.html"}
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html"}
+			</div>
+			<!-- css -->
+			<link href="/public/style/home/room/profiledata.css" rel="stylesheet" />
+			<!-- 上传 弹框 -->
+			<link id="skin" rel="stylesheet" href="/public/script/jbox/Skins/Gray/jbox.css" />
+			<script type="text/javascript" src="/public/script/jbox/jquery.jBox-2.3.min.js"></script>
+			<script type="text/javascript" src="/public/script/jbox/i18n/jquery.jBox-zh-CN.js"></script>
+			<!--  -->
+			<div class="content_sws_nr_right" id="iframe_main">
+				<div class="tabBar">
+					<div class="content_sws_nr_right_lgrzl">
+						<div class="content_sws_nr_r_lgrzl_t">
+							{include file="Public/welcom.html" }
+						</div>
+					</div>
+					
+					<div class="hd">
+						<ul  class="content_sws_nr_right_t">
+							<li><a class="navigation" href="/Profile/edit">个人资料</a></li>
+						</ul>
+					</div>
+					<div class="bd">
+						<form method="post" action="/Profile/submit" class="registerform" name="saveData">
+							<div class="conWrap" style="width: 1500px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: 0px;">
+								<div class="content_sws_nr_right_b">
+									<br/>
+									<ul class="content_sws_nr_right_b_lxr">
+										<li>
+											<div class="content_error" id="dtotal">{tip id='total' default=''}</div>
+										</li>
+										<li>
+											<h4>会员名</h4>
+											<div class="content_sws_nr_right_b_lxr_xm">
+												{$smarty.session.member.account}
+											</div>
+										</li>
+										<li>
+											<h4>会员类型</h4>
+											<div class="content_sws_nr_right_b_lxr_bm">个人会员</div>
+										</li>
+										<li>
+											<h4>真实姓名</h4>
+											<div class="content_sws_nr_right_b_lxr_xm">
+												<input type="text" value="{$memberinfo.prettyname}"  datatype="s2-200"  nullmsg="真实姓名不能为空！" errormsg="至少2个字符" id="name" name="prettyname"/>
+											</div>
+										</li>
+										<li>
+											<h4>性别</h4>
+											<div class="content_sws_nr_right_b_lxr_xm">
+												<label>
+													<input style="float:none;height:auto;width:20px;" type='radio' name='gender' {if $memberinfo['gender'] neq 2 } checked='checked' {/if} value=1 > 先生 
+												</label>
+												<label>
+													<input style="float:none;height:auto;width:20px;" type='radio' name='gender' {if $memberinfo['gender'] eq 2 } checked='checked' {/if} value=2 > 女士 
+												</label>
+											</div>
+										</li>
+										<li>
+											<h4>邮箱</h4>
+											<div class="content_sws_nr_right_b_lxr_xm">
+												<input type="text" value="{$memberinfo.email}" name="email" datatype="e" nullmsg="邮箱不能为空！" errormsg="请按正确邮箱格式填写" id="email"/>
+											</div>
+										</li>
+										<li>
+											<h4>手机号码</h4>
+											<div class="content_sws_nr_right_b_lxr_xm">										
+												<input type="text" value="{$memberinfo.mobile}" name="mobile" datatype="m" nullmsg="手机号码不能为空!" errormsg="请填写正确的手机号"/>
+											</div>
+										</li>
+										<li>
+											<h4>所在地</h4>
+											<div class="content_sws_nr_right_b_lxr_bm">
+												{'addrareaid'|ajax_area_select:'请选择':$memberinfo.addrareaid}<span id="mess"></span>
+											</div>
+										</li>
+										<li>
+											<h4>身份证号码</h4>
+											<div class="content_sws_nr_right_b_lxr_xm">		
+												<input type="text" value="{$memberinfo.idnumber}" datatype="/\d{17}[\d|X]|\d{15}/" nullmsg="身份证号不能为空" errormsg="请填写正确的身份证号码" name="idnumber"/>																
+											</div>
+										</li>
+										<li>
+											<h4>身份证上传</h4>
+											<div class="content_sws_nr_right_b_lxr_xm">	
+												<div class="content_sws_nr_right_b_gzzs_r">
+													<div class="gzzs_r_img" style="text-align:center">
+														{if $member.idcart_1 neq ''}
+															<img id="idimg" width="209" height="144" src="/Public/images/register/waitpic.gif" onclick="loadlayer('idimg','idcart_1');" style="cursor: pointer;"/>
+														{else}
+															<img id="idimg" width="209" height="144" src="{$proofdata.0.imageurl}" onclick="loadlayer('idimg','idcart_1');" style="cursor: pointer;">
+														{/if}
+														身份证（正）
+													</div>
+													<div class="gzzs_r_lj">
+														<div style="float:left;height:16px;padding-top:1px;">
+															<input type='hidden' name="idcart_1" id="idcart_1" value='{$proofdata.0.imageurl}' >
+															<a style="font-size:12px;cursor: pointer;" onclick="loadlayer('idimg','idcart_1');" >【上传】</a>
+															<a style="font-size:12px;cursor: pointer;" onclick="delurl('idimg','idcart_1');" >【删除】</a>
+														</div>
+													</div>
+												</div>
+												<div class="content_sws_nr_right_b_gzzs_r" style="text-align:center">
+													<div class="gzzs_r_img" style="margin-left:10px;">
+														{if $member.idcart_2 neq ''}
+															<img id="idimg2" width="209" height="144" src="/Public/images/register/waitpic.gif"  onclick="loadlayer('idimg2','idcart_2');" style="cursor: pointer;"/>
+														{else}
+															<img id="idimg2" width="209" height="144" src="{$proofdata.1.imageurl}"  onclick="loadlayer('idimg2','idcart_2');" style="cursor: pointer;">
+														{/if}
+														身份证（反）
+													</div>
+													<div class="gzzs_r_lj">
+														<div style="float:left;height:16px;padding-top:1px;">
+															<input type='hidden' name="idcart_2" id="idcart_2" value='{$proofdata.1.imageurl}' />
+															<a style="font-size:12px;cursor: pointer;" onclick="loadlayer('idimg2','idcart_2');" >【上传】</a>
+															<a style="font-size:12px;cursor: pointer;" onclick="delurl('idimg2','idcart_2');" >【删除】</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+											<div class="content_sws_nr_right_b_lxr_bm"><span id="images"></span></div>
+										</li>
+										<li>
+											<div class="content_sws_nr_right_b_rbcfh">
+												<input type="submit" name="submit" value="保  存" class="btn"/>
+											</div>
+										</li>
+									</ul>	
+								</div>				
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{include file="Public/footer.html" }
+	
+<script type="text/javascript">
+
+	/* 图片上传 */
+	var closedlayerfunc = function(upimgid,imgurls){
+		var  savesrc = window.frames["jbox-iframe"].document.getElementById("savedata").value;
+		$("#"+upimgid).attr("src",savesrc);
+		$("#"+imgurls).val(savesrc);
+		return true;
+	}
+
+	function loadlayer(upimgid,imgurls){
+		
+		$.jBox("iframe:/Uploadfile/upload/", {
+			title: "上传图片",
+			width: 500,
+			height: 350,
+			showClose: false,
+			buttons: { '确定': 1 ,'取消':2},
+			submit:function(v,h,f){
+				if(v==1){
+					closedlayerfunc(upimgid,imgurls);
+				}else if(v==2){
+					delurl_t(upimgid,imgurls);
+					return true;
+				}else{
+					alert("出错了，Sorry ~");
+				}
+			}
+		});
+	}
+	//删除图片
+	function delurl(upimgid,imgurls){
+		if(confirm('您真的要删除这张吗?')){
+			var srcurl=$("#"+upimgid).attr("src");
+			
+			$.ajax({
+				type: "POST",
+				url: "/Uploadfile/imgdel/",
+				data: "imgurl="+srcurl,
+				success: function(msg){
+				//alert(msg);
+					if(msg==1 || msg==2){
+						$("#"+upimgid).attr("src","__PUBLIC__/images/zanwu.jpg");
+						$("#"+imgurls).attr('value',"__PUBLIC__/images/zanwu.jpg");
+						alert('删除成功');
+					}else{
+						alert('删除失败');
+					}
+				}
+			});
+		}
+	}
+	/*删除图片，未保存时*/
+	function delurl_t(upimgid,imgurls){
+
+		var  up_src = window.frames["jbox-iframe"].document.getElementById("savedata").value;
+		if(up_src){
+			$.ajax({
+				type: "POST",
+				url: "/Uploadfile/imgdel/",
+				data: "imgurl="+up_src,
+				success: function(msg){
+					if(msg==1 || msg==2){
+						return true;
+					}else{
+						return false;
+					}
+				}
+			});
+		}
+	}
+
+</script>

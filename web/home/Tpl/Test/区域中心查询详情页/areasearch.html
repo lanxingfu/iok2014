@@ -1,0 +1,141 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Index/top.html'}
+<link href="/public/style/home/areasearch.css" rel="stylesheet" />
+<div class="zs_rjym_box">
+	<div class="zs_rjym_nr">
+    	<div class="zs_rjym_top">
+        	<div class="zs_rjym_top_t">{$headnav}</div>
+        </div>
+        <div class="zs_rjym_conter">
+        	<div class="zs_rjym_conter_left">
+            	<div class="zs_rjym_conter_left_top">
+                	<div class="zs_rjym_conter_left_top_nr">
+                    	<div class="zs_rjym_conter_left_top_nr_t">
+                        	<div class="zs_rjym_conter_left_top_nr_tbt">
+                                <h3>{$nav}</h3>
+							</div>
+                            <ul class="zs_rjym_conter_left_top_nr_ta">
+								<foreach name="xiaji" item="v">
+									<li><a href="/Invest/areasearch/areaid/{$v['areaid']}">{$v['areaname']}</a></li>
+								</foreach>
+							</ul>
+                        </div>		
+						<div class="zs_rjym_conter_left_top_nr_c">
+							<h4>{$areadata['areaname']}{$areadata['areatype']}</h4>
+							<div class="zs_rjym_conter_left_top_nr_ctext">
+								<empty name="areadata.memdata">
+									<div class="null">
+										抱歉，您所查询的区域暂时没有{$areadata['areatype']}，如果您想了解更多详细信息，可以电话直接与我们进行沟通，或者通过下面的留言栏联系我们。<br/>
+										咨询热线：400－888－8810<br/>
+										留　　言：<a href="/Invest/guestbook" target="_blank">（点击留言）</a>
+									</div>
+								<else />
+									<p>联系人： </p>
+									<p>性　别： <eq name="areadata['memdata']['gender']" value="1">男<else/>女</eq></p>
+									<p>电　话：  </p>
+									<!--<p>手　机： </p>-->
+									<p>Q　&nbsp;Q： </p>
+									<p>邮　箱：  </p>
+									<p>地　址：  </p>
+								</empty>
+							</div>
+						</div>					
+						<if condition="(($areadata['trade'] eq 1) OR ($areadata['trade'] eq 2) OR ($areadata['trade'] eq 3) OR ($areadata['trade'] eq 4) OR ($areadata['trade'] eq 5) OR ($areadata['trade'] eq 6)) and ($zsareaid neq 1) and ($zsareaid neq 2) and ($zsareaid neq 9) and ($zsareaid neq 22)">
+							<div class="zs_rjym_conter_left_top_nr_b">
+								<h4>
+									{$areadata['areaname']}<if condition="($areadata['trade'] eq 1) OR ($areadata['trade'] eq 2) OR ($areadata['trade'] eq 3)">市级管理中心<elseif condition="($areadata['trade'] eq 4) OR ($areadata['trade'] eq 5) OR ($areadata['trade'] eq 6)" />区/县级业务中心</if>
+								</h4>
+								<ul class="zs_rjym_conter_left_top_nr_bli">
+									<empty name="qumoredata">
+										<div class="null">
+											抱歉，您所查询的区域暂时没有
+											<if condition="($areadata['trade'] eq 1) OR ($areadata['trade'] eq 2) OR ($areadata['trade'] eq 3)">								
+												市级管理中心。
+											<elseif condition="($areadata['trade'] eq 4) OR ($areadata['trade'] eq 5) OR ($areadata['trade'] eq 6)" />
+												区/县级业务中心。
+											</if>
+										</div>
+									<else />
+										<foreach name="qumoredata" item="v">
+											<li>
+												<h5>
+												<if condition="($areadata['trade'] eq 4) OR ($areadata['trade'] eq 5) OR ($areadata['trade'] eq 6)">								
+													{$areadata['areaname']}/
+												</if>
+												{$v.areaname}</h5>
+												<p>联系人： </p>
+												<p>性　别： <eq name="v['gender']" value="1">男<else/>女</eq></p>
+												<p>电　话：  </p>
+												<!--<p>手　机：</p>-->
+												<p>Q　&nbsp;Q：  </p>
+												<p>邮　箱：  </p>
+												<p>地　址：  </p>
+											</li>
+										</foreach>
+									</empty>
+								</ul>
+							</div>
+						</if>
+                    </div>
+                </div>
+            </div>
+            <div class="zs_rjym_conter_right">
+            	<div class="content_bottom_nr_qdzs_cxqy">
+                    <ul class="content_b_n_qdzs_cxqy_n">
+                        <li>
+                            <h3><img src="/Public/image/zs_tubiao_7.png" alt="" /><span>区域管理中心 查询</span></h3>
+                            <div class="content_b_n_qdzs_cxqy_glzx">
+								<form method="post" action="/Invest/areasearch" name="saveData">
+									<select name="areaid">
+										<option>请选择查询城市</option>
+										<foreach name="areadiqu" item="v">
+											<option value="{$v.areaid}" <if condition="$v.areaid eq $areaid">selected</if>>{$v.areaname}</option>
+										</foreach>
+									</select>
+									<p style="display:none;"><input type="submit" id="_submit_"></p>
+									<p><a href="javascript:void(0);" onclick="DQ('_submit_').click();"><img src="/Public/image/zs_tubiao_9_1.png" alt="" /></a></p>
+								</form>
+                            </div>
+                        </li>
+						<li>
+                            <h3><img src="/Public/image/zs_tubiao_8.png" alt="" /><span>商务服务站/商务代表 查询</span></h3>
+                            <div class="content_b_n_qdzs_cxqy_glzx">
+								<form method="post" action="/Invest/represearch" name="saveData2">
+									<select name="areaid">
+										<option>请选择查询城市</option>
+										<foreach name="areadiqu" item="v">
+											<option value="{$v.areaid}" <if condition="$v.areaid eq $repareaid">selected</if>>{$v.areaname}</option>
+										</foreach>
+									</select>
+									<p style="display:none;"><input type="submit" id="_submit2_"></p>
+									<p><a href="javascript:void(0);" onclick="DQ('_submit2_').click();"><img src="/Public/image/zs_tubiao_9.png" alt="" /></a></p>
+								</form>
+                            </div>
+                        </li>
+                    </ul>
+            	</div>
+                <div class="zs_rjym_conter_right_lb">
+                	<div class="content_bottom_nr_zszx_reght">
+                        <div class="content_bottom_nr_zszx_rtt">
+                            <h3>推荐资讯</h3>
+                            <!--<p><a href="#" target="_blank">MORE&gt;</a></p>-->
+                        </div>
+                        <ul class="content_bottom_nr_zszx_rbt">
+							<empty name="news_list">
+								<li>暂无推荐资讯</li>
+							<else />
+								<foreach name="news_list" item="v">
+									<li><a href="__APP__/News/show/itemid/{$v.itemid}" target="_blank" title="{$v.title}">{$v.title}</a></li>
+								</foreach>
+							</empty>
+                        </ul>
+                	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{include file='Public/footer.html'}

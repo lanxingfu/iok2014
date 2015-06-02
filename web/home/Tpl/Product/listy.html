@@ -1,0 +1,113 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Public/home_top.html'}
+<link href="/public/style/home/gy_qbcp.css" rel="stylesheet" />
+
+<div style="margin:0 auto;width:1000px;">
+	<div class="gy_qbcp">
+		<div class="qglby_box">
+			<div class="qglby_nr">
+				<div class="qglby_top">
+					<div class="zxejym_conter_nr_top" style="border-bottom:none;"><strong><a href="/Product">产品</a></strong>{$nav}</div>
+					<ul class="qglby_top_b">
+						{foreach from=$sonlist item=son}
+						<li><a href="/Product/listy/catid/{$son.id}" class="c_7">{$son.prettyname}</a></li>
+						{/foreach}
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		<div class="gy_qbcp_left_box">
+			{if $list}
+			<div class="gy_qbcp_left">
+				<div class="gy_qbcp_left_top">
+					<div class="gy_qbcp_left_top_l">
+						<h3>所有产品</h3>
+					</div>
+					<div class="gy_qbcp_left_top_r">
+						<a href="/Product/listy/catid/{$cateid}/sortby/price/orderby/{$orderby}">价格
+						{if $sortby eq 'price'}{if $orderby eq 'asc'}<img src="/Public/image/home/product/gy_qbcp_2.png" alt="" />{else}
+						<img src="/Public/image/home/product/qglby_img_1.png" alt="" />{/if}{/if}</a>
+						<a href="/Product/listy/catid/{$cateid}/sortby/sales/orderby/{$orderby}">销量
+						{if $sortby eq 'sales'}{if $orderby eq 'asc'}<img src="/Public/image/home/product/gy_qbcp_2.png" alt="" />{else}
+						<img src="/Public/image/home/product/qglby_img_1.png" alt="" />{/if}{/if}</a>
+						<a href="/Product/listy/catid/{$cateid}/sortby/goodcomment/orderby/{$orderby}">好评度</a>
+						<a href="/Product/listy/catid/{$cateid}/sortby/updatetime/orderby/{$orderby}">更新时间</a>
+					</div>
+				</div>
+				<div class="gy_qbcp_left_nr">
+				{foreach from=$list item=l}
+					<div class="gy_qbcp_left_nr_one">
+						<div class="gy_qbcp_left_nr_left">
+							<div class="gy_qbcp_left_nr_left_l">
+								<a href="/Product/show/itemid/{$l.id}"><img src="{$l.thumb}" alt="" /></a>
+							</div>
+							<div class="gy_qbcp_left_nr_left_r">
+								<h4><a href="/Product/show/itemid/{$l.id}">{$l.title}</a></h4>
+								<p>最低起订量：{$l.moq}{$l.unit}</p>
+								<p>产地：{$l.placeareaid}</p>
+								<span>发货地：{$l.shipareaid}</span>
+							</div>
+						</div>
+						<div class="gy_qbcp_left_nr_right">
+							<div class="gy_qbcp_left_nr_right_l">
+								<p>单价：<strong>￥{$l.price}</strong> /{$l.unit}</p>
+								<p><span><img src="/Public/image/home/product/gy_qbcp_3.png" /></span>我行网认证企业</p>
+								<p><span><img src="/Public/image/home/product/gy_qbcp_4.png" /></span>实地认证企业</p>
+								<p><span><img src="/Public/image/home/product/gy_qbcp_5.png" /></span>莱茵认证企业</p>
+							</div>
+							<div class="gy_qbcp_left_nr_right_r">
+								<p>库存：<strong>{$l.inventory}</strong> {$l.unit}</p>
+								<p>人气：{$l.hits}</p>
+								<p><a href="#">详情</a></p>
+							</div>
+						</div>
+					</div>
+				{/foreach}
+				</div>
+			</div>
+			{else}
+			<span class="zanwu">对不起，没有检索到您想要找的商品！ 试试 <a href="/Product" style="color:#30C">查看更多的商品</a> 有没有您要找的宝贝 O(∩_∩)O~</span>
+			{/if}
+			<div id="pages">{$showpage}</div>
+		</div>
+		<div class="qglby_conter_right">
+            	<div class="qglby_conter_right_top">
+                	<h3>同类推荐</h3>
+                    <!--<a target="_blank"href="#">MORE&gt;</a>-->
+                </div>
+					{if $hotlist}
+					<ul class="qglby_conter_right_bot">
+						{foreach from=$hotlist item=hot}
+							<li>
+								<div class="qglby_conter_right_bot_img">
+									<a href="/Product/show/itemid/{$hot.id}">{if $hot.thumb}<img src="{$hot.thumb}" alt="{$hot.title}">{else}<img src="/Public/image/zanwu.jpg">{/if}</a>
+								</div>
+								<h4><a href="/Product/show/itemid/{$hot.id}">{$hot.title}</a></h4>
+								<p>单价：<span>&yen;{$hot.price}</span>{if $hot.unit}{$hot.unit}{else}件{/if}</p>								
+							</li>
+						{/foreach}
+					</ul>
+					{else}
+					<span class="zanwuj">暂无热销产品</span>
+					{/if}
+            </div>
+	</div>
+</div>
+<script>
+	//立即购买
+	function nowbuy(id,num){
+		var islogin = "{$_SESSION['userdata']['userid']}";
+		if(!islogin){
+			alert('您当前还未登录，请登录后继续购买');
+			window.location='/Public/login/';
+		}else{
+			window.location='/Product/order/itemid/'+id+'/num/'+num;
+		}
+		
+	}
+</script>
+
+{include file='Public/footer.html'}

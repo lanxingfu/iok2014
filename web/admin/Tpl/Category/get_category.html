@@ -1,0 +1,8 @@
+<script src="public/script/clienthint_ajax.js"></script>
+<select onchange="queryCity('?m=Category&a=get_category&catpid='+this.options[this.selectedIndex].value+'&n='+Math.random(),'{$catpid}',this.value,'网络传输错误','Please waite...')">
+	<option value='-1' selected>请选择分类</option>
+	{foreach from=$result item=row}	
+		<option value='{$row.id}'>{$row.prettyname}</option>
+	{/foreach}
+</select> 
+<span id='{$catpid}'></span>

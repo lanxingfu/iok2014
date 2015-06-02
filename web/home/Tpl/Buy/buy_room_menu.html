@@ -1,0 +1,9 @@
+<!-- menus -->
+<div id="wrapper">
+	<a href="/Buy/addbuy" {if $menus eq 1} class="navigation" {/if} > <span>( + )</span> 添加求购</a>
+	<a href="/Buy/published" {if $menus eq 2} class="navigation" {/if} >已上架({$buy_status['3']})<span></span></a>
+	<a href="/Buy/check" {if $menus eq 3} class="navigation" {/if} >审核中({$buy_status['2']})<span></span></a>
+	<a href="/Buy/notpass" {if $menus eq 4} class="navigation" {/if} >未通过({$buy_status['1']})<span></span></a>
+	<a href="/Buy/pastdue" {if $menus eq 5} class="navigation" {/if} >已下架({$buy_status['4']})<span></span></a>
+	<a href="/Order/iokbuy" >订单管理<span></span></a>
+</div>

@@ -1,0 +1,85 @@
+{include file="Public/header_room.html"}
+{include file="Public/room_top.html"}
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html" }
+			</div>
+			<!-- css -->
+			<link href="/public/style/home/room/account.css" rel="stylesheet" />
+			<!-- js -->
+			<div class="content_sws_nr_right" id="iframe_main">
+				<div class="content_sws_nr_right_lgrzl">
+					<div class="content_sws_nr_r_lgrzl_t">
+						{include file="Public/welcom.html" }
+					</div>
+				</div>
+				<ul class="content_sws_nr_right_t">
+					<li><a href="/Profile/passwd" class="navigation">登录密码</a></li>
+					<li><a href="/Profile/paypass/">支付密码</a></li>
+				</ul>
+				<div class="content_sws_nr_right_b">
+					<div class="content_sws_nr_right_b_dlmm">
+						<form name="passform" id='passform' action="/Profile/passwdsubmit">
+						<h2>登录密码</h2><div class="content_error" style="">{tip id='error' default=''}</div>
+						<div style="float:left;">
+						<ul class="content_sws_nr_right_b_dlmm_t">
+							<li>
+								<h3>原始登录密码</h3>
+								<div class="content_sws_nr_right_b_dlmm_tr">
+									<input type="password" name="oldpassword" value="" />
+									<p><span>*</span> 如要更改密码，需输入现有密码</p>
+								</div>
+							</li>
+							<li>
+								<h3>新登录密码</h3>
+								<div class="content_sws_nr_right_b_dlmm_tr">
+									<input type="password" name="newpassword" value="" />
+									<p><span>*</span> 不与原密码一样</p>
+								</div>
+							</li>
+							<li>
+								<h3>重复新登录密码</h3>
+								<div class="content_sws_nr_right_b_dlmm_tr">
+									<input type="password" name="cnewpassword" value="" />
+								</div>
+							</li>
+						</ul>
+						</div>
+						<div class="content_sws_nr_right_b_qiye_bcfh">
+							<input type='submit' name='submit' value='确认修改' onclick="javascript:changes('passform');" ></input>
+							<a onclick="javascript:window.location.href='{$_SERVER['HTTP_REFERER']}' ">返回</a>
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+{include file="Public/footer.html" }
+
+<script type="text/javascript">
+	/*function changes(formid){
+		var formval = $('#'+formid).serialize();
+		$.ajax({
+		   type: "POST",
+		   url: "/",
+		   data: formval,
+		   success: function(backdata){
+				if(backdata){
+					$.iokPlugin.alert(backdata);
+					$("input[name='oldpasswd']").val('');
+					$("input[name='newpasswdone']").val('');
+					$("input[name='newpasswdtwo']").val('');
+				}else{
+					$.iokPlugin.alert('修改失败~');
+					$("input[name='oldpasswd']").val('');
+					$("input[name='newpasswdone']").val('');
+					$("input[name='newpasswdtwo']").val('');
+				}
+		   }
+		});
+	}*/
+</script>

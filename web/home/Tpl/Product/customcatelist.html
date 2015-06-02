@@ -1,0 +1,135 @@
+{include file="Public/header_room.html"}
+{include file="Public/room_top.html"}
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html" }
+			</div>
+			<link href="/public/style/home/room/customcate.css" rel="stylesheet" />
+			<div class="content_sws_nr_right" id="iframe_main">
+				<div class="content_sws_nr_right_lgrzl">
+					<div class="content_sws_nr_r_lgrzl_t">
+								{include file="Public/welcom.html" }
+					</div>
+				</div>
+				<div class="content_sws_nr_right_b">
+					<div class="content_sws_nr_right_b_t">
+						{include file="Product/productmenu.html" }
+					</div>
+				
+					<div class="content_sws_nr_right_b_t_xjxz">
+						<table>
+							<tr class="xjxz_table_th">
+								<th class="xjxz_table_th_xk"><input type="checkbox" name = 'decideid' onclick="javascript:checkalls('cateid','decideid');" />全选</th>
+								<th class="xjxz_table_th_tp">排  序</th>
+								<th class="xjxz_table_th_spmc">名  称</th>
+								<th class="xjxz_table_th_tp">备  注</th>
+								<th >操作</th>
+							</tr>
+							{foreach $typelist as $vo}
+							<tr class="xjxz_table_td">
+								<td class="xjxz_table_th_xk">
+									<input type="checkbox" value="{$vo.id}" name="cateid">
+								</td>
+								<td class="xjxz_table_th_tp">
+									<input type="text" class="xjxz" style="width:40px;height:20px;" maxlength="4" id="list_{$vo.id}" name="order" value="{$vo.listorder}" />
+								</td>
+								<td class="xjxz_table_th_spmc">
+									<input type="text" class="xjxy" style="width:200px;height:20px;" maxlength="100" id="type_{$vo.id}" name="prettyname" value="{$vo.prettyname}" />
+								</td>
+								<td class="xjxz_table_th_tp">
+									<input type="text" class="xjxy" style="width:100px;height:20px;" maxlength="100" id="note_{$vo.id}" name="note" value="{$vo.note}" />
+								</td>
+								<td class="xjxz_table_th_tp_b">&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="mod({$vo.id})">保存</a></td>
+							</tr>
+							{/foreach}
+							<form action="/Product/customsubmit" method="post" name="form2">
+							<tr class="xjxz_table_td">
+								<td class="xjxz_table_th_xk">新分组</td>
+								<td class="xjxz_table_th_tp">
+									<input type="text" id="sort" name="listorder"  style="width:40px;height:20px;" maxlength="4" value="{$neworder}" />
+								</td>
+								<td class="xjxz_table_th_spmc">
+									<input type="text" id="name" name="prettyname" style="width:200px;height:20px;" maxlength="25" value="{$returndata.prettyname}"/>
+								</td>
+								<td class="xjxz_table_th_tp">
+									<input type="text" id="note" name="note" style="width:100px;height:20px;" maxlength="25" value="{$returndata.note}"/>
+								</td>
+								<td class="xjxz_table_th_tp_b">
+									<input type="submit" value='点击添加'>
+								</td>
+								
+							</tr>
+							</form>
+						</table>
+						<div class="content_sws_nr_right_b_t_spxq_b">
+							<div class="content_sws_nr_right_b_qiye_bcfh">
+								<a href="javascript:void(0)" {literal} onclick="Javascript:Moreval_s('cateid');" {/literal} >删  除</a>
+								<div class="content_error" style="">{tip id='vprettyname' default=''}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+</div>
+{include file="Public/footer.html" }
+
+<script type="text/javascript">
+function mod(id){
+var prettyname = $("#type_"+id).val();
+var listorder = $("#list_"+id).val();
+var note = $("#note_"+id).val();
+	$.ajax({
+		type: "POST",
+		url: "/Product/catesave",
+		data: "id="+id+"&prettyname="+prettyname+"&listorder="+listorder+"&note="+note,
+		success: function(msg){
+			if(msg=='保存成功！'){
+				alert( msg );
+			}else if(msg=='保存失败！'){
+				alert( msg );
+			}else if(msg=='分类已存在！'){
+				alert('分类已存在，请重命名！');
+			}else{
+				alert('操作失败，请刷新页面重试！');
+			}
+		}
+	});
+	
+}
+
+function Moreval_s(doom){
+	var dellist = document.getElementsByName(doom);
+	var delid = "";
+	for (var i = 0; i < dellist.length; i++){
+		if (dellist[i].checked){
+			delid += dellist[i].value + ",";
+		}
+	}
+	if(delid==''){
+		alert('请先选择分类！');
+		return false;
+	}
+	if(confirm('确定要删除吗？')){
+		$.ajax({
+			type: "POST",
+			url: "/Product/catedel/",
+			data: "idlist="+delid,
+			success: function(msg){
+				if(msg=='删除成功！'){
+					window.location ='/Product/customcatelist';
+				}else if(msg=='请选择要删除的分类！'){
+					alert('请选择要删除的分类！');
+				}else{
+					alert('删除失败了，请重试！');
+				}
+			}
+		});
+	}
+}
+
+</script>

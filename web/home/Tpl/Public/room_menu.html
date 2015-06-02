@@ -1,0 +1,117 @@
+<script type="text/javascript"> 
+jQuery(document).ready(function($)
+{
+	//$("#mymenu ul li").next("ul").hide(); 
+	$("#mymenu ul li").click(function()
+	{
+		$(this).next("ul").toggle(); 
+	});
+});
+</script> 
+
+<!-- menu -->
+<div id="mymenu">
+		{IF $smarty.session.member.gradeid|in_array:array(1,2,3,7,8,9)}
+			<!-- 企业 -->
+			<h2><img src="/public/image/public/httb_5.png" alt="" /><span>
+				<a href="/Company">我的商务室</a>
+			</span></h2>
+			<div class="content_sws_nr_left_xx">
+				<ul>
+				<li><h3>交易管理</h3></li>
+				<ul class="content_sws_nr_left_xx_a">
+						<li><a href="/Order/ioksell" >我是卖家</a></li>
+						<li><a href="/Order/iokbuy">我是买家</a></li>
+						<li><a href="/Order/evaluation">评价管理</a></li>
+						<li><a href="/Favorite/company">商品收藏</a></li>
+						<li><a href="/Brand/index">品牌管理</a></li>
+				</ul>
+				</ul>
+			</div>
+			<div class="content_sws_nr_left_xx">
+				<ul>
+				<li><h3>供应的产品</h3></li>
+					<ul class="content_sws_nr_left_xx_a">
+						<li><a href="/Product/addproduct">发布供应产品</a></li>
+						<li><a href="/Product/productlist" >出售中的产品</a></li>
+						<li><a href="/Product/check">审核中的产品</a></li>
+						<li><a href="/Product/nopass" >未通过的产品</a></li>
+						<li><a href="/Product/nosell" >已下架产品</a></li>
+						<li><a href="/Product/customcatelist" >产品分类</a></li>
+					</ul>
+				</ul>
+			</div>
+			<div class="content_sws_nr_left_xx">
+				<ul>
+				<li><h3>求购的产品</h3></li>
+				<ul class="content_sws_nr_left_xx_a">
+					<li><a href="/Buy/addbuy">发布求购产品</a></li>
+					<li><a href="/Buy/published">已发布的求购</a></li>
+					<li><a href="/Buy/check" >审核中的求购</a></li>
+					<li><a href="/Buy/notpass/" >未通过的求购</a></li>
+					<li><a href="/Buy/pastdue/" >过期求购</a></li>
+				</ul>
+				</ul>
+			</div>
+			<div class="content_sws_nr_left_xx">
+				<ul>
+				<li><h3>资料管理</h3></li>
+				<ul class="content_sws_nr_left_xx_a">
+					<li><a href="/Company/edit/way/one" >公司资料</a></li>
+					<li><a href="/Company/editcontact/way/two" >联系方式</a></li>
+					<li><a href="/Company/editintro/way/three" >公司介绍</a></li>
+					<li><a href="/Proof/edit/way/four">公司资质</a></li>				
+					<li><a href="/Address/companylist" >收货地址</a></li>
+					<li><a href="/Company/passwd" >密码管理</a></li>
+					<li><a href="/Member/companymessage/mestate/0">站内信</a></li>
+				</ul>
+				</ul>
+			</div>
+			<div class="content_sws_nr_left_xx">
+				<ul>
+				<li><h3>账号管理</h3></li>
+				<ul class="content_sws_nr_left_xx_a">
+					<li><a href="/Company/editbank" >对公账号设置</a></li>
+					<li><a href="/Accounts/record/action/0/menu/0" >资金明细</a></li>
+					<li><a href="/Accounts/index/action/0" >积分明细</a></li>
+				</ul>
+				</ul>
+			</div>
+		{else}
+			<!-- 个人 -->
+			<h2><img src="/public/image/public/httb_5.png" alt="" /><span>
+				<a href="/Profile">我的商务室</a>
+			</span></h2>
+			<div class="content_sws_nr_left_xx">
+				<ul>
+				<li><h3>交易管理</h3></li>
+				<ul class="content_sws_nr_left_xx_a">
+						<li><a href="/Order/buy">我是买家</a></li>
+						<li><a href="/Order/personpj">评价管理</a></li>
+						<li><a href="/Favorite/profile">商品收藏</a></li>
+				</ul>
+				</ul>
+			</div>
+			<div class="content_sws_nr_left_xx">
+				<ul>
+				<li><h3>资料管理</h3></li>
+				<ul class="content_sws_nr_left_xx_a">
+					<li><a href="/Profile/edit" >个人资料</a></li>
+					<li><a href="/Address/profilelist" >收货地址</a></li>
+					<li><a href="/Profile/passwd" >密码管理</a></li>
+					<li><a href="/Message/mesadd/type/1">站内信</a></li>
+				</ul>
+				</ul>
+			</div>
+			<div class="content_sws_nr_left_xx">
+				<ul>
+				<li><h3>账号管理</h3></li>
+				<ul class="content_sws_nr_left_xx_a">
+					<li><a href="/Profile/editbank" >个人帐号账号设置</a></li>
+					<li><a href="/Fund/index/action/0" >资金明细</a></li>
+					<li><a href="/Score/index/action/0" >积分明细</a></li>
+				</ul>
+				</ul>
+			</div>
+		{/if}
+</div>

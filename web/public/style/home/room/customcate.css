@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+/* 企业商务室 供应分类 */
+
+
+.content_sws_nr_right_b{width:751px; float:left;}
+.content_sws_nr_right_b_t{width:719px;height:30px; padding-left:11px; line-height:30px; font-family:"微软雅黑"; font-size:12px; float:left; padding-right:16px; background:#f6f7f8;}
+.content_sws_nr_right_b_t a{ float:left; padding-right:10px; padding-left:10px; display:inline; color:#006199;}
+.content_sws_nr_right_b_t a:hover{ color:#fff; text-decoration:none; background:#c80000;}
+.content_sws_nr_right_b_t a span{ color:#c80000;}
+
+.content_sws_nr_right_b_t a:hover span{ color:#fff;}
+.content_sws_nr_right_b_t .navigation{color:#fff;font-weight:bold;background:#c80000;}
+
+
+.content_sws_nr_right_b_t_dwy{width:742px; padding-left:7px; float:left; padding-top:12px;}
+.content_sws_nr_right_b_t_dwy_t{width:742px;height:24px; font-family:"微软雅黑"; font-size:12px; float:left; padding-bottom:14px;}
+.content_sws_nr_right_b_t_dwy_t select{height:24px;color:#6e6e6e;float:left; margin-right:12px; text-align:center; line-height:24px;}
+.content_sws_nr_right_b_t_dwy_t textarea{width:146px;height:22px; border:1px solid #b6b7b8; line-height:22px; float:left; margin-right:12px;}
+.content_sws_nr_right_b_t_dwy_t a{ float:left;width:51px;height:24px; line-height:24px; margin-right:12px; background:url(../images/httb_15.png) no-repeat; color:#fff; text-align:center;}
+.content_sws_nr_right_b_t_dwy_b{width:742px;height:24px;font-family:"微软雅黑"; font-size:12px; color:#6e6e6e; float:left;}
+.content_sws_nr_right_b_t_dwy_b li{width:154px; float:left; line-height:24px; height:24px;}
+.content_sws_nr_right_b_t_dwy_b li b{ font-weight:normal; float:left;}
+.content_sws_nr_right_b_t_dwy_b li textarea{width:43px;height:22px;border:1px solid #b6b7b8; line-height:22px; margin:0 4px; float:left;}
+.content_sws_nr_right_b_t_dwy_b li span{ color:#000; font-weight:bold; font-size:14px; float:left;}
+
+.content_sws_nr_right_b_t_xjxz{width:749px; float:left; padding-top:12px;}
+.content_sws_nr_right_b_t_xjxz table{ border-bottom:1px dashed #bfbfbf;width:749px; padding-bottom:6px;}
+.xjxz_table_th{width:743px;height:29px; float:left; background:#eef0f1; padding-left:6px;font-family:"微软雅黑"; font-size:12px; color:#006199; margin-bottom:13px;}
+.xjxz_table_th th{height:29px; line-height:29px; font-weight:normal;}
+.xjxz_table_th th.xjxz_table_th_xk{width:77px; float:left; border-right:2px solid #fff;}
+.xjxz_table_th th.xjxz_table_th_xk input{margin-right:4px;display:inline;}
+.xjxz_table_th th.xjxz_table_th_tp{width:173px; border-right:2px solid #fff; float:left;}
+.xjxz_table_th th.xjxz_table_th_spmc{width:146px; float:left;}
+.xjxz_table_td{width:743px;height:22px; float:left; margin-top:14px; padding-left:6px;font-family:"微软雅黑"; font-family:"Arial"; font-size:12px; color:#6e6e6e; margin-bottom:10px;}
+.xjxz_table_td td{ line-height:22px; text-align:center;}
+.xjxz_table_td td.xjxz_table_th_xk{width:77px; border-right:2px solid #fff; float:left;}
+.xjxz_table_td td.xjxz_table_th_xk input{height:22px;width:39px; margin:0 auto;}
+.xjxz_table_td td.xjxz_table_th_tp{width:173px; border-right:2px solid #fff; float:left;}
+.xjxz_table_td td.xjxz_table_th_tp textarea{height:22px; width:39px; margin:0 auto; text-align:center; line-height:22px;font-family:"微软雅黑";font-size:12px; color:#6e6e6e;}
+.xjxz_table_td td.xjxz_table_th_spmc{width:215px; border-right:2px solid #fff; float:left;}
+.xjxz_table_td td.xjxz_table_th_spmc textarea{width:197px;height:22px; line-height:22px; font-family:"微软雅黑";font-size:12px; color:#6e6e6e;}
+.xjxz_table_td td.xjxz_table_th_tp_b input{color:#FF0000;border:0px solid red;background-color:#FFFFFF;font-weight:bold;padding: 3px 3px 3px 8px;}
+
+/* 公用按钮部分 */
+.content_sws_nr_right_b_t_spxq_b{width:716px;height:24px; padding-top:10px; padding-left:33px; float:left;}
+.content_sws_nr_right_b_qiye_bcfh{width:459px;color:#6e6e6e;font-family:"微软雅黑"; font-size:12px;  line-height:22px; float:left; padding:15px 0 15px 7px;}
+.content_sws_nr_right_b_qiye_bcfh input{width:64px;height:24px; cursor: pointer;text-align:center; color:#ffffff; float:left; margin-right:19px; background:url(../../../image/public/room_but.png) no-repeat;}
+.content_sws_nr_right_b_qiye_bcfh a{width:64px;height:24px; cursor: pointer;text-align:center; color:#ffffff; float:left; margin-right:19px; background:url(../../../image/public/room_but.png) no-repeat;}
+

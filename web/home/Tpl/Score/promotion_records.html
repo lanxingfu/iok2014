@@ -1,0 +1,84 @@
+{include file="Public/header_room.html"}
+<!-- top -->
+{include file="Public/room_top.html"}
+<link href="__CSS__/home/sws_accounts.css" rel="stylesheet" />
+<link href="__CSS__/common.css" rel="stylesheet" />
+<link href="__CSS__/home/room/table_form.css" rel="stylesheet" />
+<script type="text/javascript" src="/Public/js/common.js"></script>
+<div class="content">
+	<div class="content_nr">
+		<div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html"}
+			</div>
+
+		<div class="content_sws_nr_right" id="iframe_main">
+			<div class="content_sws_nr_right_lgrzl">
+				<div class="content_sws_nr_r_lgrzl_t">
+					{include file="Public/welcom.html"}
+				</div>
+			</div>
+			<ul class="content_sws_nr_right_t" id="tabss">
+				<li><a href="/Score/index/action/0" {if $smarty.get.action eq 0}class="navigation"{/if} >积分记录</a></li>
+				<li><a href="/Score/index/action/1" {if $smarty.get.action eq 1}class="navigation"{/if} >推广记录</a></li>
+				<li><a href="/Score/index/action/2" {if $smarty.get.action eq 2}class="navigation"{/if} >推广赚积分</a></li>
+			</ul>
+				<div class="content_sws_nr_right_b" id="contentss">
+					<div class="content_sws_nr_right_b_dlmm">
+						<div class="pad-lr-10">
+						{if $list neq ''}
+						<div class="table-list" style="height:auto; width:100%">
+							<table id="checkList" class="table-list" width="100%" cellspacing="0" cellpadding="0">
+									<thead>
+										<tr class="row">
+										<th width="8">
+										</th>
+										<th width="45">
+										<a title="按照编号升序排列 " href="javascript:sortBy('listorder','1','delivery')">编号</a>
+										</th>
+										<th>
+										<a title="按照姓名升序排列 " href="javascript:sortBy('truename','1','delivery')">收入</a>
+										</th>
+										<th style="width:auto">
+										<a title="按照收货地址升序排列 " href="javascript:sortBy('address','1','delivery')">支出</a>
+										</th>
+										<th style="width:auto">
+										<a title="按照收货地址升序排列 " href="javascript:sortBy('address','1','delivery')">余额</a>
+										</th>
+										<th width="210 ">
+										<a title="按照添加时间升序排列 " href="javascript:sortBy('addtime','1','delivery')">发生时间</a>
+										</th>
+										<th width="120px" style="text-align:center;">事由</th>
+										<th width="120px" style="text-align:center;">备注</th>
+										</tr>
+										</thead>
+										<tbody>
+										{foreach $list as $vo}
+										<tr class="out" onmouseout="outs(event)" onmouseover="overs(event)">
+											<td>
+											</td>
+											<td>{$vo.id}</td>
+											<td>{if $vo.amount lt '0' }暂无{else}{$vo.amount}{/if}</td>
+											<td>{if $vo.amount gt '0' }暂无{else}{$vo.amount}{/if}</td>
+											<td>{if $vo.balance eq '' }暂无{else}{$vo.balance}{/if}</td>
+											<td>{if $vo.addtime eq '' }暂无{else}{$vo.addtime|date_format:'Y-m-d H:i:s'}{/if}</td>
+											<td>{$vo.reason}</td>
+											<td>{$vo.note}</td>
+										</tr>
+										{/foreach}
+									</tbody>
+								</table>
+						
+						</div>
+						<div id="pages">{$showpage}</div>
+						{else}
+						<div style="margin:10px auto;padding-top:15px;border:1px solid #bfbfbf;color:#bfbfbf;text-align:center;"><span>对不起，没有找到相应信息的推广记录！ </span></div>
+						{/if}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<include file="default:Public:footer" />

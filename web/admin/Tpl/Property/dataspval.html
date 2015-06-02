@@ -1,0 +1,6 @@
+<select name="prettynameid" >
+	{foreach from=$result item=row}
+		<option value='{$row.id}'>{$row.prettyname}</option>
+	{/foreach}
+</select> 
+<span id='{$categoryid}'></span>

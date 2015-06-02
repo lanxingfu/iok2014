@@ -1,0 +1,72 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Department/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- table -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title" style="margin-bottom:10px;">
+						<h5>部门管理 》部门列表</h5>
+						{include file="record.inc.htm"}
+					</div>
+					{include file="search.inc.htm"}
+					<!-- end box / title -->
+					<div class="table">
+						<table>
+							<thead>
+								<tr>
+									<th class="left">名称</th>
+									<th width="40">序号</th>
+									<th width="80">管理员</th>
+									<th width="140">添加时间</th>
+									<th width="60">操作</th>
+									<th class="selected last" width="40"><input type="checkbox" class="checkall" /></th>
+								</tr>
+							</thead>
+							<tbody>
+								{foreach item=val from=$rec}
+								<tr>
+									<td><a href="/iokadmin.php?m=Department&a=detail&id={$val['id']}">{$val['prettyname']}</a></td>
+									<td>{$val['listorder']}</td>
+									<td>{$val['leader']|default:'无'}</td>
+									<td>{$val['addtime']|date_format:'%Y-%m-%d %H:%M:%S'|default:'-'}</td>
+									<td>
+										{if $val['id'] eq '1'}
+										<span style="color:gray">编辑</span>
+										{else}
+										<a href="/iokadmin.php?m=Department&a=edit&id={$val['id']}">编辑</a>
+										{/if}
+									</td>
+									<td class="selected last">{if $val['id'] ne '1'}<input type="checkbox" name="id[]" value="{$val['id']}" />{/if}</td>
+								</tr>
+								{foreachelse}
+								<tr><td colspan="100%">没有记录</td></tr>
+								{/foreach}
+							</tbody>
+						</table>
+						<!-- pagination -->
+						{$page|default:''}
+						<!-- end pagination -->
+						<!-- table action -->
+						<div class="action">
+							<select id="action">
+								<option value="0">禁用</option>
+								<option value="1">启用</option>
+							</select>
+							<div class="button">
+								<input type="reset" value="执行操作" onclick="javascript:var ids = ischeckmore();alert(ids);" />
+							</div>
+						</div>
+						
+						<!-- end table action -->
+					</div>
+				</div>
+				<!-- end table -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

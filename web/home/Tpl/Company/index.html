@@ -1,0 +1,256 @@
+{include file="Public/header_room.html" }
+{include file="Public/room_top.html" }
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html" }
+			</div>
+			<!-- 加载单页面样式 -->
+			<link href="/public/style/home/room/companyindex.css" rel="stylesheet" />
+			
+			<div class="content_sws_nr_right" id="iframe_main">
+
+				<div class="content_sws_nr_right_l">
+				
+					<div class="content_sws_nr_right_lgrzl">
+						<div class="content_sws_nr_r_lgrzl_t">
+							{include file="Public/welcom.html" }
+						</div>
+						<div class="content_sws_nr_r_lgrzl_b">
+							<ul class="content_sws_nr_r_lgrzl_bl">
+								<li>公司名称：{$smarty.session.member.company}</li>
+								<li>
+									会员等级：
+										{if $smarty.session.member.gradeid eq 1}省级管理中心
+										{elseif $smarty.session.member.gradeid eq 2}市级管理中心
+										{elseif $smarty.session.member.gradeid eq 3}县级业务中心
+										{elseif $smarty.session.member.gradeid eq 7}企业会员
+										{elseif $smarty.session.member.gradeid eq 8}认证企业会员
+										{elseif $smarty.session.member.gradeid eq 9}双重认证企业会员
+										{else}
+											会员......
+										{/if}
+								</li>
+								<li>主营产品：{$companydata['business']|default:'暂无!'}</li>
+								<li style="width:400px;">经营地：{$companydata['areaid']}</li>
+							</ul>
+							<div class="content_sws_nr_r_lgrzl_br">
+							</div>
+						</div>
+					</div>
+					
+					<div class="content_sws_nr_right_lwdzj">
+						<div class="content_sws_nr_right_lwdzj_t">
+							<h4>我的资金</h4>
+							<p>账户余额:<span>{$companydata['totalmoney']}</span>元</p>
+						</div>
+						<ul class="content_sws_nr_right_lwdzj_b">
+							<li style="padding:0 29px"><a href="/Finance/transfer"><img src="/public/image/public/img_8.png" alt="" /></a></li>
+							<li style="padding:0 29px"><a href="/Finance/drawing"><img src="/public/image/public/img_9.png" alt="" /></a></li>
+							<li style="padding:0 29px"><a href="/Accounts/record/action/0"><img src="/public/image/public/img_10.png" alt="" /></a></li>
+						</ul>
+					</div>
+					<div class="content_sws_nr_right_lwdjy">
+						<div class="content_sws_nr_right_lwdjy_t">
+							<h4>我的交易<a href="/Mall/cart.html" style="width:100px;float:right;" target="_blank"><img src="/public/image/public/httb_8.png" style="display:inline;vertical-align: middle;width:20px;">&nbsp;&nbsp;购物车</a></h4>				
+						</div>
+						<div class="content_sws_nr_right_lwdjy_b">
+							<ul class="content_sws_nr_right_lwdjy_bl">
+								<li>
+									<h3>我是卖家</h3>
+									<div class="content_sws_nr_right_lwdjy_bla">
+										<a href="/Order/sell/auctionStatus/0">待确认订单（{$order_status['0']}）</a>
+										<a href="/Order/sell/auctionStatus/1">待买家付款（{$order_status['1']}）</a>
+										<a href="/Order/sell/auctionStatus/2">待发货（{$order_status['2']}）</a>
+										<a href="/Order/sell/auctionStatus/3">待买家收货（{$order_status['3']}）</a>
+										<a href="/Order/sell/auctionStatus/10">待买家收发票（{$order_status['10']}）</a>
+										<a href="/Order/sell/auctionStatus/4">待评价（{$order_status['4']}）</a>
+									</div>
+								</li>
+								<li>
+									<h3>我是买家</h3>
+									<div class="content_sws_nr_right_lwdjy_bla">
+										<a href="/Order/buy/auctionStatus/0">待卖家确认订单（{$orders_status['0']}）</a>
+										<a href="/Order/buy/auctionStatus/1">待付款订单（{$orders_status['1']}）</a>
+										<a href="/Order/buy/auctionStatus/2">待卖家发货订单（{$orders_status['2']}）</a>
+										<a href="/Order/buy/auctionStatus/3">待收货订单（{$orders_status['3']}）</a>
+										<a href="/Order/buy/auctionStatus/10">待收发票订单（{$orders_status['10']}）</a>
+										<a href="/Order/buy/auctionStatus/4">待评价（{$orders_status['4']}）</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="content_sws_nr_right_lgydcp">
+						<div class="content_sws_nr_right_lgydcp_t">
+							<h4>我供应的产品</h4>
+						</div>
+						<ul class="content_sws_nr_right_lgydcp_b">
+							<li><a href="/Supply/sell">已上架（{$mall_status['3']}）</a></li>
+							<li><a href="/Supply/check">审核中（{$mall_status['2']}）</a></li>
+							<li><a href="/Supply/nopass">未通过（{$mall_status['1']}）</a></li>
+							<li><a href="/Supply/nosell">已下架（{$mall_status['4']}）</a></li>
+						</ul>
+					</div>
+					<div class="content_sws_nr_right_lqgdcp">
+						<div class="content_sws_nr_right_lqgdcp_t">
+							<h4>我求购的产品</h4>
+						</div>
+						<ul class="content_sws_nr_right_lqgdcp_b">
+							<li><a href="/Need/sendedneed">已上架（{$buy_status['3']}）</a></li>
+							<li><a href="/Need/checkneed">审核中（{$buy_status['2']}）</a></li>
+							<li><a href="/Need/nopassneed">未通过（{$buy_status['1']}）</a></li>
+							<li><a href="/Need/outneed">已下架（{$buy_status['4']}）</a></li>
+						</ul>
+					</div>
+					<div class="content_sws_nr_right_ltjyy">
+						<div class="content_sws_nr_right_ltjyy_t">
+							<h4>我的应用</h4>
+							<a href="/App">更多&gt;&gt;</a>
+						</div>
+						<ul class="content_sws_nr_right_ltjyy_b">
+							<li>
+								<a href="/App"><img src="/public/image/public/img_wxy.png" alt="" /></a>
+								<a href="/App">我行游</a>
+							</li>
+						</ul>
+					</div>
+					<div class="content_sws_nr_right_ltjcp">
+						<div class="content_sws_nr_right_ltjcp_t">
+							<h4>推荐产品</h4>
+							<a href="/Mall">更多&gt;&gt;</a>
+						</div>
+						<ul class="content_sws_nr_right_ltjcp_b">
+						{if $love_mall neq ''}
+							{foreach $love_mall as $v}
+								<li>
+									<a href="/Mall/Show/itemid/{$v.itemid}"><img src="{$v.thumb}" alt="{$v.title}" /></a>
+									<a href="/Mall/Show/itemid/{$v.itemid}">{$v.title}</a>
+								</li>
+							{/foreach}
+						{elseif $love_buy neq ''}
+							{foreach $love_buy as $v}
+								<li>
+									<a href="/Buy/Show/itemid/{$v.itemid}"><img src="{$v.thumb}" alt="{$v.title}" /></a>
+									<a href="/Mall/Show/itemid/{$v.itemid}">{$v.title}</a>
+								</li>
+							{/foreach}
+						{else}
+							"暂无你喜欢的商品！快去寻找吧~~~";
+						{/if}
+			  
+						</ul>
+					</div>
+				</div>
+				<div class="content_sws_nr_right_r">
+						{if $represents neq ''}
+							<div class="content_sws_nr_right_r_swdbjj" style="padding-top:0px;height:196px">			
+								<h3>您的商务代表</h3>
+								<div class="content_sws_nr_right_r_swdbjj_b">
+									<div class="content_sws_nr_right_r_swdbjj_bt">
+										<div class="content_sws_nr_right_r_swdbjj_btl">
+											<img width="72" height="72"src="{$represent['headpic']|default:'/public/image/public/user.png'}" onerror="this.src='/public/image/public/user.png'" alt="头像" />
+										</div>
+										<div class="content_sws_nr_right_r_swdbjj_btr">
+											<ul style="width:142px;">
+											<li>姓名：{$represents['truename']|default:'暂无'}</li>
+											<li>
+												<span style="float:left;width:36px;">星级：</span>
+												<span style="height:13px;width:106px;float:left;">
+													{if $represent.star eq ''}
+													<img src="/public/image/public/xxx_0.png" alt="" />									
+													{else }
+													<img src="/public/image/public/xxx_{$represent['star']}.png" alt="" />
+													{/if}
+												</span>
+											</li>
+											<li style="height:13px;clear:both;">手机号码：{$represents['mobile']|default:'暂无'}</li>
+											</ul>
+										</div>
+									</div>
+									<div class="content_sws_nr_right_r_swdbjj_bb">
+										<p>电子邮件：<span style="width: 155px;overflow: hidden;float: right;" title="{$represents['email']|default:'暂无'}">{$represents['email']|default:'暂无'}</span></p>
+										<p>通讯地址：{$represents['address']|default:'暂无通讯地址'}</p>
+										<p>QQ：{$represents['qq']|default:'暂无'}</p>
+									</div>
+								</div>		
+							</div>
+						{else }
+							<div class="content_sws_nr_right_r_swdbjj" style="padding-top:0px;height:196px">			
+								<h3>您的商务代表</h3>
+								<div class="content_sws_nr_right_r_swdbjj_b">
+									<div class="content_sws_nr_right_r_swdbjj_bt">
+										<div class="content_sws_nr_right_r_swdbjj_btl">							
+											<img width="72" height="72" src="/public/image/public/iokkf2.png"  alt="头像" />
+										</div>
+										<div class="content_sws_nr_right_r_swdbjj_btr">
+											<ul style="width:142px;">
+											<li>姓名：我行网客服</li>
+											<br/>
+											<li style="height:13px;clear:both;"title="010-87162577">电话号码：010-87162577</li>
+											</ul>
+										</div>
+									</div>
+									<div class="content_sws_nr_right_r_swdbjj_bb">
+										<p>电子邮件：<span style="width: 155px;overflow: hidden;float: right;" title="service@iokokok.com">service@iokokok.com</span></p>
+									
+									</div>
+								</div>		
+							</div>
+						{/if}
+					<div class="content_sws_nr_right_r_gglb" style="float:left;height:auto;padding-bottom:3px;">
+						<div class="content_sws_nr_right_r_gglb_t">
+							<h4><img src="/public/image/public/httb_10.png" alt="" />告示</h4>
+						</div>
+						<ul class="content_sws_nr_right_r_gglb_b">
+							{foreach $announce as $v}
+							<li><a target="_blank" href="{$v.linkurl}">{$v.title|default:'暂无公告！'}</a></li>
+							{/foreach}
+						</ul>
+					</div>
+					<div class="content_sws_nr_right_r_ggw">
+						<a href="/App"><img src="/public/image/public/img_9.jpg" alt="" /></a>
+					</div>
+					<div class="content_sws_nr_right_r_cjyy">
+						<h4>常见应用</h4>
+						<ul class="content_sws_nr_right_r_cjyy_b">
+							<li><a href="/App">我行游</a></li>
+						</ul>
+					</div>
+					<div class="content_sws_nr_right_r_swbq">
+						<h2><img src="/public/image/public/httb_11.png" alt="" />&nbsp;&nbsp;商务便签</h2>
+						<div class="content_sws_nr_right_r_swbq_b">
+							<textarea   style="overflow-x:visible;overflow-y:visible; " id="mynote">{$smarty.session.member.mynote}</textarea>
+							<a href="#" onclick="addnote();"><img src="/public/image/public/httb_12.png" alt="" /></a>
+							<span>限1000字内</span>
+						</div>
+					</div>
+					{if $represents neq ''}
+					<div class="content_sws_nr_right_r_kfyx">
+						<img width="134px" src="/public/image/public/httb_13.png" alt="" />
+						<img width="168px" src="/public/image/public/httb_14.png" alt="" />
+					</div>
+					{/if}
+				</div>
+			</div>
+			{literal}
+			<script type="text/javascript">
+			function addnote()
+			{
+				$.post('/Member/addnote/',{mynote:$('#mynote').val()},function(d)
+				{
+					if(d=='PASS'){
+						$.iokPlugin.alert('设置成功');
+					}else{
+						$.iokPlugin.alert('请填写1-1000个字哦');
+					}
+				}		
+				)
+			}
+			</script>
+			{/literal}
+		</div>
+    </div>
+</div>
+{include file="Public/footer.html" }

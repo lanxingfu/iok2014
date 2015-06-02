@@ -1,0 +1,154 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,h1,h2,h3,h4,h5,h6,p,span,strong,b,i,input,textatea,ul,ol,li,select,label,tabel{ margin:0; padding:0;}
+li{ list-style:none;}
+img{ border:none;}
+a{ text-decoration:none;}
+
+
+
+/* F1 */
+.gyeq_cp_con_x{width:1000px; float:left;}
+.gyeq_cp_con_x_f1{width:1000px; float:left; padding-bottom:10px;}
+
+/* 公用标题 */
+.gyeq_cp_con_x_f1_top{width:1000px;height:28px; border-bottom:3px solid #c80000; background:#f2f2f2; float:left; line-height:28px;}
+.gyeq_cp_con_x_f1_top_l{ width:164px; float:left;}
+.gyeq_cp_con_x_f1_top_l span{ float:left; font-size:18px; font-family:"Arial"; color:#000; font-weight:bold; background:url(../../iamge/home/product/gyimg_6.png) no-repeat;width:45px;height:28px; text-align:center;}
+.gyeq_cp_con_x_f1_top_l h3{ float:left; font-family:"微软雅黑"; font-size:16px;}
+.gyeq_cp_con_x_f1_top_l h3 a{ color:#c80000;}
+.gyeq_cp_con_x_f1_top_l h3 a:hover{ color:#000; text-decoration:underline;}
+.gyeq_cp_con_x_f1_top_r{width:520px; float:right;}
+.gyeq_cp_con_x_f1_top_r_a{ float:left; font-size:12px; font-family:"微软雅黑";}
+.gyeq_cp_con_x_f1_top_r_a a{ color:#6e6e6e; background:url(../../iamge/home/product/tubiao.png) no-repeat right center; padding:0 8px;}
+.gyeq_cp_con_x_f1_top_r_a a:hover{ color:#aa0000; text-decoration:underline;}
+.gyeq_cp_con_x_f1_top_r span{ float:right; font-size:12px; font-family:"微软雅黑";}
+.gyeq_cp_con_x_f1_top_r span a{ color:#c80000; padding-right:12px; background:url(../../iamge/home/product/img_6.png) no-repeat right center;height:28px; float:left;}
+.gyeq_cp_con_x_f1_top_r span a:hover{ color:#000; text-decoration:underline;}
+
+
+/* 公用内容部分 */
+.gyeq_cp_con_x_f1_bottom{width:100%; float:left; padding-top:10px;}
+.gyeq_cp_con_x_f1_bottom_nr{width:998px; float:left; border:1px solid #dedede; border-bottom:none;}
+.gyeq_cp_con_x_f1_bottom_nr_img1{width:172px; float:left;border-right:1px solid #dedede;}
+.gyeq_cp_con_x_f1_bottom_nr_img1 a{width:172px;height:178px; float:left;border-bottom:1px solid #dedede;}
+.gyeq_cp_con_x_f1_bottom_nr_img1 a img{width:172px;height:178px;}
+.gyeq_cp_con_x_f1_bottom_nr_imgduli{width:138px; float:left; padding:0 13px;border-bottom:1px solid #dedede;}
+.gyeq_cp_con_x_f1_bottom_nr_imgduli_img{width:138px;height:297px; float:left;}
+.gyeq_cp_con_x_f1_bottom_nr_imgduli_img img{width:138px;height:297px;}
+.gyeq_cp_con_x_f1_bottom_nr_imgduli_text{width:138px;height:60px; float:left;}
+.gyeq_cp_con_x_f1_bottom_nr_imgduli_text a{width:100%; line-height:20px; float:left; font-family:"宋体"; font-size:12px; color:#666666;}
+.gyeq_cp_con_x_f1_bottom_nr_imgduli_text a:hover{ color:#a80000; text-decoration:underline;}
+.gyeq_cp_con_x_f1_bottom_nr_imgduli_text p{width:100%; float:left; font-family:"Verdana"; font-size:15px; color:#a80000;}
+.gyeq_cp_con_x_f1_bottom_nr_imgduli_text p span{ font-size:12px;}
+
+/* F1的内容部分 */
+.gyeq_cp_con_x_f1_bottom_nr_img3{width:661px; float:left; float:left;}
+.gyeq_cp_con_x_f1_bottom_nr_img3_t{width:494px;height:178px; float:left; border:1px solid #dedede; border-top:none;border-right:none; overflow:hidden; position:relative;}
+.gyeq_cp_con_x_f1_bottom_nr_img3_timg{width:494px;height:178px; float:left;}
+.gyeq_cp_con_x_f1_bottom_nr_img3_timg li{width:494px;height:178px; float:left;}
+.gyeq_cp_con_x_f1_bottom_nr_img3_timg li img{width:494px;height:178px;} 
+.gyeq_cp_con_x_f1_bottom_nr_img3_t_lh{height:6px; float:left; position:absolute; bottom:15px;*height:6px; left:168px; }
+.gyeq_cp_con_x_f1_bottom_nr_img3_t_lh a{width:50px;height:6px; display:inline-block; margin-right:6px; background:url(../../iamge/home/product/gycp_eq_1.png) no-repeat;}
+.gyeq_cp_con_x_f1_bottom_nr_img3_t_lh a:hover{ background:url(../../iamge/home/product/gycp_eq_2.png) no-repeat;}
+.gyeq_cp_con_x_f1_bottom_nr_img3_t_lh a.red_bg{background:url(../../iamge/home/product/gycp_eq_2.png) no-repeat;}
+.gyeq_cp_con_x_f1_bottom_nr_img3_xiimg{}
+.gyeq_cp_con_x_f1_bottom_nr_img3_xiimg li{width:132px;height:170px; float:left; padding:8px 16px 0; border-left:1px solid #dedede; border-bottom:1px solid #dedede;}
+.gyeq_cp_con_x_f1_bottom_nr_img3_xiimg_img{width:120px;height:110px; padding:0 6px; float:left;}
+.gyeq_cp_con_x_f1_bottom_nr_img3_xiimg_img img{width:120px;height:110px;}
+.gyeq_cp_con_x_f1_bottom_nr_img3_xiimg li h4{width:100%; line-height:20px; float:left; font-family:"宋体"; font-size:12px; font-weight:normal;}
+.gyeq_cp_con_x_f1_bottom_nr_img3_xiimg li h4 a{ color:#666666;}
+.gyeq_cp_con_x_f1_bottom_nr_img3_xiimg li h4 a:hover{ color:#a80000; text-decoration:underline;}
+.gyeq_cp_con_x_f1_bottom_nr_img3_xiimg li p{width:100%; float:left; font-family:"Verdana"; font-size:15px; color:#a80000;}
+.gyeq_cp_con_x_f1_bottom_nr_img3_xiimg li p span{ font-size:12px;}
+
+
+
+
+
+/* F2 */
+.gyeq_cp_con_x_f2_bottom_nr_img3{width:661px; float:left; float:left;}
+.gyeq_cp_con_x_f2_bottom_nr_img3_t{width:494px;height:178px; float:right; border:1px solid #dedede; border-top:none;border-left:none; overflow:hidden; position:relative;}
+.gyeq_cp_con_x_f2_bottom_nr_img3_timg{width:494px;height:178px; float:left;}
+.gyeq_cp_con_x_f2_bottom_nr_img3_timg li{width:494px;height:178px; float:left;}
+.gyeq_cp_con_x_f2_bottom_nr_img3_timg li img{width:494px;height:178px;} 
+.gyeq_cp_con_x_f2_bottom_nr_img3_t_lh{height:6px; float:left; position:absolute; bottom:15px;*height:6px; left:168px; }
+.gyeq_cp_con_x_f2_bottom_nr_img3_t_lh a{width:50px;height:6px; display:inline-block; margin-right:6px; background:url(../../iamge/home/product/gycp_eq_1.png) no-repeat;}
+.gyeq_cp_con_x_f2_bottom_nr_img3_t_lh a:hover{ background:url(../../iamge/home/product/gycp_eq_2.png) no-repeat;}
+.gyeq_cp_con_x_f2_bottom_nr_img3_t_lh a.red_bg{background:url(../../iamge/home/product/gycp_eq_2.png) no-repeat;}
+.gyeq_cp_con_x_f2_bottom_nr_img3_xiimg{}
+.gyeq_cp_con_x_f2_bottom_nr_img3_xiimg li{width:132px;height:170px; float:left; padding:8px 16px 0; border-right:1px solid #dedede; border-bottom:1px solid #dedede;}
+.gyeq_cp_con_x_f2_bottom_nr_img3_xiimg_img{width:120px;height:110px; padding:0 6px; float:left;}
+.gyeq_cp_con_x_f2_bottom_nr_img3_xiimg_img img{width:120px;height:110px;}
+.gyeq_cp_con_x_f2_bottom_nr_img3_xiimg li h4{width:100%; line-height:20px; float:left; font-family:"宋体"; font-size:12px; font-weight:normal;}
+.gyeq_cp_con_x_f2_bottom_nr_img3_xiimg li h4 a{ color:#666666;}
+.gyeq_cp_con_x_f2_bottom_nr_img3_xiimg li h4 a:hover{ color:#a80000; text-decoration:underline;}
+.gyeq_cp_con_x_f2_bottom_nr_img3_xiimg li p{width:100%; float:left; font-family:"Verdana"; font-size:15px; color:#a80000;}
+.gyeq_cp_con_x_f2_bottom_nr_img3_xiimg li p span{ font-size:12px;}
+
+
+
+
+
+
+/* 优质供应产品 */
+.gyeq_cp_con_x_yzgycp{width:100%; float:left; padding-bottom:10px;}
+.gyeq_cp_con_x_yzgycp_top{width:1000px;height:28px; border-bottom:3px solid #c80000; background:#f2f2f2; float:left; line-height:28px;}
+.gyeq_cp_con_x_yzgycp_top_l{ width:164px; float:left;}
+.gyeq_cp_con_x_yzgycp_top_l span{ float:left; font-size:18px; font-family:"Arial"; color:#000; font-weight:bold; background:url(../../iamge/home/product/gycp_eq_3.png) no-repeat;width:131px;height:28px; text-align:center;}
+.gyeq_cp_con_x_yzgycp_nr{width:999px; float:left; border-left:1px solid #dedede; margin-top:6px;}
+.gyeq_cp_con_x_yzgycp_nr li{width:170px; float:left;height:186px; padding:13px 14px 0; border:1px solid #dedede; border-left:none;}
+.gyeq_cp_con_x_yzgycp_nr_img{width:170px;height:128px; float:left;}
+.gyeq_cp_con_x_yzgycp_nr_img img{width:170px;height:128px;}
+.gyeq_cp_con_x_yzgycp_nr li h4{width:100%; line-height:26px; float:left; font-family:"宋体"; font-size:12px; font-weight:normal; text-align:center;}
+.gyeq_cp_con_x_yzgycp_nr li h4 a{ color:#666666;}
+.gyeq_cp_con_x_yzgycp_nr li h4 a:hover{color:#a80000; text-decoration:underline;}
+.gyeq_cp_con_x_yzgycp_nr li p{font-family:"Verdana"; font-size:15px; color:#666666;width:100%; line-height:26px; float:left; text-align:center;}
+.gyeq_cp_con_x_yzgycp_nr li p span{color:#a80000;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

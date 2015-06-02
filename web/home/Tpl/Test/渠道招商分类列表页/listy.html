@@ -1,0 +1,63 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Index/top.html'}
+<link href="/public/style/home/invest-listy.css" rel="stylesheet" />
+<div class="zxejym_conter">
+	<div class="zxejym_conter_nr">
+    	<div class="zxejym_conter_nr_top">{$nav}</div>
+        <div class="zxejym_conter_nr_content">
+        	<div class="zxejym_conter_nr_con_left">
+            	<ul class="zxejym_conter_nr_con_left_ul">
+                	<foreach name="data" item="v">
+						<li>
+							<p><a href="__APP__/Invest/show/itemid/{$v.itemid}">{$v.title}</a></p>
+							<span></span>
+						</li>
+					</foreach>
+                </ul>
+				<div id="pages">{$showpage}</div>
+            </div>
+				
+            <div class="zxejym_conter_nr_con_right">
+            	<div class="zxejym_conter_nr_con_r_top">
+                	<div class="zxejym_conter_nr_con_r_top_t">
+                    	<h4>推荐资讯</h4>
+                        <!--<span><a href="#">MORE&gt;</a></span>-->
+                    </div>
+                    <ul class="zxejym_conter_nr_con_r_top_li">
+						<empty name="news_list">
+							<li>暂无推荐资讯</li>
+						<else />
+							<foreach name="news_list" item="v">
+								<li><a href="__APP__/Invest/show/itemid/{$v.itemid}">{$v.title}</a></li>
+							</foreach>
+						</empty>   
+                    </ul>
+                </div>
+                <div class="zxejym_conter_nr_con_r_bo">
+                	<div class="zxejym_conter_nr_con_r_bo_top">
+                    	<h4>推荐图文</h4>
+                    </div>
+                    <ul class="zxejym_conter_nr_con_r_bo_b">
+						<empty name="img_list">
+							<li>暂无推荐图文</li>
+						<else />
+							<foreach name="img_list" item="v">
+								<li>
+									<div class="zxejym_conter_nr_con_r_bo_b_l">
+										<a href="__APP__/Invest/show/itemid/{$v.itemid}"><img src="{$v.thumb}" alt="" onError='this.src="/Public/images/zanwu.jpg"'/></a>
+									</div>
+									<p><a href="__APP__/Invest/show/itemid/{$v.itemid}">{$v.title}</a></p>
+								</li>
+							</foreach>
+						</empty>   
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+{include file='Public/footer.html'}

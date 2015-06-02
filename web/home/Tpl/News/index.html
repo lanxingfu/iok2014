@@ -1,0 +1,285 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Public/home_top.html'}
+<link href="/public/style/home/news.css" rel="stylesheet" />
+<script src="/public/script/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/public/script/SuperSlide/jquery.SuperSlide.2.1.js"></script>
+{literal}
+<style>
+.mainpp{
+width: 100%;
+height: 28px;
+font-family: "宋体";
+font-size: 12px;
+line-height: 28px;
+color: #1e1e1e;
+text-align: center;
+float: left;
+}
+</style>
+{/literal}
+<div class="zxxb_14">
+	<div class="zxxb_14_box">
+    	<div class="zxxb_sy">
+        	<div class="zxxb_sy_l">
+            	<div class="zxxb_sy_l_left">
+                	<div class="zxxb_sy_l_left_rdzx">
+                    	<div class="zxxb_sy_l_bt">
+                        	<h3>热点资讯</h3>
+                            <a href="#">更多…</a>
+                        </div>
+                        <div class="zxxb_sy_l_left_rdzx_nr">
+                        	<h6><a href="/News/show/itemid/{$hottop.id}">{$hottop.title}</a></h6>
+                            <ul class="zxxb_sy_l_left_rdzx_nr_list">
+							{foreach from=$hotlist item=hotl key=hotk}
+								{if $hotk eq 6}
+								<li style="border-bottom:none;"><a href="/News/show/itemid/{$hotl.id}">{$hotl.title}</a><span>{$hotl.addtime}</span></li>
+								{else}
+                            	<li><a href="/News/show/itemid/{$hotl.id}">{$hotl.title}</a><span>{$hotl.addtime}</span></li>
+								{/if}
+							{/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="zxxb_sy_l_left_gglht">
+                    	<div class="zxxb_sy_l_left_gglht_nr">
+                        	<div class="zxxb_sy_l_left_gglht_nr_img">
+								<ul>
+                            	<li><img src="public/image/news/zx_img_1.jpg" alt="" /><p class="mainpp">11111111111</p></li>
+                            	<li><img src="public/image/news/zx_img_1.jpg" alt="" /><p class="mainpp">22222222222222222</p></li>
+                            	<li><img src="public/image/news/zx_img_1.jpg" alt="" /><p class="mainpp">333333333333333</p></li>
+								</ul>
+							</div>
+							<ul class="img_lhtb">
+								<div class="hd">
+									<ul>
+										<li><a href="javascript:;">2</a></li>
+										<li><a href="javascript:;">2</a></li>
+										<li><a href="javascript:;">3</a></li>
+									 </ul>
+								</div>
+							</ul>
+                        </div>
+						<p></p>
+							{literal}<script type="text/javascript">jQuery(".zxxb_sy_l_left_gglht_nr").slide({mainCell:".zxxb_sy_l_left_gglht_nr_img ul",autoPlay:true});</script>{/literal}			
+                    </div>
+                    <div class="zxxb_sy_l_left_ztpd">
+                    	<div class="zxxb_sy_l_bt">
+                        	<h3>专题频道</h3>
+                            <a href="#">更多…</a>
+                        </div>
+                        <div class="zxxb_sy_l_left_ztpd_nr">
+                        	<div class="zxxb_sy_l_left_ztpd_nr_l">
+                            	<img src="public/image/news/zx_img_2.jpg" alt="" />
+                            </div>
+                            <div class="zxxb_sy_l_left_ztpd_nr_r">
+                            	<h4>双"蛋"活动即将开启</h4>
+                                <p>"双11"网上订车实际成交不足三成揭秘俄罗斯跨境网购：成人用品上演热水器市场明年500亿 电商渠道增长IDC预计今年全球PC市场萎缩10.1% &nbsp;&nbsp;<a href="#">[详情]</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zxxb_sy_l_left_ftsp">
+                    	<div class="zxxb_sy_l_bt">
+                        	<h3>访谈视频</h3>
+                            <a href="/News/video">更多…</a>
+                        </div>
+                        <div class="zxxb_sy_l_left_ftsp_nr">
+                        	<div class="video">
+                            	<img src="public/image/news/zx_img_3.jpg" alt="" />
+                            </div>
+                            <div class="zxxb_sy_l_left_ftsp_nr_r">
+                            	<h4>双"蛋"活动即将开启</h4>
+                                <p>2013全媒体营销峰会12月7日营销峰会深圳举办</p>
+                                <span>2013-11-12 北京</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zxxb_sy_l_left_zcfg">
+                    	<div class="zxxb_sy_l_bt">
+                        	<h3>政策法规</h3>
+                            <a href="#">更多…</a>
+                        </div>
+                        <div class="zxxb_sy_l_left_rdzx_nr">
+                        	<h6><a href="/News/show/itemid/{$zcfgtop.id}">{$zcfgtop.title}</a></h6>
+                            <ul class="zxxb_sy_l_left_rdzx_nr_list">
+								{foreach from=$zcfglist item=zcfg key=zcfgk}
+								{if $zcfgk eq 6}
+									<li style="border-bottom:none;"><a href="/News/show/itemid/{$zcfg.id}">{$zcfg.title}</a><span>{$zcfg.addtime}</span></li>
+								{else}
+									<li><a href="/News/show/itemid/{$zcfg.id}">{$zcfg.title}</a><span>{$zcfg.addtime}</span></li>
+                             {/if}
+								{/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="zxxb_sy_l_right">
+                	<div class="zxxb_sy_l_right_wxsd">
+                    	<div class="zxxb_sy_l_bt">
+                        	<h3>我行视点</h3>
+                            <a href="/News/video">更多…</a>
+                        </div>
+                        <div class="zxxb_sy_l_right_wxsd_nr">
+                        	<div class="zxxb_sy_l_left_ztpd_nr">
+                                <div class="zxxb_sy_l_left_ztpd_nr_l">
+                                    <img src="{$wxsdtop.thumb}" alt="" />
+                                </div>
+                                <div class="zxxb_sy_l_left_ztpd_nr_r">
+                                    <h4>{$wxsdtop.title}</h4>
+                                    <p>{$wxsdtop.introduce}&nbsp;&nbsp;<a href="/News/show/itemid/{$wxsdtop.id}">[详情]</a></p>
+                                </div>
+                            </div>
+                            <ul class="zxxb_sy_l_right_wxsd_nr_li">
+								{foreach from=$wxsdlist item=wxsd}
+									<li><a href="/News/show/itemid/{$wxsd.id}">{$wxsd.title}</a></li>
+								{/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="zxxb_sy_l_right_yjbg">
+                    	<div class="zxxb_sy_l_bt">
+                        	<h3>研究报告</h3>
+                            <a href="#">更多…</a>
+                        </div>
+                        <div class="zxxb_sy_l_right_wxsd_nr">
+                        	<div class="zxxb_sy_l_left_ztpd_nr">
+                                <div class="zxxb_sy_l_left_ztpd_nr_l">
+                                    <img src="{$yjbgtop.thumb}" alt="" />
+                                </div>
+                                <div class="zxxb_sy_l_left_ztpd_nr_r">
+                                    <h4>{$yjbgtop.title}</h4>
+                                    <p>{$yjbgtop.introduce}&nbsp;&nbsp;<a href="/News/show/itemid/{$yjbgtop.id}">[详情]</a></p>
+                                </div>
+                            </div>
+                            <ul class="zxxb_sy_l_right_wxsd_nr_li">
+								{foreach from=$yjbglist item=yjbg}
+									<li><a href="/News/show/itemid/{$yjbg.id}">{$yjbg.title}</a></li>
+								{/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="zxxb_sy_l_right_tjzh">
+                    	<div class="zxxb_sy_l_bt">
+                        	<h3>推荐展会</h3>
+                            <a href="#">更多…</a>
+                        </div>
+                        <ul class="zxxb_sy_l_right_tjzh_nr">
+							{foreach from=$tjzhtop item=tjzh}
+                        	<li>
+                            	<div class="zxxb_sy_l_right_tjzh_nr_one">
+                                	<div class="zxxb_sy_l_right_tjzh_nr_one_l">
+                                    	<img width="116" height="86" src="{$tjzh.thumb}" alt="" />
+                                    </div>
+                                    <div class="zxxb_sy_l_right_tjzh_nr_one_r">
+                                    	<p>{$tjzh.title}</p>
+                                        <span>{$tjzh.introduce}</span>
+                                    </div>
+                                </div>
+                        </li>
+							{/foreach}
+                            <li>
+                            	<div class="zxxb_sy_l_right_tjzh_nr_two">
+									{foreach from=$tjzhlist item=tjzhl}
+                                	<a href="/News/show/itemid/{$tjzhl.id}">{$tjzhl.title}</a>
+									{/foreach}
+                                    
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="zxxb_sy_l_right_swzn">
+                    	<div class="zxxb_sy_l_bt">
+                        	<h3>商务指南</h3>
+                            <a href="#">更多…</a>
+                        </div>
+                        <div class="zxxb_sy_l_right_swzn_nr">
+                        	<h6><a href="/News/show/itemid/{$swzntop.id}">{$swzntop.title}</a></h6>
+                            <ul class="zxxb_sy_l_right_swzn_nr_list">
+								{foreach from=$swznlist item=swzn}
+									<li><a href="/News/show/itemid/{$swzn.id}">{$swzn.title}</a></li>
+								{/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="zxxb_sy_r">
+            	<div class="zxxb_sy_r_wzk">
+                	<div class="zxxb_sy_r_wzk_top">
+                    	<h3>微周刊</h3>
+						<ul class="zxxb_sy_r_wzk_t_lh">
+							<div class="hd">
+								<ul>
+									<li><a href="javascript:;"></a></li>
+									<li><a href="javascript:;"></a></li>
+									<li><a href="javascript:;"></a></li>
+								 </ul>
+							</div>
+						</ul>
+                  </div>
+                    <div class="zxxb_sy_r_wzk_img">
+						<ul>
+							<li><img src="public/image/news/zx_img_4.jpg" alt="" /></li>
+							<li><img src="public/image/news/zx_img_4.jpg" alt="" /></li>
+							<li><img src="public/image/news/zx_img_4.jpg" alt="" /></li>
+						</ul>
+                    </div>	
+                </div>
+				{literal}<script type="text/javascript">jQuery(".zxxb_sy_r_wzk").slide({mainCell:".zxxb_sy_r_wzk_img ul",autoPlay:true});</script>		{/literal}
+                <div class="zxxb_sy_r_sjzx">
+                	<div class="zxxb_sy_l_bt">
+                        <h3>数据中心</h3>
+                        <a href="#">更多…</a>
+                    </div>
+                    <div class="zxxb_sy_r_sjzx_nr">
+                    	<img src="public/image/news/zx_img_5.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="zxxb_sy_r_sczs">
+                	<div class="zxxb_sy_l_bt">
+                        <h3>市场走势</h3>
+                        <a href="#">更多…</a>
+                    </div>
+                    <div class="zxxb_sy_r_sczs_nr">
+                    	<div class="zxxb_sy_r_sczs_nr_top">
+                        	<div class="zxxb_sy_r_sczs_nr_t_img">
+                            	<img src="{$sczstop.thumb}" alt="" />
+                            </div>
+                            <h4>{$sczstop.title}</h4>
+                        </div>
+                        <ul class="zxxb_sy_r_sczs_nr_list">
+							{foreach from=$sczslist item=sczs}
+								<li><a href="/News/show/itemid/{$sczs.id}">{$sczs.title}</a></li>
+							{/foreach}
+                        </ul>
+                    </div>
+                </div>
+                <div class="zxxb_sy_r_mthz">
+                	<div class="zxxb_sy_l_bt">
+                        <h3>媒体合作</h3>
+                        <a href="#">更多…</a>
+                    </div>
+                    <div class="zxxb_sy_r_mthz_nr">
+                    	<div class="zxxb_sy_r_mthz_nr_t">
+                        	<div class="zxxb_sy_r_mthz_nr_t_img">
+                            	<img src="{$mthztop.imageurl}" alt="" />
+                            </div>
+                            <div class="zxxb_sy_r_mthz_nr_t_r">
+                            	<h4>{$mthztop.title}</h4>
+                                <p>{$mthztop.content} &nbsp;&nbsp;<a href="http://{$mthztop.linkurl}" target="_blank">[详情]</a></p>
+                            </div>
+                        </div>
+                        <ul class="zxxb_sy_r_mthz_nr_list">
+							{foreach from=$mthzlist item=mthz}
+								<li><a href="http://{$mthz.linkurl}" target="_blank">{$mthz.title}</a></li>
+							{/foreach}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{include file='Public/footer.html'}

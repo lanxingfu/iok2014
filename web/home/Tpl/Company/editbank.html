@@ -1,0 +1,69 @@
+{include file="Public/header_room.html" }
+{include file="Public/room_top.html" }
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html" }
+			</div>
+			<!-- css -->
+			<link href="/public/style/home/room/account.css" rel="stylesheet" />
+			<script type="text/javascript" src="/public/script/base.js"></script><!-- 地区 -->
+
+			<div class="content_sws_nr_right" id="iframe_main">
+				<div class="content_sws_nr_right_lgrzl">
+					<div class="content_sws_nr_r_lgrzl_t">
+						{include file="Public/welcom.html" }
+					</div>
+				</div>
+				<ul class="content_sws_nr_right_t">
+					<li><a href="/Finance/transfer">转账</a></li>
+					<li><a href="/Finance/drawing">提现</a></li>
+					<li><a class="navigation" href="/Company/editbank" >对公账号设置</a></li>
+				</ul>
+				<div class="content_sws_nr_right_b">
+					<div class="content_sws_nr_right_b_dlmm">
+						<form name="creator" id='passform' action="/Company/submitbank" method="POST" >
+						<h2>对公账号：</h2>
+						<ul class="content_sws_nr_right_b_dlmm_t">
+							<li>
+								<h3>开户行{$data_acc.bankname}</h3>
+								<div class="content_sws_nr_right_b_dlmm_tr">
+								<input name="bankname" id="bankname" type="text" value="{$data_acc.bankname}">
+									<p style="color:red;"><!-- <span>*</span> --> {tip id='tbankname' default='请详细填写开户行 如：某某银行某某分行'}</p>
+								</div>
+							</li>
+							<li>
+								<h3>开户行所在地区</h3>
+								<div class="content_sws_nr_right_b_dlmm_tr" style="width:350px;">
+									<div class="content_sws_nr_right_b_rgsdq_t" style="padding:0px;">
+										{'bankareaid'|ajax_area_select:'请选择':$data_acc.bankareaid}
+									</div>
+								</div>
+								<p style="color:red;float:left;">{tip id='tbankareaid' default=''}</p>
+							</li>
+							<li>
+								<h3>开户名</h3>
+								<div class="content_sws_nr_right_b_dlmm_tr">
+									{$smarty.session.member.company}
+								</div>
+							</li>
+							<li>
+								<h3>收款账号</h3>
+								<div class="content_sws_nr_right_b_dlmm_tr">
+									<input type="text" size="20" id="bankaccount" name="bankaccount" value="{$data_acc.bankaccount}" />
+									<p style="padding-right:40px;color:red;"><!-- <span>*</span> -->{tip id='tbankaccount' default='此账号开户名必须为：'}<strong style="padding-left:9px;">{$smarty.session.member.company}</strong></p>
+								</div>
+							</li>
+						</ul>
+						<div class="content_sws_nr_right_b_qiye_bcfh">
+							<input type="submit" name="submit" value="确认修改" />
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+{include file="Public/footer.html" }

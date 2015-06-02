@@ -1,0 +1,313 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style media=print>
+dd_belatedpng\:* {
+	display: none! important
+}
+img.dd_belatedpng_sizefinder {
+	display: none! important
+}
+</style>
+<style media=screen>
+dd_belatedpng\:* {
+	behavior: url(#default#vml)
+}
+dd_belatedpng\:shape {
+	position: absolute
+}
+img.dd_belatedpng_sizefinder {
+	z-index: -1;
+	visibility: hidden;
+	behavior: none;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	position: absolute;
+	top: -10000px;
+	border-bottom-style: none
+}
+.ie {
+}
+</style>
+<title>我行网平台</title>
+<link href="/public/style/weibo/basic.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/public/style/weibo/head.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/public/style/weibo/timer.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/public/style/weibo/jqueryui.css" rel="stylesheet" type="text/css" media="screen" />
+<script src="/public/script/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="/public/script/jqueryui.pickdater.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	$("#batch_date,.b_nrk_time1").datepicker({
+	    minDate: 0,
+	    maxDate: "+3M +5D",
+	    dateFormat: 'yy-mm-dd',
+	    inline: true,
+	    bgiframe: true,
+	    showAnim: '',
+	    duration: '',
+	    showOtherMonths: true,
+	    selectOtherMonths: true
+	});
+});
+function gotoUrl(url)
+{
+	url?window.location.href=url:window.location.reload(true);
+}
+function recordchange()
+{
+	var record = $('#record').val();
+	var qs = window.location.search;
+	if(record != undefined && !isNaN(record) && record > 0)
+	{
+		if(record > 20) record = 20;
+		if(qs.indexOf('record') > 0)
+		{
+			qs = qs.replace(/[\&]record=[^\&]*/,'&record='+record);
+		}else
+		{
+			qs += '&record='+record;	
+		}
+		if(qs.indexOf('page') > 0)
+		{
+			qs = qs.replace(/[\&]page=[^\&]*/,'&page=1');
+		}else
+		{
+			qs += '&page=1';	
+		}
+		if(qs.indexOf('?') >= 0)
+		{
+			gotoUrl('/weibo/index.php'+qs);
+		}else
+		{
+			gotoUrl('/weibo/index.php?a=index'+qs);
+		}
+	}
+}
+function gopage()
+{
+	var page= $('#goto').val();
+	var qs = window.location.search;
+	if(page != undefined && !isNaN(page) && page > 0)
+	{
+		if(qs.indexOf('page') > 0)
+		{
+			qs = qs.replace(/[\&]page=[^\&]*/,'&page='+page);
+		}else
+		{
+			qs += '&page='+page;
+		}
+		if(qs.indexOf('?') >= 0)
+		{
+			gotoUrl('/weibo/index.php'+qs);
+		}else
+		{
+			gotoUrl('/weibo/index.php?a=index'+qs);
+		}
+	}else
+	{
+		alert('页码不正确');	
+	}
+}
+function saveintime()
+{
+	var intime = $('#batch_interval').val();
+	if(intime != undefined && !isNaN(intime) && intime > 0)
+	{
+		$.get('/weibo/index.php?a=saveintime&intime='+intime,function(d){
+			alert(d);
+		});
+	}else
+	{
+		alert('时间间隔不正确');
+	}
+}
+function sendnow(id)
+{
+	$('#t'+id).parent().parent().find('textarea').css('color','gray');
+	$('#t'+id).parent().find('input').remove();
+	$('#t'+id).html('发送中，请稍后...');
+	$.get('/weibo/index.php?a=sendnow&id='+id, function(obj){
+		eval("var o="+obj);
+		if(o.status == 1)
+		{
+			$('#t'+id).html(o.msg);
+		}else
+		{
+			alert(o.msg);
+			$('#t'+id).html('发送失败');
+		}
+	});
+}
+function delaysend(id)
+{	
+	$('#t'+id).parent().parent().find('textarea').css('color','gray');
+	$('#t'+id).parent().find('input').remove();
+	$('#t'+id).css('color','green');
+	$('#t'+id).html('队列中，请稍后...');
+	$.get('/weibo/index.php?a=delaysend&id='+id+'&date='+$('#batch_date').val()+'&hour='+$('#batch_hour').val()+'&minute='+$('#batch_minute').val()+'&intime='+$('#batch_interval').val(), function(obj){
+		eval('var o='+obj);
+		if(o.status == 1)
+		{
+			$('#t'+id).html(o.msg);
+			$('#batch_date').val(o.date);
+			$('#batch_hour').val(o.hour);
+			$('#batch_minute').val(o.minute);
+		}else
+		{
+			alert(o.msg);
+			$('#t'+id).html('队列失败');
+		}
+	});
+}
+</script>
+</head>
+<body>
+<!-----头部----->
+<div class="head" id="head">
+	<div class="head_lef">
+		<h1><a href="/" title="我行网" ></a></h1>
+		<ul>
+			<li><a href="http://weibo.com/" target="_blank" class="current">新浪平台</a></li>
+		</ul>
+	</div>
+	<div class="head_rig">
+		<div class="medals"></div>
+		<div class="user">
+			<div class="user_box"><a href="#" class="nick" title="{$smarty.session.username}"><span>{$smarty.session.username}</span></a></div>
+			<ul></ul>
+		</div>
+	</div>
+</div>
+<!-----头部结束-----> 
+<!-----主体----->
+<div class="div_body" id="div_body">
+	<div id="show_body"> 
+		<!-- 微博地址弹出窗口结束 -->
+		<div id="main" class="main"> 
+			<!--皮皮定时器-->
+			<table class="timer">
+				<tr>
+					<td class="priority_border" id="cont">
+						<div class="lef l" id="timer1_left">
+							<div class="tit">
+								<div id="ch_nav1" class="nav r"> 
+									<a href="/weibo/" id="timer_content" class="ie">内容库</a> 
+									<a href="/weibo/index.php?a=sendlog" class="ie nor">发送记录</a> 
+								</div>
+							</div>
+							<!-- left category -->
+							<div class="til_nav">
+								<div class="til_nav_body">
+									<a href="/weibo/index.php" style="border-top:0;"{if $categoryid eq 0} class="hov ie"{/if}>全部</a>
+									{foreach item=val from=$category key=key}
+									<a href="/weibo/index.php?categoryid={$val['id']}"{if $val['id'] eq $categoryid} class="hov ie"{/if}>{$val['typename']}</a>
+									{/foreach}
+								</div>
+							</div>
+							<div class="cont_bar_rig">
+								<div class="cont_bar" id="timer1_cont_bar">
+									<div class="cont_bar">
+										<div class="b_nrk_right" id="gallery"> 
+											<!-- set time -->
+											<div class="b_nrk_top f14 cl" style="margin-top:20px;"> <span class="b_nrk_span">开始时间</span>
+												<input class="ie b_nrk_time1" type="text" value="{$startdate}" id="batch_date" readonly />
+												<select class="b_nrk_time2" name="hour" id="batch_hour">
+													{foreach from=$hour item=val}
+													<option value="{$val}"{if $val eq $starthour} selected{/if}>{$val}</option>
+													{/foreach}
+												</select>
+												<span class="b_nrk_span">时</span>
+												<select class="b_nrk_time2" name="minute" id="batch_minute">
+													{foreach from=$minute item=val}
+													<option value="{$val}"{if $val eq $startminute} selected{/if}>{$val}</option>
+													{/foreach}
+												</select>
+												<span class="b_nrk_span">分</span> 
+												<span class="b_nrk_span" style="margin-left:50px;">间隔</span>
+												<input type="text" class="b_nrk_txt" id="batch_interval" value="{$smarty.session.weibo.sendinterval|default:30}"/>
+												<span class="b_nrk_span">分钟</span>
+												<input type="button" value="保存" class="l cp b_nrk_time_input" onClick="javascript:saveintime(this);"/>
+											</div>
+											<!-- weibo list -->
+											<div id="list">
+												{foreach item=val from=$rec key=key}
+												<div style="padding-bottom:15px;" class="b_nrk_body cl">
+													<textarea class="b_nrk_nr"{if $val['status'] eq '1' or $val['status'] eq '2'} style="color:gray;"{/if} readonly>{$val['message']|escape:'html'|nl2br}</textarea>
+													<p class="b_nrk_p"> 
+														<span id="t{$val['id']}" class="tips"{if $val['status'] eq '1'} style="color:green"{/if}>{if $val['status'] ne 0}{$val['msg']}{/if}</span>
+														{if $val['status'] ne '1' and $val['status'] ne '2'}
+														<input type="button" class="b_nrk_maue ie" value="定时发送" onClick="javascript:delaysend('{$val['id']}');" />
+														<input type="button" class="b_nrk_maue1 ie" value="立即发送" onClick="javascript:sendnow('{$val['id']}');" />
+														{/if}
+													</p>
+													<div class="b_nrk_pic">
+														<div class="nrk_pic">
+															<a class="b_nrk_pic_a" target="_blank" href="{$val['imageurl']}">
+																<img src="{$val['imageurl']}.thumb.jpg">
+															</a>
+														</div>
+													</div>
+												</div>
+												{/foreach}
+												<!-- page -->
+												{$page}
+												<div class="nrk_page cl">
+													<div class="SG cl">
+														<div class="le">每页显示：
+															<select id="record" onchange="javascript:recordchange()">
+																<option value="5"{if empty($smarty.get.record) || $smarty.get.record eq 5} selected{/if}>5</option>
+																<option value="10"{if $smarty.get.record eq 10} selected{/if}>10</option>
+																<option value="20"{if $smarty.get.record eq 20} selected{/if}>20</option>
+															</select>&nbsp;条 
+														</div>
+														<div class="ri"> 到达
+															<input type="text" id="goto" class="text">
+															页
+															<input type="button" class="go" value="跳转" onclick="javascript:gopage()">
+														</div>
+													</div>
+													<!--  end page --> 
+												</div>
+											</div>
+											<!--  end weibo list --> 
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- right avatar -->
+						<div class="rig r">
+							<div class="rig_photo cl"> 
+								<a href="http://weibo.com/u/{$smarty.session.weibo.uid|default:0}" target="_blank" class="l"><img id="headpic" src="{$smarty.session.weibo.headpic|default:''}" /></a>
+								<div class="rig_date l">
+									<div class="rig_date_rev"> 
+										<a href="http://weibo.com/{$smarty.session.weibo.uid|default:0}/fans" target="_blank" style="color:#333; text-decoration:none">粉丝</a><br />
+										<a href="http://weibo.com/{$smarty.session.weibo.uid|default:0}/fans" target="_blank" class="rig_date_stro" style="color:#fff"><strong id="followers">{$smarty.session.weibo.followers|default:0}</strong></a> 
+									</div>
+									<p> 
+										<a href="http://weibo.com/{$smarty.session.weibo.uid|default:0}/follow" target="_blank" style="color:#333; text-decoration:none">关注</a><br />
+										<a href="http://weibo.com/{$smarty.session.weibo.uid|default:0}/follow" target="_blank" class="rig_date_stro" style="color:#fff"><strong id="friends">{$smarty.session.weibo.friends|default:0}</strong></a> 
+									</p>
+									<p> 
+										<a href="http://weibo.com/{$smarty.session.weibo.uid|default:0}/profile" target="_blank" style="color:#333; text-decoration:none">微博</a><br />
+										<a href="http://weibo.com/{$smarty.session.weibo.uid|default:0}/profile" target="_blank" class="rig_date_stro" style="color:#fff"><strong id="statuses">{$smarty.session.weibo.statuses|default:0}</strong></a> 
+									</p>
+								</div>
+								<div class="rig_ID l">
+									<p class="cl">
+										<a href="http://weibo.com/u/{$smarty.session.weibo.uid|default:0}" target="_blank" class="f14 l" style="color:#FFF; font-weight:bold"><span id="nickname">{$smarty.session.weibo.nickname|escape:'html'|default:'...'}</span></a>
+										<br /><input type="button" value="刷新" onClick="javascript:gotoUrl();" />
+									</p>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+</body>
+</html>

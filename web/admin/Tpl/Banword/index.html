@@ -1,0 +1,91 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+{literal}
+<script language="javascript">
+ function del(id)
+{
+   if(confirm("确实要删除吗?"))
+	 window.location.href='/iokadmin.php?m=Banword&a=del&id='+id;
+}
+function alldel(){	
+	var str='';	
+	$("input:checkbox[name='alldel']:checked").each(function(){
+		str+=$(this).val()+",";
+	})
+	if(str){
+		if(confirm("确实删除所有选中吗?"))
+		window.location.href='/iokadmin.php?m=Banword&a=del&id='+str;
+	}else{
+		alert('请至少选中一项');
+	}
+
+}
+</script>
+{/literal}
+		<!-- content -->
+		<div id="content">
+			{include file="Syscfg/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- table -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title" style="margin-bottom:10px;">
+						<h5>词语过滤</h5>
+						{include file="record.inc.htm"}
+					</div>
+					<!-- {include file="search.inc.htm"} -->
+					<!-- end box / title -->
+					<div class="table"><!-- id,replacefrom,replaceto,enabled,addtime,adduserid -->
+						<table>
+							<thead>
+								<tr>
+									<th class="left">编号</th>
+									<th>查找词语</th>
+									<th>替换为</th>
+									<th>拦截</th>
+									<th>添加时间</th>
+									<th>添加用户</th>
+									<th>操作</th>
+									<th class="selected last"><input type="checkbox" class="checkall"/></th>
+								</tr>
+							</thead>
+							<tbody>
+								{foreach from=$banword item=id}
+								<tr>
+									<td class="category">{$id.id}</td>
+									<td class="category">{$id.replacefrom}</td>
+									<td class="category">{$id.replaceto}</td>
+									<td class="category">{if $id.enabled eq 0} 已开启{else}已关闭{/if}</td>
+									<td class="category">{$id.addtime}</td>
+									<td class="category">{$id.adduserid.account}</td>
+									<td class="category"><a href="?m=Banword&a=add&id={$id.id}">编辑</a>/
+														 <a href="javascript:del({$id.id});">删除</a>
+									</td>
+									<td class="selected last"><input type="checkbox"  name='alldel' value="{$id.id}"/></td>
+								</tr>
+								{/foreach}
+							</tbody>
+						</table>
+						<!-- pagination -->
+						{$page|default:''}
+						<!-- end pagination -->
+						<!-- table action -->
+						<div class="action">
+							<select name="action">
+								<option value="" class="unlocked">批量删除</option>
+							</select>
+							<div class="button">
+								<a href="javascript:alldel();"><input type="submit" name="submit" value="确定" /></a>
+							</div>
+						</div>
+						
+						<!-- end table action -->
+					</div>
+				</div>
+				<!-- end table -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

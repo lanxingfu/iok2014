@@ -1,0 +1,132 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="User/leftmenu.inc.htm"}
+			<!-- end content / left -->
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>用户管理 》{if $rec['id']}编辑信息{else}添加用户{/if}</h5>
+					</div>
+					<!-- end box / title -->
+					<form id="frm" method="post">
+					<div class="form">
+						<div class="fields">
+							<div class="field  field-first">
+								{if $rec['id']}
+								<div class="fname">登录账号</div>
+								<div class="fvalue">{$rec['account']}<input type="hidden" name="account" value="{$rec['account']}" /></div>
+								{else}
+								<div class="label">登录账号</div>
+								<div class="input">
+									<input type="text" name="account" value="{$rec['account']}" class="small" />
+								</div>
+								<div class="tip">{tip id='account' default='请输入用户的登录账号，3到20位英文字母、数字及“_”“-”组合'}</div>
+								{/if}
+							</div>
+							{if !$rec['id']}
+							<div class="field">
+								<div class="label">登录密码</div>
+								<div class="input">
+									<input type="password" name="passwd1" class="small" />
+								</div>
+								<div class="tip">{tip id='passwd1' default='请输入用户的登录密码，密码长度6-20位'}</div>
+							</div>
+							<div class="field">
+								<div class="label">重复输入</div>
+								<div class="input">
+									<input type="password" name="passwd2" class="small" />
+								</div>
+								<div class="tip">{tip id='passwd2' default='请再次输入用户的登录密码'}</div>
+							</div>
+							{/if}
+							<div class="field">
+								<div class="label">真实姓名</div>
+								<div class="input">
+									<input type="text" name="prettyname" value="{$rec['prettyname']}" class="small" />
+								</div>
+								<div class="tip">{tip id='prettyname' default='请输入真实姓名'}</div>
+							</div>
+							<div class="field">
+								<div class="label">所属部门</div>
+								<div class="select">
+									<select id="departmentid" name="departmentid" onchange="javascript:getusergroup(this.value,'{$rec[usergroupid]}','usergroup');">
+									{html_options values=$department['id'] output=$department['prettyname'] selected=$rec['departmentid']}
+									</select>
+								</div>
+								<div class="tip">{tip id="department" default="请选择所属部门"}</div>
+							</div>
+							<div class="field">
+								<div class="label">所属用户组</div>
+								<div class="select" id="usergroup"></div>
+								<div class="tip">{tip id="usergroup" default="请选择用户组"}</div>
+							</div>
+							<div class="field">
+								<div class="label">email</div>
+								<div class="input">
+									<input type="text" name="email" value="{$rec['email']}" class="small" />
+								</div>
+								<div class="tip">{tip id='email' default='请输入email'}</div>
+							</div>
+							<div class="field">
+								<div class="label">手机号码</div>
+								<div class="input">
+									<input type="text" name="mobile" value="{$rec['mobile']}" class="small" />
+								</div>
+								<div class="tip">{tip id='mobile' default='请输入手机号码'}</div>
+							</div>
+							<div class="field">
+								<div class="label">QQ</div>
+								<div class="input">
+									<input type="text" name="qq" value="{$rec['qq']}" class="small" />
+								</div>
+								<div class="tip">{tip id='qq' default='请输入qq号码'}</div>
+							</div>
+							<div class="field">
+								<div class="label">职位名称</div>
+								<div class="input">
+									<input type="text" name="position" value="{$rec['position']}" class="small" />
+								</div>
+								<div class="tip">{tip id='position' default='请输入职位名称'}</div>
+							</div>
+							<div class="field">
+								<div class="label label-textarea">个人介绍</div>
+								<div class="textarea textarea-editor">
+									<textarea name="introduce" cols="50" rows="12" class="editor">{$rec['introduce']|nl2br|escape:'html'}</textarea>
+								</div>
+							</div>
+							<div class="buttons">
+								<input type="hidden" name="m" value="User" />
+								<input type="hidden" name="a" value="submit" />
+								<input type="hidden" name="id" value="{$rec['id']}" />
+								<input type="submit" name="submit" value="提交" />
+								<input type="reset" name="reset" value="返回" onclick="javascript:gotoUrl('/iokadmin.php?m=User{if $rec['id']}&a=detail&id={$rec['id']}{/if}')" />
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		{literal}
+		<script type="text/javascript">
+		function getusergroup(id, did, eid)
+		{
+			$.get('/iokadmin.php?m=Misc&a=getusergroup&id='+id+'&did='+did,function(d){
+				if(d)
+				{
+					$('#'+eid).html(d);	
+				}
+			});
+		}
+		</script>
+		{/literal}
+		<script type="text/javascript">getusergroup($('#departmentid').val(),'{$rec[usergroupid]}','usergroup')</script>
+		<!-- end content -->
+{include file="footer.inc.htm"}

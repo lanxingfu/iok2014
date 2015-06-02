@@ -1,0 +1,61 @@
+{include file="Public/header_room.html"}
+<!-- top -->
+{include file="Public/room_top.html"}
+<link href="__CSS__/home/sws_accounts.css" rel="stylesheet" />
+<div class="content">
+	<div class="content_nr">
+		<div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html"}
+			</div>
+			<div class="content_sws_nr_right" id="iframe_main">
+				<div class="content_sws_nr_right_lgrzl">
+					<div class="content_sws_nr_r_lgrzl_t">
+						{include file="Public/welcom.html"}
+					</div>
+				</div>
+				<ul class="content_sws_nr_right_t" id="tabss">
+					<li><a href="/Score/index/action/0"{if $smarty.get.action eq 0}class="navigation"{/if} >积分记录</a></li>
+					<li><a href="/Score/index/action/1"{if $smarty.get.action eq 1}class="navigation"{/if}>推广记录</a></li>
+					<li><a href="/Score/index/action/2" {if $smarty.get.action eq 2}class="navigation"{/if} >推广赚积分</a></li>
+				</ul>
+				<div class="content_sws_nr_right_b" id="contentss">
+					<div class="content_sws_nr_right_b_dlmm">
+						<div class="menu">
+							<table cellpadding="0" cellspacing="0">
+							</table>
+						</div>
+						<table cellspacing="1" cellpadding="6" class="tb">
+							<tr>
+								<td class="tl">推广网址</td>
+								<td class="tr"><input type="text" name="code" value="http://www.iokokok.com/Public/register/id/{$smarty.session.member.id}" size="80" id="codes" onmouseover="this.select();" style="padding:3px;"/></td>
+							</tr>
+							<tr>
+								<td class="tl">推广方法</td>
+								<td class="tr">
+								- 将上面的网址发给您QQ/MSN/Email等好友<br/>
+								- 在论坛签名,博客链接,网站等加上上面的网址<br/>
+								</td>
+							</tr>
+							<tr>
+								<td class="tl">奖励方法</td>
+								<td class="tr">
+								- 每引导一个企业注册您可以获赠 <strong class="f_blue">20</strong>积分<br/>
+								</td>
+							</tr>
+							<tr>
+								<td class="tl">备注事项</td>
+								<td class="tr">
+								- 无论引导至那个页面，系统均会自动记录您为用户注册推荐人<br/>
+								- 引导用户需注册成功完善资料并通过审核后方可为您加分<br/>
+								- 同一IP 24小时内计算一次<br/>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{include file="Public/footer.html"}

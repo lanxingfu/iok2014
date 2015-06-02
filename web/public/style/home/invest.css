@@ -1,0 +1,246 @@
+/* 中间部分 */
+.content{ width:100%; float:left;}
+.content_zx{width:100%; float:left;}
+.content_top{height:250px; background:#EBEBEB;}
+.barner{width:1000px; margin:0 auto; }
+.barner img{ float:left; vertical-align:middle;}
+
+.content_bottom{width:1000px; margin:0 auto;}
+.content_bottom_nr{width:980px; float:left; padding:12px 0px 18px 15px;}
+.header_conter{padding-top:0px;}
+/* 第一块 */
+.content_bottom_nr_jdxw{width:980px; float:left;padding-bottom:12px;}
+.content_bottom_nr_jdxw_left{width:710px;  float:left;}
+.content_b_nr_jdxw_left_t{width:708px;height:34px; background:#ebebeb; float:left;}
+.content_b_nr_jdxw_left_tl{width:102px;height:37px; float:left; margin:0 0 0 -10px; background:url(../../image/invest/img_1.png) no-repeat;}
+.content_b_nr_jdxw_left_tl p{ color:#000000;height:20px; font-family:"Arial"; font-size:22px;}
+.content_b_nr_jdxw_left_tl span{ color:#fff; display:block;font-family:"微软雅黑"; font-size:16px; padding-left:33px; font-weight:bold;height:16px;}
+.content_b_nr_jdxw_left_tc{width:551px; font-family:"微软雅黑"; font-size:20px; font-weight:bold; color:#aa0000; text-align:center; line-height:34px; float:left;height:34px;}
+.content_b_nr_jdxw_left_tr{width:60px;height:32px; line-height:32px; font-family:"Arial"; font-size:11px; float:left; padding-top:2px;}
+.content_b_nr_jdxw_left_tr a{ color:#909090; }
+.content_b_nr_jdxw_left_tr a:hover{ color:#aa0000; text-decoration:underline;}
+
+.content_b_nr_jdxw_left_b{width:708px; padding-top:11px; float:left;}
+.content_b_nr_jdxw_left_bl{width:357px;height:264px; float:left; padding-bottom:13px; padding-top:3px;}
+.content_b_nr_jdxw_left_br{padding-top:5px;width:330px; padding-left:20px; float:left; font-family:"宋体"; font-size:12px; color:#6e6e6e; padding-bottom:10px;}
+.content_b_nr_jdxw_left_br li{ float:left;padding-bottom:2px;width:100%;}
+.content_b_nr_jdxw_left_br li a:hover{ color:#aa0000; text-decoration:underline;}
+.content_b_nr_jdxw_left_br h3{ float:left;width:100%; line-height:30px;font-family:"微软雅黑"; font-size:14px;}
+.content_b_nr_jdxw_left_br h3 a{ color:#666;}
+.content_b_nr_jdxw_left_br p{width:100%; float:left; line-height:20px; background:url(../../image/invest/img_2.png) no-repeat 5px 9px; text-indent:19px;}
+
+.content_bottom_nr_jdxw_R{width:255px;float:right;}
+
+/* 9月1号改的 */
+.content_bottom_nr_qdzs_cxqy{width:244px;float:left;height:251px;padding-left:9px;border: 1px solid #e7e4e4;background-color:#EBEBEB;/* background:url(../../image/invest/zs_tubiao_10.png) no-repeat; */}
+.content_b_n_qdzs_cxqy_n{width:100%;float:left;padding-top:30px;}
+.content_b_n_qdzs_cxqy_n li{width:100%;float:left;padding-bottom:24px;}
+.content_b_n_qdzs_cxqy_n li h3{width:100%;float:left;height:19px;font-family:"微软雅黑"; font-size:16px;line-height:19px;color:#000000;font-weight:normal;}
+.content_b_n_qdzs_cxqy_n li h3 img{float:left;}
+.content_b_n_qdzs_cxqy_n li h3 span{float:left;padding-left:5px;}
+
+.content_b_n_qdzs_cxqy_glzx{width:227px;padding-left:12px;float:left; padding-top:10px;}
+.content_b_n_qdzs_cxqy_glzx select{cursor: pointer;width:194px;height:24px;float:left;padding:2px 2px 2px 4px;border:1px solid #8a8a8a;font-family:"微软雅黑"; font-size:12px;line-height:24px;color:#6e6e6e;}
+.content_b_n_qdzs_cxqy_glzx select option{padding:2px 2px 2px 6px;cursor: pointer;}
+.content_b_n_qdzs_cxqy_glzx p{float:left;padding-top:10px;padding-left:116px;font-family:"微软雅黑"; font-size:12px;line-height:21px;}
+
+
+.content_bottom_nr_jdxw_rtb{width:248px;height:66px; float:left; padding-top:8px;/*  padding-left:3px; */}
+
+.content_b_n_qdzs_cxqy_glzx p a{width:69px;height:21px;float:left;color:#fff;text-align:center;}
+
+.content_b_n_qdzs_cxqy_glzx p a{width:69px;height:21px;float:left;background:url(../../image/invest/zs_tubiao_9_1.png) no-repeat;color:#fff;text-align:center;}
+.content_b_n_qdzs_cxqy_glzx p a span{width:69px;height:21px;float:left;background:url(../../image/invest/zs_tubiao_9.png) no-repeat;color:#fff;text-align:center;}
+
+
+
+
+
+
+/* 第二部分 */
+.content_bottom_nr_ggw{width:980px; float:left; padding-top:11px; padding-left:4px;}
+.content_bottom_nr_ggw img{width:972px;height:115px; vertical-align:middle;}
+
+/* 第三部分 */
+.content_bottom_nr_wxdt{width:980px; float:left; padding-bottom:12px;}
+.content_bottom_nr_wxdt_left{width:708px; border:1px solid #e7e4e4; float:left;}
+.content_b_nr_wxdt_left_t{width:708px;height:44px; background:#ebebeb; float:left;}
+.content_b_nr_wxdt_left_tl{width:102px;height:48px; float:left; margin:0 0 0 -10px; background:url(../../image/invest/img_1.png) no-repeat; display:inline;}
+.content_b_nr_wxdt_left_tl p{height:20px;float:left; vertical-align:middle; padding-top:10px;}
+.content_b_nr_wxdt_left_tl span{ color:#fff;font-family:"微软雅黑"; font-size:16px; font-weight:bold;height:48px; line-height:48px; padding-left:6px;}
+.content_b_nr_wxdt_left_tc{width:551px; font-family:"微软雅黑"; font-size:20px; font-weight:bold; color:#aa0000; text-align:center; line-height:44px; float:left;height:44px;}
+.content_b_nr_wxdt_left_tr{width:60px;height:34px; line-height:34px; font-family:"Arial"; font-size:11px; float:left; padding-top:10px;}
+.content_b_nr_wxdt_left_tr a{ color:#909090; font-weight:bold;}
+.content_b_nr_wxdt_left_tr a:hover{ color:#aa0000; text-decoration:underline;}
+
+.content_b_nr_wxdt_left_t{width:708px;height:30px; background:url(../../image/invest/bg_bt.png) repeat-x; float:left;}
+.content_b_nr_wxdt_left_tlt{width:128px;height:30px; float:left;border-left:3px solid #aa0000;}
+.content_b_nr_wxdt_left_tlt span{ color:#aa0000;font-family:"微软雅黑"; font-size:16px; font-weight:bold;height:30px; line-height:30px; padding-left:6px;}
+.content_b_nr_wxdt_left_tct{width:512px; font-family:"微软雅黑"; font-size:20px; font-weight:bold; color:#aa0000; text-align:center; line-height:30px; float:left;height:30px;}
+.content_b_nr_wxdt_left_trt{width:60px;height:30px; line-height:30px; font-family:"Arial"; font-size:11px; float:left;}
+.content_b_nr_wxdt_left_trt a{ color:#909090;}
+.content_b_nr_wxdt_left_trt a:hover{ color:#aa0000; text-decoration:underline;}
+
+.content_b_nr_wxdt_left_b{width:699px; padding-left:9px; padding-top:15px; float:left; padding-bottom:8px;}
+.content_b_nr_wxdt_left_bl{width:364px; float:left;}
+.content_b_nr_wxdt_left_bl li{width:364px;float:left;padding-bottom:10px; display:inline;height:21px; line-height:20px;}
+.content_b_nr_wxdt_left_bl li p{ line-height:17px; font-size:12px; font-family:"宋体"; color:#6E6E6E;height:17px;float:left;}
+.content_b_nr_wxdt_left_bl li .p_1{ color:#969696;}
+.content_b_nr_wxdt_left_bl li p span{ color:#fe0000;}
+.content_b_nr_wxdt_left_bl li p .span_1{ color:#969696;}
+.content_b_nr_wxdt_left_bl li .a_1{ cursor:default;}
+.content_b_nr_wxdt_left_bl li a{ float:right;padding-right: 20px;}
+.content_b_nr_wxdt_left_br{width:264px; float:left;height:210px; padding-top:2px;}
+
+/* 9月1号改的 */
+.content_bottom_nr_wxdt_zsyc{width:255px;float:right;height:273px;}
+
+/* 新添加的广告部分 */
+.content_bottom_nr_ggwz{width:980px;height:100px; float:left; padding-bottom:12px;}
+.content_bottom_nr_ggwz img{width:980px;height:100px;}
+
+
+
+/* 第四部分 */
+
+.content_bottom_nr_qdyy{width:980px; float:left; padding-bottom:12px;}
+.content_bottom_nr_qdyy_left{width:708px; border:1px solid #e7e4e4; float:left;}
+.content_b_nr_qdyy_left_t{width:708px;height:44px; background:#ebebeb; float:left;}
+.content_b_nr_qdyy_left_tl{width:102px;height:48px; float:left; margin:3px 0 0 -10px; background:url(../../image/invest/img_1.png) no-repeat; display:inline;}
+.content_b_nr_qdyy_left_tl p{height:20px;float:left; vertical-align:middle; padding-top:10px;}
+.content_b_nr_qdyy_left_tl span{ color:#fff;font-family:"微软雅黑"; font-size:16px; font-weight:bold;height:48px; line-height:48px; padding-left:6px;}
+.content_b_nr_qdyy_left_tc{width:551px; font-family:"微软雅黑"; font-size:20px; font-weight:bold; color:#aa0000; text-align:center; line-height:44px; float:left;height:44px;}
+.content_b_nr_qdyy_left_tr{width:60px;height:34px; line-height:34px; font-family:"Arial"; font-size:11px; float:left; padding-top:10px;}
+.content_b_nr_qdyy_left_tr a{ color:#909090; font-weight:bold;}
+.content_b_nr_qdyy_left_tr a:hover{ color:#aa0000; text-decoration:underline;}
+
+.content_b_nr_qdyy_left_t{width:708px;height:30px;background:url(../../image/invest/bg_bt.png) repeat-x; float:left;}
+.content_b_nr_qdyy_left_tlt{width:128px;height:30px; float:left;border-left:3px solid #aa0000;}
+.content_b_nr_qdyy_left_tlt span{ color:#aa0000;font-family:"微软雅黑"; font-size:16px; font-weight:bold;height:30px; line-height:30px; padding-left:6px;}
+.content_b_nr_qdyy_left_tct{width:512px; font-family:"微软雅黑"; font-size:20px; font-weight:bold; color:#aa0000; text-align:center; line-height:30px; float:left;height:30px;}
+.content_b_nr_qdyy_left_trt{width:60px;height:30px; line-height:30px; font-family:"Arial"; font-size:11px; float:left;}
+.content_b_nr_qdyy_left_trt a{ color:#909090;}
+.content_b_nr_qdyy_left_trt a:hover{ color:#aa0000; text-decoration:underline;}
+
+.content_b_nr_qdyy_left_b{width:699px; padding-left:9px; padding-top:15px; float:left; padding-bottom:14px;}
+.content_b_nr_qdyy_left_bl{width:335px; float:left;}
+.content_b_nr_qdyy_left_bl li{width:323px;float:left;padding-bottom:10px; display:inline;height:21px; line-height:20px;}
+.content_b_nr_qdyy_left_bl li p{ line-height:17px; font-size:12px; font-family:"宋体"; color:#6E6E6E;height:17px;float:left;}
+.content_b_nr_qdyy_left_bl li a{ float:right;background:url(../../image/invest/img_23.png) no-repeat;width:71px;height:24px; line-height:18px; color:#fff; font-family:"微软雅黑"; font-size:12px; text-align:center;}
+.content_b_nr_qdyy_left_bl li .no{cursor: default;}
+.content_b_nr_qdyy_left_bl li .yes{cursor:pointer;}
+.content_b_nr_qdyy_left_br{width:344px; padding-right:20px; float:left;height:197px; padding-top:2px;}
+
+
+/* 9月1号改的 */
+.content_bottom_nr_qdyy_zsglzx{width:252px;float:right;border:1px solid #e7e4e4;background-color:#f7f7f7;}
+.content_bottom_nr_qdyy_zsglzx_nnr{width:243px;float:left;padding-left:10px;padding-top:15px; background:#EBEBEB;}
+.content_bottom_nr_qdyy_zsglzx_nnr li{width:100%;float:left;padding-bottom:12px;}
+.content_bottom_nr_qdyy_zsglzx_limg{width:112px;height:59px;float:left; padding-right:10px;}
+.content_bottom_nr_qdyy_zsglzx_limg img{width:112px;height:59px;}
+.content_bottom_nr_qdyy_zsglzx_nnr li h4{float:left;width:90px;font-family:"微软雅黑"; font-size:13px; text-align:center;color:#000000;line-height:16px;font-weight:normal;padding-top:15px;}
+
+/* 蜜蜂计划 9月1号增加的 */
+.content_b_nr_wxdt_left_mfjh{width:699px;padding-left:9px;padding-top:20px;float:left;height:221px;}
+.content_b_nr_wxdt_left_mfjh_l{width:344px;padding-right:20px;float:left;}
+.content_b_nr_wxdt_left_mfjh_lt{width:100%;float:left;padding-bottom:10px;}
+.content_b_nr_wxdt_left_mfjh_lt img{width:160px;height:64px;}
+.content_b_nr_wxdt_left_mfjh_lb{width:100%;float:left;font-family:"宋体"; font-size:12px; line-height:20px;color:#6e6e6e;}
+.content_b_nr_wxdt_left_mfjh_r{width:335px;height:197px;float:left;}
+.content_b_nr_wxdt_left_mfjh_r img{width:258px;height:197px;}
+
+
+/* 第五部分 */
+.content_bottom_nr_zsal{width:978px; float:left;border:1px solid #e7e4e4;margin-top:10px;}
+.content_b_nr_zsal_left_t{width:978px;height:30px;background:url(../../image/invest/bg_bt.png) repeat-x; float:left;}
+.content_b_nr_zsal_left_tlt{border-left:3px solid #AA0000;float:left;height:30px;width:128px;}
+.content_b_nr_zsal_left_tlt span{color: #AA0000;font-family: "微软雅黑";font-size: 16px;font-weight: bold;height:30px;line-height:30px;padding-left: 6px;}
+.content_b_nr_zsal_left_tct{width:551px; font-family:"微软雅黑"; font-size:20px; font-weight:bold; color:#aa0000; text-align:center; line-height:30px; float:left;height:30px;}
+.content_b_nr_zsal_left_trt{float:right;font-family: "Arial";font-size: 11px;height:30px;line-height:30px;width: 60px;}
+.content_b_nr_zsal_left_trt a{ color:#909090;  }
+.content_b_nr_zsal_left_trt a:hover{ color:#aa0000; text-decoration:underline;}
+
+.content_bottom_nr_zsal_b{width:938px;height:191px; padding:19px 12px 8px 28px; float:left;}
+.content_bottom_nr_zsal_b li{ padding-right:20px; float:left;}
+.content_bottom_nr_zsal_bt{height:157px;}
+.content_bottom_nr_zsal_b li h4{ font-family:"微软雅黑"; font-size:12px;height:34px; line-height:34px; text-align:center;}
+.content_bottom_nr_zsal_b li h4 a{ color:#6e6e6e;}
+.content_bottom_nr_zsal_b li h4 a:hover{ color:#aa0000;}
+
+
+/* 第六部分 */
+.content_bottom_nr_zszx{width:980px; float:left; padding-top:12px; }
+.content_bottom_nr_zszx_left{width:708px; border:1px solid #e7e4e4; float:left;}
+.content_b_nr_zszx_left_t{width:708px;height:30px;background:url(../../image/invest/bg_bt.png) repeat-x; float:left;}
+.content_b_nr_zszx_left_tlt{width:128px;height:30px; float:left;border-left:3px solid #aa0000;}
+.content_b_nr_zszx_left_tlt span{ color:#aa0000;font-family:"微软雅黑"; font-size:16px; font-weight:bold;height:30px; line-height:30px; padding-left:6px;}
+.content_b_nr_zszx_left_tct{width:512px; font-family:"微软雅黑"; font-size:20px; font-weight:bold; color:#aa0000; text-align:center; line-height:30px; float:left;height:30px;}
+.content_b_nr_zszx_left_trt{width:60px;height:30px; line-height:30px; font-family:"Arial"; font-size:11px; float:left;}
+.content_b_nr_zszx_left_trt a{ color:#909090; font-weight:bold;}
+.content_b_nr_zszx_left_trt a:hover{ color:#aa0000; text-decoration:underline;}
+
+.content_b_nr_zszx_left_b{width:708px;height:157px; padding-top:15px; float:left; padding-bottom:10px;}
+.content_b_nr_zszx_left_bl{width:170px;height:157px; border-right:1px solid #e0e0e0; padding-left:42px; float:left;}
+.content_b_nr_zszx_left_blt{width:166px;height:32px; line-height:32px; padding-left:4px; float:left;}
+.content_b_nr_zszx_left_blt img{width:32px;height:24px; float:left;}
+.content_b_nr_zszx_left_blt h3{ padding-left:10px; font-family:"微软雅黑"; font-size:16px; color:#000; float:left;}
+.content_b_nr_zszx_left_blb{width:170px; float:left; padding:6px 0 15px 0; }
+.content_b_nr_zszx_left_blb li{height:20px; line-height:20px; padding-left:13px; padding-bottom:1px; background:url(../../image/invest/img_2.png) no-repeat left center;}
+.content_b_nr_zszx_left_blb li a{ color:#6e6e6e; font-size:12px; font-family:"宋体";}
+.content_b_nr_zszx_left_blb li a:hover{ color:#aa0000; text-decoration:underline;}
+
+.content_b_nr_zszx_left_bc{width:183px;height:157px; border-right:1px solid #e0e0e0; padding-left:62px; float:left;}
+.content_b_nr_zszx_left_bct{width:177px;height:32px; line-height:32px; padding-left:6px; float:left;}
+.content_b_nr_zszx_left_bct img{width:37px;height:26px; float:left;}
+.content_b_nr_zszx_left_bct h3{ padding-left:10px; font-family:"微软雅黑"; font-size:16px; color:#000; float:left;}
+.content_b_nr_zszx_left_bcb{width:183px; float:left; padding:6px 0 15px 0; }
+.content_b_nr_zszx_left_bcb li{height:20px; line-height:20px; padding-left:13px; padding-bottom:1px; background:url(../../image/invest/img_2.png) no-repeat left center;}
+.content_b_nr_zszx_left_bcb li a{ color:#6e6e6e; font-size:12px; font-family:"宋体";}
+.content_b_nr_zszx_left_bcb li a:hover{ color:#aa0000; text-decoration:underline;}
+
+.content_b_nr_zszx_left_br{width:181px;height:157px; padding-left:61px; float:left;}
+.content_b_nr_zszx_left_brt{width:181px;height:32px; line-height:32px; float:left;}
+.content_b_nr_zszx_left_brt img{width:28px;height:26px; float:left;}
+.content_b_nr_zszx_left_brt h3{ padding-left:10px; font-family:"微软雅黑"; font-size:16px; color:#000; float:left;}
+.content_b_nr_zszx_left_brb{width:181px; float:left; padding:6px 0 15px 10px; }
+.content_b_nr_zszx_left_brb li{height:20px; line-height:20px; padding-left:13px; padding-bottom:1px; background:url(../../image/invest/img_2.png) no-repeat left center;}
+.content_b_nr_zszx_left_brb li a{ color:#6e6e6e; font-size:12px; font-family:"宋体";}
+.content_b_nr_zszx_left_brb li a:hover{ color:#aa0000; text-decoration:underline;}
+
+.content_bottom_nr_zszx_reght{width:252px; float:right; border:1px solid #e7e4e4;background-color:#f7f7f7;}
+.content_bottom_nr_zszx_rtt{width:253px;height:30px; background:#ad0909; float:left;}
+.content_bottom_nr_zszx_rtt h3{height:30px;line-height:30px; font-family:"微软雅黑"; font-size:15px; color:#fff; float:left; text-indent:10px;}
+.content_bottom_nr_zszx_rtt p{ float:right;width:52px;height:30px; line-height:30px;font-family:"Arial"; font-size:11px; background:url(../../image/invest/img_9.png) no-repeat left bottom; padding-left:15px;}
+.content_bottom_nr_zszx_rtt p a{ color:#fff;}
+.content_bottom_nr_zszx_rtt p a:hover{ text-decoration:underline;}
+.content_bottom_nr_zszx_rbt{width:232px; height: 162px;padding:12px 10px 8px 11px; float:left; background:#EBEBEB;}
+.content_bottom_nr_zszx_rbt li{ background:url(../../image/invest/img_2.png) no-repeat left center; padding-left:12px; font-family:"宋体"; font-size:12px; line-height:24px;height:24px; padding-bottom:3px;}
+.content_bottom_nr_zszx_rbt li a{ color:#6e6e6e;}
+.content_bottom_nr_zszx_rbt li a:hover{ color:#aa0000; text-decoration:underline;}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 招商案例  横向图片无缝衔接滚动 the start  for 王斌 */
+#demo {width:958px; float:left;margin-left:10px; overflow:hidden;height:176px; border:none;}
+#indemo {float: left;width: 1000%;}
+#demo1,#demo2{height:157px;float:left; display:inline-table;}
+#demo1 li,#demo2 li{ width:215px; height:157px; float:left; padding-left:8px; }
+#demo1 li img,#demo2 li img{display:block; background:#fff; padding:1px; border:3px solid #fff;}
+#demo1 li span,#demo2 li span{ width:215px; height:30px; line-height:30px; text-align:center; overflow:hidden;}
+#demo1 {float: left;}
+#demo2 {float: left;}
+.lmboxb ul {margin-left:12px;margin-top:5px;}
+.lmboxb ul li {}
+.lmboxb ul li a {line-height:24px;}
+.qyys{text-align: center;}
+.qyys a{color: #6e6e6e;font-size: 12px;font-family: "微软雅黑";}
+/* 招商案例the end */

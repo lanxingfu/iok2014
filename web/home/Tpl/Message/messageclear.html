@@ -1,0 +1,71 @@
+{include file="Public/header_room.html"}
+<!-- top -->
+{include file="Public/room_top.html"}
+<!-- css -->
+<link href="__PUBLIC__/style/home/room/table_form.css" rel="stylesheet" />
+<link href="__PUBLIC__/style/home/room/clearmessage.css" rel="stylesheet" />
+<link href="__PUBLIC__/style/home/room/reset.css" rel="stylesheet" />
+<link href="__PUBLIC__/style/home/room/common.css" rel="stylesheet" />
+<!-- js -->
+<script language="javascript" type="text/javascript" src="__JS__/home/date/WdatePicker.js"></script><!--日历控件-->
+<div class="content">
+	<div class="content_nr">
+		<div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html"}
+			</div>
+
+			<div class="content_sws_nr_right" id="iframe_main">
+				<div class="content_sws_nr_right_lgrzl">
+								<div class="content_sws_nr_r_lgrzl_t">
+									{include file="Public/welcom.html"}
+								</div>
+							</div>
+				<ul class="content_sws_nr_right_t">
+					<li><a href="/Message/mesadd/type/1"  {if $smarty.get.type eq '1' } class="navigation" {/if} >(+)发送信件</a></li>
+					<li><a href="/Message/index/type/receive"{if $smarty.get.type eq 'receive'}class="navigation"{/if} >收件箱</a></li>
+					<li><a href="/Message/index/type/send"  {if $smarty.get.type eq 'send'}class="navigation"{/if} >已发送</a></li>
+					<li><a href="/Message/mesclear/type/2"  {if $smarty.get.type eq '2'}class="navigation"{/if} >信件清理</a></li>
+				</ul>
+				<div class="content_sws_nr_right_b" id="contentss">
+					<div class="content_sws_nr_right_b_dlmm">
+					<form action="/Message/clearsubmit/"  method="POST" id="form1" name="form1" >
+						<ul class="content_sws_nr_right_b_dlmm_t">
+							<li>
+								<h3>信件</h3>
+								<div class="content_sws_nr_right_b_dlmm_tr_ii">
+									<label><input type="radio" name="type" checked="checked" value="1"/>&nbsp;<span style="float:left">收件箱</span></label>
+									<label><input type="radio" name="type" value="2"/>&nbsp;<span style="float:left">已发送</span></label>
+									<!--<label><input type="radio" name="craft" value="3"/>&nbsp;<span style="float:left">草稿箱</span></label>-->			
+								</div>
+							</li>
+							<li>
+								<h3>日期范围</h3>
+								<div class="content_sws_nr_right_b_dlmm_tr">
+
+									{literal}<input class="Wdate" style="width:160px;text-align: center;" type="text" name="outdate" onfocus="this.blur()" id="txtStartDate" value="" onClick="WdatePicker({dateFmt:'yyyy-M-d H:mm:ss',maxDate:'%y-%M-%d'})">{/literal}
+									<span>至&nbsp;</span>
+									{literal}
+										<input class="Wdate" style="width:160px;text-align: center;" type="text" name="data"  onfocus="this.blur()" id="txtEndDate" value="" onClick="WdatePicker({dateFmt:'yyyy-M-d H:mm:ss',maxDate:'%y-%M-%d'})">  
+									{/literal}
+								</div>
+							</li>
+							<li>
+								<h3>选项</h3>
+									<input type="checkbox" name="isread"  value="1"  checked="checked"/><span>保留未读信件</span>
+							</li>
+							
+							
+						</ul>
+						<div class="content_sws_nr_right_b_qiye_bcfh">
+							<input type='submit' value='清理' name='sub'/>
+							<input type='reset' value='重置' name='res'/>
+						</div>
+					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{include file="Public/footer.html"}

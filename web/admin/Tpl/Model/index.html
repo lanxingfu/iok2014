@@ -1,0 +1,65 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Model/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- table -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title" style="margin-bottom:10px;">
+						<h5>模块管理 》模块列表</h5>
+						{include file="record.inc.htm"}
+					</div>
+					{include file="search.inc.htm"}
+					<!-- end box / title -->
+					<div class="table">
+						<table>
+							<thead>
+								<tr>
+								
+									<th width="40">Id</th>
+									<th class="left">名称</th>
+									<th width="140">添加时间</th>
+									
+									<th width="60">操作</th>
+									
+								</tr>
+							</thead>
+							<tbody>
+								{foreach item=val from=$rec}
+								<tr>
+									
+									
+									<td>{$val['id']}</td>
+									<td><a href="/iokadmin.php?m=Model&a=detail&id={$val['id']}">{$val['prettyname']}</a></td>
+									
+									<td>{$val['addtime']|date_format:'%Y-%m-%d %H:%M:%S'|default:'-'}</td>
+									
+									<td>
+										
+										<a href="/iokadmin.php?m=Model&a=edit&id={$val['id']}">编辑</a>
+										
+									</td>
+									
+								</tr>
+								
+								{foreachelse}
+								<tr><td colspan="100%">没有记录</td></tr>
+								{/foreach}
+								
+							</tbody>
+						</table>
+						<!-- pagination -->
+						{$page|default:''}
+						<!-- end pagination -->
+						
+					</div>
+				</div>
+				<!-- end table -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

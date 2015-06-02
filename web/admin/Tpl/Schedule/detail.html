@@ -1,0 +1,85 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+</script>
+		<!-- content -->
+		<div id="content">
+			{include file="Schedule/leftmenu.inc.html"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- table -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title" style="margin-bottom:10px;">
+						<h5>广告列表</h5>
+						{include file="record.inc.htm"}
+					</div>
+					<div id="search_div">
+						<form action="/iokadmin.php/Schedule/detail" method='post'>
+							<div style="padding:10px 20px;">
+								<select name='search_type'>
+									<option {if $search_type eq "prettyname"} selected {/if} value='prettyname'>广告名称</option>
+									<option {if $search_type eq "introduce"} selected {/if} value='introduce'>广告介绍</option>
+									<option {if $search_type eq "user"} selected {/if} value='user'>会员名</option>
+								</select>
+								<input name="search_key" type="text" style="width:120px;" value="{$search_key}" />
+								
+								
+								<span>	
+									<input type="hidden" name="adplaceid" value="{$listarr[0]['adplaceid']}">
+									<input type="submit" value="搜索" />
+								</span>
+							</div>
+						</form>
+					</div>
+					<!-- end box / title -->
+					<div class="table">
+						<table>
+							<thead>
+								<tr>
+									<th class="selected last"><input type="checkbox" class="checkall" /></th>
+									<th class="left">Id</th>
+									<!-- <th>广告类型</th> -->
+									<th style='width:156px;'>广告名称</th>
+									<th>广告位ID</th>
+									<th>广告价格</th>
+									<th>是否启用</th>
+									<th>起始时间</th>
+									<th>结束时间</th>
+									<th>添加用户</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								{foreach from=$listarr item=l}
+								<tr>
+									<td class="selected last"><input type="checkbox" name='alldel' value="{$l['id']}"/></td>
+									<td style='width:20px;' class="title">{$l['id']}</td>
+									<!-- <td>幻灯片广告</td> -->
+									<td>{$l['prettyname']}</td>
+									<td>{$l['adplaceid']}</td>
+									<td>{$l['price']}</td>
+									<td>{$l['enabled']}</td>
+									<td>{$l['fromtime']}</td>
+									<td>{$l['totime']}</td>
+									<td>{$l['adduserid']}</td>
+									<td><a href="/iokadmin.php/Schedule/add/id/{$l['id']}/adid/{$l['adplaceid']}">广告排期</a>
+									<!-- <a href="">排期修改</a> --></td>
+										
+								</tr>
+								{/foreach}
+							
+							</tbody>
+						</table>
+						<!-- pagination -->
+						{$page|default:''}
+						<!-- end pagination -->
+						<!-- table action -->
+						<!-- end table action -->
+					</div>
+				</div>
+				<!-- end table -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

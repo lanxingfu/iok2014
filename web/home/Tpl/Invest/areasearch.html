@@ -1,0 +1,210 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Public/home_top.html'}
+<link href="/public/style/home/zs_rjym.css" rel="stylesheet" />
+<style>
+.null{
+font-family: "微软雅黑";
+font-size: 13px;
+color: #6e6e6e;
+padding-right: 30px;
+float: left;
+}
+</style>
+{literal}
+<script>
+function sub(id){
+	var id=$("#select"+id).find("option:selected").val();
+	location.href = "/Invest/areasearch/id/"+id;
+}
+function sub1(id){
+	var id=$("#select"+id).find("option:selected").val();
+	location.href = "/Invest/represearch/id/"+id;
+}
+</script>
+{/literal}
+<div class="zs_rjym_box">
+	<div class="zs_rjym_nr">
+    	<div class="zs_rjym_top">
+        	<div class="zs_rjym_top_t">
+            	<h3>招商</h3>
+                <p>
+                    &gt;
+                    <a target="_blank" href="#">区域管理中心查询</a>
+                </p>
+            </div>
+        </div>
+        <div class="zs_rjym_conter">
+        	<div class="zs_rjym_conter_left">
+            	<div class="zs_rjym_conter_left_top">
+                	<div class="zs_rjym_conter_left_top_nr">
+                    	<div class="zs_rjym_conter_left_top_nr_t">
+                        	<div class="zs_rjym_conter_left_top_nr_tbt">
+                                <h3>{$nowname.prettyname}管理中心</h3>
+                                <p>{$areanme}</a></p>
+                        	</div>
+                            <ul class="zs_rjym_conter_left_top_nr_ta">
+							{foreach from=$arealist item=al}
+									<li><a href="/Invest/areasearch/id/{$al['id']}">{$al['prettyname']}</a></li>
+								{/foreach}
+                            	</ul>
+                        </div>
+                        <div class="zs_rjym_conter_left_top_nr_c">
+                        	<h4>{$nowname.prettyname}{$nowname['type']}</h4>
+                            <div class="zs_rjym_conter_left_top_nr_ctext">
+							{if $mainlist.name neq ""}
+                            	<span>联系人：{$mainlist.name}</span>
+                                <span>性别：{if $mainlist.gender eq "1"}男{else}女{/if}</span>
+                                <span>电话：{if $mainlist.telephone eq ""}暂无{else}{$mainlist.telephone}{/if}</span>
+                                </span>
+                                <span>QQ：{if $mainlist.qq eq ""}暂无{else}{$mainlist.qq}{/if}</span>
+                                <span>Email：{if $mainlist.email eq ""}暂无{else}{$mainlist.email} {/if}</span>
+                                <p>地址：{if $mainlist.address eq "" }暂无{else}{$mainlist.address} {/if}</p>
+								{else}
+									<div class="null">抱歉，您所查询的区域暂时没有{$nowname.type}，如果您想了解更多详细信息，可以电话直接与我们进行沟通，或者通过下面的留言栏联系我们。<br/>
+										咨询热线：400－888－8810<br/>
+										留　　言：<a href="/Invest/guestbook" target="_blank">（点击留言）</a>
+									</div>
+								{/if}
+                            </div>
+                        </div>
+						{if $list['shi']}
+                        <div class="zs_rjym_conter_left_top_nr_b">
+                        	<h4>{$nowname.prettyname}市级管理中心</h4>
+                            <ul class="zs_rjym_conter_left_top_nr_bli">
+							{if $list['shi']}
+										{foreach from=$list['shi'] item=shi}
+                            	<li>
+                                	<h5>{$nowname.prettyname}/{$shi.prettyname}</h5>
+                                    <span>联系人：{$shi.name}</span>
+                                    <span>性别：{if $shi.gender eq "1"}男{else}女{/if}</span>
+                                    <span>电话：{if $shi.telephone eq ""}暂无{else}{$shi.telephone}{/if}</span>
+                                    
+                                    <span>QQ：{if $shi.qq eq ""}暂无{else}{$shi.qq}{/if} </span>
+                                    <span>Email：{if $shi.email eq ""}暂无{else}{$shi.email} {/if}</span>
+                                    <p>地址：{if $shi.address eq "" }暂无{else}{$shi.address} {/if}</p>
+                                	</li>
+										{/foreach}
+									{else}
+										<div class="null">
+											抱歉，您所查询的区域暂时没有
+											市级管理中心。
+										</div>
+									{/if}
+                            </ul>
+                        </div>
+						{/if}{if $list['xian']}
+						<div class="zs_rjym_conter_left_top_nr_b">
+                        	<h4>{$nowname.prettyname}区/县级管理中心</h4>
+                            <ul class="zs_rjym_conter_left_top_nr_bli">
+							{if $list['xian']}
+										{foreach from=$list['xian'] item=xian}
+                            	<li>
+                                	<h5>{$nowname.prettyname}/{$xian.prettyname}</h5>
+                                    <span>联系人：{$xian.name}</span>
+                                    <span>性别：{if $xian.gender eq "1"}男{else}女{/if}</span>
+                                    <span>电话：{if $xian.telephone eq ""}暂无{else}{$xian.telephone}{/if}</span>
+                                    
+                                    <span>QQ：{if $xian.qq eq ""}暂无{else}{$xian.qq}{/if} </span>
+                                    <span>Email：{if $xian.email eq ""}暂无{else}{$xian.email} {/if}</span>
+                                    <p>地址：{if $xian.address eq "" }暂无{else}{$xian.address} {/if}</p>
+                                	</li>
+										{/foreach}
+									{else}
+										<div class="null">
+											抱歉，您所查询的区域暂时没有
+											区/县级管理中心。
+										</div>
+									{/if}
+                            </ul>
+                        </div>
+						{/if}
+                    </div>
+                </div>
+				<!--
+                <div class="zs_rjym_conter_left_bot">
+                	<div class="zs_rjym_conter_left_bot_nr">
+                    	<div class="zs_rjym_conter_left_bot_nr_left">
+                        	<div class="zs_rjym_conter_left_bot_nr_left_l">
+                            	<a target="_blank"href="#"><img src="/public/image/invest/zs_rjym_img_4.png" alt="" />上一页</a>
+                            </div>
+                            <div class="zs_rjym_conter_left_bot_nr_left_a">
+                            	<a target="_blank"href="#">1</a>
+                                <a target="_blank"href="#">2</a>
+                                <a target="_blank"href="#">3</a>
+                                <a target="_blank"class="a_list" href="#">4</a>
+                                <a target="_blank"href="#">5</a>
+                                <a target="_blank"href="#">6</a>
+                                <a target="_blank"href="#">7</a>
+                            </div>
+                            <div class="zs_rjym_conter_left_bot_nr_left_r">
+                            	<a target="_blank"href="#">下一页<img src="/public/image/invest/zs_rjym_img_5.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="zs_rjym_conter_left_bot_nr_right">
+                        	<p style="padding-right:15px;">共400页</p>
+                            <p>跳转至<input type="text" value="" />页</p>
+                            <p class="p_list">
+                            	<input type="button" value="确定" />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+				-->
+            </div>
+            <div class="zs_rjym_conter_right">
+            	<div class="content_bottom_nr_qdzs_cxqy">
+                    <ul class="content_b_n_qdzs_cxqy_n">
+                        <li>
+                            <h3><img src="/public/image/invest/zs_tubiao_7.png" alt="" /><span>区域管理中心查询</span></h3>
+                            <div class="content_b_n_qdzs_cxqy_glzx">
+                                <select id="select1">
+                                    <option>请选择查询城市</option>
+                                   {foreach from=$area item=ar}
+											<option value="{$ar.id}">{$ar.prettyname}</option>
+										{/foreach}
+                                </select>
+                                <p><a href="javascript:sub(1);"><img src="/public/image/invest/zs_tubiao_9_1.png" alt="" /></a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <h3><img src="/public/image/invest/zs_tubiao_8.png" alt="" /><span>商务服务站查询</span></h3>
+                            <div class="content_b_n_qdzs_cxqy_glzx">
+                                <select id="select2">
+                                    <option>请选择查询城市</option>
+                                    {foreach from=$area item=ar}
+											<option value="{$ar.id}">{$ar.prettyname}</option>
+										{/foreach}
+                                </select>
+                                <p><a href="javascript:sub1(2);"><img src="/public/image/invest/zs_tubiao_9.png" alt="" /></a></p>
+                            </div>
+                        </li>
+                    </ul>
+            	</div>
+                <div class="zs_rjym_conter_right_lb">
+                	<div class="content_bottom_nr_zszx_reght">
+                        <div class="content_bottom_nr_zszx_rtt">
+                            <h3>推荐资讯</h3>
+                            <p><a href="#" target="_blank">MORE&gt;</a></p>
+                        </div>
+                        <ul class="content_bottom_nr_zszx_rbt">
+                            <li><a href="#" target="_blank">家电售后服务投诉多 视售后成</a></li>
+                            <li><a href="#" target="_blank">家电售后服务投诉多 视售后成</a></li>
+                            <li><a href="#" target="_blank">家电售后服务投诉多 视售后成</a></li>
+                            <li><a href="#" target="_blank">家电售后服务投诉多 视售后成</a></li>
+                            <li><a href="#" target="_blank">家电售后服务投诉多 视售后成</a></li>
+                            <li><a href="#" target="_blank">家电售后服务投诉多 视售后成</a></li>
+                            <li><a href="#" target="_blank">家电售后服务投诉多 视售后成</a></li>
+                            <li><a href="#" target="_blank">家电售后服务投诉多 视售后成</a></li>
+                            <li><a href="#" target="_blank">家电售后服务投诉多 视售后成</a></li>
+                            <li><a href="#" target="_blank">家电售后服务投诉多 视售后成</a></li>
+                            <li><a href="#" target="_blank">家电售后服务投诉多 视售后成</a></li>
+                        </ul>
+                	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{include file='Public/footer.html'}

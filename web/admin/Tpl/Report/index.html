@@ -1,0 +1,97 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<script language="javascript">
+ function del(id)
+{
+   if(confirm("确实要删除吗?"))
+	 window.location.href='/iokadmin.php/Report/delete/id/'+id;
+}
+function alldel(){	
+	var str='';
+	$("input:checkbox[name='alldel']:checked").each(function(){
+		str+=$(this).val()+",";
+	})
+	if(str){
+		if(confirm("确实删除所有选中吗?"))
+		window.location.href='/iokadmin.php/Report/delete/id/'+str;
+	}else{
+		alert('请至少选中一项');
+	}
+
+}
+</script>
+		<!-- content -->
+		<div id="content">
+			{include file="Report/leftmenu.inc.html"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- table -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title" style="margin-bottom:10px;">
+						<h5>信息列表</h5>
+						{include file="record.inc.htm"}
+					</div>
+					<div id="search_div">
+						<form action="/iokadmin.php/Report/index" method='get'>
+							<div style="padding:10px 20px;">
+								 关键词:
+								<input name="search_title" type="text" style="width:120px;" value="{$search_key|escape:'html'|nl2br}" />
+								<span>						
+									<input type="submit" value="搜索" />
+								</span>
+							</div>
+						</form>
+					</div>
+					<!-- end box / title -->
+					<div class="table">
+						<table>
+							<thead>
+								<tr>
+									<th class="selected last"><input type="checkbox" class="checkall" /></th>
+									<th class="left">Id</th>
+									<!-- <th>广告类型</th> -->
+									<th style='width:156px;'>信息标题</th>
+									<th>关联专题</th>
+									<th>是否启用</th>
+									<th>是否置顶</th>
+									<th>添加时间</th>
+									<th>添加用户</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								{foreach from=$list item=l}
+								<tr>
+									<td class="selected last"><input type="checkbox" name='alldel' value="{$l['id']}"/></td>
+									<td style='width:20px;' class="title">{$l['id']}</td>
+									<!-- <td>幻灯片广告</td> -->
+									<td>{$l['title']}</td>
+									<td>无关联</td>
+									<td>{if $l['enabled'] eq 1} 启用 {else} 关闭 {/if}</td>
+									<td>{if $l['istop'] eq 1} 置顶 {else} 不置顶 {/if}</td>
+									<td>{$l['addtime']}</td>
+									<td>{$l['adduserid']}</td>
+									<td><a href="/iokadmin.php/Report/edit/id/{$l['id']}">编辑</a> 
+										<a href="javascript:del({$l['id']})">删除</a></td>
+								</tr>
+								{/foreach}
+								<tr style='height:5px;'>
+									<td><input type="checkbox" class="checkall" /></td>
+									<td colspan='9'><a href='javascript:alldel();'>批量删除</a></td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- pagination -->
+						{$page|default:''}
+						<!-- end pagination -->
+						<!-- table action -->
+						<!-- end table action -->
+					</div>
+				</div>
+				<!-- end table -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

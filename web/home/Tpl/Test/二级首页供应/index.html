@@ -1,0 +1,221 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Index/top.html'}
+<link href="/public/style/home/mall.css" rel="stylesheet" />
+<div class="conter_center">
+	<div class="content_nr_xqnr">        
+		<!-- 内容第一部分的左边 -->
+		<div class="content_nr_xqnr_left">
+			<div class="content_nr_xqnr_Ln">
+				<h3>
+					<a target="_blank" href="/Mall" target="_blank">最新供应</a>
+				</h3>
+				<ul class="content_xqnr_Ln_B">
+						<li>
+							<img src="/Public/image/index/img_8.png" alt="" />
+							<h4><a href="/Mall/show/itemid/{$v.itemid}" target="_blank"></a></h4>
+							<span></span>
+						</li>
+					
+				</ul>
+			</div>
+			<div class="gy_content_left_t">
+				<div class="content_nr_xqnr_img">
+					<div class="slideBox">
+						<div class="hd">
+							<ul>
+							
+							<li>{$k}</li>
+							
+							</ul>
+						</div>
+						<div class="bd">
+							<ul>
+						   
+							<li><a href="{$vo.image_url}" title="{$vo.image_alt}" ><img src='{$vo.image_src}' alt="{$vo.image_alt}" ></a></li>
+							
+						</ul>
+						</div>
+						<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+						<a class="prev" href="javascript:void(0)"></a>
+						<a class="next" href="javascript:void(0)"></a>
+					</div>				
+					
+				</div>
+				<div class="content_nr_xqnr_img_b">
+					<div class="picScroll-left">
+						<div class="hd">
+							<a class="next"></a>
+							<ul></ul>
+							<a class="prev"></a>
+							<!--<span class="pageState"></span>-->
+						</div>
+						<div class="bd">
+							<ul>
+								
+								<li>
+									<div class="pic"><a href="{$vo.image_url}" title="{$vo.image_alt}"  ><img src="{$vo.image_src}" alt="{$vo.image_alt}" /></a></div>
+									<div class="title"><a href="{$vo.image_url}">{$vo.image_alt}</a></div>
+								</li>
+								</volist>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="content_nr_xqnr_right">
+			<div class="gy_content_right_t">
+				<a target="_blank" href="/Public/login">登录</a><span>|</span>
+				<a target="_blank" href="/Supply/supply">发布供应</a>
+			</div>
+			<div class="gy_content_right_o">
+				<h2 class="gy_Cright_bt">仅需<span>4步</span>实现快速采购</h2>
+				<ul class="gy_content_right_oli">
+					<li>
+						<div class="gy_content_right_oli_img">
+							<img src="/Public/image/mall/gyimg_12.png" alt="" />
+						</div>
+						<div class="gy_content_right_oli_R">
+							<h3>注册</h3>
+							<p>登录<a target="_blank" href="/Public/register">www.iokokok.com</a>进行用户注册</p>
+						</div>
+					</li>
+					<li>
+						<div class="gy_content_right_oli_img">
+							<img src="/Public/image/mall/gyimg_13.png" alt="" />
+						</div>
+						<div class="gy_content_right_oli_R">
+							<h3>通过审核</h3>
+							<p>分配商务代表实地审核</p>
+						</div>
+					</li>
+					<li>
+						<div class="gy_content_right_oli_img">
+							<img src="/Public/image/mall/gyimg_14.png" alt="" />
+						</div>
+						<div class="gy_content_right_oli_R">
+							<h3>寻找商机</h3>
+							<p>查看供应或商务代表撮合交易</p>
+						</div>
+					</li>
+					<li>
+						<div class="gy_content_right_oli_img">
+							<img src="/Public/image/mall/gyimg_15.png" alt="" />
+						</div>
+						<div class="gy_content_right_oli_R">
+							<h3>下订单</h3>
+							<p>购买选中产品</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="gy_content_nr_Re_Ro">
+				<div class="gy_content_nr_Re_Ro_top">
+					<h3>安全交易</h3>
+					<div class="gy_content_nr_Re_Ro_topIMG">
+						<img src="/Public/image/index/img_11.png" alt="" />
+					</div>
+				</div>
+				<ul class="gy_content_nr_Re_Ro_ul">
+											
+						<li>								
+							<div class="gy_content_nr_Re_Ro_ul_img">
+								<img src="/Public/images/index/anquan_{$k}.png" alt="" />
+							</div>
+							<h4><a href="/Helps/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></h4>
+						</li>
+					
+				</ul>
+			</div>
+		</div>
+		<div class="conter_b">
+			
+				<div class="conter_b_ycl">
+					<div class="conter_b_ycl_top">
+						<div class="conter_b_ycl_top_l">
+							<span>{$k}F</span>
+							<h3><a target="_blank" href="/Mall/listy/catid/{$v.catid}">{$v.catname}</a></h3>
+						</div>
+						<div class="conter_b_ycl_top_r">
+							<span><a target="_blank" href="/Mall/listy/catid/{$v.catid}">查看更多</a></span>
+							<div class="conter_b_ycl_top_r_a">
+								
+									<a target="_blank" href="/Mall/listy/catid/{$f.catid}"  >{$f.catname}</a>
+								
+							</div>								
+						</div>
+					</div>
+					<div class="conter_b_ycl_bottom">
+						<div class="conter_b_ycl_bottom_l">
+							
+						   
+							<a title="{$vo.image_alt}" href="{$vo.image_url}"><img src="{$vo.image_src}" alt="" onError='this.src="/Public/images/zanwu.jpg"'/></a>
+							</volist>
+						</div>
+						<ul class="conter_b_ycl_bottom_r">
+							
+								<li style="<if condition='($x eq 4) OR ($x eq 9)'>border-right:none;</if><if condition='$x gt 4'>border-bottom:none;</if>">
+									<div class="conter_b_ycl_bottom_rli_t"><a target="_blank" href="/Mall/show/itemid/{$y.itemid}"><img src="{$y.thumb}" alt="" onError='this.src="/Public/images/zanwu.jpg"'/></a></div>
+									<div class="conter_b_ycl_bottom_rli_b">
+										<h4><a target="_blank" href="/Mall/show/itemid/{$y.itemid}" title="{$y.title}"></a></h4>
+										<p><span>&yen;{$y.price}</span> /</p>
+									</div>
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			<div class="conter_b_yzggcp">
+				<div class="conter_b_yzggcp_top">
+					<div class="conter_b_yzggcp_top_l">
+						<h3><a href="javascript:void(0);" style="TEXT-DECORATION: none;cursor:default;">优质供应产品</a></h3>
+					</div>
+				   <!--  <div class="conter_b_yzggcp_top_r">
+						<span><a target="_blank" href="#">查看更多</a></span>
+					</div> -->
+				</div>
+				<div class="conter_b_yzggcp_bottom">
+					<ul class="conter_b_yzggcp_bottom_r">
+						
+							<li > 
+								<div class="conter_b_yzggcp_bottom_rli_t" style="height:auto"><a target="_blank" href="/Mall/show/itemid/{$v.itemid}"><img style='height:auto' src="" alt="" onError='this.src="/Public/images/zanwu.jpg"'/></a></div>
+								<div class="conter_b_yzggcp_bottom_rli_b" style='text-align:center'>
+									<h4><a target="_blank" href="/Mall/show/itemid/{$v.itemid}">{$v.title}</a></h4>
+									<p><span>&yen;{$v.price}</span> /件</p>
+								</div>
+							</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="conter_b_sjft">
+				<div class="conter_b_sjft_top">
+					<div class="conter_b_sjft_top_l">
+						<h3><a target="_blank" href="/Helps/listy/catid/8951">商家访谈</a></h3>
+					</div>
+					<div class="conter_b_sjft_top_r">
+						<!-- <span><a target="_blank" href="/News/listy/catid/8886">MORE&gt;</a></span> -->
+					</div>
+				</div>
+				<div class="conter_b_sjft_bottom">
+					<ul class="conter_b_sjft_bottom_r">
+						
+							<li>
+								<div class="conter_b_sjft_bottom_rli_t"><a target="_blank" href="/Helps/show/itemid/{$v.itemid}"><img src="{$v.thumb}" alt="" /></a></div>
+								<div class="conter_b_sjft_bottom_rli_b">
+									<h4><a target="_blank" href="/Helps/show/itemid/{$v.itemid}">{$v.title}</a></h4>
+								</div>
+							</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	{include file="Public/footer_2.html"}
+</div>
+
+{include file='Public/footer.html'}

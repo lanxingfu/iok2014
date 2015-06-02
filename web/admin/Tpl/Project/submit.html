@@ -1,0 +1,37 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Project/leftmenu.inc.htm"}
+			<!-- end content / left -->
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>项目管理 》{if $id}编辑信息{else}添加项目{/if}</h5>
+					</div>
+					<!-- end box / title -->
+					<div class="box">
+						<!-- box / title -->
+						<div id="box-messages">
+							<div class="messages">
+								<div style="width:100%;text-align:center;margin:50px 0px 100px 0px;clear:both;">
+								{if $id}
+								{tip id='submit' default='信息修改成功！'}
+								{else}
+								{tip id='submit' default='信息添加成功！'}
+								{/if}
+								<a href="/iokadmin.php?m=Project{if $id}&a=detail&id={$id}{/if}" title="返回">点击返回</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

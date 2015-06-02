@@ -1,0 +1,271 @@
+{include file="Public/header_room.html" }
+{include file="Public/room_top.html" }
+<link href="__CSS__/home/room/iokorderlist.css" rel="stylesheet" />
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+            	{include file="Public/room_menu.html" }
+			</div>
+			
+			<div class="content_sws_nr_right" id="iframe_main" >
+					<div class="content_sws_nr_right_t">
+						{include file="Public/welcom.html" }
+					</div>
+					<div class="content_sws_nr_right_b_t">
+						{include file="Order/iokbuymenu.html"}
+					</div>
+					<div class="content_sws_nr_right_b_c">
+						<table>
+							<tr>
+								<th class="cpt">产品图</th>
+								<th class="spfw">商品/服务</th>
+								<th class="dj">单价（元）</th>
+								<th class="sl">数量</th>
+								<th class="je">金额</th>
+								<th class="gxsj">更新时间</th>
+								<th class="zt">状态</th>
+							</tr>
+						</table>
+					</div>
+					<div id="content">
+					<ul class="content_sws_nr_right_b_b">
+					{if $orderlist|count gt 0}
+						{foreach key=key item=item from=$orderlist}
+						<li>
+							<div class="content_sws_nr_right_b_bt">
+								<div class="content_sws_nr_right_b_bt_l">
+									<p>订单号：<span>{$item.ordernumber}</span></p>
+									<div class="swdb_xxxx" id="boox_{$item.id}" style="display:none">
+                                        	<div class="swdb_xxxx_bt">
+												<div class="swdb_xxxx_btl">
+													{if $item.headpic eq ''}
+														<img src="__IMAGES__/public/user.png" alt="我行网客服"  />
+													{else }
+														<img src="{$item.headpic}"  />
+													{/if}
+												</div>
+												<ul class="swdb_xxxx_btr">
+													<li><p >姓 名:</p><span style="overflow:hidden">{$item.staffname}</span></li>
+												</ul>
+											</div>		
+											<ul class="swdb_xxxx_bb">
+												<li>
+												<span style="width:40px;">邮 箱:</span>
+												<span style="overflow:hidden;width:147px;float:left" title="{$item.email}">{$item.email}</span></li>
+												<li><span style="width:40px;">电 话:</span><span>{$item.mobile}</span></li>
+											</ul>
+                                    </div>
+								</div>
+								<div class="content_sws_nr_right_b_bt_r" >
+									<a>	<span style="float:left">商务代表：</span></a>
+									{if $item.sellerstaffid eq 0}
+									<img src="__IMAGES__/public/send_mess_h.png"/>
+									{else}
+									<a  href="/Member/companymessage/mestate/1/username/{$item[seller_representname]}"  >
+									<img src="__IMAGES__/public/send_mess_o.png"/></a>
+									{/if}
+									<span style="color:#6E6E6E;" onmousemove="showStaff({$item.id})" onmouseout="hideStaff({$item.id})">{$item.staffname}</span>
+								</div>
+							</div>
+							<div class="content_sws_nr_right_b_bb">
+								<div class="content_sws_nr_right_b_bb_l">
+									<div class="content_sws_nr_right_b_bb_ll"> 
+										<a href="__APP__/Product/show/itemid/{$item.productid}" target="_blank">
+										<img width="59" height="61" src="{$item.thumb}" alt="{$vo.title}" /></a>
+									</div>
+									<div class="content_sws_nr_right_b_bb_lr">
+										<a href="__APP__/Product/show/itemid/{$item.productid}" title="{$item.title}" target='_blank'>{$item.title}</a>
+										<p>备注：{$item.note}</p>
+									</div>
+								</div>
+								<div class="content_sws_nr_right_b_bb_r">
+									<div class="content_sws_nr_right_b_bb_rt">
+										<p style="width:81px;">{$item.price}</p>
+										<span style="width:51px;">{$item.number}</span>
+										<p style="width:75px;" title="优惠金额：{$item.discountamount} | 物流费用：{$item.shipfare}">{$item.amount}</p>
+										<span style="width:125px;">{$item.addtime}</span>
+										<h3>{$item.nowstatus}</h3>
+									</div>
+									<div class="content_sws_nr_right_b_bb_rb">
+									<!--根据状态修改图标-->
+									<!--{if $history neq 'navigation' }-->
+										<span>
+										   {$item.statusico}
+										</span>   
+									<!-- {/if}-->
+									</div>
+								</div>
+							</div>
+                           
+						</li>
+						<div class="extend_from" id="extend_time_{$item.itemid}" style="display:none;">
+                            	<form action="" method="post">
+                               	  <p>
+                                      <span>延长收货时间：</span>
+                                        <input name="orderid" type="hidden" value="{$item.itemid}" />
+                                        <label>
+                                        <input type="radio" name="extend_time" value="3" id="extend_time_3" checked="checked" />
+                                        3天</label>
+                                         &nbsp;
+                                        <label>
+                                        <input type="radio" name="extend_time" value="5" id="extend_time_5" />
+                                        5天</label>
+                                         &nbsp;
+                                        <label>
+                                        <input type="radio" name="extend_time" value="10" id="extend_time_10" />
+                                        10天</label>
+                                         &nbsp;
+                                        <label>
+                                        <input type="radio" name="extend_time" value="15" id="extend_time_15" />
+                                        15天</label>
+                                        &nbsp;
+                                	 <input name="" type="button" value="提交" onclick="submitExtendTime({$item.id});" style="cursor:pointer;" />
+                              	  </p>
+                              </form>
+                           </div>   
+                            <div class="extend_from" id="extend_invoice_{$item.itemid}" style="display:none;">
+                            	<form action="" method="post">
+                               	  <p>
+                                      <span>延长收发票时间：</span>
+                                         <label>
+                                        <input type="radio" name="extend_invoice_time" value="3" id="extend_invoice_time_3" checked="checked" />
+                                        3天</label>
+                                         &nbsp;
+                                        <label>
+                                        <input type="radio" name="extend_invoice_time" value="5" id="extend_invoice_time_5" />
+                                        5天</label>
+                                         &nbsp;
+                                        <label>
+                                        <input type="radio" name="extend_invoice_time" value="10" id="extend_invoice_time_10" />
+                                        10天</label>
+                                         &nbsp;
+                                        <label>
+                                        <input type="radio" name="extend_invoice_time" value="15" id="extend_invoice_time_15" />
+                                         15天</label>
+                                         &nbsp;
+                                        <input name="" type="button" value="提交" onclick="submitExtendInvoice({$item.id});" style="cursor:pointer;" />
+                              	  </p>
+                              </form>
+                           </div> 
+						{/foreach}
+					{else}
+					<div style="margin:0 auto;padding:5px;border:1px solid #bfbfbf;color:#bfbfbf;text-align:center;"><span>对不起，没有找到相应信息的订单 </span></div>
+					{/if}
+						<li id="classnone">
+							<div id="pages">{$page}</div>
+						</li>
+					</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+    </div>
+</div>
+{include file="Public/footer.html" }
+{literal}
+<script>
+function showStaff(id){
+	$('#boox_'+id).show();
+}
+function hideStaff(id){
+	$('#boox_'+id).hide();
+}
+
+function closeOrder(itemid) {
+	var id = itemid
+	$.iokPlugin.confirm('您确认要关闭此交易吗？此操作将不可撤销!',function(){
+	window.location.href="/Order/closeTrade/itemid/"+id;	
+	},function(){});
+}
+ 
+function extenTime(id) {
+	var div=document.getElementById(id);
+	if( div.style.display=='none' ) {
+		$("#"+id).show("slow");
+	} else{
+		$("#"+id).hide("slow");
+	}
+ 	
+}
+
+function extendInvoice(id){ 
+	var div=document.getElementById(id);
+	if( div.style.display=='none' ) {
+		$("#"+id).show("slow");
+	} else{
+		$("#"+id).hide("slow");
+	}
+}
+
+ function submitExtendTime(id) {
+	 $.iokPlugin.confirm('您确认要延长收货时间吗？',function(){
+	 var extend_time = $("input[name='extend_time']:checked").val();
+	 var order_id = id;
+		$.ajax({
+			type: "POST",
+			url: "/Order/extendTime",
+			data: "orderid="+order_id+"&extend_time="+extend_time,
+			success: function(msg){
+				if(msg.indexOf('ok')>=0) {
+					 $.iokPlugin.alert( "成功延长收货时间" );
+					 $("#extend_time_"+id).hide("slow");
+					 window.location.reload();
+				} else if (msg.indexOf('no')>=0) {
+					 $.iokPlugin.alert( "延长收货时间失败" );
+					 $("#extend_time_"+id).hide("slow");
+					  window.location.reload();
+				} else if(msg.indexOf('repeat')>=0) {
+					$.iokPlugin.alert( "已经延长过收货时间，不能重复延长" );
+					$("#extend_time_"+id).hide("slow");
+					 window.location.reload();
+				} else if(msg.indexOf('empty')>=0) {
+					$.iokPlugin.alert( "延长时间数据不全" );
+					$("#extend_time_"+id).hide("slow");
+					 window.location.reload();
+				} else{
+					$.iokPlugin.alert( "操作错误" );
+					$("#extend_time_"+id).hide("slow");
+					 window.location.reload();
+				}
+			}
+		});
+	 },function(){})
+ }
+ 
+
+function submitExtendInvoice(id) {
+	$.iokPlugin.confirm('您确认要延长收发票时间吗？',function(){
+		var extend_time = $("input[name='extend_invoice_time']:checked").val();
+		var order_id = id;
+		$.ajax({
+			type: "POST",
+			url: "/Order/extendInvoiceTime",
+			data: "orderid="+order_id+"&extend_time="+extend_time,
+			success: function(msg){
+				if(msg.indexOf('ok')>=0) {
+					$.iokPlugin.alert( "成功延长收发票时间" );
+					$("#extend_invoice_"+id).hide("slow");
+					window.location.reload();
+				} else if (msg.indexOf('no')>=0) {
+					$.iokPlugin.alert( "延长收发票时间失败" );
+				} else if(msg.indexOf('repeat')>=0) {
+					$.iokPlugin.alert( "已经延长过收发票时间，不能重复延长" );
+					$("#extend_invoice_"+id).hide("slow");
+					window.location.reload();
+				} else if(msg.indexOf('empty')>=0) {
+					$.iokPlugin.alert( "延长时间数据不全" );
+					$("#extend_invoice_"+id).hide("slow");
+					window.location.reload();
+				} else{
+					$.iokPlugin.alert( "操作错误" );
+					$("#extend_invoice_"+id).hide("slow");
+					window.location.reload();
+				}
+			}
+		});
+	},function(){})
+}
+</script>
+{/literal}

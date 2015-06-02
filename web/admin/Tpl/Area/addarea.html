@@ -1,0 +1,89 @@
+﻿{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<!-- content -->
+<div id="content">
+	{include file="Syscfg/leftmenu.inc.htm"}
+	<!-- content / right -->
+	<div id="right">
+		<div class="box">
+			<!-- box / title -->
+			<div class="title">
+				<h5>{if $area['id']}编辑地区{else}添加地区{/if}</h5>
+			</div>
+			<form id="form" action="?m=Area&a=submit" method="post">
+				<input type="hidden" id="id" name="id" class="small" value="{$area['id']}"/>
+				<div class="form">
+					<div class="fields">
+						<div class="field  field-first">
+							<div class="label">
+								<label for="input-small">上级地区:</label>
+							</div>
+							<div class="select" name="parentid" id='parentid'></div>
+							<script>loadarea('parentid')</script>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">地区名称:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="input-small" name="prettyname" class="small" value="{$area['prettyname']}"/>
+								<div class="tip">{tip id='prettyname' default='请输入添加地区名'}</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">排序:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="input-small" name="listorder" style="width:20px;" value="{$area['listorder']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="select">地区级别:</label>
+							</div>
+							<div class="select">
+								<select id="select" name="grade">
+								{if $area['grade'] neq ''}
+									<option value="{$area['grade']}">{$area['grade']}</option>
+								{else}
+									<option value="0">选择级别</option>
+									<option value="1">1(省一类)</option>
+									<option value="2">2(省二类)</option>
+									<option value="3">3(省三类)</option>
+									<option value="4">4(市一类)</option>
+									<option value="5">5(市二类)</option>
+									<option value="6">6(市三类)</option>
+									<option value="7">7(县一类)</option>
+									<option value="8">8(县二类)</option>
+									<option value="9">9(县三类)</option>
+								{/if}
+								</select>
+							</div>
+							<div class="tip">{tip id='grade' default='请选择地区级别'}</div>
+						</div>
+						<div class="field">
+							<div class="label label-textarea" >
+								<label for="textarea">地区简介：</label>
+							</div>
+							<div class="textarea">
+								<textarea id="textarea1" name="note"  style="height:50px;" cols="20" rows="4">{$area['note']}</textarea>
+							</div>
+						</div>
+						<div class="field">
+							<div class="buttons">
+								<div class="highlight">
+									<input type="submit" name="submit" value="保存" />
+								</div>
+								<input type="reset" name="reset" value="取消" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	<!-- end content / right -->
+	</div>
+</div>
+<!-- end content -->
+{include file="footer.inc.htm"}

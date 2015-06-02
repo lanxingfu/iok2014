@@ -1,0 +1,357 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+{literal}
+<style type="text/css">
+.table_sptps img{width: 110px;height: 115px;float: left;margin-right: 12px;}
+.table_sptpsc img{width: 200px;height: 150px;float: left;margin-right: 12px;}
+.tests{width:100px;margin: auto;}
+</style>
+<link href="/public/style/home/room/companydata.css" rel="stylesheet" />
+<!-- js -->
+<!-- 上传 弹框 -->
+<script type="text/javascript" src="/public/script/swfupload/js/handlers.js"></script>
+<script type="text/javascript" src="/public/script/swfupload/swfupload.js"></script>
+{/literal}
+<!-- content -->
+<div id="content">
+	{include file="Channel/leftmenu.inc.htm"}
+	<!-- content / right -->
+	<div id="right">
+		<div class="box">
+			<!-- box / title -->
+			<div class="title">
+				<h5>{if $data.id}编辑商务代表{else}添加商务代表{/if}</h5>
+			</div>
+			<form id="form" action="?m=Servicestaff&a=submit" method="post">
+				<input type="hidden" name="id" value="{$data.id}">
+				<div class="form">
+					<div class="fields">
+						<div class="field  field-first">
+							<div class="label">
+								<label style="color:red;">&nbsp;*&nbsp;</label>
+								<label for="label">用户名:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="account" name="account" class="small" value="{$data['account']}"/>
+								<div class="tip">{tip id='account' default='请输入用户的登录账号，3到20位英文字母、数字及“_”“-”组合'}</div>
+							</div>	
+						</div>
+						<div class="field">
+							<div class="label">
+								<label style="color:red;">&nbsp;*&nbsp;</label>
+								<label for="label">密码:</label>
+							</div>
+							<div class="input">
+								<input type="password" id="passhash" name="passhash" class="small" value="{$data['passhash']}"/>
+								<div class="tip">{tip id='passhash' default='请输入用户的登录密码，密码长度6-20位'}</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label style="color:red;">&nbsp;*&nbsp;</label>
+								<label for="label">重复输入</label>
+							</div>
+							<div class="input">
+								<input type="password" name="passhash2" class="small" />
+							</div>
+							<div class="tip">{tip id='passhash2' default='请再次输入用户的登录密码'}</div>
+						</div>
+						<div class="field">
+							<div class="label label-radio">
+								<label>性别</label>
+							</div>
+							<div class="radios">		
+								<div class="radio">
+										<input type="radio" value='male' name="gender" checked /><label for="radio-2">男</label>
+										<input type="radio" value='female' name="gender" /><label for="radio-2">女</label>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label style="color:red;">&nbsp;*&nbsp;</label>
+								<label for="input-small">服务地区:</label>
+							</div>
+							{if $data['agentareaid']}
+							<div class="select" >
+								<select id="agentareaid" name="agentareaid">
+									<option value="{$data['agentareaid']}">{$data['agentareaid']}</option>
+								</select>
+							</div>
+							{else}
+							<div class="select" name="agentareaid" id='agentareaid'></div>
+							<script>loadarea('agentareaid')</script>
+							{/if}
+							<div class="tip" style="padding:0 0 3px 0;">{tip id='top0' default='默认与注册地区一致'}</div>
+						</div>
+						<div class="field">
+							<div class="label label-radio">
+								<label>类型</label>
+							</div>
+							<div class="radios">		
+								<div class="radio">
+									<input type="radio" value='4' name="gradeid" {if $data.gradeid neq 5}checked{else}defaultChecked{/if} onclick="javascript:$('#img_3_').css('display','none');"/>
+									<label for="radio-2">商务代表</label>
+									<input type="radio" value='5' name="gradeid" {if $data.gradeid eq 5}checked{else}defaultChecked{/if} onclick="javascript:$('#img_3_').css('display','block');"/>
+									<label for="radio-2">商务服务站</label>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label style="color:red;">&nbsp;*&nbsp;</label>
+								<label for="file">上传头像:</label>
+							</div>
+							<div class="input" style="width:100px;">
+								<div class="table_sptps" style="float:left;display:inline;margin:5px;">
+									<img onclick="loadlayer('img_4','img4');" id="img_4" src="{$data.img_4|default:'/public/image/public/user_pic_big.gif'}">
+									<input type="hidden" name="img4" id="img4" value="">
+									<div class="tests">
+										<a onclick="loadlayer('img_4','img4');">【上传】</a>
+										<a onclick="delurl('img_4','img4');">【删除】</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="field" >
+							<div class="label">
+								<label style="color:red;">&nbsp;*&nbsp;</label>
+								<label for="file">上传身份证:</label>
+							</div>
+							<div style="margin-left:100px;height:165px;">
+								<div style="width:40px;display:inline;float:left;">正面：</div>
+								<div class="table_sptpsc" style="float:left;display:inline;margin:5px;">
+									<img onclick="loadlayer('img1','img_1');" id="img1" src="{$data.img_1|default:'/public/image/public/uploadimg.jpg'}">
+									<input type="hidden" name="img_1" id="img_1" value="">
+									<div class="tests">
+										<a onclick="loadlayer('img1','img_1');">【上传】</a>
+										<a onclick="delurl('img1','img_1');">【删除】</a>
+									</div>
+								</div>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<div style="width:40px;display:inline;float:left;">反面：</div>
+								<div class="table_sptpsc" style="float:left;display:inline;margin:5px;">
+									<img onclick="loadlayer('img2','img_2');" id="img2" src="{$data.img_2|default:'/public/image/public/uploadimg.jpg'}">
+									<input type="hidden" name="img_2" id="img_2" value="">
+									<div class="tests">
+										<a onclick="loadlayer('img2','img_2');">【上传】</a>
+										<a onclick="delurl('img2','img_2');">【删除】</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="field" id="img_3_" style="display:{if $data.gradeid eq 5}block{else}none{/if};">
+							<div class="label">
+								<label style="color:red;">&nbsp;*&nbsp;</label>
+								<label for="file">营业执照:</label>
+							</div>
+							<div class="input input-file">
+								<div class="table_sptpsc" style="float:left;display:inline;margin:5px;">
+									<img onclick="loadlayer('img3','img_3');" id="img3" src="{$data.img_3|default:'/public/image/public/uploadimg.jpg'}">
+									<input type="hidden" name="img_3" id="img_3" value="">
+									<div class="tests">
+										<a onclick="loadlayer('img3','img_3');">【上传】</a>
+										<a onclick="delurl('img3','img_3');">【删除】</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label style="color:red;">&nbsp;*&nbsp;</label>
+								<label for="input-small">真实姓名:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="prettyname" name="prettyname" class="small" value="{$data['prettyname']}"/>
+							</div>
+							<div class="tip">{tip id='prettyname' default='请输入真实姓名'}</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label style="color:red;">&nbsp;*&nbsp;</label>
+								<label for="input-small">手机号:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="mobile" name="mobile" class="small" value="{$data['mobile']}"/>
+							</div>
+							<div class="tip">{tip id='mobile' default='请输入手机号码'}</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label style="color:red;">&nbsp;*&nbsp;</label>
+								<label for="input-small">邮箱:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="email" name="email" class="small" value="{$data['email']}"/>
+							</div>
+							<div class="tip">{tip id='email' default='请输入电子邮箱'}</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">QQ:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="qq" name="qq" class="small" value="{$data['qq']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">电话:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="telephone" name="telephone" class="small" value="{$data['telephone']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">传真:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="fax" name="fax" class="small" value="{$data['fax']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">邮编:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="postcode" name="postcode" class="small" value="{$data['postcode']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">地址:</label>
+							</div>
+							{if $data['addrareaid']}
+							<div class="select">
+								<select id="addrareaid" name="addrareaid">
+									<option value="{$data['addrareaid']}">{$data['addrareaid']}</option>
+								</select> 
+							</div>
+							{else}
+							<div style="margin-top: 4px;" class="select" name="addrareaid" id='areaid0'></div>
+							<script>loadarea('areaid0')</script>
+							{/if}
+							&nbsp;<input type="text" id="address" name="address" class="small" value="{$data['address']}"/>
+							{tip id='address' default='请输入详细地址'}
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">邀请人:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="inviterid" name="inviterid" class="small" value="{$data['inviterid']}"/>
+							</div>
+							<div class="tip">{tip id='inviterid' default='请输入邀约人'}</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label style="color:red;">&nbsp;*&nbsp;</label>
+								<label for="input-small">请输入验证码</label>
+							</div>
+							<div class="input">
+								<input type="text" name="captcha" style="width:40px;" id="captcha" maxlength="4" />
+								<img src="/iokadmin.php?m=Misc&a=captcha&t={$smarty.now}" title="点击更换图片" onclick="javascript:reloadcaptcha(this);" style="margin-left:10px;height:25px;" />
+							</div><div class="tip" id="dverify">{tip id='tverify' default=''}</div>
+						</div>
+						<div class="field">
+							<div class="buttons">
+								<div class="highlight">
+									<input type="submit" name="submit" value="保存" />
+								</div>
+								<input type="reset" name="reset" value="取消" onclick="javascript:gotoUrl('/iokadmin.php?m=Servicestaff')"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	<!-- end content / right -->
+	</div>
+</div>
+<!-- end content -->
+{literal}
+<script type="text/javascript">
+	var closedlayerfunc = function(upimgid,imgurls){
+		var  savesrc = window.frames["jbox-iframe"].document.getElementById("savedata").value;
+		$("#"+upimgid).attr("src",savesrc);
+		$("#"+imgurls).val(savesrc);
+		return true;
+	}
+	function loadlayer(upimgid,imgurls){
+		
+		$.jBox("iframe:iokadmin.php?m=Uploadfile&a=upload", {
+			title: "上传图片",
+			width: 500,
+			height: 350,
+			showClose: false,
+			buttons: { '确定': 1 ,'取消':2},
+			submit:function(v,h,f){
+				if(v==1){
+					closedlayerfunc(upimgid,imgurls);
+				}else if(v==2){
+					delurl_t(upimgid,imgurls);
+					return true;
+				}else{
+					$.jBox.alert("出错了，Sorry ~",'提示');
+				}
+			}
+		});
+	}
+	//删除图片
+	function delurl(upimgid,imgurls){
+		$.jBox.confirm('您真的要删除这张吗?',"提示",function(){
+			var srcurl=$("#"+upimgid).attr("src");
+			$.ajax({
+				type: "POST",
+				url: "iokadmin.php?m=Uploadfile&a=imgdel",
+				data: "imgurl="+srcurl,
+				success: function(msg){
+					if(msg==1 || msg==2){
+						$("#"+upimgid).attr("src","/public/image/public/uploadimg.jpg");
+						$("#"+imgurls).attr('value',"/public/image/public/uploadimg.jpg");
+						$.jBox.alert('删除成功','');
+					}else{
+						$.jBox.alert('删除失败','');
+					}
+				}
+			});
+		},function(){});
+
+	}
+	function del(id){
+		var submit = function (v, h, f) {
+		if (v == 'ok')
+			window.location.href='/iokadmin.php?m=Product&a=del&id='+id;
+			//jBox.tip(v, 'info');
+		else if (v == 'cancel')
+			jBox.tip('已取消', 'info');
+
+			return true; //close
+		};
+
+		$.jBox.confirm("确定删除吗？", "提示", submit);
+	}
+	/*删除图片，未保存时*/
+	function delurl_t(upimgid,imgurls){
+
+		var  up_src = window.frames["jbox-iframe"].document.getElementById("savedata").value;
+		if(up_src){
+			$.ajax({
+				type: "POST",
+				url: "iokadmin.php?m=Uploadfile&a=imgdel",
+				data: "imgurl="+up_src,
+				success: function(msg){
+					if(msg==1 || msg==2){
+						$.jBox.alert('删除成功');
+					}else{
+						$.jBox.alert('删除失败');
+					}
+				}
+			});
+		}
+	}
+	/*图片上传结束*/
+</script>
+{/literal}
+{include file="footer.inc.htm"}

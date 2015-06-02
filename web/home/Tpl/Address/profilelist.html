@@ -1,0 +1,142 @@
+{include file="Public/header_room.html" }
+{include file="Public/room_top.html" }
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html" }
+			</div>
+			<!-- css -->
+			<link href="/public/style/home/room/address.css" rel="stylesheet" />
+			<link href="/public/style/home/room/table_form.css" rel="stylesheet" />
+			<script type="text/javascript">
+			var URL = '/Profile';
+			</script>
+			<div class="content_sws_nr_right" id="iframe_main">
+				<div class="content_sws_nr_right_lgrzl">
+					<div class="content_sws_nr_r_lgrzl_t">
+						{include file="Public/welcom.html" }
+					</div>
+				</div>
+				<ul class="content_sws_nr_right_t">
+					<li><a href="/Address/profileadd"  >添加地址</a></li>
+					<li><a href="/Address/profilelist" class="navigation" >收货地址</a></li>
+				</ul>
+				<div class="content_sws_nr_right_b" style="margin-top:5px;">
+					<div class="content_sws_nr_right_b_dlmm">
+						<div class="pad-lr-10">
+						<div class="table-list">
+						<table id="checkList" class="table-list" width="100%" cellspacing="0" cellpadding="0">
+							<thead>
+							<tr class="row">
+							<th width="8">
+							</th>
+							<th width="45">
+							<a title="按照编号升序排列 " href="javascript:sortBy('listorder','1','delivery')">顺序</a>
+							</th>
+							<th>
+							<a title="按照姓名升序排列 " href="javascript:sortBy('truename','1','delivery')">姓名</a>
+							</th>
+							<th style="width:auto">
+							<a title="按照收货地址升序排列 " href="javascript:sortBy('address','1','delivery')">收货地址</a>
+							</th>
+							<th width="210 ">
+							<a title="按照添加时间升序排列 " href="javascript:sortBy('addtime','1','delivery')">添加时间</a>
+							</th>
+							<th width="120px" style="text-align:center;">操作</th>
+							</tr>
+							</thead>
+							<tbody>
+							{foreach $lists as $vo}
+							<tr class="out" onmouseout="outs(event)" onmouseover="overs(event)">
+								<td>
+								</td>
+								<td>{$vo.listorder}</td>
+								<td>{if $vo.prettyname eq '' }暂无{else}{$vo.prettyname}{/if}</td>
+								<td>{if $vo.address eq '' }暂无{else}{$vo.address}{/if}</td>
+								<td>{if $vo.addtime eq '' }暂无{else}{$vo.addtime|date_format:'Y-m-d H:i:s'}{/if}</td>
+								<td align="center" class="spxq_table_th_gl">
+									<a href="/Address/profileedit/id/{$vo.id}">
+										<img  style="width:10px;height:15px;display:inline;padding-right:8px;" src="/public/image/home/business_room/httb_10.png" alt="编辑"/>
+									</a>&nbsp;
+									<a href="/Address/deleteaddress/id/{$vo.id}" onclick="javascript:return confirm('是否要删除此项？');" >
+										<img  style="width:10px;height:15px;display:inline;" alt="删除" src="/public/image/home/business_room/httb_12.png">
+									</a>
+								</td>
+							</tr>
+							{/foreach}
+							</tbody>
+						</table>
+						</div>
+						
+						<div id="pages">{$page}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+{include file="Public/footer.html" }
+{literal}
+<script type='text/javascript'>
+function foreverdel_(id){
+	var keyValue;
+	if (id)
+	{
+		keyValue = id;
+	}else {
+		keyValue = getSelectCheckboxValues_();
+	}
+	if (!keyValue)
+	{
+		$.iokPlugin.alert('请选择删除项！');
+		return false;
+	}
+	$.iokPlugin.confirm('确实要永久删除选择项吗？',function(){
+		$.ajax({
+			type: "POST",
+			url: URL+"/foreverdelete/",
+			dataType: "json",
+			data: {id:keyValue},
+			success: function(msg){
+				doDelete_(msg.datas,msg.status)
+			}
+		});
+	},function(){});
+}
+function doDelete_(data,status){
+		if (status==1)
+		{
+			var Table = $('checkList');
+			var len	=	selectRowIndex.length;
+			if(len==0){
+				window.location.reload();
+			}
+			for (var i=len-1;i>=0;i-- )
+			{
+				//删除表格行
+				Table.deleteRow(selectRowIndex[i]);
+			}
+			selectRowIndex = Array();
+		}
+		if(status==250){
+			$.iokPlugin.alert("非法操作！");
+		}
+}
+function getSelectCheckboxValues_(){
+	var obj = document.getElementsByName('key');
+	var result ='';
+	var j= 0;
+	for (var i=0;i<obj.length;i++)
+	{
+		if (obj[i].checked==true){
+				selectRowIndex[j] = i+1;
+				result += obj[i].value+",";
+				j++;
+		}
+	}
+	return result.substring(0, result.length-1);
+}
+</script>
+{/literal}

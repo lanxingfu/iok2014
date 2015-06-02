@@ -1,0 +1,36 @@
+<div class="header">
+	<!-- 头部的头部  -->
+	{include file="Public/header_top.html"}
+	<!-- 头部中间部分 -->
+    <div class="header_conter">
+			<div class="header_conter_nr_invest">
+				<div class="header_conter_logo_invest">
+					<a href="/Index"><img src="__PUBLIC__/image/public/logo.png" alt="logo" /></a>
+				</div>
+				<div class="header_conter_zxgqreg" style="width:143px;">
+					<h1>用户注册</h1>
+				</div>
+				<ul class="header_conter_sskreg" style="width:366px;">
+					<li style="padding:0 12px;">
+						<div class="header_conter_ssk_tubiao"><a href="/Register/index/types/company"><img src="__PUBLIC__/image/public/img_11.png" alt="" /></a></div>
+						<h4><a href="/Register/index/types/company" {if  $types == 'company'} class="a_ll" {/if}>企业注册</a></h4>
+					</li>
+					<li style="padding:0 12px;">
+						<div class="header_conter_ssk_tubiao"><a href="/Register/index/types/repstation"><img src="__PUBLIC__/image/public/tub-3.png" alt="" /></a></div>
+						<h4><a href="/Register/index/types/repstation" {if  $types == 'repstation'} class="a_ll" {/if}>商务服务站</a></h4>
+					</li>
+					<li style="padding:0 12px;">
+						<div class="header_conter_ssk_tubiao"><a href="/Register/index/types/represent"><img src="__PUBLIC__/image/public/img_12.png" alt="" /></a></div>
+						<h4><a href="/Register/index/types/represent" {if  $types == 'represent'} class="a_ll" {/if}>商务代表</a></h4>
+					</li>
+					<li style="padding:0 12px;border-right:none;">
+						<div class="header_conter_ssk_tubiao"><a href="/Register/index/types/member"><img src="__PUBLIC__/image/public/img_13.png" alt="" height="20px" /></a></div>
+						<h4><a href="/Register/index/types/member" {if  $types == 'member'} class="a_ll" {/if}>个人注册</a></h4>
+					</li>
+				</ul>
+				<div class="header_conter_lcfs_invest" style="padding-left:12px;">
+					<img src="__PUBLIC__/image/public/img_4.png" alt="联系电话" />
+				</div>
+			</div>	
+    </div>
+</div>

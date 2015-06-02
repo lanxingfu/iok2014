@@ -1,0 +1,96 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<!-- content -->
+<div id="content">
+	{include file="Syscfg/leftmenu.inc.htm"}
+	<!-- content / right -->
+	<div id="right">
+		
+		<div id="box1-tabs" class="box">
+			<!-- box / title -->
+			<div class="title">
+				<ul class="links">
+					<li><a href="?m=Log">登陆日志</a></li>
+					<li><a href="?m=Log&a=logaudit">审核日志</a></li>
+					<li><a href="?m=Log&a=logscore">积分流水</a></li>
+					<li class="ui-tabs-selected ui_state_active  ui_state_hover"><a href="?m=Log&a=logfinance">财务流水</a></li>
+					<li><a href="?m=Log&a=logactions">操作日志</a></li>
+				</ul>
+			</div>
+			
+
+<!-- box / title -->
+<div id="box-dialogs">
+	<!-- table -->
+	<div class="box">
+		<!-- box / title -->
+		<!-- <div class="title">
+			<h5>财务流水</h5>
+		</div> -->
+		<!-- end box / title -->
+		{include file="search.inc.htm"}
+		<div class="table">
+			<form action="" method="post">
+			<table>
+				<thead>
+					<tr>			
+						<th class="left">编号</th>
+						<th>会员名</th>
+						<th>地区</th>
+						<th>订单ID</th>
+						<th>资金类型</th>
+						<th>银行</th>
+						<th>金额</th>
+						<th>余额</th>
+						<th>理 &nbsp;  &nbsp; 由</th>
+						<th>时 &nbsp;  &nbsp; 间</th>
+						
+					</tr>
+				</thead>
+				<tbody>
+				{foreach from=$data item=v}
+					<tr>
+						<td class="category">{$v.id}</td>
+						<td class="category">{$v.memberid.account}</td>
+						<td class="category">{$v.areaid.prettyname}</td>
+						<td class="category">{$v.orderid}</td>
+						<td class="category">{$v.type}</td>
+						<td class="category">{$v.bank}</td>
+						<td class="category">{$v.amount}</td>
+						<td class="category">{$v.balance}</td>
+						<td class="category">{$v.reason}</td>
+						<td class="category">{$v.addtime}</td>
+					</tr>
+				{/foreach}
+				</tbody>
+			</table>
+			{$page|default:''}
+			<!-- table action -->
+			<div class="action">
+				<select name="action">
+					<option value="" class="locked">Set status to Deleted</option>
+					<option value="" class="unlocked">Set status to Published</option>
+					<option value="" class="folder-open">Move to Category</option>
+				</select>
+				<div class="button">
+					<input type="submit" name="submit" value="Apply to Selected" />
+				</div>
+			</div>
+			<!-- end table action -->
+			</form>
+		</div>
+	</div>
+<!-- end table -->
+</div>
+
+
+		</div>
+
+	<!-- end box / left -->
+
+	<!-- end box / right -->
+	</div><!-- end content / right -->
+</div>
+<!-- end content -->
+{include file="footer.inc.htm"}
+		

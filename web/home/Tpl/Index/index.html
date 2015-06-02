@@ -1,0 +1,404 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Public/home_top.html'}
+<div class="content">
+<script src="/public/script/home/common.js"></script>
+<script src="/public/script/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/public/script/SuperSlide/jquery.SuperSlide.2.1.js"></script>
+<link href="/public/style/home/index_ad_right.css" rel="stylesheet" />
+<link href="/public/style/home/index.css" rel="stylesheet" />
+<div id="iok_fad">
+	<div id="fad_content">
+		<a href="javascript:void(0)" id="fad_close" onclick="Closeyxj()">&nbsp;&nbsp;</a>
+		<img src="/Public/image/index/piao.png" border="0" usemap="#Map" />
+		<map name="Map">
+		  <area shape="rect" coords="4,4,251,76" href="http://www.iokokok.com/Public/register">
+		  <area shape="rect" coords="4,79,273,142" href="http://www.iokokok.com/Public/login">
+		</map>
+	</div>
+</div>
+
+<div id="iok_fad1" class="iok_fad1">
+	<div id="fad_content1">
+		<img src="/Public/image/iok_code.png" border="0" usemap="#Map1" />
+		<map name="Map1">
+		  <area shape="rect" coords="3,23,20,68" onclick="Closeyxj1()" />
+		</map>
+	</div>
+</div>
+
+{literal}
+<script type="text/javascript">  
+	var duilian = $("div.iok_fad1");
+	var window_w = $(window).width();
+	//定屏幕大于1000分辨率的宽度时显示广告
+	if(window_w>1000){duilian.show();}
+	$(window).scroll(function(){
+		var scrollTop = $(window).scrollTop();
+		var tp = document.documentElement.clientHeight;
+		
+		duilian.stop().animate({top:tp-194+scrollTop});
+	});  
+function Closeyxj(){
+	$("#iok_fad").hide();
+	}
+function Closeyxj1(){
+	$("#iok_fad1").hide();
+	}
+</script>
+{/literal}
+<style>
+
+#iok_fad1{
+	display:block;
+	bottom:0px;
+	left:1px!important;
+	left:18px;
+	width:138px;
+	height:194px;
+	line-height:30px;
+	position:absolute;
+	z-index:888;
+	text-align:center;
+}
+#fad_content1{
+	width:138px;
+	height:194px;
+	position:relative;
+	z-index:889;
+}
+
+#iok_fad {
+	display:block;
+	bottom:0px;
+	right:1px!important;
+	right:18px;
+	width:279px;
+	height:150px;
+	line-height:30px;
+	position:fixed;
+	z-index:888;
+	border:1px solid #fff;
+	text-align:center;
+}
+#fad_content{
+	width:279px;
+	height:150px;
+	position:relative;
+	z-index:889;
+}
+
+#fad_close{
+	position:absolute;
+	right: 0px;
+	top: -5px;
+	height:50px;
+	width:30px;
+	line-height:30px;
+	display:block;
+	z-index:900;
+}
+*html {
+	overflow-x:auto;
+	overflow-y:auto;
+}
+* html #iok_fad {
+	position:absolute;
+}
+</style>
+<div style="height:0px;"></div>
+<!-- 中间内容部分 -->
+<div class="conter_center">
+	<div class="content_nr_xqnr">
+		<!-- 内容第一部分的左边 -->
+		<div class="content_nr_xqnr_left">
+			<div class="content_nr_xqnr_Ln">
+				<h3>
+					<a class="tab_2" id="trade_t_1" style="cursor:default;" onmouseover="Tb(1, 3, 'trade', 'tab');">供应</a>
+					<a class="tab_1" id="trade_t_2" style="cursor:default;" onmouseover="Tb(2, 3, 'trade', 'tab');">求购</a>
+					<a class="tab_1" id="trade_t_3" style="cursor:default;background:none;" onmouseover="Tb(3, 3, 'trade', 'tab');">最新成交</a>
+				</h3>
+				<ul class="content_xqnr_Ln_B" id="trade_c_1" style="display:block;">
+					{foreach from=$gylist item=gy}
+						<li>
+							<img src="/Public/image/index/img_8.png" alt="" />
+							<h4><a href="/Product/show/itemid/{$gy.id}" target="_blank">{$gy.title}</a></h4>
+							<span>￥{$gy.price}</span>
+						</li>
+					{/foreach}
+				</ul>
+				<ul class="content_xqnr_Ln_B" id="trade_c_2" style="display:none;">
+					
+						<li>
+							<img src="/Public/image/index/img_9.png" alt="" />
+							<h4><a href="/Buy/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></h4>
+							<span>等待报价&yen;{$v.price}</span>
+						</li>
+					
+				</ul>
+				<ul class="content_xqnr_Ln_B" id="trade_c_3" style="display:none;">
+					
+						<li>
+							<img src="/Public/image/index/img_7.png" alt="" />
+							<h4><a href="/Mall/show/itemid/{$v.mallid}" target="_blank">{$v.title}</a></h4>
+							<span>&yen;{$v.price}</span>
+						</li>
+					
+				</ul>
+			</div>
+			<!-- 内容第一部分的右边 -->
+			<div class="content_nr_xqnr_right">
+				<div class="content_nr_Ro">							
+					<div class="slideBox">
+						<div class="hd">
+							<ul>
+                            {foreach from=$adlist item=adlistkey key=adk}
+                            <li>{$adk}</li>
+                            {/foreach}
+                         </ul>
+						</div>
+						<div class="bd">
+							<ul>
+							   {foreach from=$adlist item=adl}
+								<li><a href="{$adl.linkurl}" title="{$adl.title}" target="_blank"><img src='/file/upload/{$adl.imageurl}' {if $adl['imageurl'] eq ""} style="display:none"{/if} alt="{$adl.title}" ></a></li>
+							   {/foreach}
+							</ul>
+						</div>
+						<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+						<a class="prev" href="javascript:void(0)"></a>
+						<a class="next" href="javascript:void(0)"></a>
+					</div>				
+					{literal}<script type="text/javascript">jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});</script>{/literal}					
+				</div>
+				<div class="content_nr_Rn">
+					<img src="/Public/image/index/img_10.png" alt="" />
+				</div>
+			</div>
+			<div class="content_nr_xqnr_right_ri">
+				<h3>
+					<a href="/Public/register" target="_blank">免费注册</a>
+					<a href="/Public/login" target="_blank" style="background:none;">登录</a>
+				</h3>
+				<div class="content_nr_xqnr_right_ri_one">
+					<div class="content_nr_xqnr_right_ri_one_t">
+						<a href="/Helps/listy/catid/8959" target="_blank" class="tablt_2" id="tradelt_t_1" onmouseover="Tb(1, 2, 'tradelt', 'tablt');">买家入门</a>
+						<a href="/Helps/listy/catid/8960" target="_blank" class="tablt_1" id="tradelt_t_2" onmouseover="Tb(2, 2, 'tradelt', 'tablt');">卖家入门</a>
+					</div>
+					<div class="content_nr_xqnr_right_ri_one_c" id="tradelt_c_1" style="display:block;">
+						<foreach name="help_maijia1" item="v">
+							<a href="/Helps/show/itemid/{$v.itemid}">{$v.title}</a>
+						</foreach>
+					</div>
+					<div class="content_nr_xqnr_right_ri_one_c" id="tradelt_c_2" style="display:none;">
+						<foreach name="help_maijia2" item="v">
+							<a href="/Helps/show/itemid/{$v.itemid}">{$v.title}</a>
+						</foreach>
+					</div>
+				</div>
+				<div class="content_nr_xqnr_right_ri_two">
+					<h4>促成服务指南</h4>
+					<ul class="content_nr_xqnr_right_ri_two_nr">
+						<foreach name="help_cucheng" item="v">
+							<li><a href="/Helps/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></li>
+						</foreach>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="content_nr_tscp">
+			<div class="content_nr_tscp_ycl">
+				<div class="content_nr_tscp_ycl_l">
+					{foreach from=$list item=l key=k}
+						{if $k eq 0}
+							<div class="content_nr_tscp_ycl_l_top">
+								<strong>1F</strong>				
+								<h5><a href="/Mall/listy/catid/{$l.id}" target="_blank">{$l.prettyname}</a></h5>
+                                <span><a href="/Mall/listy/catid/{$l.id}">更多&gt;&gt;</a></span>
+							</div>
+							<ul class="content_nr_tscp_ycl_l_li">
+								{foreach from=$l[0]['arr'] item=el key=k}
+									<li>
+										<ul class="content_nr_tscp_ycl_l_li_nr">
+											<li>
+												<a href="/Mall/listy/catid/{$el.id}" target="_blank" class="title">{$el.prettyname}</a>
+												{foreach from=$el.list item=ll key=k}
+														{if $k neq 0}<span>&nbsp;|&nbsp;</span>{else}&nbsp;{/if}<a href="/Mall/listy/catid/{$ll.id}" title="{$ll.prettyname}" class="child" target="_blank">{$ll.prettyname|truncate:18:"":true}</a>
+												{/foreach}
+											</li>
+										</ul>
+									</li>
+								{/foreach}
+							</ul>
+						{/if}
+					{/foreach}
+				</div>
+				<div class="content_nr_tscp_ycl_r">
+					<div class="content_nr_Re_Ro">
+						<div class="content_nr_Re_Ro_top">
+							<h3>安全交易</h3>
+							<div class="content_nr_Re_Ro_topIMG">
+								<img src="/Public/image/index/img_11.png" alt="" />
+							</div>
+						</div>
+						<ul class="content_nr_Re_Ro_ul">
+							<foreach name="help_anquan" key="k" item="v">									
+								<li>								
+									<div class="content_nr_Re_Ro_ul_img">
+										<img src="/Public/image/index/anquan_{$k}.png" alt="" />
+									</div>
+									<h4><a href="/Helps/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></h4>
+								</li>
+							</foreach>
+						</ul>
+					</div>
+					<div class="content_nr_Re_Ro" style="margin-bottom:0;">
+						<div class="content_nr_Re_Ro_top">
+							<h3>生 意 经</h3>
+							<div class="content_nr_Re_Ro_topIMG">
+								<img src="/Public/image/index/img_11.png" alt="" />
+							</div>
+						</div>
+						<ul class="content_nr_Re_Ro_ul">
+							<foreach name="help_syj" key="k" item="v">				
+								<li>
+									<div class="content_nr_Re_Ro_ul_img">
+										<img src="/Public/image/index/shengyi_{$k}.png" alt="" />
+									</div>
+									<h4><a href="/Helps/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></h4>
+								</li>
+							</foreach>
+						</ul>
+					</div>
+				</div>
+			</div>
+			{foreach from=$list item=l key=k}
+				{if $k neq 0}
+					<div class="content_nr_tscp_gyp">
+						<div class="content_nr_tscp_gyp_l_top">
+							<strong>{$k}F</strong>
+							<h5><a href="/Mall/listy/catid/{$l.id}" target="_blank">{$l.prettyname}</a></h5>
+                            <span><a href="/Mall/listy/catid/{$l.id}">更多&gt;&gt;</a></span>
+						</div>
+						<div class="content_nr_tscp_gyp_l_bot">
+							<ul class="content_nr_tscp_gyp_l_li">
+								{foreach from=$l[0]['arr'] item=el key=k}
+									<li>
+										<ul class="content_nr_tscp_gyp_l_li_nr">
+											<li>
+												<a href="/Mall/listy/catid/{$el.id}" target="_blank" class="title">{$el.prettyname}</a>
+												{foreach from=$el.list item=ll key=k}
+														{if $k neq 0}<span>&nbsp;|&nbsp;</span>{else}&nbsp;{/if}<a href="/Mall/listy/catid/{$ll.id}" title="{$ll.prettyname}" class="child" target="_blank">{$ll.prettyname}</a>
+												{/foreach}
+											</li>
+										</ul>
+									</li>
+								{/foreach}
+							</ul>
+							{if $k eq 1}
+							<div class="content_nr_tscp_gyp_l_gg">
+								<div class="picScroll-top">
+									<div class="hd">
+										<!-- <a class="next"></a> -->
+										<ul></ul>
+										<!-- <a class="prev"></a> -->
+										<!-- <span class="pageState"></span> -->
+									</div>
+									<div class="bd">
+										<ul class="picList">
+											{foreach from=$ada2 item=ad2}
+											<li>
+												<div class="pic">
+													<a href="{$ad2.linkurl}" target="_blank"><img src="/file/upload/{$ad2.imageurl}" alt="{$ad2.title}" {if $ad2['imageurl'] eq ""} style="display:none"{/if}/></a>
+												</div>
+											</li>
+											{/foreach}
+										</ul>
+									</div>
+								</div>
+							</div>
+							{else if $k eq 2}
+							<div class="content_nr_tscp_gyp_l_gg">
+								<div class="picScroll-top">
+									<div class="hd">
+										<!-- <a class="next"></a> -->
+										<ul></ul>
+										<!-- <a class="prev"></a> -->
+										<!-- <span class="pageState"></span> -->
+									</div>
+									<div class="bd">
+										<ul class="picList">
+											{foreach from=$ada3 item=ad3}
+											<li>
+												<div class="pic">
+													<a href="{$ad3.linkurl}" target="_blank"><img src="/file/upload/{$ad3.imageurl}" alt="{$ad3.title}" {if $ad3['imageurl'] eq ""} style="display:none"{/if}/></a>
+												</div>
+											</li>
+											{/foreach}
+										</ul>
+									</div>
+								</div>
+							</div>
+							{else if $k eq 3}
+							<div class="content_nr_tscp_gyp_l_gg">
+								<div class="picScroll-top">
+									<div class="hd">
+										<!-- <a class="next"></a> -->
+										<ul></ul>
+										<!-- <a class="prev"></a> -->
+										<!-- <span class="pageState"></span> -->
+									</div>
+									<div class="bd">
+										<ul class="picList">
+											{foreach from=$ada4 item=ad4}
+											<li>
+												<div class="pic">
+													<a href="{$ad4.linkurl}" target="_blank"><img src="/file/upload/{$ad4.imageurl}" alt="{$ad4.title}" {if $ad4['imageurl'] eq ""} style="display:none"{/if}/></a>
+												</div>
+											</li>
+											{/foreach}
+										</ul>
+									</div>
+								</div>
+							</div>
+							{else if $k eq 4}
+							<div class="content_nr_tscp_gyp_l_gg">
+								<div class="picScroll-top">
+									<div class="hd">
+										<!-- <a class="next"></a> -->
+										<ul></ul>
+										<!-- <a class="prev"></a> -->
+										<!-- <span class="pageState"></span> -->
+									</div>
+									<div class="bd">
+										<ul class="picList">
+											{foreach from=$ada5 item=ad5}
+											<li>
+												<div class="pic">
+													<a href="{$ad5.linkurl}" target="_blank"><img src="/file/upload/{$ad5.imageurl}" alt="{$ad5.title}" {if $ad5['imageurl'] eq ""} style="display:none"{/if}/></a>
+												</div>
+											</li>
+											{/foreach}
+										</ul>
+									</div>
+								</div>
+							</div>
+							{/if}
+							{literal}
+							<script type="text/javascript">jQuery(".picScroll-top").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"top",autoPlay:true,easing:"easeOutCirc",interTime:4000,vis:1});</script>				
+							<script type="text/javascript">jQuery(".picScroll-top1").slide({titCell:".hd1 ul",mainCell:".bd1 ul",autoPage:true,effect:"top",autoPlay:true,easing:"easeOutCirc",interTime:6000,vis:1});</script>				
+							<script type="text/javascript">jQuery(".picScroll-top2").slide({titCell:".hd2 ul",mainCell:".bd2 ul",autoPage:true,effect:"top",autoPlay:true,easing:"easeOutCirc",interTime:5000,vis:1});</script>				
+							<script type="text/javascript">jQuery(".picScroll-top3").slide({titCell:".hd3 ul",mainCell:".bd3 ul",autoPage:true,effect:"top",autoPlay:true,easing:"easeOutCirc",interTime:5400,vis:1});</script>
+							{/literal}
+						</div>
+					</div>
+				{/if}
+			{/foreach}
+		</div>
+	</div>
+</div>
+</div>
+{include file="Public/footer_2.html"}
+<!-- footer -->
+{include file='Public/footer.html'}
+

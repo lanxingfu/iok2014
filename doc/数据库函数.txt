@@ -1,0 +1,51 @@
+﻿新框架使用说明：
+
+数据库操作：
+1、$this->res($sql);
+它用来获取一个字段的第一个值，一般用在只查询一个字段的一个值的时候，例如统计一个表的总数
+$sql = "select count(id) from iok_user limit 1";
+$count = $this->res($sql);
+如果iok_user有100条记录，这时候$count得到的就是100。
+
+2、$this->rec($sql);
+它用来获取一个表的第一组数据，一般用来得到一条记录的时候
+$sql = "select * from iok_user where id=1 limit 1"
+$rec = $this->rec($sql);
+这时候$rec就是一个一位数组 array('id'=>1,'account'=>'admin',...);
+
+3、$this->arr($sql);
+它用来获取一组记录，返回的是一个大数组，这个比较常用，一般和foreach配合使用，可以直接assign到模板中，在模板里使用foreach中循环输出变量
+$sql = "select * from iok_user";
+$arr = $this->arr($sql);
+$arr返回值类似array(array('id'=>1,'account'=>'admin',...),array('id'=>2,'account'=>'sunwei',...),array('id'=>3,'account'=>'abcd',...),...);
+
+4、$this->ass($sql)
+它用来返回一个索引型的数组，一般用来在php中进行数组操作，主要是为了方便使用数组函数，而尽量少使用循环进行操作
+$sql = "select * from iok_user";
+$ass = $this->ass($sql);
+$ass返回值为array('id'=>array(1,2,...),'account'=>array('admin','sunwei',...),...);
+
+5、$this->idx($sql, $index='id',$unique = false)
+他用来返回一个以$index值为索引的数组，一般用在其他语言接口中，php很少用到
+$uinque 表示是否返回一维数组，默认返回多维数组
+$sql = "select * from iok_user";
+$idx = $this->idx($sql,'id');
+$idx返回值为array('1'=>array(array('id'=>1,'account'=>'admin'),...),'2'=>array(array('id'=>2,'account'=>'sunwei')),...)
+返回一维数组：
+$sql = "select * from iok_user";
+$idx = $this->idx($sql,'id',true);
+$idx返回值为array('1'=>array('id'=>1,'account'=>'admin',...),'2'=>array('id'=>2,'account'=>'sunwei',...))
+
+
+6、$this->exec($sql);
+用来执行一个sql语句，有返回影响的行数
+$sql = "update iok_user set prettyname='admin','aaa'='aaa' limit 1";
+
+7、$this->ins($tablename, $insert_array);
+$tablename是要插入的表名称，$insert_array是表示要插入的数据数组，可以是一维数组
+array('id'=>1,'account'=>'admin',…);
+也可以是二维数据字典
+array('id'=>array(1,2,3,4),'name'=>array('sunway1','sunway2','sunway3','sunway4'));
+
+
+

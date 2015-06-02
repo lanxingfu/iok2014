@@ -1,0 +1,244 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Public/home_top.html'}
+<link href="/public/style/home/buy.css" rel="stylesheet" />
+<script src="/public/script/home/common.js"></script>
+<script src="/public/script/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/public/script/SuperSlide/jquery.SuperSlide.2.1.js"></script>
+<div class="conter_center">
+    	<div class="content_nr_xqnr">        
+			<!-- 内容第一部分的左边 -->
+        	<div class="content_nr_xqnr_left">
+            	<div class="content_nr_xqnr_Ln">
+                	<h3>
+                    	<a href="/Buy">最新求购</a>
+                    </h3>
+                   <ul class="content_xqnr_Ln_B">
+						{foreach from=$buylist item=bl}
+							<li>
+								<img src="/public/image/home/product/img_9.png" alt="" />
+								<h4><a href="/Buy/show/itemid/{$bl.id}" title="{$v.title}" target="_blank">{$bl.title}</a></h4>
+								<span>{if $bl['price'] eq ""}等待报价{else}&yen;{$bl.price}{/if}</span>
+							</li>
+						{/foreach}
+                  </ul>
+                </div>
+                    <div class="content_nr_xqnr_img">
+                    	<!--供应广告展位-->
+                    	<div class="slideBox">
+							<div class="hd">
+								<ul>
+									{foreach from=$adc1 item=a1k key=a1kk}
+                                <li>{$a1kk+1}</li>
+									{/foreach}
+                             </ul>
+							</div>
+							<div class="bd">
+								<ul>
+									{foreach from=$adc1 item=adl}
+									<li><a href="{$adl.linkurl}" title="{$adl.title}" target="_blank"><img src='/file/upload/{$adl.imageurl}' {if $adl['imageurl'] eq ""} style="display:none"{/if} alt="{$adl.title}" ></a></li>
+                                {/foreach}
+								</ul>
+							</div>
+							<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+							<a class="prev" href="javascript:void(0)"></a>
+							<a class="next" href="javascript:void(0)"></a>
+						</div>	
+{literal}						
+					  <script type="text/javascript">jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});</script>
+{/literal}            
+                </div>
+				
+				<div class="conter_b_qgnr_left">
+					<div class="conter_b_qgnr_left_bt">
+						<h3>按行业选择</h3>
+					</div>
+					<ul class="conter_b_qgnr_left_xx">
+						{foreach from=$list item=titlel key=$titlek}
+							
+							<li><a href="/Buy/listy/catid/{$titlel.id}" class="tabbuy_1" id="trade_t_{$titlek+1}" onMouseOver="Tb({$titlek+1}, 6, 'trade', 'tabbuy');">{$titlel['title']}</a></li>
+						{/foreach}
+						<li style="display:none;"><a href="javascript:void(0);" class="tabbuy_1" id="trade_t_6"></a></li>
+					</ul>										
+					{foreach from=$list item=l key=$k}
+						
+						<ul class="conter_b_qgnr_left_xxnr" id="trade_c_{$k+1}" style="display:none;">
+							{foreach from=$l['list'] item=ll}
+								<li>
+									<div class="conter_b_qgnr_left_xxnr_l">
+										<a target="_blank" href="/Buy/show/itemid/{$ll.id}">{$ll.title}</a>
+										<p>采购数量：{$ll.amount}个</p>
+									</div>
+									<div class="conter_b_qgnr_left_xxnr_r">
+										<p>过期时间：
+											
+												<span>{$ll['expiredtime']}</span>
+											
+										</p>
+										<a target="_blank" href="/Buy/toQuote/itemid/{$ll.id}">立即报价</a>
+									</div>
+								</li>
+							{/foreach}
+						</ul>
+					{/foreach}
+					<ul class="conter_b_qgnr_left_xxnr" id="trade_c_6" style="display:block;">
+						{foreach from=$randlist item=rand}
+							<li>
+								<div class="conter_b_qgnr_left_xxnr_l">
+									<a target="_blank" href="/Buy/show/itemid/{$rand.id}">{$rand.title}</a>
+									<p>采购数量：{$rand.amount}个</p>
+								</div>
+								<div class="conter_b_qgnr_left_xxnr_r">
+									<p>过期时间：
+										
+											<span>{$rand['expiredtime']}</span>
+										
+									</p>
+									<a target="_blank" href="/Buy/toQuote/itemid/{$rand.id}">立即报价</a>
+								</div>
+							</li>
+						{/foreach}
+					</ul>
+				</div>				
+			</div>
+        	<div class="content_nr_xqnr_right">
+            	<div class="gy_content_right_t">
+                	<a target="_blank" href="/Public/login/">登录</a><span>|</span>
+                    <a target="_blank" href="/Need/sendneed/menu/1">发布求购</a>
+                </div>
+                <div class="gy_content_right_o">
+                	<h2 class="gy_Cright_bt">仅需<span>4步</span>实现快速报价</h2>
+                    <ul class="gy_content_right_oli">
+                    	<li>
+                        	<div class="gy_content_right_oli_img">
+                            	<img src="/public/image/buy/qgimg_12.png" alt="" />
+                            </div>
+                            <div class="gy_content_right_oli_R">
+                            	<h3>注册</h3>
+								<p>登录<a target="_blank" href="/Public/register">www.iokokok.com</a>进行用户注册</p>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="gy_content_right_oli_img">
+                            	<img src="/public/image/buy/qgimg_13.png" alt="" />
+                            </div>
+                            <div class="gy_content_right_oli_R">
+                            	<h3>通过审核</h3>
+                                <p>分配商务代表实地审核</p>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="gy_content_right_oli_img">
+                            	<img src="/public/image/buy/qgimg_14.png" alt="" />
+                            </div>
+                            <div class="gy_content_right_oli_R">
+                            	<h3>查看求购</h3>
+                                <p>进入求购页查看信息</p>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="gy_content_right_oli_img">
+                            	<img src="/public/image/buy/qgimg_15.png" alt="" />
+                            </div>
+                            <div class="gy_content_right_oli_R">
+                            	<h3>报价</h3>
+                                <p>针对求购信息报价</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gy_content_nr_Re_Ro">
+					<div class="gy_content_nr_Re_Ro_top">
+						<h3>安全交易</h3>
+						<div class="gy_content_nr_Re_Ro_topIMG">
+							<img src="/public/image/home/product/img_11.png" alt="" />
+						</div>
+					</div>
+					<ul class="gy_content_nr_Re_Ro_ul">
+						<foreach name="help_anquan" key="k" item="v">									
+							<li>								
+								<div class="gy_content_nr_Re_Ro_ul_img">
+									<img src="/Public/images/index/anquan_{$k}.png" alt="" />
+								</div>
+								<h4><a href="__APP__/Helps/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></h4>
+							</li>
+						</foreach>
+					</ul>
+				</div>
+				<div class="conter_b_qgnr_right">
+					<div class="conter_b_qgnr_right_g">
+						 {foreach from=$adc2 item=ad5}
+						<a href="{$ad5.linkurl}" target="_blank"><img src="/file/upload/{$ad5.imageurl}" alt="{$ad5.title}" {if $ad5['imageurl'] eq ""} style="display:none"{/if}/></a>
+						{/foreach}
+					</div>
+				</div>
+            </div>
+            <div class="conter_b">
+                <div class="conter_b_yzggcp">
+                	<div class="conter_b_yzggcp_top">
+                    	<div class="conter_b_yzggcp_top_l">
+                            <h3>商务服务站</h3>
+                        </div>
+                    </div>
+                    <div class="conter_b_yzggcp_bottom">
+                        <div class="txtScroll-top">
+                            <div class="bd">
+                                <ul class="infoList">
+									{foreach from=$buslist item=busl key=$bulk}
+                               
+                                	{if $busl['s']}
+                                    <li>
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                 {/if}
+                                        <td align="center" valign="top">
+                                          <div class="conter_b_yzggcp_bottom_rli_div1">										
+                                           {if $busl['imageurl'] eq ""}
+                                                <img src="/public/image/buy/tx_img00.jpg" alt="" />
+                                            {else}
+                                                <img src="{$busl.imageurl}" width="60" height="60" />
+                                            {/if}
+                                          </div>  
+                                          <div class="conter_b_yzggcp_bottom_rli_div2">
+                                                <dl>
+                                                    <dt>姓名：</dt>
+                                                    <dd class="normal">{$busl['prettyname']}</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>地址：</dt>
+                                                    <dd class="normal">{$busl.address}</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>星级：</dt>
+                                                    <dd class="stars"><img src="/public/image/home/product/xxx_{$busl.star}.png" alt="" /></dd>
+                                                </dl>
+                                            </div>
+									    
+                                        </td>
+                                    {if $busl['e']}
+                                    </tr>
+                                    </table>
+                                    </li>
+                                    {/if}
+                                  {/foreach}
+                                </ul>
+								{literal}
+					<script id="jsID" type="text/javascript">
+                    jQuery(".txtScroll-top").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"top",autoPlay:true,scroll:1,vis:1,easing:"swing"});
+                    </script>
+					{/literal}
+                            </div>
+                        </div>
+                  
+                    </div>
+					
+                </div>
+                
+				
+            </div>
+		</div>
+	{include file="Public/footer_2.html"}
+</div>
+
+{include file='Public/footer.html'}

@@ -1,0 +1,201 @@
+<div class="header">
+	{include file="Public/header_top.html"}
+	<!-- 头部中间部分 -->
+    <div class="header_conter">
+		{if $Header_true eq 'invest'}<!--招商-->
+			<div class="header_conter_nr_invest">
+				<div class="header_conter_logo_invest">
+					<a href="/Index"><img src="__PUBLIC__/image/public/logo.png" alt="logo" /></a>
+				</div>
+				<div class="header_conter_ssk_invest">
+					<img src="__PUBLIC__/image/public/top_1.png" alt="" />
+				</div>
+				<div class="header_conter_lcfs_invest">
+					<img src="__PUBLIC__/image/public/img_4.png" alt="联系电话" />
+				</div>
+			</div>		
+		{elseif $Header_true eq 'school'}<!--商学院-->
+			<div class="header_conter_nr_invest">
+				<div class="header_conter_logo_invest">
+					<a href="/Index"><img src="__PUBLIC__/image/public/logo.png" alt="logo" /></a>
+				</div>
+				<div class="header_conter_ssk_invest">
+					<img src="__PUBLIC__/image/public/topsch_1.png" alt="" />
+				</div>
+				<div class="header_conter_lcfs_invest">
+					<img src="__PUBLIC__/image/public/img_4_1.png" alt="联系电话" />
+				</div>
+			</div>	
+		{elseif $Header_true eq 'news'}<!--资讯-->
+			<div class="header_conter_nr_invest">
+				<div class="header_conter_logo_invest">
+					<a href="/Index"><img src="__PUBLIC__/image/public/logo.png" alt="logo" /></a>
+				</div>
+				<div class="header_conter_ssk_invest">
+					<img src="__PUBLIC__/image/public/imgnews_8.png" alt="" />
+				</div>
+				<div class="header_conter_lcfs_invest">
+					<img src="__PUBLIC__/image/public/img_4_1.png" alt="联系电话" />
+				</div>
+			</div>	
+		{elseif $Header_true eq 'cart'}<!--购物车-->
+			<div class="header_conter_nr_invest">
+				<div class="header_conter_logo_invest">
+					<a href="/Index"><img src="__PUBLIC__/image/public/logo.png" alt="logo" /></a>
+				</div>
+				<div class="gwc_top_b_nr_right">
+                	<if condition="$step eq '2'">
+                	<img src="__PUBLIC__/image/public/mall/gwc_xtb_3.png" alt="" />
+                	<else />
+                	<img src="__PUBLIC__/image/public/mall/gwc_xtb_2.png" alt="" />
+                    </if>
+                </div>
+			</div>
+		{elseif $Header_true eq 'login'}<!--登录-->
+			<div class="header_conter_nr_invest">
+				<div class="header_conter_logo_invest">
+					<a href="/Index"><img src="__PUBLIC__/image/public/logo.png" alt="logo" /></a>
+				</div>
+				<div class="header_conter_zxgqss">
+					<h1>用户登录</h1>
+				</div>
+				<div class="header_conter_lcfs_invest">
+					<img src="__PUBLIC__/image/public/img_4.png" alt="联系电话" />
+				</div>
+			</div>	
+		{elseif $Header_true eq 'register'}<!--注册--> 
+			<div class="header_conter_nr_invest">
+				<div class="header_conter_logo_invest">
+					<a href="/Index"><img src="__PUBLIC__/image/public/logo.png" alt="logo" /></a>
+				</div>
+				<div class="header_conter_zxgqreg" style="width:143px;">
+					<h1>用户注册</h1>
+					<!--<h3><a href="#">注册演示<span>>></span></a></h3>-->
+				</div>
+				<ul class="header_conter_sskreg" style="width:366px;">
+					<li style="padding:0 12px;">
+						<div class="header_conter_ssk_tubiao"><a href="/Public/register/file/company"><img src="__PUBLIC__/image/public/img_11.png" alt="" /></a></div>
+						<h4><a href="/Public/register/file/company" <eq name="reg_file" value="company"> class="a_ll" </eq>>企业注册</a></h4>
+					</li>					
+					<li style="padding:0 12px;">
+						<div class="header_conter_ssk_tubiao"><a href="/Public/register/file/repstation"><img src="__PUBLIC__/image/public/tub-3.png" alt="" /></a></div>
+						<h4><a href="/Public/register/file/repstation" <eq name="reg_file" value="repstation"> class="a_ll" </eq>>商务服务站</a></h4>
+					</li>
+					<li style="padding:0 12px;">
+						<div class="header_conter_ssk_tubiao"><a href="/Public/register/file/represent"><img src="__PUBLIC__/image/public/img_12.png" alt="" /></a></div>
+						<h4><a href="/Public/register/file/represent" <eq name="reg_file" value="represent"> class="a_ll" </eq>>商务代表</a></h4>
+					</li>
+					<li style="padding:0 12px;border-right:none;">
+						<div class="header_conter_ssk_tubiao"><a href="/Public/register/file/member"><img src="__PUBLIC__/image/public/img_13.png" alt="" /></a></div>
+						<h4><a href="/Public/register/file/member" <eq name="reg_file" value="member"> class="a_ll" </eq>>个人注册</a></h4>
+					</li>
+				</ul>
+				<div class="header_conter_lcfs_invest" style="padding-left:12px;">
+					<img src="__PUBLIC__/image/public/img_4.png" alt="联系电话" />
+				</div>
+			</div>	
+		{else}<!--首页-->
+			<div class="header_conter_nr">
+				<div class="header_conter_logo">
+					<a href="/Index"><img src="__PUBLIC__/image/public/logo.png" alt="logo" /></a>
+				</div>		
+				<div class="header_conter_ssk">
+					<h2><img src="__PUBLIC__/image/public/top_con_1.png" alt="" /></h2>
+					<div class="header_C_ssk_input">
+						<div class="header_ssk_in">
+							<input type="text" id="search_keyword" name="search" value="{$keyword|default:'请输入要搜索的商品'}" {literal}onfocus="javascript:if(this.value=='请输入要搜索的商品'){this.value=''}" onblur="javascript:if(this.value==''){this.value='请输入要搜索的商品'}" {/literal} />
+							<div class="header_ssk_in_dh" id="search-val">
+								<div class="vall" id="search_html">
+								{if $type eq 'buy'}
+								求购
+								{elseif $type eq 'news'}
+								资讯
+								{else}
+								供应
+								{/if}
+								</div>
+								<ul class="header_ssk_in_dh_ul" style="display:none;" id="search-list">
+									<li><a href="javascript:void(0);" onclick="swaptype(this,'product')">供应</a></li>
+									<li><a href="javascript:void(0);" onclick="swaptype(this,'buy')">求购</a></li>
+									<li><a href="javascript:void(0);" onclick="swaptype(this,'news')">资讯</a></li>
+									<!-- <li style="border-bottom:none;"><a href="javascript:void(0);">商学院</a></li> -->
+								</ul>
+								<span><img src="__PUBLIC__/image/public/tubiao_4.png" alt="" /></span>
+							</div>
+						</div>
+						<a href="#" onclick="javascript:searchitem()"><img src="__PUBLIC__/image/public/img_3.png" alt="搜索" /></a>
+					</div>
+					<div class="header_C_ssk_rmss">
+						<span>热门搜索：</span>
+                        <!--热门搜索关键词 暂时放在common中-->
+						{foreach $hotKeyword as $keys => $hVal}
+                             <a href="/Search/listy/keyword/{$hVal}">{$hVal}</a>
+                        {/foreach}
+					</div>
+				</div>
+				<div class="header_conter_lcfs" style="float:right;padding-left:0px;padding-right:39px;">
+					<img src="__PUBLIC__/image/public/img_4_1.png" alt="联系电话" />
+				</div>
+			</div>
+		{/if}
+    </div>
+	<!-- 导航部分 -->
+	{if ($Header_true neq 'login') AND ($Header_true neq 'register') AND ($Header_true neq 'cart')}<!--如果是登录页，这块需隐藏-->
+		<div class="header_nav">
+			<div class="header_nav_nr">
+				<div class="header_nav_left" id="dao-title">
+					<h4>全部商品分类</h4>
+					<ul class="content_nr_xqnr_Lo" style="display:none;" id="dao-show">
+						{foreach $head_cate as $v}
+							<li><a href="/Product/listy/catid/{$v.catid}">{$v.catname}</a></li>
+						{/foreach}
+					</ul>
+				</div>
+				<div class="header_nav_a">
+					<a href="/" class="{$inIndex}">首 页</a>
+					{if $Header_true eq 'invest' }	<!--区分招商跟其他模块导航-->	
+						<a href="/Invest/show/itemid/23">招商政策</a>
+						<a href="/Invest/show/itemid/28">加盟说明</a>
+						<a href="/Invest/show/itemid/29">运营支持</a>
+						<a href="/Invest/guestbook">在线咨询</a>							
+					{else}
+						<a href="/Product" class="{$inProduct}">供 应</a>
+						<a href="/Buy" class="{$inBuy}">求 购</a>
+						<!-- <a href="/Vt">微推广</a> -->
+						<a href="/App" class="{$inApp}">应用</a>
+					{/if}
+				</div>
+				<div class="header_nav_right">
+					<a href="/News">资讯</a>
+					<a href="/School">商学院</a>
+					<a href="/Invest" style="background:none;">渠道招商</a>
+				</div>
+			</div>
+		</div>
+	{/if}
+</div>
+<script>
+$("#search-val").hover(function(){
+		$(this).css("overflow","visible");
+		$("#search-list").show();
+	},function(){
+		$(this).css("overflow","hidden");
+		$("#search-list").hide();	
+	});
+var searchtype = 'product';
+	function swaptype(o,t)
+	{
+		$('#search_html').html($(o).html());
+		searchtype = t;
+	}
+	function searchitem()
+	{
+		if($('#search_keyword').val() == '请输入要搜索的商品')
+		{
+			alert('请输入要搜索的商品');
+		}else
+		{
+			window.location.href='/Search/listy/type/'+searchtype+'/keyword/'+$('#search_keyword').val()
+		}
+	}
+</script>

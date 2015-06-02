@@ -1,0 +1,100 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Public/home_top.html'}
+<link href="/public/style/home/invest-show.css" rel="stylesheet" />
+<div class="zxejym_conter">
+	<div class="zxejym_conter_nr">
+    	<div class="zxejym_conter_nr_top">{$nav}</div>
+        <div class="zxejym_conter_nr_content">
+        	<div class="conter_box">
+                <div class="zxejym_conter_nr_con_left">
+                    <div class="zxejym_conter_nr_con_left_ul">
+                        <div class="zxejym_conter_nr_con_left_ul_top">
+                            <h2>{$data.title}</h2>
+                            <p>发布日期：&nbsp;&nbsp;&nbsp;来源：{$data.copyfrom}</p>
+                        </div>
+                        <div class="zxejym_conter_nr_con_left_ul_text">
+                            {$data.content}
+                        </div>
+                    </div>
+                </div>
+                <!--评论暂时屏蔽 
+				<div class="zxejym_conter_nr_con_left_pl">
+                    <div class="zxejym_conter_nr_con_left_pl_ly">
+                        <textarea>请您文明上网，理性发言</textarea>
+                        <p><a href="#">提交评论</a></p>
+                    </div>
+                    <ul class="zxejym_conter_nr_con_left_pl_lyb">
+                        <li>
+                            <h3><a href="#">心缘</a>&nbsp;发表评论</h3>
+                            <p>四川省正式启动电子商务培育计划四川省正式启动电子商务培育计划四川省正式启动电子商务培育计划四川省正式启动电子商务培育计划四川省正式启动电子商务培育计划四川省正式启动电子商务培育计划四川省正式启动电子商务培育</p>
+                        </li>
+                        <li>
+                            <h3><a href="#">心缘</a>&nbsp;发表评论</h3>
+                            <p>四川省正式启动电子商务培育计划四川省正式启动电子商务培育计划四川省正式启动电子商务培育计划四川省正式启动电子商务培育计划四川省正式启动电子商务培育计划四川省正式启动电子商务培育计划四川省正式启动电子商务培育</p>
+                        </li>
+                        <li>
+                            <h3><a href="#">心缘</a>&nbsp;发表评论</h3>
+                            <p>四川省正式启动电子商务培育计划四川省正式启动电子商务培育计划四川省正式启动电子商务培育计划四川省正式启动电子商务培育计划四川省正式启动电子商务培育计划四川省正式启动电子商务培育计划四川省正式启动电子商务培育</p>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+            <div class="zxejym_conter_nr_con_right">
+            	<div class="zxejym_conter_nr_con_r_top">
+                	<div class="zxejym_conter_nr_con_r_top_t">
+                    	<h4>推荐资讯</h4>
+                        <!--<span><a href="#">MORE&gt;</a></span>-->
+                    </div>
+                    <ul class="zxejym_conter_nr_con_r_top_li">
+						<empty name="news_list">
+							<li>暂无推荐资讯</li>
+						<else />
+							<foreach name="news_list" item="v">
+								<li><a href="__APP__/Invest/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></li>
+							</foreach>
+						</empty>
+                    </ul>
+                </div>
+                <div class="zxejym_conter_nr_con_r_bo">
+                	<div class="zxejym_conter_nr_con_r_bo_top">
+                    	<h4>推荐图文</h4>
+                    </div>
+                    <ul class="zxejym_conter_nr_con_r_bo_b">
+						<empty name="img_list">
+							<li>暂无推荐图文</li>
+						<else />
+							<foreach name="img_list" item="v">
+								<li>
+									<div class="zxejym_conter_nr_con_r_bo_b_l">
+										<a href="__APP__/Invest/show/itemid/{$v.itemid}"><img src="{$v.thumb}" alt="" onError='this.src="/Public/images/zanwu.jpg"'/></a>
+									</div>
+									<p><a href="__APP__/Invest/show/itemid/{$v.itemid}">{$v.title}</a></p>
+								</li>
+							</foreach>
+						</empty>
+                    </ul>
+                </div>
+				<!--
+                <div class="zxejym_conter_nr_con_r_foo">
+                	<div class="zxejym_conter_nr_con_r_foo_t">
+                    	<h4>推荐专题</h4>
+                    </div>
+                    <ul class="zxejym_conter_nr_con_r_foo_li">
+						<empty name="zt_list">
+							<li>暂无推荐专题</li>
+						<else />
+							<foreach name="zt_list" item="v">
+								<li><a href="{$v.linkurl}" target="_blank">{$v.title}</a></li>
+							</foreach>
+						</empty>
+                    </ul>
+                </div>
+				-->
+            </div>
+        </div>
+    </div>
+</div>
+
+{include file='Public/footer.html'}

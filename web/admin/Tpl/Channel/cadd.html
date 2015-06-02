@@ -1,0 +1,189 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<!-- content -->
+<div id="content">
+	{include file="Channel/leftmenu.inc.htm"}
+	<!-- content / right -->
+	<div id="right">
+		<div class="box">
+			<!-- box / title -->
+			<div class="title">
+				<h5>{if $data.id}编辑代理商{else}添加代理商{/if}</h5>
+			</div>
+			<form id="form" action="?m=Channel&a=submit" method="post">
+				<input type="hidden" name="id" value="{$data.id}">
+				<div class="form">
+					<div class="fields">
+						<div class="field  field-first">
+							<div class="label">
+								<label for="label">用户名:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="account" name="account" class="small" value="{$data['account']}"/>
+								<div class="tip">{tip id='account' default='请输入用户的登录账号，3到20位英文字母、数字及“_”“-”组合'}</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="label">密码:</label>
+							</div>
+							<div class="input">
+								<input type="password" id="passhash" name="passhash" class="small" value="{$data['passhash']}"/>
+								<div class="tip">{tip id='passhash' default='请输入用户的登录密码，密码长度6-20位'}</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="label">重复输入</label>
+							</div>
+							<div class="input">
+								<input type="password" name="passhash2" class="small" />
+							</div>
+							<div class="tip">{tip id='passhash2' default='请再次输入用户的登录密码'}</div>
+						</div>
+						<div class="field">
+							<div class="label label-radio">
+								<label>性别</label>
+							</div>
+							<div class="radios">		
+								<div class="radio">
+										<input type="radio" value='male' name="gender" checked /><label for="radio-2">男</label>
+										<input type="radio" value='female' name="gender" /><label for="radio-2">女</label>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">代理地区:</label>
+							</div>
+							{if $data['agentareaid']}
+							<div class="select" >
+								<select id="agentareaid" name="agentareaid">
+									<option value="{$data['agentareaid']}">{$data['agentareaid']}</option>
+								</select>
+							</div>
+							{else}
+							<div class="select" name="agentareaid" id='agentareaid'></div>
+							<script>loadarea('agentareaid')</script>
+							{/if}
+							<div class="tip" style="padding:0 0 3px 0;">{tip id='top0' default='默认与注册地区一致'}(如不一致请:
+								<input type="button" onclick="javascript:$('#none').css('display','block');" value="点击"/>)
+							</div>
+						</div>
+						<div class="field" id="none" style="display:none;">
+							<div class="label">
+								<label for="input-small">注册地区:</label>
+							</div>
+							{if $data['areaid']}
+							<div class="select" >
+								<select id="areaid" name="areaid">
+									<option value="{$data['areaid']}">{$data['areaid']}</option>
+								</select>
+							</div>
+							{else}
+							<div class="select" name="areaid" id='areaid'></div>
+							<script>loadarea('areaid')</script>
+							{/if}
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">真实姓名:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="prettyname" name="prettyname" class="small" value="{$data['prettyname']}"/>
+							</div>
+							<div class="tip">{tip id='prettyname' default='请输入真实姓名'}</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">手机号:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="mobile" name="mobile" class="small" value="{$data['mobile']}"/>
+							</div>
+							<div class="tip">{tip id='mobile' default='请输入手机号码'}</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">邮箱:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="email" name="email" class="small" value="{$data['email']}"/>
+							</div>
+							<div class="tip">{tip id='email' default='请输入电子邮箱'}</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">QQ:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="qq" name="qq" class="small" value="{$data['qq']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">电话:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="telephone" name="telephone" class="small" value="{$data['telephone']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">传真:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="fax" name="fax" class="small" value="{$data['fax']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">邮编:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="postcode" name="postcode" class="small" value="{$data['postcode']}"/>
+							</div>
+						</div>
+						<!-- <div class="field">
+							<div class="label">
+								<label for="input-small">地址:</label>
+							</div>
+							{if $data['agentareaid']}
+							<div class="select">
+								<select id="addrareaid" name="addrareaid">
+									<option value="{$data['addrareaid']}">{$data['addrareaid']}</option>
+								</select> 
+							</div>
+							{else}
+							<div style="margin-top: 4px;" class="select" name="addrareaid" id='areaid0'></div>
+							<script>loadarea('areaid0')</script>
+							{/if}
+							<input type="text" id="address" name="address" class="small" value="{$data['address']}"/>
+							{tip id='address' default='请输入详细地址'}
+						</div> -->
+						<div class="field">
+							<div class="label">
+								<label for="input-small">邀请人:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="inviterid" name="inviterid" class="small" value="{$data['inviterid']['account']}"/>
+							</div>
+							<div class="tip">{tip id='inviterid' default='请输入邀约人'}</div>
+						</div>
+						<div class="field">
+							<div class="buttons">
+								<div class="highlight">
+									<input type="submit" name="submit" value="保存" />
+								</div>
+								<input type="reset" name="reset" value="取消" onclick="javascript:gotoUrl('/iokadmin.php?m=Channel')"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	<!-- end content / right -->
+	</div>
+</div>
+<!-- end content -->
+{include file="footer.inc.htm"}

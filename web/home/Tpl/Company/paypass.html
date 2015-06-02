@@ -1,0 +1,86 @@
+{include file="Public/header_room.html"}
+{include file="Public/room_top.html"}
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html" }
+			</div>
+			<!-- css -->
+			<link href="/public/style/home/room/account.css" rel="stylesheet" />
+			<!-- js -->
+			<div class="content_sws_nr_right" id="iframe_main">
+				<div class="content_sws_nr_right_lgrzl">
+					<div class="content_sws_nr_r_lgrzl_t">
+						{include file="Public/welcom.html" }
+					</div>
+				</div>
+				<ul class="content_sws_nr_right_t">
+					<li><a href="/Company/passwd">登录密码</a></li>
+					<li><a href="/Company/paypass" class="navigation">支付密码</a></li>
+				</ul>
+				<div class="content_sws_nr_right_b">
+					<div class="content_sws_nr_right_b_zfmm">
+						<form name="payform" id="payform" action="/Company/paypasssubmit">
+							<input type='hidden' name="way" value='payf'>
+						<h2>支付密码</h2><div class="content_error" style="">{tip id='error' default=''}</div>
+						<div style="float:left;">
+						<ul class="content_sws_nr_right_b_zfmm_t">
+							<li>
+								<h3>原始支付密码</h3>
+								<div class="content_sws_nr_right_b_zfmm_tr">
+									<input type="password" name="oldpayword" value="" />
+									<p><span>*</span> 支付密码默认和注册设置密码相同  <!--【<a href="#">找回支付密码</a>】--></p>
+								</div>
+							</li>
+							<li>
+								<h3>新支付密码</h3>
+								<div class="content_sws_nr_right_b_zfmm_tr">
+									<input type="password" name="newpayword" value="" />
+									<p><span>*</span> 如不更改支付密码，请留空</p>
+								</div>
+							</li>
+							<li>
+								<h3>重复支付密码</h3>
+								<div class="content_sws_nr_right_b_zfmm_tr">
+									<input type="password" name="cnewpayword" value="" />
+								</div>
+							</li>
+						</ul>
+						</div>
+						<div class="content_sws_nr_right_b_qiye_bcfh">
+							<input type='submit' name='submit' value='确认修改' onclick="javascript:changes('payform');" ></input>
+							<a onclick="javascript:window.location.href='{$_SERVER['HTTP_REFERER']}' ">返回</a>
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+{include file="Public/footer.html" }
+<script type="text/javascript">
+	/*function changes(formid){
+		var formval = $('#'+formid).serialize();
+		$.ajax({
+		   type: "POST",
+		   url: "/",
+		   data: formval,
+		   success: function(backdata){
+				if(backdata){
+					$.iokPlugin.alert(backdata);
+					$("input[name='oldpaywd']").val('');
+					$("input[name='newpaywdone']").val('');
+					$("input[name='newpaywdtwo']").val('');
+				}else{
+					$.iokPlugin.alert('修改失败~');
+					$("input[name='oldpaywd']").val('');
+					$("input[name='newpaywdone']").val('');
+					$("input[name='newpaywdtwo']").val('');
+				}
+		   }
+		});
+	}
+	*/
+</script>

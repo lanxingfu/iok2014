@@ -1,0 +1,69 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Department/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>部门管理 》详细信息</h5>
+					</div>
+					<!-- end box / title -->
+					<div class="form">
+						<div class="fields">
+							<div class="field field-first">
+								<div class="fname">部门名称</div>
+								<div class="fvalue">{$rec['prettyname']}</div>
+							</div>
+							<div class="field">
+								<div class="fname">部门管理员</div>
+								<div class="fvalue">{$rec['leader']|default:'无'}</div>
+							</div>
+							<div class="field">
+								<div class="label label-textarea">部门介绍</div>
+								<div class="textarea textarea-editor">
+									<textarea name="introduce" cols="50" rows="12" class="editor" disabled>{$rec['introduce']|nl2br|escape:'html'}</textarea>
+								</div>
+							</div>
+							<div class="field">
+								<div class="fname">列表序号</div>
+								<div class="fvalue">{$rec['listorder']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">添加时间</div>
+								<div class="fvalue">{$rec['addtime']|date_format:'%Y-%m-%d %H:%M:%S'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">添加人员</div>
+								<div class="fvalue">{$rec['adduser']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">更新时间</div>
+								<div class="fvalue">{$rec['updatetime']|date_format:'%Y-%m-%d %H:%M:%S'|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">更新人员</div>
+								<div class="fvalue">{$rec['updateuser']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">当前状态</div>
+								<div class="fvalue">{if $rec['enabled']}正常{else}禁用{/if}</div>
+							</div>
+							<div class="buttons">
+								{if $rec['id'] ne '1'}
+								<input type="reset" value="编辑" onclick="javascript:gotoUrl('/iokadmin.php?m=Department&a=edit&id={$rec['id']}')" />
+								{/if}
+								<input type="reset" value="返回" onclick="javascript:gotoUrl('/iokadmin.php?m=Department')" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

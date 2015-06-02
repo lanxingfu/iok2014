@@ -1,0 +1,65 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Project/leftmenu.inc.htm"}
+			<!-- end content / left -->
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>项目管理 》{if $rec['id']}编辑信息{else}添加项目{/if}</h5>
+					</div>
+					<!-- end box / title -->
+					<form id="frm" method="post">
+					<div class="form">
+						<div class="fields">
+							<div class="field  field-first">
+								<div class="label">项目名称</div>
+								<div class="input">
+									<input type="text" name="prettyname" value="{$rec['prettyname']}" class="small" />
+								</div>
+								<div class="tip">{tip id='trttr' default='请输入项目名称'}</div>
+							</div>
+							<div class="field">
+								<div class="label">url</div>
+								<div class="input">
+									<input type="text" name="baseurl" value="{$rec['baseurl']}" class="small" />
+								</div>
+								<div class="tip">{tip id='url' default='请输入url'}</div>
+							</div>
+							<div class="field">
+								<div class="label label-textarea">备注</div>
+								<div class="textarea textarea-editor">
+									<textarea name="note" cols="50" rows="12" class="editor">{$rec['note']|nl2br|escape:'html'}</textarea>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">状态</div>
+								<div class="input">
+								<select id="action" name="state">
+								<option {if $rec['islocked'] eq 1}  selected="selected"{/if} value="1">禁用</option>
+								<option {if $rec['islocked'] eq 0}  selected="selected" {/if}  value="0">正常</option>
+								
+								</action>
+							</select>
+							</div>
+							<div class="buttons">
+								<input type="hidden" name="m" value="Project" />
+								<input type="hidden" name="a" value="submit" />
+								<input type="hidden" name="id" value="{$rec['id']}" />
+								<input type="submit" name="submit" value="提交" />
+								<input type="reset" name="reset" value="返回" onclick="javascript:gotoUrl('/iokadmin.php?m=Project{if $rec['id']}&a=detail&id={$rec['id']}{/if}')" />
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

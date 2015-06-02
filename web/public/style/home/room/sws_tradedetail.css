@@ -1,0 +1,52 @@
+
+
+/* 中间部分 */
+
+.content{ width:100%; float:left;background:#DEDEDE; padding:14px 0 20px 0;}
+.content_nr{width:1000px; margin:0 auto;}
+.content_sws_nr{width:1000px; float:left; background:#fff;}
+.content_sws_nr_left{width:192px;height:100%; background:#f6f7f8; padding-left:18px; padding-top:8px; float:left;}
+.content_sws_nr_left h2{height:29px; font-family:"微软雅黑"; font-size:16px; line-height:28px;}
+.content_sws_nr_left h2 img{ float:left; margin-top:6px;display:inline;}
+.content_sws_nr_left h2 span{ float:left; border-bottom:1px solid #c8c8c8;width:166px; text-indent:5px;}
+.content_sws_nr_left h2 span a{ color:#c80000;}
+.content_sws_nr_left h2 span a:hover{ text-decoration:underline;}
+.content_sws_nr_left_xx{width:186px; padding-left:6px;}
+.content_sws_nr_left_xx h3{height:28px; line-height:28px; font-family:"微软雅黑"; font-size:14px; color:#404d68; background:url(../../iamge/public/httb_6.png) no-repeat left center; padding-left:10px;}
+.content_sws_nr_left_xx_a{width:166px; padding-bottom:6px; padding-left:7px; font-family:"微软雅黑"; font-size:14px;line-height:22px; border-bottom:1px solid #c8c8c8;}
+.content_sws_nr_left_xx_a li{height:22px; padding-bottom:2px; padding-left:8px; background:url(../../../image/public/img_2.png) no-repeat left center;}
+.content_sws_nr_left_xx_a li a{ color:#6e6e6e; }
+.content_sws_nr_left_xx_a li a:hover{ color:#c70000; text-decoration:underline;}
+ 
+
+/* 订单详情页 */
+/* 右边内容部分 */
+.content_sws_nr_right_b{width:760px; float:left; padding-top:10px;}
+.content_sws_nr_right_b_ddzt{width:100%; padding:10px 0; float:left; border-bottom:1px dashed #c0c0c0;font-family:"微软雅黑"; font-size:12px;  line-height:25px;}
+.content_sws_nr_right_b_ddzt p{ color:#6e6e6e;width:100%; float:left;}
+.content_sws_nr_right_b_swdbxx{width:100%; padding:10px 0; float:left; border-bottom:1px dashed #c0c0c0;font-family:"微软雅黑"; font-size:12px;  line-height:25px;}
+.content_sws_nr_right_b_swdbxx h3{ color:#006199; font-weight:normal; padding-left:20px; float:left;width:100%;}
+.content_sws_nr_right_b_swdbxx p{ color:#6e6e6e;width:100%; padding-left:20px; float:left;}
+.content_sws_nr_right_b_ddxx{width:100%; padding:10px 0; float:left; border-bottom:1px dashed #c0c0c0;font-family:"微软雅黑"; font-size:12px;  line-height:25px;margin-bottom:10px;}
+.content_sws_nr_right_b_ddxx h3{ color:#006199; font-weight:normal; padding-left:20px; float:left;width:100%;}
+.content_sws_nr_right_b_ddxx p{color:#6e6e6e;width:100%; padding-left:20px; float:left;}
+.content_sws_nr_right_b_ddxx p span{ color:#c80000;}
+.content_sws_nr_right_b_fkxx{width:100%; padding:10px 0; float:left;font-family:"微软雅黑"; font-size:12px;  line-height:25px;}
+.content_sws_nr_right_b_fkxx p{color:#6e6e6e;width:100%; padding-left:20px; float:left;}
+.content_sws_nr_right_b_fkxx p span{ color:#c80000;}
+
+.content_sws_nr_right_b p{ float:left;width:100%;height:26px; padding-top:10px;}
+.content_sws_nr_right_b p input{width:50px; font-family:"宋体"; font-size:12px;height:26px; line-height:26px; color:#000;}
+
+/* 公用按钮部分 */
+.content_sws_nr_right_b_qiye_bcfh{width:459px; float:left; padding-top:20px; padding-left:234px;color:#6e6e6e;font-family:"微软雅黑"; font-size:12px;  line-height:22px;}
+.content_sws_nr_right_b_qiye_bcfh a{width:64px;height:24px; text-align:center; color:#ffffff; float:left; margin-right:19px; background:url(../../../image/public/httb_14.png) no-repeat;}
+.content_sws_nr_right_b_qiye_bcfh a:hover{ text-decoration:underline;}
+
+.tabg{border: 1px solid #ddd;}
+.tabg th{border-bottom: 1px solid #ddd;border-right: 1px solid #ddd;background:#F6F7F8;height:28px;line-height:28px;color:#006199;}
+.tabg td{border-right: 1px solid #ddd;height:80px; color:#666; text-align:center;}
+.tabg td img{margin:auto;}
+
+.table_button{margin-top:15px;    padding-left: 10px;width:581px;height:25px; float:left;}
+.table_button input{padding-bottom: 2px;width:70px;height:25px; float:left; margin-right:15px; background:url(../../../image/public/room_but.png) no-repeat; font-family:"微软雅黑"; font-size:12px; color:#fff; line-height:24px !important; text-align:center; border:none; cursor:pointer;}

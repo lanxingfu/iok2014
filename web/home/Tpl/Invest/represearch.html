@@ -1,0 +1,154 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Public/home_top.html'}
+<link href="/public/style/home/areasearch.css" rel="stylesheet" />
+<style>
+.null{
+font-family: "微软雅黑";
+font-size: 13px;
+color: #6e6e6e;
+padding-right: 30px;
+float: left;
+}
+</style>
+{literal}
+<script>
+function sub(id){
+	var id=$("#select"+id).find("option:selected").val();
+	location.href = "/Invest/areasearch/id/"+id;
+}
+function sub1(id){
+	var id=$("#select"+id).find("option:selected").val();
+	location.href = "/Invest/represearch/id/"+id;
+}
+</script>
+{/literal}
+<div class="zs_rjym_box">
+	<div class="zs_rjym_nr">
+    	<div class="zs_rjym_top">
+        	<div class="zs_rjym_top_t">
+			<h3>招商</h3>
+                <p>
+                    &gt;
+                    <a target="_blank" href="#">区域管理中心查询</a>
+                </p>
+			</div>
+        </div>
+        <div class="zs_rjym_conter">
+        	<div class="zs_rjym_conter_left">
+            	<div class="zs_rjym_conter_left_top">
+                	<div class="zs_rjym_conter_left_top_nr">
+                    	<div class="zs_rjym_conter_left_top_nr_t">
+                        	<div class="zs_rjym_conter_left_top_nr_tbt">
+                                <h3>{$nowname.prettyname} 商务服务站/商务代表</h3>
+                                <p>{$areanme}</a></p>
+							</div>
+                            <ul class="zs_rjym_conter_left_top_nr_ta">
+								{foreach from=$arealist item=al}
+									<li><a href="/Invest/represearch/id/{$al['id']}">{$al['prettyname']}</a></li>
+								{/foreach}
+							</ul>
+                        </div>					
+						<div class="zs_rjym_conter_left_top_nr_b">
+                        	<h4>
+								{$nowname.prettyname} 商务服务站/商务代表
+							</h4>
+                            <ul class="zs_rjym_conter_left_top_nr_bli" style="width:678px;">
+								{if $list}
+								{if $list['sheng']}
+									{foreach from=$list['sheng'] item=shi}
+										<li style="width:329px;">
+											<h5>{$nowname.prettyname}/{$shi.prettyname}</h5>												
+											<p><span style="padding-right:0px;">类　型： </span><span style="color:blue;padding-right:0px;padding-left:4px;">商务代表</span></p>
+											<p>联系人：{$shi.name} </p>
+											<p>性　别：{if $shi.gender eq "1"}男{else}女{/if}</p>
+											<p>电　话： {if $shi.telephone eq ""}暂无{else}{$shi.telephone}{/if}</p>
+											
+											<p>Q　&nbsp;Q：{if $shi.qq eq ""}暂无{else}{$shi.qq}{/if}  </p>
+											<p>邮　箱：{if $shi.email eq ""}暂无{else}{$shi.email} {/if} </p>
+											<p>地　址：{if $shi.address eq "" }暂无{else}{$shi.address} {/if} </p>
+										</li>
+									{/foreach}
+								{/if}
+								{if $list['shi']}
+									{foreach from=$list['shi'] item=xian}
+										<li style="width:329px;">
+											<h5>{$nowname.prettyname}/{$xian.prettyname}</h5>												
+											<p><span style="padding-right:0px;">类　型： </span><span style="color:blue;padding-right:0px;padding-left:4px;">商务服务站</span></p>
+											<p>联系人：{$xian.name} </p>
+											<p>性　别：{if $xian.gender eq "1"}男{else}女{/if}</p>
+											<p>电　话： {if $xian.telephone eq ""}暂无{else}{$xian.telephone}{/if}</p>
+											
+											<p>Q　&nbsp;Q：{if $xian.qq eq ""}暂无{else}{$xian.qq}{/if}  </p>
+											<p>邮　箱：{if $xian.email eq ""}暂无{else}{$xian.email} {/if} </p>
+											<p>地　址：{if $xian.address eq "" }暂无{else}{$xian.address} {/if} </p>
+										</li>
+									{/foreach}
+								{/if}
+								{else}
+									<div class="null">
+										抱歉，您所查询的区域暂时没有 商务服务站/商务代表。
+									</div>
+								{/if}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="zs_rjym_conter_right">
+            	<div class="content_bottom_nr_qdzs_cxqy">
+                    <ul class="content_b_n_qdzs_cxqy_n">
+                        <li>
+                            <h3><img src="/Public/image/zs_tubiao_7.png" alt="" /><span>区域管理中心 查询</span></h3>
+                            <div class="content_b_n_qdzs_cxqy_glzx">
+								<form method="post" action="/Invest/areasearch" name="saveData">
+									<select id="select1">
+                                    <option>请选择查询城市</option>
+                                   {foreach from=$area item=ar}
+											<option value="{$ar.id}">{$ar.prettyname}</option>
+										{/foreach}
+                                </select>
+                                <p><a href="javascript:sub(1);"><img src="/public/image/invest/zs_tubiao_9_1.png" alt="" /></a></p>
+								</form>
+                            </div>
+                        </li>
+						<li>
+                            <h3><img src="/Public/image/zs_tubiao_8.png" alt="" /><span>商务服务站/商务代表 查询</span></h3>
+                            <div class="content_b_n_qdzs_cxqy_glzx">
+								<form method="post" action="/Invest/represearch" name="saveData2">
+									<select id="select2">
+                                    <option>请选择查询城市</option>
+                                   {foreach from=$area item=ar}
+											<option value="{$ar.id}">{$ar.prettyname}</option>
+										{/foreach}
+                                </select>
+                                <p><a href="javascript:sub1(2);"><img src="/public/image/invest/zs_tubiao_9_1.png" alt="" /></a></p>
+								</form>
+                            </div>
+                        </li>
+                    </ul>
+            	</div>
+                <div class="zs_rjym_conter_right_lb">
+                	<div class="content_bottom_nr_zszx_reght">
+                        <div class="content_bottom_nr_zszx_rtt">
+                            <h3>推荐资讯</h3>
+                            <!--<p><a href="#" target="_blank">MORE&gt;</a></p>-->
+                        </div>
+                        <ul class="content_bottom_nr_zszx_rbt">
+							<empty name="news_list">
+								<li>暂无推荐资讯</li>
+							<else />
+								<foreach name="news_list" item="v">
+									<li><a href="__APP__/News/show/itemid/{$v.itemid}" target="_blank" title="{$v.title}">{$v.title}</a></li>
+								</foreach>
+							</empty>
+                        </ul>
+                	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{include file='Public/footer.html'}

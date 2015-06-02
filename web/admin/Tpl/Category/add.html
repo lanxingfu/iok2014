@@ -1,0 +1,132 @@
+﻿{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+
+{literal}
+<script src="public/script/clienthint_ajax.js"></script>
+<script type="text/javascript">
+function queryCity11(citycode,dengji,nowValue)
+{
+	queryCity("?m=Category&a=get_category&catpid="+citycode+"&n="+Math.random(),dengji,nowValue);
+}
+</script>
+{/literal}
+<!-- content -->
+<div id="content">
+	{include file="Category/leftmenu.inc.htm"}
+	<!-- content / right -->
+	<div id="right">
+		<div class="box">
+			<!-- box / title -->
+			<div class="title">
+				<h5>添加分类</h5>
+			</div>
+			<form id="form" action="?m=Category&a=add" method="post">
+				<div class="form">
+					<div class="fields">
+						<div class="field  field-first">
+							<div class="label">
+								<label for="input-small">所属模块:</label>
+							</div>
+							<div class="select" name="parentid" id=''>
+								<select id="select" name="cattypeid">
+									<option value="0">选择所属模块</option>
+								{foreach from=$data item=v}
+									<option value="{$v['name']}">{$v.prettyname}</option>
+								{/foreach}
+								<select/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">上级分类:</label>
+							</div>
+							<div class="select" name="parentid" id=''>
+								<select id="select" name="catid" onChange="queryCity11(this.options[this.selectedIndex].value,'city',this.value)">
+									<option value="0">选择上级分类</option>
+									{foreach from=$category item=v}
+									<option value="{$v.id}">{$v.prettyname}</option>
+									{/foreach}
+								</select>
+								<span id='city'></span>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">分类名称:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="input-small" name="prettyname" class="small" value="{$area['listorder']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="select">级别:</label>
+							</div>
+							<div class="select">
+								<select id="select" name="level">
+									<option value="">选择级别</option>
+									<option value="0">0</option>
+									<option value="1">1</option>
+								</select>
+							</div>{tip id='top2' default='请选择分类级别'}
+						</div>
+						<div class="field">
+							<div class="label label-textarea" >
+								<label for="input-small">排序：</label>
+							</div>
+							<div class="input">
+								<input type="text" id="input-small" name="listorder" class="small" value=""/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label label-radio">
+								<label>是否启用:</label>
+							</div>
+							<div class="radios">		
+								<div class="radio">
+									<input type="radio" value='0' name="enabled" checked /><label for="radio-2">启用</label>
+									<input type="radio" value='1' name="enabled" /><label for="radio-2">禁用</label>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label label-textarea" >
+								<p>Title<br>(SEO标题)：</p>
+							</div>
+							<div class="input">
+								<input type="text" id="input-small" name="seo_title" class="small" value=""/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label label-textarea" >
+								<p>Meta Keywords<br>(网页关键词)：</p>
+							</div>
+							<div class="textarea">
+								<textarea id="textarea1" name="seo_keywords"  style="height:50px;" cols="20" rows="4">SEO Meta Keywords</textarea>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label label-textarea" >
+								<p>Meta Description <br>(网页描述)：</p>
+							</div>
+							<div class="textarea">
+								<textarea id="textarea2" name="seo_description"  style="height:50px;" cols="20" rows="4">SEO Meta Description</textarea>
+							</div>
+						</div>
+						<div class="field">
+							<div class="buttons">
+								<div class="highlight">
+									<input type="submit" name="submit" value="保存" />
+								</div>
+								<input type="reset" name="reset" value="取消" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	<!-- end content / right -->
+	</div>
+</div>
+<!-- end content -->
+{include file="footer.inc.htm"}

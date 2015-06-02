@@ -1,0 +1,11 @@
+后台：
+列表（index）：表示对所有记录进行列表显示，并包括排序、基本搜索功能
+详情（detail）：对单个记录详细信息展示
+状态（ajaxstate）：使用ajax对单条记录进行状态修改，包括启用和禁用，主要操作enabled字段
+增加（add/edit）：添加一条记录
+修改（edit）：修改一条记录
+提交（submit）：提交修改记录
+删除（delete）：删除一条记录
+审核（ajaxcheck）：使用ajax对单条记录进行审核，包括通过和拒绝，主要操作status字段
+批量状态（ajaxstate）：使用ajax对多条记录进行状态修改，包括启用和禁用，主要操作enabled字段
+批量审核（ajaxcheck）：使用ajax对多条记录进行审核，包括通过和拒绝，主要操作status字段

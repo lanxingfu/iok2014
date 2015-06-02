@@ -1,0 +1,46 @@
+{include file="Public/header.html"}
+<!-- top -->
+{include file="Public/home_top.html"}
+<link href="__CSS__/home/register-com-men.css" rel="stylesheet" />
+<!-- 中间内容部分 -->
+<div class='content'>
+<div class="content_qyzc">
+	<div class="content_qyzc_nr">
+		<div class="content_qyzc_nr_t">找回密码</div>
+		<div class="content_qyzc_nr_b">
+			<div class="content_qyzc_nr_bb" style="padding-top:60px;">
+				<form action="/Misc/changepword/" method="post">
+					<ul class="content_qyzc_nr_bbt zhaohui" style="padding-left:250px;">
+						<li>
+							{tip id="top"}
+						</li>
+						<li style="padding-bottom:25px;color:#555;text-align:center;width:355px;">
+							{$smarty.session.member.change_name}
+						</li>
+						<li>
+							<h4>新密码<span>&nbsp;*&nbsp;</span></h4>
+							<div class="content_qyzc_nr_bbtr">
+								<input type="password" value="" name="newpassword"/>
+							</div>
+							<div class="content_error" id="dpassword"></div>
+							<div class="tishi">登录密码长度应在6-20之间</div>
+						</li>
+						<li>
+							<h4>确认新密码<span>&nbsp;*&nbsp;</span></h4>
+							<div class="content_qyzc_nr_bbtr">
+								<input type="password" value="" name="newpasswordt"/>
+							</div>
+							<div class="content_error" id="dpasswordt"></div>
+						</li>
+						<li>
+							<div class="newbutton" style="padding:40px 0 0 125px"><input type="submit" name="submit" value="确定" id="_submit"/></div>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- footer -->
+{include file="Public/footer.html"}

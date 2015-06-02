@@ -1,0 +1,348 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<!-- Kingedit -->
+<link type="text/css" rel="stylesheet" href="/public/script/admin/editor/skins/default.css">
+
+<!-- css -->
+<link href="/public/style/home/room/companydata.css" rel="stylesheet" />
+<!-- js -->
+<!-- 上传 弹框 -->
+<script type="text/javascript" src="/public/script/swfupload/js/handlers.js"></script>
+<script type="text/javascript" src="/public/script/swfupload/swfupload.js"></script>
+{literal}
+<style type="text/css">
+#content div.box table{border-collapse:inherit}
+#content div.box table td{padding:0;border:0 none;background: none;}
+
+.table_sptps img{width: 110px;height: 115px;float: left;margin-right: 12px;}
+</style>
+<script type="text/javascript" charset="utf-8" src="/public/script/admin/editor/kindeditor.js"></script>
+<!-- KingEditor开始 -->
+<script>
+	KE.show({
+		id : 'content1',
+		imageUploadJson : '/public/script/admin/editor/php/upload_json.php',
+		fileManagerJson : '/public/script/admin/editor/php/file_manager_json.php',
+		allowFileManager : true,
+		afterCreate : function(id) {
+			KE.event.ctrl(document, 13, function() {
+				KE.util.setData(id);
+				document.forms['example'].submit();
+			});
+			KE.event.ctrl(KE.g[id].iframeDoc, 13, function() {
+				KE.util.setData(id);
+				document.forms['example'].submit();
+			});
+		}
+	});
+</script>
+{/literal}
+<!-- content -->
+<div id="content">
+	{include file="Product/leftmenu.inc.htm"}
+	<!-- content / right -->
+	<div id="right">
+		<div class="box">
+			<!-- box / title -->
+			<div class="title">
+				<h5>产品管理>>{if $data.id}修改产品{else}添加产品{/if}</h5>
+			</div>
+			<form id="form" action="?m=Product&a=submit" method="post">
+				<div class="form">
+				<input type="hidden" id="id" name="id" class="small" value="{$data['id']}"/>
+					<div class="fields">
+						<div class="field  field-first">
+							<div class="label">
+								<label for="label">产品名称:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="title" name="title" class="small" value="{$data['title']}"/>
+								<div class="tip">{tip id='title' default='请输入您的产品名称'}</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="label">分类:</label>
+							</div>
+							<div class="select">
+								<select class="select" name="categoryid" id="categoryid" >
+								{if $data['categoryid']}
+									<option value="{$data['categoryid']}">{$data['categoryid']['prettyname']}</option>
+								{else}
+									<option value="">请选择分类</option>
+									<option value="">消费品</option>
+									<option value="">工业品</option>
+								{/if}
+								</select>
+								</div>
+							<div class="tip">{tip id='categoryid'}</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="label">自定义分类:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="customcategoryid" name="customcategoryid" style="width:60px;" value="{$data['customcategoryid']}"/>
+								<div class="tip">{tip id='customcategoryid' default='请输入您的自定义分类'}</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="label">品牌:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="custombrandid" name="custombrandid" class="small" value="{$data['custombrandid']}"/>
+								<div class="tip">{tip id='custombrandid' default='请输入您的自定义品牌'}</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="label">货号/型号</label>
+							</div>
+							<div class="input">
+								<input type="text" name="model" class="small" value="{$data['model']}"/>
+							</div>
+							<div class="tip">{tip id='model' default='请输入您的货号或者型号'}</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="label">成分/材质</label>
+							</div>
+							<div class="input">
+								<input type="text" name="material" class="small" value="{$data['material']}"/>
+							</div>
+							<div class="tip">{tip id='material' default='请输入该产品的成分或者材质'}</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">原产地:</label>
+							</div>
+							<div class="select" name="placeareaid" id='placeareaid'></div>
+							<script>loadarea("placeareaid")</script>
+							<div class="tip">{tip id='placeareaid' default='请输入产品原产地'}</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">商品图片:</label>
+							</div>
+							<div class="input" style="width:400px;">				
+								<div class="table_sptps" style="float:left;display:inline;margin:5px;">
+									<div class="images">
+										<img onclick="loadlayer('titleimg','imgurl');" id="titleimg" src="{$data.thumb|default:'/public/image/public/uploadimg.jpg'}">
+										<input type="hidden" name="imgurl" id="imgurl" value="">
+									</div>
+									<div class="tests">
+										<a onclick="loadlayer('titleimg','imgurl');">【上传】</a>
+										<a onclick="delurl('titleimg','imgurl');">【删除】</a>  
+									</div>
+								</div>
+								<div class="table_sptps" style="float:left;display:inline;margin:5px;">
+									<img onclick="loadlayer('titleimg1','imgurl1');" id="titleimg1" src="{$data.thumb1|default:'/public/image/public/uploadimg.jpg'}">
+									<input type="hidden" name="imgurl1" id="imgurl1" value="">
+									<div class="tests">
+										<a onclick="loadlayer('titleimg1','imgurl1');">【上传】</a>
+										<a onclick="delurl('titleimg1','imgurl1');">【删除】</a>
+									</div>
+								</div>
+								<div class="table_sptps" style="float:left;display:inline;margin:5px;">
+									<img onclick="loadlayer('titleimg2','imgurl2');" id="titleimg2" src="{$data.thumb2|default:'/public/image/public/uploadimg.jpg'}">
+									<input type="hidden" name="imgurl2" id="imgurl2" value="">
+									<div class="tests">
+										<a onclick="loadlayer('titleimg2','imgurl2');">【上传】</a>
+										<a onclick="delurl('titleimg2','imgurl2');">【删除】</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">商品详情:</label>
+							</div>
+							<div class="input">
+								<textarea id="content1" name="content" cols="100" rows="8" style="width:700px;height:200px;visibility:hidden;">{$data['content']}</textarea>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">发货地:</label>
+							</div>
+							<div class="select" name="shipareaid" id='shipareaid'></div>
+							<script>loadarea('shipareaid')</script>
+							<div class="tip">{tip id='shipareaid' default='请输入产品发货地'}</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">计量单位:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="unit" name="unit" class="small" value="{$data['unit']}"/>
+							</div>
+							<div class="tip">{tip id='unit' default='请输入计量单位'}</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">产品单价:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="price" name="price" class="small" value="{$data['price']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">产品参考价:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="referenceprice" name="referenceprice" class="small" value="{$data['referenceprice']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">最小起订量:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="moq" name="moq" class="small" value="{$data['moq']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">库存总量:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="inventory" name="inventory" class="small" value="{$data['inventory']}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">发货期限:</label>
+							</div>
+							<div style="float:left;" class="input">
+								<div style="float:left;padding:10px 10px 0 0;">自买家付款之日起</div>
+								<input type="text" id="deliverydays" name="deliverydays" style="width:20px;" value="{$data['deliverydays']}"/>
+								<div style="float:left;padding:10px 0 0 10px;">
+									天内发货 &nbsp; &nbsp;{tip id='address' default='请输入发货期限'}
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label label-radio">
+								<label>是否包邮</label>
+							</div>
+							<div class="radios">		
+								<div class="radio">
+										<input type="radio" value='0' name="isfreedelivery" checked /><label for="radio-2">协商</label>
+										<input type="radio" value='1' name="isfreedelivery" /><label for="radio-2">包邮</label>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">佣金比例:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="commission" name="commission"  style="width:20px;"  value="{$data['commission']}"/>
+								<div style="float:left;padding:10px 10px 0 0;">%</div>
+							</div>
+							<div class="tip">{tip id='commission' default='请输入该产品佣金比例'}</div>
+						</div>
+						<div class="field">
+							<div class="buttons">
+								<div class="highlight">
+									<input type="submit" name="submit" value="保存" />
+								</div>
+								<input type="reset" name="reset" value="取消" onclick="javascript:gotoUrl('/iokadmin.php?m=Channel')"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	<!-- end content / right -->
+	</div>
+</div>
+	
+{literal}
+<script type="text/javascript">
+	var closedlayerfunc = function(upimgid,imgurls){
+		var  savesrc = window.frames["jbox-iframe"].document.getElementById("savedata").value;
+		$("#"+upimgid).attr("src",savesrc);
+		$("#"+imgurls).val(savesrc);
+		return true;
+	}
+	function loadlayer(upimgid,imgurls){
+		
+		$.jBox("iframe:iokadmin.php?m=Uploadfile&a=upload&id=123456", {
+			title: "上传图片",
+			width: 500,
+			height: 350,
+			showClose: false,
+			buttons: { '确定': 1 ,'取消':2},
+			submit:function(v,h,f){
+				if(v==1){
+					closedlayerfunc(upimgid,imgurls);
+				}else if(v==2){
+					delurl_t(upimgid,imgurls);
+					return true;
+				}else{
+					$.jBox.alert("出错了，Sorry ~");
+				}
+			}
+		});
+	}
+	//删除图片
+	function delurl(upimgid,imgurls){
+		$.jBox.confirm('您真的要删除这张吗?',"提示",function(){
+			var srcurl=$("#"+upimgid).attr("src");
+			$.ajax({
+				type: "POST",
+				url: "iokadmin.php?m=Uploadfile&a=imgdel",
+				data: "imgurl="+srcurl,
+				success: function(msg){
+					if(msg==1 || msg==2){
+						$("#"+upimgid).attr("src","/public/image/public/uploadimg.jpg");
+						$("#"+imgurls).attr('value',"/public/image/public/uploadimg.jpg");
+						$.jBox.alert('删除成功');
+					}else{
+						$.jBox.alert('删除失败');
+					}
+				}
+			});
+		},function(){});
+
+	}
+	function del(id){
+		var submit = function (v, h, f) {
+		if (v == 'ok')
+			window.location.href='/iokadmin.php?m=Product&a=del&id='+id;
+			//jBox.tip(v, 'info');
+		else if (v == 'cancel')
+			jBox.tip('已取消', 'info');
+
+			return true; //close
+		};
+
+		$.jBox.confirm("确定删除吗？", "提示", submit);
+	}
+	/*删除图片，未保存时*/
+	function delurl_t(upimgid,imgurls){
+
+		var  up_src = window.frames["jbox-iframe"].document.getElementById("savedata").value;
+		if(up_src){
+			$.ajax({
+				type: "POST",
+				url: "iokadmin.php?m=Uploadfile&a=imgdel",
+				data: "imgurl="+up_src,
+				success: function(msg){
+					if(msg==1 || msg==2){
+						$.jBox.alert('删除成功');
+					}else{
+						$.jBox.alert('删除失败');
+					}
+				}
+			});
+		}
+	}
+	/*图片上传结束*/
+</script>
+{/literal}
+<!-- end content -->
+{include file="footer.inc.htm"}

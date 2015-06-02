@@ -1,0 +1,177 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Index/top.html'}
+<link href="/public/style/home/index_ad_right.css" rel="stylesheet" />
+<link href="/public/style/home/index.css" rel="stylesheet" />
+<link href="/public/style/home/default.css" rel="stylesheet" />
+<!-- content -->
+<div class="conter_center">
+	<div class="content_nr_xqnr">
+		<!-- 内容第一部分的左边 -->
+		<div class="content_nr_xqnr_left">
+			<div class="content_nr_xqnr_Ln">
+				<h3>
+					<a class="tab_2" id="trade_t_1" style="cursor:default;" onmouseover="Tb(1, 3, 'trade', 'tab');">供应</a>
+					<a class="tab_1" id="trade_t_2" style="cursor:default;" onmouseover="Tb(2, 3, 'trade', 'tab');">求购</a>
+					<a class="tab_1" id="trade_t_3" style="cursor:default;background:none;" onmouseover="Tb(3, 3, 'trade', 'tab');">最新成交</a>
+				</h3>
+				<ul class="content_xqnr_Ln_B" id="trade_c_1" style="display:block;">
+					
+						<li>
+							<img src="/Public/image/index/img_8.png" alt="" />
+							<h4><a href="/Mall/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></h4>
+							<span>暂无报价</span>
+						</li>
+				
+				</ul>
+				<ul class="content_xqnr_Ln_B" id="trade_c_2" style="display:none;">
+					
+						<li>
+							<img src="/Public/image/index/img_9.png" alt="" />
+							<h4><a href="/Buy/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></h4>
+							<span>等待报价</span>
+						</li>
+					
+				</ul>
+				<ul class="content_xqnr_Ln_B" id="trade_c_3" style="display:none;">
+					
+						<li>
+							<img src="/Public/image/index/img_7.png" alt="" />
+							<h4><a href="/Mall/show/itemid/{$v.mallid}" target="_blank">{$v.title}</a></h4>
+							<span>&yen;{$v.price}</span>
+						</li>
+					
+				</ul>
+			</div>
+			<!-- 内容第一部分的右边 -->
+			<div class="content_nr_xqnr_right">
+				<div class="content_nr_Ro">							
+					<div class="slideBox">
+						<div class="hd">
+							<ul>
+                           
+                            
+                            <li>{$k}</li>
+                           
+                            </ul>
+						</div>
+						<div class="bd">
+							<ul>
+                                
+                                <li><a href="{$vo.image_url}" title="{$vo.image_alt}" ><img src='{$vo.image_src}' alt="{$vo.image_alt}" ></a></li>
+                               
+							</ul>
+						</div>
+						<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+						<a class="prev" href="javascript:void(0)"></a>
+						<a class="next" href="javascript:void(0)"></a>
+					</div>				
+					<script type="text/javascript"></script>					
+				</div>
+				<div class="content_nr_Rn">
+					<img src="/Public/image/index/img_10.png" alt="" />
+				</div>
+			</div>
+			<div class="content_nr_xqnr_right_ri">
+				<h3>
+					<a href="/Public/register" target="_blank">免费注册</a>
+					<a href="/Public/login" target="_blank" style="background:none;">登录</a>
+				</h3>
+				<div class="content_nr_xqnr_right_ri_one">
+					<div class="content_nr_xqnr_right_ri_one_t">
+						<a href="/Helps/listy/catid/8959" target="_blank" class="tablt_2" id="tradelt_t_1" onmouseover="Tb(1, 2, 'tradelt', 'tablt');">买家入门</a>
+						<a href="/Helps/listy/catid/8960" target="_blank" class="tablt_1" id="tradelt_t_2" onmouseover="Tb(2, 2, 'tradelt', 'tablt');">卖家入门</a>
+					</div>
+					<div class="content_nr_xqnr_right_ri_one_c" id="tradelt_c_1" style="display:block;">
+						
+							<a href="/Helps/show/itemid/{$v.itemid}">{$v.title}</a>
+						
+					</div>
+					<div class="content_nr_xqnr_right_ri_one_c" id="tradelt_c_2" style="display:none;">
+						
+							<a href="/Helps/show/itemid/{$v.itemid}">{$v.title}</a>
+						
+					</div>
+				</div>
+				<div class="content_nr_xqnr_right_ri_two">
+					<h4>促成服务指南</h4>
+					<ul class="content_nr_xqnr_right_ri_two_nr">
+						
+							<li><a href="/Helps/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="content_nr_tscp">
+			<div class="content_nr_tscp_ycl">
+				<div class="content_nr_tscp_ycl_l">
+					
+							<div class="content_nr_tscp_ycl_l_top">
+								<strong>1F</strong>				
+								<h5><a href="/Mall/listy/catid/{$v.catid}" target="_blank">{$v.catname}</a></h5>
+                                <span><a href="/Mall/listy/catid/{$v.catid}">更多&gt;&gt;</a></span>
+							</div>
+							<ul class="content_nr_tscp_ycl_l_li">
+								
+									<li>
+										<ul class="content_nr_tscp_ycl_l_li_nr">
+											<li>
+												<a href="/Mall/listy/catid/" target="_blank" class="title"></a>
+												<span></span><a href="/Mall/listy/catid/" title="" class="child" target="_blank"></a>
+													
+											</li>
+										</ul>
+									</li>
+								
+							</ul>
+						
+				</div>
+				<div class="content_nr_tscp_ycl_r">
+					<div class="content_nr_Re_Ro">
+						<div class="content_nr_Re_Ro_top">
+							<h3>安全交易</h3>
+							<div class="content_nr_Re_Ro_topIMG">
+								<img src="/Public/image/index/img_11.png" alt="" />
+							</div>
+						</div>
+						<ul class="content_nr_Re_Ro_ul">
+															
+								<li>								
+									<div class="content_nr_Re_Ro_ul_img">
+										<img src="/Public/images/index/anquan_{$k}.png" alt="" />
+									</div>
+									<h4><a href="/Helps/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></h4>
+								</li>
+							
+						</ul>
+					</div>
+					<div class="content_nr_Re_Ro" style="margin-bottom:0;">
+						<div class="content_nr_Re_Ro_top">
+							<h3>生 意 经</h3>
+							<div class="content_nr_Re_Ro_topIMG">
+								<img src="/Public/image/index/img_11.png" alt="" />
+							</div>
+						</div>
+						<ul class="content_nr_Re_Ro_ul">
+										
+								<li>
+									<div class="content_nr_Re_Ro_ul_img">
+										<img src="/Public/images/index/shengyi_{$k}.png" alt="" />
+									</div>
+									<h4><a href="/Helps/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></h4>
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+						
+		</div>
+	</div>
+</div>
+{include file="Public/footer_2.html"}
+<!-- footer -->
+{include file='Public/footer.html'}
+

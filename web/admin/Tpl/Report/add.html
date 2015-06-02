@@ -1,0 +1,126 @@
+﻿{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<script>
+$(function(){
+	$("#istop-2").click(function(){
+		$("#uploaddiv").css("display","none");
+		$("#uploaddiv_1").css("display","none");
+	});
+	$("#istop-1").click(function(){
+		$("#uploaddiv").css("display","block");
+		$("#uploaddiv_1").css("display","block");
+	});
+});
+</script>
+		<!-- content -->
+		<div id="content">
+			<!-- end content / left -->
+			{include file="Report/leftmenu.inc.html"}
+			<!-- end content / left -->
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>增加信息</h5>
+					</div>
+					<!-- end box / title -->
+					<form id="form" action="/iokadmin.php/Report/submit" method="post" enctype="multipart/form-data">
+					<div class="form">
+						<div class="fields">
+							<div class="field">
+								<div class="label label-radio">
+									<label>是否启用：</label>
+								</div>
+								<div class="radios">
+									<div class="radio">
+										<input type="radio" id="radio-1" name="enabled" value="1" checked="checked"/>
+										<label for="radio-1">启用</label>
+									
+										<input type="radio" id="radio-2" name="enabled" value="0"/>
+										<label for="radio-2">关闭</label>
+									</div>
+								</div>
+							</div> 
+							<div class="field">
+								<div class="label label-radio">
+									<label>是否置顶：</label>
+								</div>
+								<div class="radios">
+									<div class="radio">
+										<input type="radio" id="istop-1" name="istop" value="1"/>
+										<label for="radio-1">置顶</label>
+									
+										<input type="radio" id="istop-2" name="istop" value="0" checked="checked"/>
+										<label for="radio-2">不置顶</label>
+									</div>
+								</div>
+							</div> 
+							<div class="field" id="uploaddiv" style="display:none">
+								<div class="label">
+									<label for="file">上传图片：</label>
+								</div>
+								<div class="input">
+									<input type="file" name="imageurl" size="40"/>
+								</div>
+								<div class="input input-file">
+								{if $newarr['imageurl'] }
+									<img width="300" height="200" src="/file/upload/{$newarr['imageurl']}"> 
+								{/if}
+								</div>
+							</div>
+							<div class="field" id="uploaddiv_1" style="display:none">
+								<div class="label">
+									<label for="select">简介：</label>
+								</div>
+								<div class="input">
+									<textarea name="content" style="height:50px;" class="editor" cols="50" rows="12"></textarea>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="input-small">关联专题：</label>
+								</div>
+								<div class="select">
+									<select name="subjectid">
+										<option value="0">不关联</option>
+									{*{foreach from=$type item=t}
+										<option value="{$t['id']}">{$t['prettyname']}</option>
+									{/foreach}*}
+									</select>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="select">信息标题：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="title" class="small" />
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="select">URL地址：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="linkurl" class="small" />
+								</div>
+							</div>
+							
+							<div class="buttons">
+								<input type="reset" name="reset" value="Reset" />
+								<div class="highlight">
+									<input type="submit" name="submit.highlight" value="Submit" />
+								</div>
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

@@ -1,0 +1,133 @@
+{include file="Public/header_room.html"}
+<!-- top -->
+{include file="Public/room_top.html"}
+<link href="__PUBLIC__/style/home/room/table_form.css" rel="stylesheet" />
+<link href="__PUBLIC__/style/home/room/remessge.css" rel="stylesheet" />
+<link href="__PUBLIC__/style/home/room/reset.css" rel="stylesheet" />
+<link href="__PUBLIC__/style/home/room/common.css" rel="stylesheet" />
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html"}
+			</div>
+<div class="content_sws_nr_right" id="iframe_main">
+		<div class="content_sws_nr_right_lgrzl">
+			<div class="content_sws_nr_r_lgrzl_t">
+				{include file="Public/welcom.html"}
+			</div>
+		</div>
+		<ul class="content_sws_nr_right_t">
+			<li><a href="/Message/mesadd/type/1"  {if $smarty.get.type eq '1' } class="navigation" {/if} >(+)发送信件</a></li>
+			<li><a href="/Message/index/type/receive"{if $smarty.get.type eq 'receive'}class="navigation"{/if} >收件箱</a></li>
+			<li><a href="/Message/index/type/send"  {if $smarty.get.type eq 'send'}class="navigation"{/if} >已发送</a></li>
+			<li><a href="/Message/mesclear/type/2"  {if $smarty.get.type eq '2'}class="navigation"{/if} >信件清理</a></li>
+		</ul>
+	<div class="content_sws_nr_right_b">
+		<div class="content_sws_nr_right_b_dlmm">
+			<div class="pad-lr-10">
+			{if $list}
+				<div style="height:auto; width:100%">
+					<table id="checkList" class="table-list" width="100%" cellspacing="0" cellpadding="0">
+									<thead>
+										<tr >
+											<th width="90">
+												<input type="checkbox" name='decideid' onclick="javascript:checkalls('id','decideid');" >&nbsp 全选</input>
+										
+											</th>
+										<th>
+										<a>类型</a>
+										</th>
+										<th width="45">
+										<a>编号</a>
+										</th>
+										
+										<th style="width:auto">
+										<a>标题</a>
+										</th>
+										<th style="width:60">
+										<a>{if $smarty.get.type eq 'receive'}发件人{else}收件人{/if}</a>
+										</th>
+										<th width="120 ">
+										<a>发生时间</a>
+										</th>
+										<th width="110px" style="text-align:center;">查看
+										</th>
+										</tr>
+									</thead>
+										<tbody>
+										{foreach $list as $vo}
+										<tr class="out" onmouseout="outs(event)" onmouseover="overs(event)">
+											
+											<td align="left"><input type="checkbox" value="{$vo.id}" name="id"></td>
+											
+											
+
+											<td>{if ($vo.isread eq 1  and $smarty.get.type eq 'receive') }<img src="__PUBLIC__/image/home/business_room/mes.png"/>{elseif $smarty.get.type eq 'send'}<img src="__PUBLIC__/image/home/business_room/mes.png"/>{else}<img src="__PUBLIC__/image/home/business_room/message_0.gif"/>{/if}</td>
+											<td>{$vo.id}</td>
+											<td>{if $smarty.get.type eq 'receive'}<a href="/Message/meslook/type/recieve/itemid/{$vo['id']}">{$vo.title}</a>{else}<a href="/Message/meslook/type/send/itemid/{$vo['id']}">{$vo.title}</a>{/if}</td>
+											<td>{$vo.account}</td>
+											<td>{if $vo.addtime eq '' }暂无{else}{$vo.addtime|date_format:'Y-m-d H:i:s'}{/if}</td>
+											<td align="center">{if $smarty.get.type eq 'receive'}<a href="/Message/meslook/type/recieve/itemid/{$vo['id']}"><img src="__PUBLIC__/image/home/business_room/httb_11.png"/></a>{else}<a href="/Message/meslook/type/send/itemid/{$vo['id']}"><img src="__PUBLIC__/image/home/business_room/httb_11.png"/></a>{/if}</td>
+											
+										</tr>
+										{/foreach}
+									</tbody>
+								</table>
+						<div id="pages">{$showpage}</div>
+						<div class="btn">
+							<a href="javascript:void(0)" style="background:url(__PUBLIC__/image/home/business_room/httb_14.png) no-repeat;"{literal} onclick="Javascript:Moreval_s('id');" {/literal} ><span style="text-align:center;color:white;">删  除</a></a>
+								
+						</div>
+						{else}
+							<div style="margin:10px auto;padding-top:15px;border:1px solid #bfbfbf;color:#bfbfbf;text-align:center;"><span>对不起，还没有站内信件！ </span></div>
+						
+						{/if}
+					</form>
+					
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+		</div>
+    </div>
+</div>
+{include file="Public/footer.html"}
+<script type='text/javascript'>
+function Moreval_s(doom){
+var a = window.location.href;
+var b=a.split("/");
+var type =b['6'];
+
+	var dellist = document.getElementsByName(doom);
+	var delid = "";
+	for (var i = 0; i < dellist.length; i++){
+		if (dellist[i].checked){
+			delid += dellist[i].value + ",";
+		}
+	}
+	if(delid==''){
+		alert('请先选择信件！');
+		return false;
+	}
+	if(confirm('确定要删除吗？')){
+		$.ajax({
+			type: "POST",
+			url: "/Message/mesdelete/type/"+type,
+			data: "idlist="+delid,
+			success: function(msg){
+				if(msg=='站内信删除成功'){
+					alert('站内信删除成功');
+					window.location ='/Message/index/type/'+type;
+				}else{
+					alert('站内信删除失败');
+				}
+			}
+		});
+	}
+}
+
+</script>

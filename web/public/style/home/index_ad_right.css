@@ -1,0 +1,73 @@
+
+/* 首页右侧上下滚动图片广告css   for  wb  20131113 */
+.picScroll-top{ margin:0 auto;  width:195px;  overflow:hidden; position:relative;  border:1px solid #ccc;   }
+.picScroll-top .hd{ overflow: hidden;height: 20px;padding: 0px;position: absolute;right: 2px;z-index: 1;}
+.picScroll-top .hd .prev,.picScroll-top .hd .next{ display:block;  width:9px; height:5px; float:right; margin-right:5px; margin-top:10px; 
+	overflow:hidden;cursor:pointer; background:url("/Public/js/SuperSlide/images/arrow.png") 0 -100px no-repeat;}
+.picScroll-top .hd .next{ background-position:0 -140px;  }
+.picScroll-top .hd .prevStop{ background-position:-60px -100px;  }
+.picScroll-top .hd .nextStop{ background-position:-60px -140px;  }
+.picScroll-top .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:5px; zoom:1; }
+.picScroll-top .hd ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer;
+	background:url("/Public/js/SuperSlide/images/icoCircle.png") 0 -9px no-repeat; }
+.picScroll-top .hd ul li.on{ background-position:0 0; }
+.picScroll-top .bd ul{ overflow:hidden; zoom:1; }
+.picScroll-top .bd ul li{ text-align:center; zoom:1; }
+.picScroll-top .bd ul li .pic{ text-align:center; }
+.picScroll-top .bd ul li .pic img{ width:195px; height:160px; display:block;  padding:0px; }
+.picScroll-top .bd ul li .pic a:hover img{ border-color:#999;  }
+.picScroll-top .bd ul li .title{ line-height:16px; }
+
+.picScroll-top1{ margin:0 auto;  width:195px;  overflow:hidden; position:relative;  border:1px solid #ccc;   }
+.picScroll-top1 .hd1{ overflow: hidden;height: 20px;padding: 0px;position: absolute;right: 2px;z-index: 1;}
+.picScroll-top1 .hd1 .prev,.picScroll-top1 .hd1 .next{ display:block;  width:9px; height:5px; float:right; margin-right:5px; margin-top:10px; 
+	overflow:hidden;cursor:pointer; background:url("/Public/js/SuperSlide/images/arrow.png") 0 -100px no-repeat;}
+.picScroll-top1 .hd1 .next{ background-position:0 -140px;  }
+.picScroll-top1 .hd1 .prevStop{ background-position:-60px -100px;  }
+.picScroll-top1 .hd1 .nextStop{ background-position:-60px -140px;  }
+.picScroll-top1 .hd1 ul{ float:right; overflow:hidden; zoom:1; margin-top:5px; zoom:1; }
+.picScroll-top1 .hd1 ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer;
+	background:url("/Public/js/SuperSlide/images/icoCircle.png") 0 -9px no-repeat; }
+.picScroll-top1 .hd1 ul li.on{ background-position:0 0; }
+.picScroll-top1 .bd1 ul{ overflow:hidden; zoom:1; }
+.picScroll-top1 .bd1 ul li{ text-align:center; zoom:1; }
+.picScroll-top1 .bd1 ul li .pic{ text-align:center; }
+.picScroll-top1 .bd1 ul li .pic img{ width:195px; height:160px; display:block;  padding:0px; }
+.picScroll-top1 .bd1 ul li .pic a:hover img{ border-color:#999;  }
+.picScroll-top1 .bd1 ul li .title{ line-height:16px; }
+
+.picScroll-top2{ margin:0 auto;  width:195px;  overflow:hidden; position:relative;  border:1px solid #ccc;   }
+.picScroll-top2 .hd2{ overflow: hidden;height: 20px;padding: 0px;position: absolute;right: 2px;z-index: 1;}
+.picScroll-top2 .hd2 .prev,.picScroll-top2 .hd2 .next{ display:block;  width:9px; height:5px; float:right; margin-right:5px; margin-top:10px; 
+	overflow:hidden;cursor:pointer; background:url("/Public/js/SuperSlide/images/arrow.png") 0 -100px no-repeat;}
+.picScroll-top2 .hd2 .next{ background-position:0 -140px;  }
+.picScroll-top2 .hd2 .prevStop{ background-position:-60px -100px;  }
+.picScroll-top2 .hd2 .nextStop{ background-position:-60px -140px;  }
+.picScroll-top2 .hd2 ul{ float:right; overflow:hidden; zoom:1; margin-top:5px; zoom:1; }
+.picScroll-top2 .hd2 ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer;
+	background:url("/Public/js/SuperSlide/images/icoCircle.png") 0 -9px no-repeat; }
+.picScroll-top2 .hd2 ul li.on{ background-position:0 0; }
+.picScroll-top2 .bd2 ul{ overflow:hidden; zoom:1; }
+.picScroll-top2 .bd2 ul li{ text-align:center; zoom:1; }
+.picScroll-top2 .bd2 ul li .pic{ text-align:center; }
+.picScroll-top2 .bd2 ul li .pic img{ width:195px; height:160px; display:block;  padding:0px; }
+.picScroll-top2 .bd2 ul li .pic a:hover img{ border-color:#999;  }
+.picScroll-top2 .bd2 ul li .title{ line-height:16px; }
+
+.picScroll-top3{ margin:0 auto;  width:195px;  overflow:hidden; position:relative;  border:1px solid #ccc;   }
+.picScroll-top3 .hd3{ overflow: hidden;height: 20px;padding: 0px;position: absolute;right: 2px;z-index: 1;}
+.picScroll-top3 .hd3 .prev,.picScroll-top3 .hd3 .next{ display:block;  width:9px; height:5px; float:right; margin-right:5px; margin-top:10px; 
+	overflow:hidden;cursor:pointer; background:url("/Public/js/SuperSlide/images/arrow.png") 0 -100px no-repeat;}
+.picScroll-top3 .hd3 .next{ background-position:0 -140px;  }
+.picScroll-top3 .hd3 .prevStop{ background-position:-60px -100px;  }
+.picScroll-top3 .hd3 .nextStop{ background-position:-60px -140px;  }
+.picScroll-top3 .hd3 ul{ float:right; overflow:hidden; zoom:1; margin-top:5px; zoom:1; }
+.picScroll-top3 .hd3 ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer;
+	background:url("/Public/js/SuperSlide/images/icoCircle.png") 0 -9px no-repeat; }
+.picScroll-top3 .hd3 ul li.on{ background-position:0 0; }
+.picScroll-top3 .bd3 ul{ overflow:hidden; zoom:1; }
+.picScroll-top3 .bd3 ul li{ text-align:center; zoom:1; }
+.picScroll-top3 .bd3 ul li .pic{ text-align:center; }
+.picScroll-top3 .bd3 ul li .pic img{ width:195px; height:160px; display:block;  padding:0px; }
+.picScroll-top3 .bd3 ul li .pic a:hover img{ border-color:#999;  }
+.picScroll-top3 .bd3 ul li .title{ line-height:16px; }

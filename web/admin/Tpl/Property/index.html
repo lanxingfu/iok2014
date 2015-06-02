@@ -1,0 +1,69 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<!-- content -->
+<div id="content">
+	{include file="Syscfg/leftmenu.inc.htm"}
+	<!-- content /  right -->
+	<div id="right">
+		<div class="box">
+			<div class="title">
+					<h5>属性列表</h5>
+					{include file="record.inc.htm"}
+			</div>
+			{include file="search.inc.htm"}
+					<!-- end box / title -->
+			<div class="table">
+				<table>
+					<thead>
+						<tr>
+							<th class="left">编号</th>
+							<th>排序</th>
+							<th>所属分类</th>
+							<th>属性名</th>
+							<th>属性值</th>
+							<th>是否禁用</th>
+							<th>添加时间</th>
+							<th>添加作者</th>
+							<th>操作</th>
+							<th class="selected last"><input type="checkbox" class="checkall" /></th>
+						</tr>
+					</thead>
+					<tbody>
+					{foreach from=$data item=v}
+						<tr>
+							<td>{$v.id}</td>
+							<td>{$v.listorder}</td>
+							<td>{$v.catname}</td><!-- {$v.categoryid} -->
+							<td>{$v.prettyname}</td>
+							<td>{$v.propertyvalue}</td>
+							<td>{if $v.enabled eq 1}已启用{else}已禁用{/if}</td>
+							<td>{$v.addtime}</td>
+							<td>{$v.userid}</td>
+							<td class="category"><a href="?m=Property&a=edit&id={$ass.id[loop]}">编辑</a>/<a href="?m=Property&a=delarea&pname={$ass.id[loop]}">删除</a></td>
+							<td class="selected last"><input type="checkbox" /></td>
+						</tr>
+					{/foreach}
+					</tbody>
+				</table>
+				<!-- pagination -->
+				{$page|default:''}
+				<!-- end pagination -->
+				<!-- table action -->
+				<div class="action">
+					<select name="action">
+						<option value="" class="locked">Set status to Deleted</option>
+						<option value="" class="unlocked">Set status to Published</option>
+						<option value="" class="folder-open">Move to Category</option>
+					</select>
+					<div class="button">
+						<input type="submit" name="submit" value="Apply to Selected" />
+					</div>
+				</div>
+				
+				<!-- end table action -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end content -->
+{include file="footer.inc.htm"}

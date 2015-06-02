@@ -1,0 +1,82 @@
+{include file="Public/header.html"}
+{include file="Register/registertop.html"}
+<link href="__PUBLIC__/style/home/register-com-men.css" rel="stylesheet" />
+<!-- 中间内容部分 -->
+<div class="content">
+	<div class="content_qyzc">
+		<div class="content_qyzc_nr">
+			<div class="content_qyzc_nr_t">注册账号</div>
+			<div class="content_qyzc_nr_b">
+				<div class="content_qyzc_nr_bt">请认真、仔细地填写以下信息，严肃的商业信息有助于您获得别人的信任，结交潜在的商业伙伴，获取商业机会！<span>*</span>为必填项</div>
+				<div class="content_qyzc_nr_bb">
+					<form action="/Register/company_sub" method="post" onsubmit="return check();" id='reg_com'>
+						<ul class="content_qyzc_nr_bbt">
+							<li>
+								<h4>注册类型</h4>
+								<div class="content_qyzc_nr_bbtr leixing">企业会员</div>
+								<div class="content_error" id="dtotal">{tip id='total' default=''}</div>
+								<input type="hidden" name="recommendid" value="<?php echo $_GET['recid']?>"/>
+								<input type="hidden" name="recommendname" value="<?php echo $_GET['recuser']?>"/>
+							</li>
+							<li>
+								<h4>会员名<span>&nbsp;*&nbsp;</span></h4>
+								<div class="content_qyzc_nr_bbtr">
+									<input type="text" value="{$datas['username']}" name="username" id="username" onblur="validator('username',this.value);"/>
+								</div>
+								<div class="content_error" id="dusername">{tip id='tusername' default=''}</div>						
+								<div class="tishi">会员名应为小写字母(a-z)、数字(0-9)开头及结尾，下划线(_)、中划线(-)组合，6-18位字符</div>							
+							</li>
+							<li>
+								<h4>密&nbsp;&nbsp;码<span>&nbsp;*&nbsp;</span></h4>
+								<div class="content_qyzc_nr_bbtr">
+									<input type="password" value="{$datas['password']}" name="password" id="password" onblur="validator('password',this.value);"/>
+								</div>
+								<div class="content_error" id="dpassword">{tip id='tpassword' default=''}</div>						
+							</li>
+							<li>
+								<h4>重新输入密码<span>&nbsp;*&nbsp;</span></h4>
+								<div class="content_qyzc_nr_bbtr">
+									<input type="password" value="{$datas['cpassword']}" name="cpassword" id="cpassword" />
+								</div>
+								<div class="content_error" id="dcpassword">{tip id='tcpassword' default=''}</div>						
+							</li>
+							<li>
+								<h4>联系方式<span>&nbsp;*&nbsp;</span></h4>
+								<div class="content_qyzc_nr_bbtr">
+									<input type="text" value="{$datas['relation']}" name="relation" id="relation" />
+								</div>
+								<div class="content_error" id="drelation">{tip id='trelation' default=''}</div>
+								<div class="tishi">如：13800000000</div>
+							</li>
+							<li>
+								<h4>请输入验证码<span>&nbsp;*&nbsp;</span></h4>
+								<div class="content_qyzc_nr_bbtr_o">
+									<input type="text" name='verify' value="" id="verify" />
+								</div>
+								<div class="content_qyzc_nr_bbtr_oi">
+									<a href="javascript:void(0);">
+										<img id="yzm_pic" src="/Ajax/verify/ajax/0" alt="点击刷新" onclick="this.src='/Ajax/verify/?t='+new Date().getTime();" />
+									</a>
+									<a href="javascript:void(0);" onclick="window.document.getElementById('yzm_pic').click();" class="verifystyle" >换一张</a>
+								</div>
+								<div class="content_error" id="dverify">{tip id='tverify' default=''}</div>
+							</li>
+							<li>
+								<div class="content_qyzc_nr_bbtr_in">							
+									<input type="checkbox" value="1" checked="checked" onclick="Tong_Xieyi('阅读同意我行网企业入驻服务协议，才能提交注册！')" id="regxieyi"/><label for="regxieyi"> 我已阅读并同意以下《我行网企业入驻服务协议》</label>
+								</div>							
+								<div class="newbutton">
+									<input type="submit" name="submit" value="注册" id="_submit"/>
+								</div>
+							</li>
+						</ul>
+						<div class="content_qyzc_nr_bbb">
+							{include file="Register/agreement_com.html"}
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{include file="Public/footer.html"}

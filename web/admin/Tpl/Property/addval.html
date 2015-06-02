@@ -1,0 +1,71 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<script src="public/script/clienthint_ajax.js"></script>
+<script type="text/javascript">
+function queryCity11(citycode,dengji,nowValue)
+{
+	queryCity("?m=Property&a=dataspval&categoryid="+citycode+"&n="+Math.random(),dengji,nowValue);
+}
+</script>
+<!-- content -->
+<div id="content">
+	{include file="Syscfg/leftmenu.inc.htm"}
+	<!-- content / right -->
+	<div id="right">
+		<div class="box">
+			<!-- box / title -->
+			<div class="title">
+				<h5>添加属性</h5>
+			</div>
+			<form id="form" action="?m=Property&a=submitval" method="post">
+				<div class="form">
+					<div class="fields">
+						<div class="field  field-first">
+							<div class="label">
+								<label for="input-small">所属分类:</label>
+							</div>
+							<div class="select" name="catogoryid">
+								<input type="hidden" id='catid' name='catid' value="{if $data.categoryid}{$data.categoryid}{else}0{/if}" />
+								<select id='catogoryid' name='catogoryid' onChange="queryCity11(this.options[this.selectedIndex].value,'city',this.value)">
+									<option value='-1' selected>选择分类</option>
+									{foreach from=$cdata item=row}
+										<option value='{$row.categoryid}'>{$row.catname}</option>
+									{/foreach}
+								</select>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">属性名:</label>
+							</div>
+							<div class="select" name="prettyname" style="height:20px;">
+								<span id='city'></span>
+							</div>
+							<div class="tip">{tip id='propertynameid'}</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="input-small">属性值:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="input-small" name="propertyvalue" class="small" value="{$area['listorder']}"/>
+							</div>
+							<div class="tip">{tip id='propertyvalue'}</div>
+						</div>
+						<div class="field">
+							<div class="buttons">
+								<div class="highlight">
+									<input type="submit" name="submit" value="保存" />
+								</div>
+								<input type="reset" name="reset" value="取消" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	<!-- end content /  right -->
+	</div>
+</div>
+<!-- end content -->
+{include file="footer.inc.htm"}

@@ -1,0 +1,95 @@
+{include file="Public/header_room.html"}
+<!-- top -->
+{include file="Public/room_top.html"}
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html"}
+			</div>
+<!-- css -->
+
+<link href="__PUBLIC__/style/home/room/table_form.css" rel="stylesheet" />
+<link href="__PUBLIC__/style/home/room/remessge.css" rel="stylesheet" />
+<link href="__PUBLIC__/style/home/room/reset.css" rel="stylesheet" />
+<link href="__PUBLIC__/style/home/room/common.css" rel="stylesheet" />
+<!-- js -->
+	<div class="content_sws_nr_right" id="iframe_main">
+	<div class="content_sws_nr_right_lgrzl">
+						<div class="content_sws_nr_r_lgrzl_t">
+							{include file="Public/welcom.html"}
+						</div>
+					</div>
+		<ul class="content_sws_nr_right_t">
+			<li><a href="/Message/mesadd"  {if $_GET['mestate'] eq '0'}class="navigation"{/if} >(+)发送信件</a></li>
+			<li><a href="/Message/index/type/receive" {if $_GET['mestate'] eq '1'}class="navigation"{/if} >收件箱</a></li>
+			<li><a href="/Message/index/type/send"  {if $_GET['mestate'] eq '2'}class="navigation"{/if} >已发送</a></li>
+			<li><a href="/Message/mesclear"  {if $_GET['mestate'] eq '4'}class="navigation"{/if} >信件清理</a></li>
+		</ul>
+		<div class="content_sws_nr_right_b" id="contentss">
+		<div class="table-list">
+		
+			<table width="100%"  class="table_form">
+				<tr>
+					<th style="width:10%">
+					 标题
+					</th>
+					<td style="margin-left:5px;">&nbsp;&nbsp;&nbsp;&nbsp;{$list.title}</td>
+				</tr>
+				<tr>
+					<th>
+						{if $smarty.session.member.id eq $list.memberid}收件人{elseif $smarty.session.member.id eq $list.tomemberid}发件人{else}{/if}
+					</th>
+					<td style="margin-left:5px;">
+						&nbsp;&nbsp;&nbsp;&nbsp;{if $smarty.session.member.id eq $list.memberid}{$account}{elseif $smarty.session.member.id eq $list.tomemberid}{$account}{else}{/if}
+					</td>
+				</tr>
+				<tr>
+					<th>
+						编号
+					</th>
+					<td>
+						&nbsp;&nbsp;&nbsp;&nbsp;{$list.id}
+					</td>
+				</tr>
+				<tr>
+					<th>
+						添加时间
+					</th>
+					<td>
+						&nbsp;&nbsp;&nbsp;&nbsp;{$list.addtime|date_format:'Y-m-d H:i:s'}
+					</td>
+				</tr>
+				<tr>
+					<th>
+						信件正文
+					</th>
+					<td class="xjnr" style="width:700px;height:248px;">
+						{$list.content}
+						
+					</td>
+				</tr>
+				<tr>
+				 <th></th>
+				
+				</tr>
+			</table>
+			
+		</div>
+				 <div class="btn">
+					<a  href="/Message/mesdelete/type/{$smarty.get.type}/itemid/{$list['id']}"  style="background:url(__PUBLIC__/image/home/business_room/httb_14.png) no-repeat;width:64px;"><span style="text-align:center;color:white;">删除</span></a>
+					<!--<if condition="$message.fromuser neq '' and $message.status neq 1 and $message.fromuser neq 'system'" ><a  href="/Member/editmessage/itemid/{$message.itemid}/mestate/{$_GET['mark']}"  style="background:url(__PUBLIC__/image/home/business_room/httb_14.png) no-repeat;width:64px;"><span style="text-align:center;color:white;">回复</span></a></if> 
+					<if condition="$_GET['mark'] eq 3"><a  href="/Member/companymessage/mestate/3"   style="background:url(__PUBLIC__/image/home/business_room/httb_14.png) no-repeat;width:64px;"><span style="text-align:center;color:white;">返回</span></a></if>
+					<if condition="$_GET['mark'] eq 2"><a  href="/Member/companymessage/mestate/2"   style="background:url(__PUBLIC__/image/home/business_room/httb_14.png) no-repeat;width:64px;"><span style="text-align:center;color:white;">返回</span></a></if>
+					<if condition="$_GET['mark'] eq 0"><a  href="/Member/companymessage/mestate/0"   style="background:url(__PUBLIC__/image/home/business_room/httb_14.png) no-repeat;width:64px;"><span style="text-align:center;color:white;">返回</span></a></if>
+				
+					<if condition ="$message.status eq 1"><a  href="/Member/editmessage/itemid/{$message.itemid}/mestate/{$_GET['mark']}"  style="background:url(__PUBLIC__/image/home/business_room/httb_14.png) no-repeat;width:64px;"><span style="text-align:center;color:white;">编辑</span></a></if>
+				-->
+				</div>
+		</div>
+	
+    </div>
+</div>
+</div>
+</div>
+{include file="Public/footer.html"}

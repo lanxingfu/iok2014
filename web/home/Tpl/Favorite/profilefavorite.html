@@ -1,0 +1,89 @@
+{include file="Public/header_room.html"}
+{include file="Public/room_top.html"}
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html" }
+			</div>
+			<link href="/public/style/home/room/address.css" rel="stylesheet" />
+			<link href="/public/style/home/room/table_form.css" rel="stylesheet" />
+			<div class="content_sws_nr_right" id="iframe_main">
+				<div class="content_sws_nr_right_lgrzl">
+					<div class="content_sws_nr_r_lgrzl_t">
+						{include file="Public/welcom.html" }
+					</div>
+				</div>
+				<ul class="content_sws_nr_right_t" id="tabss">
+					<li><a href="javascript:void(0);" class="selected" rel="#default" >商品收藏</a></li>
+				</ul>
+				<div class="content_sws_nr_right_b" id="contentss">
+					<div class="content_sws_nr_right_b_dlmm">
+						<div class="pad-lr-10">
+							<div class="table-list" style="height:620px;">
+							{if $list neq ''}
+								<table  width="100%" cellspacing="0">
+									<thead>
+										<th align="left" width="50">
+											<input type="checkbox" name='decideid' onclick="javascript:checkalls('id','decideid');" >&nbsp 全选</input>
+										</th>
+										<th align="left" width="60">图片</th>
+										<th align="left" width="300">标题</th>
+										<th align="left" width="90">添加时间</th>
+									</thead>
+									{foreach $list as $vo }
+									<tr>
+										<td align="left"><input type="checkbox" value="{$vo.id}" name="id"></td>
+										<td align="left"><a href="/Mall/show/id/{$vo.id}" target="_blank"><img src="{$vo.url}" width="60px" height="60px"  /></a></td>
+										<td align="left">{if $vo.title eq ''}暂无{/if}<a target="_blank" href="/Mall/Show/id/{$vo.id}">{$vo.title}</a></td>
+										<td align="left">{$vo.addtime|date_format:'Y-m-d H:i:s'}</td>
+									</tr>
+									{/foreach}
+								</table>
+								<div class="content_sws_nr_right_b_qiye_bcfh">
+									<a href="javascript:void(0)" {literal} onclick="Javascript:Moreval_s('id');" {/literal} >删  除</a>
+								</div>
+								<div id="pages">{$page}</div>
+							{else}
+								<div style="margin:10px auto;padding-top:15px;border:1px solid #bfbfbf;color:#bfbfbf;text-align:center;"><span>对不起，没有找到相应的收藏信息！ </span></div>
+							{/if}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+{include file="Public/footer.html" }
+<script>
+function Moreval_s(doom){
+	var dellist = document.getElementsByName(doom);
+	var delid = "";
+	for (var i = 0; i < dellist.length; i++){
+		if (dellist[i].checked){
+			delid += dellist[i].value + ",";
+		}
+	}
+	if(delid==''){
+		alert('请先选择分类！');
+		return false;
+	}
+	if(confirm('确定要删除吗？')){
+		$.ajax({
+			type: "POST",
+			url: "/Favorite/delete/",
+			data: "idlist="+delid,
+			success: function(msg){
+				if(msg=='删除成功！'){
+					window.location ='/Favorite/company';
+				}else if(msg=='请选择要删除的分类！'){
+					alert('请选择要删除的分类！');
+				}else{
+					alert('删除失败了，请重试！');
+				}
+			}
+		});
+	}
+}
+</script>

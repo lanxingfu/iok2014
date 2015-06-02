@@ -1,0 +1,76 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Parameter/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>参数管理 》详细信息</h5>
+					</div>
+					<!-- end box / title -->
+					<div class="form">
+						<div class="fields">
+							<div class="field field-first">
+								<div class="fname">项目名称</div>
+								<div class="fvalue">{$rec['name']}</div>
+							</div>
+							<div class="field">
+								<div class="fname">模块名称</div>
+								<div class="fvalue">{$rec['mname']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">接口名称</div>
+								<div class="fvalue">{$rec['requesturl']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">参数字段</div>
+								<div class="fvalue">{$rec['fieldname']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">参数字段类型</div>
+								<div class="fvalue">{if $rec['paramtype'] eq 1}请求{else}返回{/if}</div>
+							</div>
+							<div class="field">
+								<div class="fname">请求方式</div>
+								<div class="fvalue">{if $rec['fieldtype'] eq 1}string
+										{elseif $rec['fieldtype'] eq 2 }integer
+										{elseif $rec['fieldtype'] eq 3 }float
+										{elseif $rec['fieldtype'] eq 4 }bool
+										{elseif $rec['fieldtype'] eq 5 }dictionary
+										{else}array
+									    {/if}</div>
+							</div>
+							<div class="field">
+								<div class="fname">参数是否可选</div>
+								<div class="fvalue">{if $rec['isoptional'] eq 1}可以{else}不可以{/if}</div>
+							</div>
+							<div class="field">
+								<div class="label label-textarea">备注</div>
+								<div class="textarea textarea-editor">
+									<textarea name="note" cols="50" rows="12" class="editor" disabled>{$rec['note']|nl2br|escape:'html'}</textarea>
+								</div>
+							</div>
+							
+							<div class="field">
+								<div class="fname">添加时间</div>
+								<div class="fvalue">{$rec['addtime']|date_format:'%Y-%m-%d %H:%M:%S'}</div>
+							</div>							
+							<div class="buttons">
+								{if $rec['id'] ne '1'}
+								<input type="reset" value="编辑" onclick="javascript:gotoUrl('/iokadmin.php?m=Parameter&a=edit&id={$rec['id']}')" />
+								{/if}
+								<input type="reset" value="返回" onclick="javascript:gotoUrl('/iokadmin.php?m=Parameter')" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

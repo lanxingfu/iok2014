@@ -1,0 +1,69 @@
+{include file="header.inc.htm"}
+		<div id="login">
+			<!-- login -->
+			<div class="title">
+				<h5>我行网后台管理系统</h5>
+				<div class="corner tl"></div>
+				<div class="corner tr"></div>
+			</div>
+			<div class="messages">
+			{tip id='top'}
+			</div>
+			<div class="inner">
+				<form id="frm" method="post">
+				<div class="form">
+					<!-- fields -->
+					<div class="fields">
+						<div class="field">
+							<div class="label">
+								<label for="username">帐号：</label>
+							</div>
+							<div class="input">
+								<input type="text" id="username" name="account" size="40" value="{$account|escape:'html'}" />
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="password">密码：</label>
+							</div>
+							<div class="input">
+								<input type="password" id="password" name="passwd" size="40" />
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="captcha">验证码：</label>
+							</div>
+							<div class="input">
+								<input type="text" name="captcha" style="width:40px;" id="captcha" maxlength="4" />
+								<img src="/iokadmin.php?m=Misc&a=captcha&t={$smarty.now}" title="点击更换图片" onclick="javascript:reloadcaptcha(this);" style="margin-left:10px;height:25px;" />
+							</div>
+						</div>
+						<div class="buttons">
+							<input type="hidden" name="m" value="login" />
+							<input type="hidden" name="a" value="submit" />
+							<input type="submit" value="登录" />
+						</div>
+					</div>
+					<!-- end fields -->
+					<!-- links -->
+					<!--
+					<div class="links">
+						<a href="index.html">忘记密码？</a>
+					</div>
+					-->
+					<!-- end links -->
+				</div>
+				</form>
+			</div>
+			<!-- end login -->
+			<div id="colors-switcher" class="color">
+				<a href="" class="blue" title="Blue"></a>
+				<a href="" class="green" title="Green"></a>
+				<a href="" class="brown" title="Brown"></a>
+				<a href="" class="purple" title="Purple"></a>
+				<a href="" class="red" title="Red"></a>
+				<a href="" class="greyblue" title="GreyBlue"></a>
+			</div>
+		</div>
+{include file="footer.inc.htm"}

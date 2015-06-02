@@ -1,0 +1,166 @@
+{include file="Public/header_room.html" }
+{include file="Public/room_top.html" }
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html" }
+			</div>
+			<!-- css -->
+			<link href="/public/style/home/room/companydata.css" rel="stylesheet" />
+			<script type="text/javascript" src="/public/script/base.js"></script><!-- 地区 -->
+			<!-- document -->
+			<div class="content_sws_nr_right" id="iframe_main">
+				<div class="tabBar">
+					<div class="content_sws_nr_right_lgrzl">
+						<div class="content_sws_nr_r_lgrzl_t">
+							{include file="Public/welcom.html" }
+						</div>
+					</div>
+					<div class="hd">
+						{include file="Company/fare.html" }
+					</div>
+					<div class="bd">
+						<form method="post" action="/Company/submit" name="saveData" enctype="multipart/form-data">
+							<div class="conWrap" style="width: 1500px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: 0px;">
+								<ul class="content_sws_nr_right_b">
+									<li>
+										<h3>会员名&nbsp;</h3>
+										<div class="content_sws_nr_right_b_r">
+											{$smarty.session.member.account}
+										</div>
+									</li>
+									<li>
+										<h3>公司名<span style="color:red">*</span></h3>	
+										{if $company.status eq 5}<!--已经通过审核-->
+											<div class="content_sws_nr_right_b_r">{$company.company}</div>
+										{else}
+											<div class="content_sws_nr_right_b_rgsm">								
+												<div class="content_sws_nr_right_b_rgsm_ll">
+													<input type="text" name="company" value="{$company['company']}" />									
+												</div>
+												<p>{tip id='tcompany' default='公司名须与营业执照保持一致'}</p>
+											</div>
+										{/if}
+									</li>
+									<li>
+										<h3> 公司类型<span style="color:red">*</span></h3>
+										<div class="content_sws_nr_right_b_rgslx">
+											<select name="type" >
+												<option value="0"  >请选择</option>
+												{foreach $companytypes as $types}
+													<option value="{$types.id}" {if $company.companytypeid eq $types.id }selected{/if} >{$types.typename}</option>
+												{/foreach}
+											</select>
+											<p style="padding-left:18px;color:#c70000;float:left;">{tip id='ttype' default=''}</p>
+										</div>
+									</li>
+									<li>
+										<h3>所在地区<span style="color:red">*</span></h3>
+										{if $company.status eq 5}<!--已经通过审核-->
+											<div class="content_sws_nr_right_b_r">{$company.areaid}</div>
+										{else}
+										<div class="content_sws_nr_right_b_rgsdq">
+											<div class="content_sws_nr_right_b_rgsdq_t" style="padding:0px;">
+												{'areaid'|ajax_area_select:'请选择':$company.areaid}
+											</div>
+										</div>
+										{/if}
+										<p style="padding:5px 0px;color:#c70000;float:left;">{tip id='tareaid' default=''}</p>
+									</li>
+									<li>
+										<h3 class="h_list">主营行业<span style="color:red">*</span></h3>
+										<div class="content_sws_nr_right_b_rgszyy" id="cate">
+											<ul class="content_sws_nr_right_b_rgszyy_t">
+												{''|ajax_category_select:'':'':8:'size="4" style="height:80px;width:140px;"'}
+											</ul>
+											<div class="content_sws_nr_right_b_rgszyy_b">
+												<ul class="content_sws_nr_right_b_rgszyy_bl" style="width:178px;">
+													<li onclick="addcate(6)" >添加&darr;</li>
+													<li onclick="delcate('cates')" >&times;删除</li>
+												</ul>
+												<p>{tip id='tcate' default='最多可添加六个主营行业！'}</p>
+											</div>
+											<div class="content_sws_nr_right_b_rgszyy_fk">
+												<select id="cates" size="2" style="height:100px;width:380px;">
+												{foreach $cates as $cid}
+													<option value="{$cid}">
+														{$cid|get_cat|cat_pos:'/'}
+													</option>
+												{/foreach}
+												</select>
+												<input type="hidden" name="categoryids" value="{$company.categoryids}" id="catid" />
+											</div>
+										</div>
+									</li>
+									<li>
+										<h3>经营范围&nbsp;</h3>
+										<div class="content_sws_nr_right_b_rgsjyfw">
+											<input type="text" value="{$company.business}" name="business"/>
+											<p>{tip id='tbus' default='内容保持在2-50个字符之间！'}</p>
+										</div>
+									</li>
+									<li>
+										<h3>经营模式&nbsp;</h3>
+										<div class="content_sws_nr_right_b_rgsjyms" id="com_mode">
+											<span>{$mode_check}</span>
+											<span style="color:#c70000;">{tip id='tmode' default='最多可选2种！'}</span>
+										</div>
+									</li>
+									<li>
+										<h3>公司规模&nbsp;</h3>
+										<div class="content_sws_nr_right_b_rgsgm">
+											<select name="scale" >
+											{foreach $COM_SIZE as $key => $scales}
+												<option value="{$key}" {if $key eq $company.scale } selected {/if} >
+													{$scales}
+												</option>
+											{/foreach}
+											</select>
+										</div>
+									</li>
+									<li>
+										<h3>注册资本&nbsp;</h3>
+										<div class="content_sws_nr_right_b_rzczb">
+												<select name="regunit" >
+												{foreach $MONEY_UNIT as $ukey => $regunits}
+													<option value="{$ukey}" {if $ukey eq $company.regunit } selected {/if} >
+														{$regunits}
+													</option>
+												{/foreach}
+												</select>
+											<label>
+												<input type="text" size="6" value="{$company.capital}" name="capital" id="capital">&nbsp; 万
+											</label>
+										</div>
+									</li>
+									<li>
+										<h3>销售的产品(供应)&nbsp;</h3>
+										<div class="content_sws_nr_right_b_rxscp">
+											<input type="text" size="50" name="productsell" id="sell" value="{$company.productsell}" >
+											<p><span>*</span> 多个产品或服务请用 " | " 隔开</p>
+										</div>
+									</li>
+									<li>
+										<h3>采购的产品(需求)&nbsp;</h3>
+										<div class="content_sws_nr_right_b_rcgcp">
+											<input type="text" size="50" name="productbuy" id="buy" value="{$company.productbuy}" >
+											<p><span>*</span>多个产品或服务请用 " | " 隔开</p>
+										</div>
+									</li>
+									<li>
+										<div class="content_sws_nr_right_b_rbcfh">
+											<input type="submit" name="submit" value="保  存" class="btn"/>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+    </div>
+</div>
+{include file="Public/footer.html" }

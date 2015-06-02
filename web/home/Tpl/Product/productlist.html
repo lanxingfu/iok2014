@@ -1,0 +1,95 @@
+{include file="Public/header_room.html"}
+{include file="Public/room_top.html"}
+
+<link href="/public/style/home/room/productlist.css" rel="stylesheet" />
+
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html"}
+			</div>
+            <div class="content_sws_nr_right" id="iframe_main">
+				<div class="content_sws_nr_right_lgrzl">
+					<div class="content_sws_nr_r_lgrzl_t">
+						{include file="Public/welcom.html" }
+					</div>
+				</div>
+                <div class="content_sws_nr_right_b">
+                	<div class="content_sws_nr_right_b_t">
+						{include file="Product/productmenu.html" }
+                    </div>
+					<div  id="content"> 
+						<form action="/Supply/sell/menu/2" name="form1" method="GET">
+						<div class="content_sws_nr_right_b_t_dwy">
+							<div class="content_sws_nr_right_b_t_dwy_t">
+								<textarea name="kw"></textarea>
+								<a href="javascript:void(0)" onclick="form1.submit()">搜 索</a>
+							</div>
+						</div>
+						</form>
+						<div class="content_sws_nr_right_b_t_spxq">
+							<table>
+								<tr class="spxq_table_th">
+									<th class="spxq_table_th_xk">
+										<input type="checkbox" name='decideid' id='chkAll' onclick="javascript:checkalls('id[]','decideid');" />
+									</th>
+									<th class="spxq_table_th_tp">图片</th>
+									<th class="spxq_table_th_spmc">商品名称</th>
+									<th class="spxq_table_th_jg">价格</th>
+									<th class="spxq_table_th_yj">佣金</th>
+									<th class="spxq_table_th_dd">订单</th>
+									<th class="spxq_table_th_xl">销量</th>
+									<th class="spxq_table_th_kc">库存</th>
+									<th class="spxq_table_th_pl">评论</th>
+									<th class="spxq_table_th_rq">人气</th>
+									<th class="spxq_table_th_gl">管理</th>
+								</tr>
+								{foreach $list as $vo}
+								<tr class="spxq_table_td">
+									<td class="spxq_table_th_xk"><input type="checkbox" value="{$vo.id}" name="id[]" id="id[]"></td>
+									<td class="spxq_table_th_tp">
+										<a href="/Product/show/id/{$vo.id}" target="_blank">
+											<img   src="{$vo.thumb}" width="60px" height="60px" alt="{$vo.title}"/>
+										</a>
+									</td>
+									<td class="spxq_table_th_spmc">
+										<a href="/Product/show/id/{$vo.id}">{$vo.title}</a>
+									</td>
+									<td class="spxq_table_th_jg">{$vo.price}</td>
+									<td class="spxq_table_th_yj">{$vo.commission}%</td>
+									<td class="spxq_table_th_dd">{$vo.orders}</td>
+									<td class="spxq_table_th_xl">{$vo.sales}</td>
+									<td class="spxq_table_th_kc">{$vo.amount}</td>
+									<td class="spxq_table_th_pl">{$vo.comments}</td>
+									<td class="spxq_table_th_rq">{$vo.hits}</td>
+									<td class="spxq_table_th_gl">
+										<?php if(!isset($array_sell[$vo.id])){ /*判断是否是活动产品*/ ?>
+										<a class="xiupa" href="/Product/edit/id/{$vo.id}" title="修改">
+											<img src="/public/image/home/business_room/httb_10.png" alt="" title='修改'/>
+										</a>
+										<?php } ?>
+									</td>
+								</tr>
+								{/foreach}
+							</table>
+							<div class="content_sws_nr_right_b_t_spxq_b">
+								{if $menus eq 2}
+								<div class="content_sws_nr_right_b_t_spxq_b_r">
+									{literal}<a href="javascript:void(0)"  onclick="Bulkaction('/Product/soldout/','id[]','/Product/productlist');">批量下架</a>{/literal}
+								</div>
+								{else if $menus eq 5}
+								<div class="content_sws_nr_right_b_t_spxq_b_r">
+									{literal}<a href="javascript:void(0)"  onclick="Bulkaction('/Product/putaway/','id[]','/Product/productlist');">批量上架</a>{/literal}
+								</div>
+								{/if}
+							</div>
+							<div id="pages">{$page}</div>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+    </div>
+</div>
+{include file="Public/footer.html"}

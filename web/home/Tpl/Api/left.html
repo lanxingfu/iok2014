@@ -1,0 +1,11 @@
+<div id="pl_web_wikiNav" class="wiki_nav">
+					<ul class="nav_list">
+							<li class="n_top ">
+							<h3 action-type="folder"><a href="#" onclick="return false;"><em class="wiki_icon icon_AppInfo"></em><span class="txt"><b>项目名称</b></span><em class="nav_arr"></em></a></h3></li>
+							
+							{foreach $leftmenu as $v}
+							<li class="n_top ">
+							<h3 action-type="folder"><a href="/Api/find/projectid/{$v['id']}" ><span class="txt">{$v['prettyname']}</span></a></h3></li>
+							{/foreach}
+					</ul>			
+				</div>

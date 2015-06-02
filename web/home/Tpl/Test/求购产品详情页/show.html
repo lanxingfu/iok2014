@@ -1,0 +1,245 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Index/top.html'}
+<link href="/public/style/home/buy-show.css" rel="stylesheet" />
+<link href="/public/style/home/mall_da.css" rel="stylesheet" />
+<!--图片放大-->
+<link href="__CSS__/mall_da.css" rel="stylesheet" />
+<script src="__JS__/mall_base.js" type="text/javascript"></script>
+<script src="__JS__/mall_lib.js" type="text/javascript"></script>
+<script src="__JS__/mall_163css.js" type="text/javascript"></script>
+
+<!-- 弹框 收藏商品用-->
+<script type="text/javascript" src="__PUBLIC__/js/swfupload/js/handlers.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/swfupload/swfupload.js"></script>
+<link id="skin" rel="stylesheet" href="__PUBLIC__/js/jBox/Skins/Gray/jbox.css" />
+<script type="text/javascript" src="__PUBLIC__/js/jBox/jquery.jBox-2.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+
+
+<!---->	
+<!-- 中间部分 -->
+<div class="content">
+	<div class="content_nr">
+    	<div class="content_nr_lb">        	
+        	<div class="zxejym_conter_nr_top">{$nav}</div>
+            <div class="content_nr_lb_b">
+            	<div class="content_nr_lb_b_l">
+                	<div class="content_nr_lb_b_l_jj">
+                    	<h3>采购商信息</h3>
+                        <div class="content_nr_lb_b_l_jj_b">
+                        	<p>
+								<if condition="$member['groupid'] eq 4">
+									待审核企业
+								<elseif condition="$member['groupid'] eq 6" />
+									企业会员
+								<elseif condition="$member['groupid'] eq 8" />
+									我行网认证企业
+								<else />
+									未知状态
+								</if>
+							</p>
+                            <p>经营模式：<empty name="member.mode">未知<else />{$member.mode}</empty></p>
+                            <p>所在地区：<empty name="member.areaname">不详<else />{$member.areaname}</empty></p>
+                            <p>满意率：<span>100%</span></p>
+                        </div>
+                    </div>
+                    <div class="content_nr_lb_b_l_xxxx">
+                    	<h3>商务代表信息</h3>
+                        <div class="content_nr_lb_b_l_xxxx_b">
+                        	<empty name="represent">
+								<div class="content_nr_lb_b_l_xxxx_bt">
+									<div class="content_nr_lb_b_l_xxxx_btl">
+										<img src="/Public/images/iokkf.png" alt="我行网客服"  />
+									</div>
+									<ul class="content_nr_lb_b_l_xxxx_btr">
+										<li><p >姓 名:</p><span>我行网客服</span></li>
+									</ul>
+								</div>		
+								<ul class="content_nr_lb_b_l_xxxx_bb">
+									<li><p style="width:40px;">邮 箱:</p><span>service@iokokok.com</span></li>
+									<li><p style="width:40px;">电 话:</p><span>010-87162577</span></li>
+								</ul>
+							<else />
+								<div class="content_nr_lb_b_l_xxxx_bt">
+									<div class="content_nr_lb_b_l_xxxx_btl">
+										<empty name="represent.headpic">
+											<img src="/Public/images/tx_img.jpg" alt="用户头像"  />
+										<else />
+											<img src="{$represent.headpic}" alt="用户头像"  />
+										</empty>
+									</div>
+									<ul class="content_nr_lb_b_l_xxxx_btr">
+										<li>
+											<p>姓 名:</p><span>{$represent.truename}</span>
+										</li>
+										<li>
+											<p>星 级:</p>
+											<span><empty name="represent.star">-<else /><img src="/Public/images/mall/xxx_{$represent.star}.png" alt="" style="margin-top:3px;"/></empty></span>
+										</li>
+										<li>
+											<p>好 评:</p><span style="color:#c70000;">100%</span>
+										</li>
+									</ul>
+								</div>							
+								<ul class="content_nr_lb_b_l_xxxx_bb">
+									<li>
+										<p>所在地：</p>
+										<span><empty name="represent.areaname">不祥<else />{$represent.areaname}</empty></span>
+									</li>
+									<li>
+										<p>邮&nbsp;&nbsp; 箱：</p>
+										<span style="width:114px;float:left;overflow:hidden;" title="<empty name='represent.email'>未填写<else />{$represent.email}</empty>"><empty name="represent.email">未填写<else />{$represent.email}</empty></span>
+									</li>
+									<li>
+										<p>电&nbsp;&nbsp; 话：</p>
+										<span><empty name="represent.mobile">未填写<else />{$represent.mobile}</empty></span>
+									</li>
+									<li>
+										<p>当前状态：</p>
+										<span><empty name="represent.online">隐身<else />在线</empty> &nbsp;(<a class="faszz" href="javascript:void(0);" title="对他发送站内信" onclick="">发送站内信</a>)</span>
+										
+									</li>
+								</ul>
+							</empty>
+                        </div>
+                    </div>
+                    <div class="content_nr_lb_b_l_xlph">
+                    	<h3>求购人气排行</h3>
+                        <ul class="content_nr_lb_b_l_xlph_b">
+							<foreach name="buy_pro" key="k" item="v">
+								<?php $k=$k+1;?>
+								<li>
+									<div class="content_nr_lb_b_l_xlph_bl">
+										<a href="/Buy/show/itemid/{$v.itemid}"><empty name="v.thumb"><img src="/Public/images/nopic_b.jpg" /><else /><img src="{$v.thumb}" /></empty></a>
+									</div>
+									<div class="content_nr_lb_b_l_xlph_br">
+										<p><strong>{$k}</strong>人气：{$v.hits}</p>
+										<p><a href="__APP__/Buy/show/itemid/{$v.itemid}">{$v.title}</a></p>
+										<p><span><empty name="v.price">等待报价<else />&yen;{$v.price} /件</empty></span></p>
+									</div>
+								</li>
+							</foreach>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content_nr_lb_b_r">
+                	<div class="content_nr_lb_b_rxx">
+                    	<div class="content_nr_lb_b_rxx_l">
+                        	<div class="content_nr_lb_b_rxx_lt jqzoom" id="spec-n1" onClick="window.open('{$data.thumb}')">
+								<empty name="data.thumb">
+									<img src="/Public/image/nopic_b.jpg" jqimg="/Public/image/nopic_b.jpg" alt="" />
+								<else />
+									
+								</empty>
+                            </div>
+                            <div class="content_nr_lb_b_rxx_lb">
+                            	<div class="content_nr_lb_b_rxx_lb_l" id="spec-left"><img src="/Public/image/mall/img_4.jpg" alt="" /></div>
+								<div id="spec-list">
+									<ul class="list-h">
+									    <li><img src="/Public/image/nopic_b.jpg"></li>
+									    <li><img src="/Public/image/nopic_b.jpg"></li>
+									    <li><img src="/Public/image/nopic_b.jpg"></li>
+										
+									</ul>								
+								</div>
+                                <div class="content_nr_lb_b_rxx_lb_r" id="spec-right"><img src="/Public/image/mall/img_5.jpg" alt="" /></div>
+                            </div>							
+                        </div>			
+						<script type="text/javascript">
+							$(function(){			
+							   $(".jqzoom").jqueryzoom({
+									xzoom:400,
+									yzoom:400,
+									offset:10,
+									position:"right",
+									preload:1,
+									lens:1
+								});
+								$("#spec-list").jdMarquee({
+									deriction:"left",
+									width:355,
+									height:56,
+									step:2,
+									speed:4,
+									delay:10,
+									control:true,
+									_front:"#spec-right",
+									_back:"#spec-left"
+								});
+								$("#spec-list img").bind("mouseover",function(){
+									var src=$(this).attr("src");
+									$("#spec-n1 img").eq(0).attr({
+										src:src.replace("\/n5\/","\/n1\/"),
+										jqimg:src.replace("\/n5\/","\/n0\/")
+									});
+									$(this).css({
+										"border":"2px solid #ff6600",
+										"padding":"1px"
+									});
+								}).bind("mouseout",function(){
+									$(this).css({
+										"border":"1px solid #ccc",
+										"padding":"2px"
+									});
+								});				
+							})
+						</script>	
+                        <div class="content_nr_lb_b_rxx_r">
+                        	<div class="content_nr_lb_b_rxx_rt">
+                            	<h2>{$data.title}</h2>
+                                <div class="content_nr_lb_b_rxx_rt_b">
+                                	<p>需求数量：<empty name="data.amount">-<else />{$data.amount}</empty></p>
+                                    <p>价格要求：<span><empty name="data.price">等待报价<else />&yen;{$data.price}</empty></span></p>
+                                    <p>规格要求：<empty name="data.standard">暂无<else />{$data.standard}</empty></p>
+                                    <p>包装要求：<empty name="data.pack">暂无<else />{$data.pack}</empty></p>
+                                    <p>所&nbsp;在&nbsp;地：<empty name="data.areaname">不详<else />{$data.areaname}</empty></p>
+                                    <p>有效期至：<empty name="data.totime">-<else /></empty></p>
+                                    <p>最后更新：<empty name="data.edittime">-<else /></empty></p>
+                                    <p>浏览次数：<empty name="data.hits">0<else />{$data.hits}</empty> 次</p>
+                                </div>								
+                            </div>
+                            <div class="content_nr_lb_b_rxx_rb">
+                            	<a href="/Buy/toQuote/itemid/{$data.itemid}"><img src="/Public/image/buy/img_10.png" alt="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_nr_lb_b_rt_xxyq">
+                    	<div class="content_nr_lb_b_rt_xxyq_t">
+                        	详细要求
+                        </div>
+                        <div class="content_nr_lb_b_rt_xxyq_b">
+							<p>商品名称：{$data.title}</p>
+							<p>商品编号：{$data.itemid}</p>
+                        	<p>所在地区：<empty name="data.areaname">不详<else />{$data.areaname}</empty></p>
+                        </div>						
+                        <div class="content_nr_lb_b_rjs_b">{$data.content}</div>
+                    </div>
+                    <div class="content_nr_lb_b_rtltj">
+                    	<div class="content_nr_lb_b_rtltj_t">
+                        	<h3>最新求购</h3>
+                        </div>
+						<empty name="buy_list">
+							<span class="zanwuj">暂无同类商品。</span>						
+						<else />
+							<ul class="content_nr_lb_b_rtltj_b">
+								<foreach name="buy_list" item="v">						
+									<li>
+										<div class="content_nr_lb_b_rtltj_bt">
+											<a href="/Buy/show/itemid/{$v.itemid}"><empty name="v.thumb"><img src="/Public/images/nopic_b.jpg" /><else /><img src="{$v.thumb}" alt="{$v.title}" /></empty></a>
+										</div>
+										<h4><a href="/Buy/show/itemid/{$v.itemid}">{$v.title}</a></h4>
+										<span><empty name="v.price">等待报价<else />&yen;{$v.price} /件</empty></span>
+									</li>
+								</foreach>								
+							</ul>
+						</empty>
+                    </div>
+                </div>
+            </div>
+        </div> 
+	</div>
+</div>
+
+{include file='Public/footer.html'}

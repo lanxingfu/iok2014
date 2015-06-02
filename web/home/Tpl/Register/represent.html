@@ -1,0 +1,134 @@
+{include file="Public/header.html"}
+{include file="Register/registertop.html"}
+<link href="/public/style/home/register-represent.css" rel="stylesheet" />
+<script type="text/javascript" src="/public/script/base.js"></script><!-- 地区 -->
+<script type="text/javascript" src="/public/script/register.js"></script>
+	<!-- 中间内容部分 -->
+<div class="content">
+	<div class="content_qyzc">
+		<div class="content_qyzc_nr">
+			<div class="content_qyzc_nr_t">注册账号</div>
+			<div class="content_qyzc_nr_b">
+				<div class="content_qyzc_nr_bt">请认真、仔细地填写以下信息，严肃的商业信息有助于您获得别人的信任，结交潜在的商业伙伴，获取商业机会！<span>*</span>为必填项</div>
+				<div class="content_qyzc_nr_bb">
+					<form action="/Register/represent_sub" method="post" onsubmit="return check();" id='reg_rep'>
+						<ul class="content_qyzc_nr_bbt">
+							<li>
+								<h4>注册类型</h4>
+								<div class="content_qyzc_nr_bbtr leixing">商务代表</div>
+								<div class="content_error" id="dtotal">{tip id='total' default=''}</div>
+							</li>
+							<li>
+								<h4>会员名<span>&nbsp;*&nbsp;</span></h4>
+								<div class="content_qyzc_nr_bbtr">
+									<input type="text" value="{$datas['username']}" name="username" id="username" onblur="validator('username',this.value);"/>
+								</div>
+								<div class="content_error" id="dusername">{tip id='tusername' default=''}</div>
+								<div class="tishi">会员名应为小写字母(a-z)、数字(0-9)开头及结尾，下划线(_)、中划线(-)组合，6-18位字符</div>
+							</li>
+							<li>
+								<h4>密&nbsp;&nbsp;码<span>&nbsp;*&nbsp;</span></h4>
+								<div class="content_qyzc_nr_bbtr">
+									<input type="password" value="{$datas['password']}" name="password" id="password" onblur="validator('password',this.value);"/>
+								</div>
+								<div class="content_error" id="dpassword">{tip id='tpassword' default=''}</div>						
+							</li>
+							<li>
+								<h4>重新输入密码<span>&nbsp;*&nbsp;</span></h4>
+								<div class="content_qyzc_nr_bbtr">
+									<input type="password" value="{$datas['cpassword']}" name="cpassword" id="cpassword" onblur="validator('cpassword',this.value);"/>
+								</div>
+								<div class="content_error" id="dcpassword">{tip id='tcpassword' default=''}</div>
+							</li>
+							<li>
+								<h4>真实姓名<span>&nbsp;*&nbsp;</span></h4>
+								<div class="content_qyzc_nr_bbtr_o">
+									<input type="text" value="{$datas['prettyname']}" name="prettyname" id="prettyname" onblur="validator('truename',this.value);"/>
+								</div>
+								<div class="content_qyzc_nr_bbtr_op">
+									<input type="radio" name="gender" value="male" id="gender_1" checked="checked"/><label for="gender_1">男</label>&nbsp;
+									<input type="radio" name="gender" value="female" id="gender_2"/><label for="gender_2">女</label>
+								</div>
+								<div class="content_error" id="dprettyname">{tip id='tprettyname' default=''}</div>
+							</li>
+							<li>
+								<h4>推&nbsp;荐&nbsp;人</h4>
+								<div class="content_qyzc_nr_bbtr">
+									<input type="text" value="{$datas['inviter']}" name="inviter"/>
+								</div>
+							</li>
+							<li>
+								<h4>服务地区<span>&nbsp;*&nbsp;</span></h4>
+								
+								<div class="content_qyzc_nr_bbtr" style="width:490px">
+									<script>
+										loadarea('areaid');
+									</script>
+									<div id='areaid' style="float:left;"></div>
+									<div class="content_error" id="dareaid_1">{tip id='tareaid' default=''}</div>
+								</div>
+								
+							</li>
+							<li>
+								<h4>电子邮箱<span>&nbsp;*&nbsp;</span></h4>
+								<div class="content_qyzc_nr_bbtr">
+									<input type="text" value="{$datas['email']}" name="email" id="email" />
+								</div>
+								<div class="content_error" id="demail">{tip id='temail' default=''}</div>
+							</li>
+							<li>
+								<h4>邮箱验证码<span>&nbsp;*&nbsp;</span></h4>
+								<div class="content_qyzc_nr_bbtr_o">
+									<input type="text" value="{$datas['emailcode']}" name="emailcode" id="emailcode" onkeyup="validator('emailcode',this.value);" onblur="validator('emailcode',this.value);"/>									
+								</div>
+								<div class="fs_botton" id="textemailcode"><a onclick="Formcode();" href="javascript:void(0);" class="fa_show">获取验证码</a></div>
+								<div class="content_error" id="demailcode">{tip id='temailcode' default=''}</div>
+							</li>
+							<li>
+								<h4>身份证<span>&nbsp;*&nbsp;</span></h4>
+								<div class="content_qyzc_nr_bbtr">
+									<input type="text" value="{$datas['idnumber']}" name="idnumber" id="idnumber" />									
+								</div>
+								<div class="content_error" id="didcard">{tip id='tidnumber' default=''}</div>
+							</li>
+							<li>
+								<h4>联系方式<span>&nbsp;*&nbsp;</span></h4>
+								<div class="content_qyzc_nr_bbtr">
+									<input type="text" value="{$datas['relation']}" name="relation" id="relation" />
+								</div>
+								<div class="content_error" id="dmobile">{tip id='trelation' default=''}</div>
+								<div class="tishi">如：13800000000</div>
+							</li>
+							<li>
+								<h4>请输入验证码<span>&nbsp;*&nbsp;</span></h4>
+								<div class="content_qyzc_nr_bbtr_o" style="width:117px;">
+									<input type="text" name='verify' value="" id="verify"/>
+								</div>
+								<div class="content_qyzc_nr_bbtr_oi">
+									<a href="javascript:void(0);">
+										<img id="yzm_pic" src="/Ajax/verify/ajax/0" alt="点击刷新" onclick="this.src='/Ajax/verify/?t='+new Date().getTime();" />
+									</a>
+									<a href="javascript:void(0);" onclick="$('#yzm_pic').click();" class="verifystyle">换一张</a>
+								</div>
+								<div class="content_error" id="dverify">{tip id='tverify' default=''}</div>
+							</li>
+							<li>
+								<div class="content_qyzc_nr_bbtr_in">							
+									<input type="checkbox" value="" checked="checked" onclick="Tong_Xieyi('阅读同意我行网商务代表注册协议，才能提交注册！')" id="regxieyi"/><label for="regxieyi"> 我已阅读并同意以下《我行网商务代表注册协议》</label>
+								</div>
+								<div class="newbutton" style="padding-left:188px"><input type="submit" value="注册" id="_submit"/></div>		
+							</li>
+						</ul>
+						<div class="content_qyzc_nr_bbb">
+							<h4>我行网商务代表注册协议</h4>
+							<h3>协议内容及签署</h3>
+							{include file="Register/agreement_rep.html"}
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- footer -->
+{include file="Public/footer.html"}

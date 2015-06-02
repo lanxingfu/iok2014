@@ -1,0 +1,16 @@
+<h3>欢迎，<span>{$smarty.session.member.prettyname|default:$smarty.session.member.account}</span> 
+【{if $smarty.session.member.gradeid eq 1 }省级管理中心
+{elseif $smarty.session.member.gradeid eq 2 }市级管理中心
+{elseif $smarty.session.member.gradeid eq 3 }县级业务中心
+{elseif $smarty.session.member.gradeid eq 4 }商务代表
+{elseif $smarty.session.member.gradeid eq 5 }商务服务站
+{elseif $smarty.session.member.gradeid eq 6 }个人会员
+{elseif $smarty.session.member.gradeid eq 7 }企业会员
+{elseif $smarty.session.member.gradeid eq 8 }认证企业会员
+{elseif $smarty.session.member.gradeid eq 9 }双重认证企业会员
+{/if}&nbsp;&nbsp;
+{if $smarty.session.member.online eq 1 }在线{else }离线{/if}】&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{if $smarty.session.member.id neq ''}
+	<a>新信件<span>({$smarty.session.member.message})</span></a></h3>
+{/if}
+

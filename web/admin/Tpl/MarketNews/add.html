@@ -1,0 +1,104 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+{literal}
+<style type="text/css">
+#content1{width: 650px;}
+#content div.box table{border-collapse:inherit;}
+#content div.box table td{padding:0;border:0 none;background: none;}
+
+.table_sptps img{width: 110px;height: 115px;float: left;margin-right: 12px;}
+</style>
+<script type="text/javascript" charset="utf-8" src="/public/script/admin/editor/kindeditor.js"></script>
+<!-- KingEditor开始 -->
+<script type="text/javascript">
+    KE.show({
+        id : 'content1' ,//TEXTAREA输入框的ID
+		minWidth:"650px",
+		minHeight:"400px",
+		resizeMode:0
+	});
+</script>
+{/literal}
+<!-- content -->
+<div id="content">
+	{include file="MarketNews/leftmenu.inc.htm"}
+	<!-- content / right -->
+	<div id="right">
+		<div class="box">
+			<!-- box / title -->
+			<div class="title">
+				<h5>添加招商动态</h5>
+			</div>
+			<form id="form" action="/iokadmin.php?m=Market&a=submit" method="post">
+				<div class="form">
+					<input type="hidden" name="id" value="{$data.id}"/>
+					<div class="fields">
+						<div class="field  field-first">
+							<div class="label">
+								<label for="input-small">标题:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="input-small" name="title" class="small" value="{$data.title}"/>
+							</div>
+							<div class="tip">{tip id='title' default='请输入标题'}</div>
+						</div>
+						<!-- <div class="field">
+							<div class="label">
+								<label for="input-small">URL地址:</label>
+							</div>
+							<div class="input">
+								<input type="text" id="input-small" name="linkurl" class="small" value="{$data.linkurl}"/>
+							</div>
+						</div> -->
+						<div class="field">
+							<div class="label">
+								<label for="file">图片:</label>
+							</div>
+							<div class="input input-file">
+								<input type="file" id="file" name="imageurl" size="40" value="{$data.imageurl}"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="inpu-small">内容</label>
+							</div>
+							<!-- <div class="input"><!-- cols="100" rows="8" style="width:700px;height:200px;visibility:hidden;" 
+								<textarea id="content1" name="content1" >{$data['content']}</textarea>
+							</div> -->
+							<div class="input">
+									<textarea id="content1" name="content" cols="100" rows="8" style="width:700px;height:200px;visibility:hidden;" ></textarea>
+							</div>
+						</div>
+						<div class="field">
+							<div class="label label-radio">
+								<label>是否开启{$data.switchon}</label>
+							</div>
+							<div class="radios">		
+								<div class="radio">
+									{if $data.switchon eq 1 || $data.switchon eq ''}
+									<input type="radio" value='1' name="switchon" checked /><label for="radio-2">开启</label>
+									<input type="radio" value='0' name="switchon"/><label for="radio-2">禁用</label>
+									{else}
+									<input type="radio" value='1' name="switchon" /><label for="radio-2">开启</label>
+									<input type="radio" value='0' name="switchon" checked /><label for="radio-2">禁用</label>
+									{/if}
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="buttons">
+								<div class="highlight">
+									<input type="submit" name="submit" value="保存" />
+								</div>
+								<input type="reset" name="reset" value="取消" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- end content / right -->
+</div>
+<!-- end content -->
+{include file="footer.inc.htm"}

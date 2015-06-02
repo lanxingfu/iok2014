@@ -1,0 +1,905 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Index/top.html'}
+<link href="/public/style/home/mall-show.css" rel="stylesheet" />
+<link href="/public/style/home/mall_da.css" rel="stylesheet" />
+<!--图片放大-->
+<link href="__CSS__/mall_da.css" rel="stylesheet" />
+<script src="__JS__/mall_base.js" type="text/javascript"></script>
+<script src="__JS__/mall_lib.js" type="text/javascript"></script>
+<script src="__JS__/mall_163css.js" type="text/javascript"></script>
+
+<!-- 弹框 收藏商品用-->
+<script type="text/javascript" src="__PUBLIC__/js/swfupload/js/handlers.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/swfupload/swfupload.js"></script>
+<link id="skin" rel="stylesheet" href="__PUBLIC__/js/jBox/Skins/Gray/jbox.css" />
+<script type="text/javascript" src="__PUBLIC__/js/jBox/jquery.jBox-2.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+
+
+<!---->	
+<!-- 中间部分 -->
+<div class="content">
+	<div class="content_nr">
+    	<div class="content_nr_lb">
+        	<div class="zxejym_conter_nr_top">{$nav}</div>
+            <div class="content_nr_lb_b">
+            	<div class="content_nr_lb_b_l">
+                	<div class="content_nr_lb_b_l_jj">
+                    	<h3>供应商信息</h3>
+                        <div class="content_nr_lb_b_l_jj_b">
+                        	<p>
+								<if condition="$member['groupid'] eq 4">
+									待审核企业
+								<elseif condition="$member['groupid'] eq 6" />
+									企业会员
+								<elseif condition="$member['groupid'] eq 8" />
+									我行网认证企业
+								<else />
+									未知状态
+								</if>
+							</p>
+                            <p>经营模式：<empty name="member.mode">未知<else />{$member.mode}</empty></p>
+                            <p>所在地区：<empty name="member.areaname">不详<else />{$member.areaname}</empty></p>
+                            <p>满意率：<span>100%</span></p>
+                        </div>
+                    </div>
+                    <div class="content_nr_lb_b_l_xxxx">
+                    	<h3>商务代表信息</h3>
+                        <div class="content_nr_lb_b_l_xxxx_b">
+                        	<empty name="represent">
+								<div class="content_nr_lb_b_l_xxxx_bt">
+									<div class="content_nr_lb_b_l_xxxx_btl">
+										<img src="/Public/images/iokkf.png" alt="我行网客服"  />
+									</div>
+									<ul class="content_nr_lb_b_l_xxxx_btr">
+										<li><p >姓 名:</p><span>我行网客服</span></li>
+									</ul>
+								</div>		
+								<ul class="content_nr_lb_b_l_xxxx_bb">
+									<li><p style="width:40px;">邮 箱:</p><span>service@iokokok.com</span></li>
+									<li><p style="width:40px;">电 话:</p><span>010-87162577</span></li>
+								</ul>
+							<else />
+								<div class="content_nr_lb_b_l_xxxx_bt">
+									<div class="content_nr_lb_b_l_xxxx_btl">
+										<empty name="represent.headpic">
+											<img src="/Public/images/tx_img.jpg" alt="用户头像"  />
+										<else />
+											<img src="{$represent.headpic}" alt="用户头像"  />
+										</empty>
+									</div>
+									<ul class="content_nr_lb_b_l_xxxx_btr">
+										<li>
+											<p>姓 名:</p><span>{$represent.truename}</span>
+										</li>
+										<li>
+											<p>星 级:</p>
+											<span><empty name="represent.star">-<else /><img src="/Public/images/mall/xxx_{$represent.star}.png" alt="" style="margin-top:3px;"/></empty></span>
+										</li>
+										<li>
+											<p>好 评:</p><span style="color:#c70000;">100%</span>
+										</li>
+									</ul>
+								</div>							
+								<ul class="content_nr_lb_b_l_xxxx_bb">
+									<li>
+										<p>所在地：</p>
+										<span><empty name="represent.areaname">不祥<else />{$represent.areaname}</empty></span>
+									</li>
+									<li>
+										<p>邮&nbsp;&nbsp; 箱：</p>
+										<span style="width:124px;float:left;overflow:hidden;" title="<empty name='represent.email'>未填写<else />{$represent.email}</empty>"><empty name="represent.email">未填写<else />{$represent.email}</empty></span>
+									</li>
+									<li>
+										<p>电&nbsp;&nbsp; 话：</p>
+										<span><empty name="represent.mobile">未填写<else />{$represent.mobile}</empty></span>
+									</li>
+									<li>
+										<p>当前状态：</p>
+										<span><empty name="represent.online">隐身<else />在线</empty> &nbsp;(<a class="faszz" href="/Member/companymessage/mestate/1/username/{$represent.username}" title="点击发送站内信">发送站内信</a>)</span>
+									</li>
+								</ul>
+							</empty>
+                        </div>
+                    </div>
+                    <div class="content_nr_lb_b_l_cpfl">
+                    	<h3>本店产品分类</h3>
+                        <ul class="content_nr_lb_b_l_cpfl_b">
+							<li><a style="font-size:12px;float:left;" href="/Mall/listy/seller/{$data['username']}" target="_blank">全部产品</a></li>
+							<volist name="categorylist" id="v" >							
+								<li><a href="/Mall/listy/mycatid/{$v.typeid}" title="{$v.typename}"></a></li>
+							</volist>
+                        </ul>
+                    </div>
+                    <div class="content_nr_lb_b_l_xlph">
+                    	<h3>销售排行</h3>
+                        <ul class="content_nr_lb_b_l_xlph_b">
+							<foreach name="mall_pro" key="k" item="v">
+								<?php $k=$k+1;?>
+								<li>
+									<div class="content_nr_lb_b_l_xlph_bl">
+										<a href="/Mall/show/itemid/{$v.itemid}"><img src="{$v.thumb}" alt="" onError='this.src="/Public/images/zanwu.jpg"'/></a>
+									</div>
+									<div class="content_nr_lb_b_l_xlph_br">
+										<p><strong>{$k}</strong>成交 {$v.orders} 笔</p>
+										<p><a href="/Mall/show/itemid/{$v.itemid}">{$v.title}</a></p>
+										<p><span>&yen;{$v.price}</span> <empty name="v.unit"> /件<else /> /{$v.unit}</empty></p>
+									</div>
+								</li>
+							</foreach>
+                        </ul>
+                    </div>
+                    <div class="content_nr_lb_b_l_llls">
+                    	<h3>猜你喜欢</h3>
+                        <ul class="content_nr_lb_b_l_llls_b">
+						<volist name="guess" id="vo">
+                        	<li>
+                            	<div class="content_nr_lb_b_l_llls_bt">
+                                	<a href="__URL__/show/itemid/{$vo.itemid}"><img style="width:125px;height:120px;" src="{$vo.thumb}" alt="" /></a>
+                                </div>
+                                <div class="content_nr_lb_b_l_llls_bb">
+                                	<h4><a href="__URL__/show/itemid/{$vo.itemid}">{$vo.title}</a></h4>
+                                    <span>&yen;{$vo.price}</span>
+                                </div>
+                            </li>
+						</volist>							
+                        </ul>
+                    </div>
+                </div>
+                <div class="content_nr_lb_b_r">
+                	<div class="content_nr_lb_b_rxx">
+                    	<div class="content_nr_lb_b_rxx_l">
+                        <!--onClick="window.open('{$data.thumb}')"-->
+                        	<div class="content_nr_lb_b_rxx_lt jqzoom" id="spec-n1" >
+								<empty name="data.thumb">
+									<img src="/Public/image/nopic_b.jpg" jqimg="/Public/images/nopic_b.jpg" alt="" />
+								<else />
+									<img src="{$data.thumb}" jqimg="{$data.thumb}" alt="" />
+								</empty>
+                            </div>
+                            <div class="content_nr_lb_b_rxx_lb">
+                                <div class="content_nr_lb_b_rxx_lbll">
+                                    <div class="content_nr_lb_b_rxx_lb_l" id="spec-left"><img src="/Public/image/mall/img_4.jpg" alt="" /></div>
+                                    <div id="spec-list">
+                                        <ul class="list-h">
+                                            <li><img src="/Public/image/nopic_b.jpg"></li>
+                                            <li><img src="/Public/image/nopic_b.jpg"></li>
+                                            <li><img src="/Public/image/nopic_b.jpg"></li>
+											
+                                        </ul>
+                                    </div>
+                                    <div class="content_nr_lb_b_rxx_lb_r" id="spec-right"><img src="/Public/image/mall/img_5.jpg" alt="" /></div>
+                                </div>
+				<?php// var_dump($data) ?>
+                                <div class="content_nr_lb_b_rxx_lb_fx">
+                                	<div class="content_nr_lb_b_rxx_lb_fx_t">
+                                        <div class="content_nr_lb_b_rxx_lb_fx_tr">
+					<script type="text/javascript">
+					bShareOpt = {
+					    uuid: "6b1900b5-9617-4dd1-a75c-b85c0241df57", 
+					   url: "", //商品的永久链接
+					   title:"{$data.title}",
+					   summary: "非常不错的商品，我刚刚买过,大家一起来抢购吧!", //商品描述
+					   pic: "{$data.thumb}", //商品图片链接
+					   vUid: "{$_SESSION['userdata']['userid']}", //用户id，为了让您能够知道您网站的注册用户分享、喜欢了哪些商品
+					   product: "{$data.title}", //商品名称
+					   price: "{$data.price}", //商品价格
+					   brand: "{$data.brand}", //商品品牌
+					   tag: "{$data.tag}", //商品标签
+					   category: "{$catename}", //商品分类
+					   template: "1" 
+					};
+					</script>
+					<a class="bsLikeDiv" href="http://static.bshare.cn"></a>
+					<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bsync.js#uuid=6b1900b5-9617-4dd1-a75c-b85c0241df576b1900b5-9617-4dd1-a75c-b85c0241df57"></script>
+					<div class="bshare-custom" style="float:left;padding:3px;"><div class="bsPromo bsPromo2"></div><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到搜狐微博" class="bshare-sohuminiblog"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);"></a></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=1&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>		
+					</div>
+                                    </div>
+                                    <div class="content_nr_lb_b_rxx_lb_fx_b">
+                                        <a href="javascript:to_favorite({$data[itemid]});">加入收藏</a>
+                                    </div>
+                                </div>
+                            </div>							
+                        </div>			
+						<script type="text/javascript">
+							/*function to_favorite(itemids){
+								$.ajax({
+									type: "POST",
+									url: "/Mall/add_favorites/",
+									data: ,
+									success: function(msg){
+										if(msg==5){
+											jBox.tip("收藏成功！！", 'success');
+										}else if(msg==4){
+											jBox.tip('收藏失败！！', 'error');
+										}else if(msg==3){
+											jBox.tip('已经收藏过了~', 'error');
+										}else if(msg==2){
+											jBox.tip('商品不存在！请刷新！', 'error');
+										}else if(msg==1){
+											jBox.tip('请选择商品或刷新！！', 'error');
+										}else if(msg==0){
+											jBox.tip('您还未登录，请先登录', 'error');
+										}else if(msg==6){
+											jBox.tip('该商品未上架！不能收藏！');
+										}else{
+											jBox.tip('收藏失败了！！', 'error');
+										}
+									}
+								});*/
+								/*
+								$.jBox("iframe:/Mall/tofavorite/itemid/"+itemid, {
+									title: "上传图片",
+									width: 500,
+									height: 350,
+									showClose: false,
+									buttons: { '确定': 1 ,'取消':2},
+									submit:function(v,h,f){
+										if(v==1){
+											jBox.tip("已保存！", 'info');
+										}else{
+											jBox.tip("保存失败，请重试！", 'info');
+										}
+									}
+								});
+								
+								// 自定义按钮
+								$.jBox.confirm("天使，做我女朋友吧？", "表白提示", submit, {
+								buttons: { '恩': true, '好吖': false} 
+								});
+								*/
+								
+							}
+							$(function(){			
+							   $(".jqzoom").jqueryzoom({
+									xzoom:400,
+									yzoom:400,
+									offset:10,
+									position:"right",
+									preload:1,
+									lens:1
+								});
+								$("#spec-list").jdMarquee({
+									deriction:"left",
+									width:355,
+									height:56,
+									step:2,
+									speed:4,
+									delay:10,
+									control:true,
+									_front:"#spec-right",
+									_back:"#spec-left"
+								});
+								$("#spec-list img").bind("mouseover",function(){
+									var src=$(this).attr("src");
+									$("#spec-n1 img").eq(0).attr({
+										src:src.replace("\/n5\/","\/n1\/"),
+										jqimg:src.replace("\/n5\/","\/n0\/")
+									});
+									$(this).css({
+										"border":"2px solid #ff6600",
+										"padding":"1px"
+									});
+								}).bind("mouseout",function(){
+									$(this).css({
+										"border":"1px solid #ccc",
+										"padding":"2px"
+									});
+								});				
+							})
+						</script>						
+                        <div class="content_nr_lb_b_rxx_r">
+                        	<div class="content_nr_lb_b_rxx_rt">
+                            	<h2>{$data.title}</h2>
+                                <div class="content_nr_lb_b_rxx_rt_b">
+                                	<p>单&nbsp;价：<span>&yen;{$data.price}</span> /<empty name="data.unit">&nbsp;&nbsp;件<else />&nbsp;&nbsp;{$data.unit}</empty></p>
+                                    <p>运&nbsp;费：<span style="color:#FF4802;">协商解决</span></p>
+									<p>品&nbsp;牌：<empty name="data.brand">未填写<else />{$data.brand}</empty></p>
+                                    <p>发货地：<empty name="data.areaname">不详<else />{$data.areaname}</empty></p>
+                                    <p>销&nbsp;量：累计<!--出售 {$data.sales}&nbsp;&nbsp;{$data.unit}，{$data.orders}-->{$dingcount} 个订单</p>
+                                    <p>库&nbsp;存：{$data.amount}&nbsp;&nbsp;{$data.unit}</p>
+                                    <p>起订量：{$data.minamount}&nbsp;&nbsp;{$data.unit}</p>
+                                    <p>评&nbsp;价：{$data.comments} 条评价</p>
+                                    <p>人&nbsp;气：{$data.hits} 人关注</p>
+                                    <p>更&nbsp;新：
+                                    
+                                    <empty name="data.edittime">-<else /></empty></p>
+                                </div>
+                            </div>
+                            <div class="content_nr_lb_b_rxx_rb">
+							<form action='' method='post'>
+                            	<div class="content_nr_lb_b_rxx_rbt">
+                                	<span>定购数量</span>
+                                    <div class="content_nr_lb_b_rxx_rbta_l">
+                                    	<a href="javascript:void(0)" onclick='addnum(0)'><img src="/Public/image/mall/img_12.png" alt="" /></a>
+                                    </div>
+                                    <input id='goods_num' type='text' value='{$data.minamount}' onblur='' class="content_nr_lb_b_rxx_rbta_c" />
+                                    <div class="content_nr_lb_b_rxx_rbta_r">
+                                    	<a href="javascript:void(0)" onclick='addnum(1)'><img src="/Public/image/mall/img_13.png" alt="" /></a>
+                                    </div>
+                                </div>
+                                <div class="content_nr_lb_b_rxx_rbb">
+                                	<a href="javascript:void(0)" onclick="nowbuy({$data.itemid})"><img src="/Public/image/mall/img_10.png" alt="" /></a>
+                                    <a href="javascript:void(0)" onclick="addcart({$data.itemid})"><img src="/Public/image/mall/img_1122.png" alt="" /></a>
+                                </div>
+								<script>
+									$(document).ready(function(){
+										$("#goods_num").change( function() {
+											// 这里可以写些验证代码
+											if(isNaN($("#goods_num").val())||$("#goods_num").val()<=0){
+												$.iokPlugin.warning("请数据正确的定购数量");
+												$("#goods_num").val({$data.minamount});
+											}
+										});
+									});
+									//立即购买
+									function nowbuy(id){
+										var islogin = '{$_SESSION['userdata']['userid']}';
+										
+										var status = {$data.status};
+										var minamount = {$data.minamount};
+										var amount = {$data.amount};
+										if(!islogin){
+											art.dialog({
+												title: '消息',
+												content: '您当前还未登录，请登录后继续购买！',
+												ok: function () {
+													goto();
+													return false;
+												}
+											});
+										}else{
+											if(status!=3){
+												$.iokPlugin.warning('未审核、下架的商品不能购买');
+												return false;
+											}
+											var goods_num = parseInt($('#goods_num').val());
+											if(goods_num > amount){
+												$.iokPlugin.warning('购买数量应小于库存总量');
+											}else if(goods_num < minamount){
+												$.iokPlugin.warning('购买数量应大于等于起订量');
+											}else{
+												$.ajax({  
+													type: "GET",  
+													url: '__URL__/order_ajax/itemid/'+id+'/num/'+goods_num+'/?random='+Math.random(),
+													dataType: 'json',
+													success: function(json){
+														if (json.statusCode != '200'){
+															$.iokPlugin.warning(json.message);
+														}else{
+															window.location='__URL__/order/itemid/'+id+'/num/'+goods_num;
+														}
+													}
+												});		
+											}
+										}
+										
+									}
+									
+									//添加购物车
+									function addcart(id){
+										var islogin = "{$_SESSION['userdata']['userid']}";
+										var minamount = "{$data.minamount}";
+										var amount = "{$data.amount}";
+										var status = {$data.status};
+										
+										if(!islogin){
+											art.dialog({
+												title: '消息',
+												content: '您当前还未登录，请登录后继续购买！',
+												ok: function () {
+													goto();
+													return false;
+												}
+											});
+										}else{
+											if(status!=3){
+												$.iokPlugin.warning('未审核、下架的商品不能购买');
+												return false;
+											}
+											var goods_num = parseInt($('#goods_num').val());
+											if(goods_num > amount){
+												 $.iokPlugin.warning('购买数量应小于库存总量');
+											}else if(goods_num < minamount){
+												 $.iokPlugin.warning('购买数量应大于等于起订量');
+											}else{
+												 $.iokPlugin.addcartCallback('__URL__/addcart/itemid/'+id+'/num/'+goods_num);
+											}
+										}
+										
+									}
+									
+									//增加数量
+									function addnum(state){
+										var minamount = {$data.minamount};
+										var amount = {$data.amount};
+										
+										var num = $('#goods_num').val();
+											if(state){
+												if(num >= amount){
+													num = amount;
+													 $.iokPlugin.warning('最大购买数量不能超过库存量！');
+												}else{
+													num++;
+												}
+											}else{
+												if(num <= minamount){
+													num = minamount;
+													 $.iokPlugin.warning('最小购买数量不能小于起订量！');
+												}else{
+													num--;
+												}
+											}
+										$('#goods_num').val(num);										
+									}
+								</script>
+                            </div>
+                        </div>
+                    </div>
+					<if condition="$tongcate neq ''">
+                    <div class="content_nr_lb_b_rtltj">
+                    	<div class="content_nr_lb_b_rtltj_t">
+                        	<h3>商家推荐</h3>
+                        </div>
+						<ul class="content_nr_lb_b_rtltj_b">
+							<volist name = "tongcate" id = "vo" empty = "暂无推荐商品。">						
+								<li>
+									<div class="content_nr_lb_b_rtltj_bt">
+										<a href="/Mall/show/itemid/{$vo.itemid}"><img src="{$vo.thumb}" alt="{$vo.title}" onError='this.src="/Public/images/zanwu.jpg"'/></a>
+									</div>
+									<h4><a href="/Mall/show/itemid/{$vo.itemid}" title="{$vo.title}"></a></h4>
+									<span> &yen; {$vo.price} / <empty name="vo.unit"> 件 <else />{$vo.unit}</empty></span>
+								</li>
+							</volist>								
+						</ul>
+                    </div>
+					</if>
+                    <div class="content_nr_lb_b_rjs">
+                    	<div class="content_nr_lb_b_rjs_t">
+                        	<div class="content_nr_lb_b_rjs_tl">
+                            	<a href="#introduce" onclick="Mshow('introduce');" class="taby_2" id="t_introduce">商品介绍</a>
+                                <a href="#order" onclick="Mshow('order');" class="taby_1" id="t_order">交易记录</a>
+                            </div>
+                            <!-- <div class="content_nr_lb_b_rjs_tr">
+                            	<a href=""><img src="/Public/images/mall/img_11_1.png" alt="" /></a>
+                            </div> -->
+                        </div>
+						<div id="c_introduce" style="display:block;">	
+							<ul class="content_nr_lb_b_rjs_c">
+								<li>商品名称：{$data.title}</li>
+								<li>商品编号：{$data.itemid}</li>
+								<li>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌：<empty name="data['brand']">未填写<else />{$data.brand}</empty></li>
+								<li>商品产地：<empty name="data.areaname">不详<else />{$data.areaname}</empty></li>								
+							</ul>
+							<div class="content_nr_lb_b_rjs_b">{$data.content}</div>
+						</div>
+						<div id="c_order" style="display:none;">
+							<empty name="dingcomment">
+								<div style="padding:10px;font-size:12px;">暂无商品交易记录。</div>
+							<else />
+								<div class="content_nr_lb_b_jyjl_b">
+									<span class="jyjl_b_mfpj">买方</span>
+									<span class="jyjl_b_dj">单价</span>
+									<span class="jyjl_b_sl">数量</span>
+									<span class="jyjl_b_sj">购买时间</span>
+									<span class="jyjl_b_zt">状态</span> 
+								</div>							
+								<ul class="content_nr_lb_b_jyjl_f">		
+									<li>
+										<ul class="content_nr_lb_b_jyjl_f_lis">
+											<foreach name="dingcomment" item="v">	
+												<li style="border-bottom:1px dashed #c0c0c0;">
+													<div class="content_nr_lb_b_jyjl_f_lis_l">
+														买家&nbsp;（<?php echo substr($v['buyer'], 0, 1)?>****<?php echo substr($v['buyer'], -1)?>）												
+													</div>
+													<div class="content_nr_lb_b_jyjl_f_lis_r">
+														<div class="content_nr_lb_b_jyjl_f_lis_rt">
+															<span class="jyjl_b_dj"><empty name="v['price']"><p class="nobold">不详</p><else />&yen;{$v['price']}</empty></span>
+															<span class="jyjl_b_sl"><empty name="v['number']"><p class="nobold">不详</p><else />{$v['number']}</empty></span>
+															<span class="jyjl_b_sj"><empty name="v['addtime']">-<else /></empty></span>
+															<span class="jyjl_b_zt">交易成功</span> 
+														</div>
+													</div>
+												</li>
+											</foreach>
+										</ul>
+									<li>
+								</ul>
+								<div id="pages">{$dingShowpage}</div>	
+							</empty>
+						</div>
+                    </div>		
+
+					
+					<div class="content_nr_lb_b_rpj">
+                    	<div class="content_nr_lb_b_rpj_t">
+                        	<a href="javascript:void(0);" class="tabs_2" id="trades_t_1" onclick="Tb(1, 4, 'trades', 'tabs');" class="a_ll">全部评价</a>
+                            <a href="javascript:void(0);" class="tabs_1" id="trades_t_2" onclick="Tb(2, 4, 'trades', 'tabs');">好&nbsp; 评</a>
+							<a href="javascript:void(0);" class="tabs_1" id="trades_t_3" onclick="Tb(3, 4, 'trades', 'tabs');">中&nbsp; 评</a>
+                            <a href="javascript:void(0);" class="tabs_1" id="trades_t_4" onclick="Tb(4, 4, 'trades', 'tabs');">差&nbsp; 评</a>
+                        </div>						
+						<div id="trades_c_1" style="display:block;">
+							<empty name="pjrec">
+								<div style="padding:10px;font-size:12px;">暂无商品评价。</div>
+							<else />
+								<div class="content_nr_lb_b_rpj_c">
+									<span class="rpj_c_mfpj">买方评价</span>
+									<span class="rpj_c_sj">时间</span>
+									<span class="rpj_c_dj">单价</span>
+									<span class="rpj_c_sl">数量</span>
+									<span class="rpj_c_cpymsxf">产品与描述相符</span>
+									<span class="rpj_c_qydfwtd">企业的服务态度</span>
+									<span class="rpj_c_qydfhsd">企业的发货速度</span>
+								</div>							
+								<ul class="content_nr_lb_b_rpj_b">							
+									<foreach name="pjrec" item="v">	
+										<li>
+											<ul class="content_nr_lb_b_rpj_b_lis">
+												<notempty name="v.comp">
+												<li style="border-bottom:1px dashed #c0c0c0;">
+													<div class="content_nr_lb_b_rpj_b_lis_l">
+														买家&nbsp;（<?php echo substr($v['comp']['username'], 0, 1)?>****<?php echo substr($v['comp']['username'], -1)?>）												
+													</div>
+													<div class="content_nr_lb_b_rpj_b_lis_r">
+														<div class="content_nr_lb_b_rpj_b_lis_rt">
+															<span class="rpj_c_sj"><empty name="v.comp.addtime">-<else /></empty></span>
+															<span class="rpj_c_dj">
+																<empty name="v.comp.price">
+																	-																	
+																<else />
+																	&yen;{$v.comp.price}
+																</empty>
+															</span>
+															<span class="rpj_c_sl">{$v.comp.number}</span>
+															<div class="rpj_c_cpymsxf">
+																<empty name="v.comp.tally">
+																	<img src="/Public/image/mall/xxx_0.png" alt="" />
+																<else />
+																	<img src="/Public/image/mall/xxx_{$v.comp.tally}.png" alt="" />
+																</empty>
+															</div>
+															<div class="rpj_c_qydfwtd">
+																<empty name="v.comp.attitude">
+																	<img src="/Public/image/mall/xxx_0.png" alt="" />
+																<else />
+																	<img src="/Public/image/mall/xxx_{$v.comp.attitude}.png" alt="" />
+																</empty>
+															</div>
+															<div class="rpj_c_qydfhsd">
+																<empty name="v.comp.speed">
+																	<img src="/Public/image/mall/xxx_0.png" alt="" />
+																<else />
+																	<img src="/Public/image/mall/xxx_{$v.comp.speed}.png" alt="" />
+																</empty>
+															</div>
+														</div>
+														<p><empty name="v.comp.content">暂无评论<else />{$v.comp.content}</empty></p>
+														<if condition="$v['comp']['grade'] neq 3"><!--是3，好评，就不显示-->
+															<notempty name="v.comp.reply">
+																<div class="pl_js"><span>解释：</span>{$v.comp.reply}</div>
+															</notempty>
+														</if>
+													</div>
+												</li>
+												</notempty>												
+												<notempty name="v.reps">												
+													<notempty name="v.reps.content"><!--如果没有商务代表评论，内容就不显示-->
+														<li>
+															<div class="content_nr_lb_b_rpj_bl">										
+																<empty name="v['reps']['headpic']">															
+																	<img src="/Public/images/tx_img.jpg" alt="" />
+																<else />
+																	<img src="{$v['reps']['headpic']}" alt="" />
+																</empty>
+																<if condition="$v['reps']['pgrade'] eq 1"><!--商务服务站-->
+																	<p> 服务站</p>
+																	<p>{$v['reps']['truename']}</p>	
+																<else/><!--商务代表-->																
+																	<p></p>
+																</if>	
+															</div>
+															<div class="content_nr_lb_b_rpj_br">
+																<p><empty name="v.reps.content">暂无评论<else />{$v.reps.content}</empty></p>
+																<notempty name="v.reps.reply">
+																	<div class="pl_js"><span>解释：</span>{$v.reps.reply}</div>
+																</notempty>
+															</div>
+														</li>
+													</notempty>
+												</notempty>
+											</ul>
+										</li>
+									</foreach>
+								</ul>							
+							</empty>
+						</div>
+						<div id="trades_c_2" style="display:none;">
+							<empty name="haoping">
+								<div style="padding:10px;font-size:12px;">暂无商品好评。</div>
+							<else />
+								<div class="content_nr_lb_b_rpj_c">
+									<span class="rpj_c_mfpj">买方评价</span>
+									<span class="rpj_c_sj">时间</span>
+									<span class="rpj_c_dj">单价</span>
+									<span class="rpj_c_sl">数量</span>
+									<span class="rpj_c_cpymsxf">产品与描述相符</span>
+									<span class="rpj_c_qydfwtd">企业的服务态度</span>
+									<span class="rpj_c_qydfhsd">企业的发货速度</span>
+								</div>							
+								<ul class="content_nr_lb_b_rpj_b">							
+									<foreach name="haoping" item="v">	
+										<li>
+											<ul class="content_nr_lb_b_rpj_b_lis">
+												<li style="border-bottom:1px dashed #c0c0c0;">
+													<div class="content_nr_lb_b_rpj_b_lis_l">
+														买方企业&nbsp;（<?php echo substr($v['comp']['username'], 0, 1)?>****<?php echo substr($v['comp']['username'], -1)?>）												
+													</div>
+													<div class="content_nr_lb_b_rpj_b_lis_r">
+														<div class="content_nr_lb_b_rpj_b_lis_rt">
+															<span class="rpj_c_sj"><empty name="v.comp.addtime">-<else /></empty></span>
+															<span class="rpj_c_dj">
+																<empty name="v.comp.price">
+																	-																	
+																<else />
+																	&yen;{$v.comp.price}
+																</empty>
+															</span>
+															<span class="rpj_c_sl">{$v.comp.number}</span>
+															<div class="rpj_c_cpymsxf">
+																<empty name="v.comp.tally">
+																	<img src="/Public/images/mall/xxx_0.png" alt="" />
+																<else />
+																	<img src="/Public/images/mall/xxx_{$v.comp.tally}.png" alt="" />
+																</empty>
+															</div>
+															<div class="rpj_c_qydfwtd">
+																<empty name="v.comp.attitude">
+																	<img src="/Public/images/mall/xxx_0.png" alt="" />
+																<else />
+																	<img src="/Public/images/mall/xxx_{$v.comp.attitude}.png" alt="" />
+																</empty>
+															</div>
+															<div class="rpj_c_qydfhsd">
+																<empty name="v.comp.speed">
+																	<img src="/Public/images/mall/xxx_0.png" alt="" />
+																<else />
+																	<img src="/Public/images/mall/xxx_{$v.comp.speed}.png" alt="" />
+																</empty>
+															</div>
+														</div>
+														<p><empty name="v.comp.content">暂无评论<else />{$v.comp.content}</empty></p>
+														<if condition="$v['comp']['grade'] neq 3"><!--是3，好评，就不显示-->
+															<notempty name="v.comp.reply">
+																<div class="pl_js"><span>解释：</span>{$v.comp.reply}</div>
+															</notempty>
+														</if>
+													</div>
+												</li>			
+												<notempty name="v.reps">												
+													<notempty name="v.reps.content"><!--如果没有商务代表评论，内容就不显示-->
+														<li>
+															<div class="content_nr_lb_b_rpj_bl">										
+																<empty name="v['reps']['headpic']">															
+																	<img src="/Public/images/tx_img.jpg" alt="" />
+																<else />
+																	<img src="{$v['reps']['headpic']}" alt="" />
+																</empty>
+																<if condition="$v['reps']['pgrade'] eq 1"><!--商务服务站-->
+																	<p> 服务站</p>
+																	<p>{$v['reps']['truename']}</p>	
+																<else/><!--商务代表-->																
+																	<p></p>
+																</if>	
+															</div>
+															<div class="content_nr_lb_b_rpj_br">
+																<p><empty name="v.reps.content">暂无评论<else />{$v.reps.content}</empty></p>
+																<notempty name="v.reps.reply">
+																	<div class="pl_js"><span>解释：</span>{$v.reps.reply}</div>
+																</notempty>
+															</div>
+														</li>
+													</notempty>
+												</notempty>
+											</ul>
+										</li>
+									</foreach>
+								</ul>							
+							</empty>
+						</div>
+						<div id="trades_c_3" style="display:none;">
+							<empty name="zhongping">
+								<div style="padding:10px;font-size:12px;">暂无商品中评。</div>
+							<else />
+								<div class="content_nr_lb_b_rpj_c">
+									<span class="rpj_c_mfpj">买方评价</span>
+									<span class="rpj_c_sj">时间</span>
+									<span class="rpj_c_dj">单价</span>
+									<span class="rpj_c_sl">数量</span>
+									<span class="rpj_c_cpymsxf">产品与描述相符</span>
+									<span class="rpj_c_qydfwtd">企业的服务态度</span>
+									<span class="rpj_c_qydfhsd">企业的发货速度</span>
+								</div>							
+								<ul class="content_nr_lb_b_rpj_b">							
+									<foreach name="zhongping" item="v">	
+										<li>
+											<ul class="content_nr_lb_b_rpj_b_lis">
+												<li style="border-bottom:1px dashed #c0c0c0;">
+													<div class="content_nr_lb_b_rpj_b_lis_l">
+														买方企业&nbsp;（<?php echo substr($v['comp']['username'], 0, 1)?>****<?php echo substr($v['comp']['username'], -1)?>）												
+													</div>
+													<div class="content_nr_lb_b_rpj_b_lis_r">
+														<div class="content_nr_lb_b_rpj_b_lis_rt">
+															<span class="rpj_c_sj"><empty name="v.comp.addtime">-<else /></empty></span>
+															<span class="rpj_c_dj">
+																<empty name="v.comp.price">
+																	-																	
+																<else />
+																	&yen;{$v.comp.price}
+																</empty>
+															</span>
+															<span class="rpj_c_sl">{$v.comp.number}</span>
+															<div class="rpj_c_cpymsxf">
+																<empty name="v.comp.tally">
+																	<img src="/Public/images/mall/xxx_0.png" alt="" />
+																<else />
+																	<img src="/Public/images/mall/xxx_{$v.comp.tally}.png" alt="" />
+																</empty>
+															</div>
+															<div class="rpj_c_qydfwtd">
+																<empty name="v.comp.attitude">
+																	<img src="/Public/images/mall/xxx_0.png" alt="" />
+																<else />
+																	<img src="/Public/images/mall/xxx_{$v.comp.attitude}.png" alt="" />
+																</empty>
+															</div>
+															<div class="rpj_c_qydfhsd">
+																<empty name="v.comp.speed">
+																	<img src="/Public/images/mall/xxx_0.png" alt="" />
+																<else />
+																	<img src="/Public/images/mall/xxx_{$v.comp.speed}.png" alt="" />
+																</empty>
+															</div>
+														</div>
+														<p><empty name="v.comp.content">暂无评论<else />{$v.comp.content}</empty></p>
+														<if condition="$v['comp']['grade'] neq 3"><!--是3，好评，就不显示-->
+															<notempty name="v.comp.reply">
+																<div class="pl_js"><span>解释：</span>{$v.comp.reply}</div>
+															</notempty>
+														</if>
+													</div>
+												</li>			
+												<notempty name="v.reps">												
+													<notempty name="v.reps.content"><!--如果没有商务代表评论，内容就不显示-->
+														<li>
+															<div class="content_nr_lb_b_rpj_bl">										
+																<empty name="v['reps']['headpic']">															
+																	<img src="/Public/images/tx_img.jpg" alt="" />
+																<else />
+																	<img src="{$v['reps']['headpic']}" alt="" />
+																</empty>
+																<if condition="$v['reps']['pgrade'] eq 1"><!--商务服务站-->
+																	<p> 服务站</p>
+																	<p>{$v['reps']['truename']}</p>	
+																<else/><!--商务代表-->																
+																	<p></p>
+																</if>	
+															</div>
+															<div class="content_nr_lb_b_rpj_br">
+																<p><empty name="v.reps.content">暂无评论<else />{$v.reps.content}</empty></p>
+																<notempty name="v.reps.reply">
+																	<div class="pl_js"><span>解释：</span>{$v.reps.reply}</div>
+																</notempty>
+															</div>
+														</li>
+													</notempty>
+												</notempty>
+											</ul>
+										</li>
+									</foreach>
+								</ul>							
+							</empty>
+						</div>
+						<div id="trades_c_4" style="display:none;">
+							<empty name="chaping">
+								<div style="padding:10px;font-size:12px;">暂无商品差评。</div>
+							<else />
+								<div class="content_nr_lb_b_rpj_c">
+									<span class="rpj_c_mfpj">买方评价</span>
+									<span class="rpj_c_sj">时间</span>
+									<span class="rpj_c_dj">单价</span>
+									<span class="rpj_c_sl">数量</span>
+									<span class="rpj_c_cpymsxf">产品与描述相符</span>
+									<span class="rpj_c_qydfwtd">企业的服务态度</span>
+									<span class="rpj_c_qydfhsd">企业的发货速度</span>
+								</div>							
+								<ul class="content_nr_lb_b_rpj_b">							
+									<foreach name="chaping" item="v">	
+										<li>
+											<ul class="content_nr_lb_b_rpj_b_lis">
+												<li style="border-bottom:1px dashed #c0c0c0;">
+													<div class="content_nr_lb_b_rpj_b_lis_l">
+														买方企业&nbsp;（<?php echo substr($v['comp']['username'], 0, 1)?>****<?php echo substr($v['comp']['username'], -1)?>）												
+													</div>
+													<div class="content_nr_lb_b_rpj_b_lis_r">
+														<div class="content_nr_lb_b_rpj_b_lis_rt">
+															<span class="rpj_c_sj"><empty name="v.comp.addtime">-<else /></empty></span>
+															<span class="rpj_c_dj">
+																<empty name="v.comp.price">
+																	-																	
+																<else />
+																	&yen;{$v.comp.price}
+																</empty>
+															</span>
+															<span class="rpj_c_sl">{$v.comp.number}</span>
+															<div class="rpj_c_cpymsxf">
+																<empty name="v.comp.tally">
+																	<img src="/Public/image/mall/xxx_0.png" alt="" />
+																<else />
+																	<img src="/Public/image/mall/xxx_1.png" alt="" />
+																</empty>
+															</div>
+															<div class="rpj_c_qydfwtd">
+																<empty name="v.comp.attitude">
+																	<img src="/Public/image/mall/xxx_0.png" alt="" />
+																<else />
+																	<img src="/Public/image/mall/xxx_2.png" alt="" />
+																</empty>
+															</div>
+															<div class="rpj_c_qydfhsd">
+																<empty name="v.comp.speed">
+																	<img src="/Public/image/mall/xxx_0.png" alt="" />
+																<else />
+																	<img src="/Public/image/mall/xxx_3.png" alt="" />
+																</empty>
+															</div>
+														</div>
+														<p><empty name="v.comp.content">暂无评论<else />{$v.comp.content}</empty></p>
+														<if condition="$v['comp']['grade'] neq 3"><!--是3，好评，就不显示-->
+															<notempty name="v.comp.reply">
+																<div class="pl_js"><span>解释：</span>{$v.comp.reply}</div>
+															</notempty>
+														</if>
+													</div>
+												</li>			
+												<notempty name="v.reps">												
+													<notempty name="v.reps.content"><!--如果没有商务代表评论，内容就不显示-->
+														<li>
+															<div class="content_nr_lb_b_rpj_bl">										
+																<empty name="v['reps']['headpic']">															
+																	<img src="/Public/images/tx_img.jpg" alt="" />
+																<else />
+																	<img src="{$v['reps']['headpic']}" alt="" />
+																</empty>
+																<if condition="$v['reps']['pgrade'] eq 1"><!--商务服务站-->
+																	<p> 服务站</p>
+																	<p>{$v['reps']['truename']}</p>	
+																<else/><!--商务代表-->																
+																	<p></p>
+																</if>	
+															</div>
+															<div class="content_nr_lb_b_rpj_br">
+																<p><empty name="v.reps.content">暂无评论<else />{$v.reps.content}</empty></p>
+																<notempty name="v.reps.reply">
+																	<div class="pl_js"><span>解释：</span>{$v.reps.reply}</div>
+																</notempty>
+															</div>
+														</li>
+													</notempty>
+												</notempty>
+											</ul>
+										</li>
+									</foreach>
+								</ul>							
+							</empty>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+</div>
+
+
+{include file='Public/footer.html'}

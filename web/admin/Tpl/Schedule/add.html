@@ -1,0 +1,168 @@
+﻿{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<script>
+{literal}
+	function selectfun(){
+		var pid=$("#placeselect").find('option:selected').val();
+		if(pid!=0){
+			$.post('/iokadmin.php/Schedule/ajaxstate',{place:pid},function(data){
+				var option="";
+				if(data!="[]"){
+					var arr = eval("("+data+")");
+					$.each(arr, function(i,u){
+						option+="<option value='"+u.id+"'>"+u.prettyname+"</option>";
+					});
+					$("#adselect").html(option);
+				}else{
+					$("#adselect").html("<option>广告位下无广告</option>");
+				}
+			});
+		}else{
+			$("#adselect").html("<option>请选择广告位</option>");
+		}
+	}
+{/literal}
+</script>
+		<!-- content -->
+		<div id="content">
+			<!-- end content / left -->
+			{include file="Schedule/leftmenu.inc.html"}
+			<!-- end content / left -->
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>广告排期</h5>
+					</div>
+					<!-- end box / title -->
+					<form id="form" action="/iokadmin.php/Schedule/submit" method="post" enctype="multipart/form-data">
+					<div class="form">
+						<div class="fields">
+							<div class="field  field-first">
+								<div class="label">
+									<label for="input-small">广告位：</label>
+								</div>
+								<div class="select">
+									<select name="adplaceid" id="placeselect" onchange="javascript:selectfun();">
+										<option value="0">请选择一个广告位</option>
+									{foreach from=$place item=p}
+										<option value="{$p['id']}">{$p['prettyname']}</option>
+									{/foreach}
+									</select>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="select">广告名称：</label>
+								</div>
+								<div class="select">
+									<select name="adid" id="adselect">
+										<option>请选择广告位</option>
+									</select>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="select">广告支付金额：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="amount" class="small" value="{$newarr['amount']}"/>元
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="select">实际支付金额：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="finalamount" class="small" value="{$newarr['finalamount']}"/>元
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="file">上传图片：</label>
+								</div>
+								<div class="input">
+									<input type="file" name="imageurl" size="40" value="{$newarr['imageurl']}"/>
+								</div>
+								<div class="input input-file">
+								{if $newarr['imageurl'] }
+									<img width="300" height="200" src="/file/upload/{$newarr['imageurl']}"> 
+								{/if}
+								</div>
+							</div>			
+							<div class="field">
+								<div class="label">
+									<label for="input-medium">广告链接：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="linkurl" class="medium" value="{$newarr['linkurl']}"/>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label label-radio">
+									<label>点击统计：</label>
+								</div>
+								<div class="radios">
+									<div class="radio">
+										<input type="radio" {if {$newarr['isstat']} eq 1 } checked {/if} id="radio-1" value="1" name="isstat"/>
+										<label for="radio-1">开启</label>
+									
+										<input type="radio" {if {$newarr['isstat']} eq 0 } checked {/if} id="radio-2" value="0" name="isstat" />
+										<label for="radio-2">关闭</label>
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="date">投放时段：</label>
+								</div>
+								<div class="input">
+									<input style='width:80px;' type="text" name="fromtime" class="date" value="{$newarr['fromtime']}"/>
+								
+								至
+								
+									<input style='width:80px;float:none' type="text" name="totime" class="date" value="{$newarr['totime']}" />
+								</div>
+							</div> 
+							<div class="field">
+								<div class="label">
+									<label for="input-small">排序：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="listorder" class="small" value="{$newarr['listorder']}"/>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label label-radio">
+									<label>是否启用：</label>
+								</div>
+								<div class="radios">
+									<div class="radio">
+										<input type="radio" {if {$newarr['enabled']} eq 1 } checked {/if} id="radio-1" name="enabled" value="1"/>
+										<label for="radio-1">启用</label>
+									
+										<input type="radio" {if {$newarr['enabled']} eq 0 } checked {/if} id="radio-2" name="enabled" value="0"/>
+										<label for="radio-2">关闭</label>
+									</div>
+								</div>
+							</div> 
+							
+							<div class="buttons">
+								<input type="hidden" name="edit" value="{$edit}">
+								<input type="reset" name="reset" value="Reset" />
+								<div class="highlight">
+									<input type="submit" name="submit.highlight" value="Submit" />
+								</div>
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

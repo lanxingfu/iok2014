@@ -1,0 +1,58 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Channel/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>企业管理 》分配商务代表</h5>
+					</div>
+					<!-- end box / title -->
+					<div class="table">
+						<table>
+							<thead>
+								<tr>
+									<th class="left">编号</th>
+									<th>用户名</th>
+									<th>类型</th>
+									<th>地区</th>
+									<th>性别</th>
+									<th>登陆次数</th>
+									<th>注册时间</th>
+									<th>注册IP</th>
+									<th>操作</th>
+									<th class="selected last"><input type="checkbox" class="checkall" /></th>
+								</tr>
+							</thead>
+							<tbody>
+							{foreach from=$data key=id item=item}
+								<tr>
+									<td>{$item.id}</td>
+									<td><a href="?m=Servicestaff&a=detail&id={$item.id}">{$item.account}</td>
+									<td>{if $item.gradeid eq 4}商务代表
+										{elseif $item.gradeid eq 5}商务服务站
+										{else}未知级别{/if}
+									</td>
+									<td>{$item.areaid.prettyname}</td>
+									<td>{if $item.gender eq 'male'}男{elseif $item.gender eq 'female'}女{else}性别未知{/if}</td>
+									<td>{$item.logincount}</td>
+									<td>{$item.registertime}</td>
+									<td>{$item.registerip}</td>
+									<td class="category"><a href="?m=Servicestaff&a=sendservice&id={$item.id}">指派</a></td>
+									<td class="selected last"><input type="checkbox" /></td>
+								</tr>
+							{/foreach}
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

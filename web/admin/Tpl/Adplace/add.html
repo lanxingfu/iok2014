@@ -1,0 +1,119 @@
+﻿{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			<!-- end content / left -->
+			{include file="Adplace/leftmenu.inc.html"}
+			<!-- end content / left -->
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>增加广告位</h5>
+					</div>
+					<!-- end box / title -->
+					<form action="submit" method="post">
+					<div class="form">
+						<div class="fields">
+							<div class="field">
+								<div class="label">
+									<label for="input-small">广告位名称：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="prettyname" class="small" />
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="input-small">广告位别名：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="name" class="small" />如：A1、B3
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="input-small">广告位类型：</label>
+								</div>
+								<div class="select">
+									<select name="adtype">
+										<option value='image'>图片</option>
+										<option value='slideshow'>幻灯片</option>
+										<option value='text'>文字、文本</option>
+										<option value='mobile'>手机类</option>
+									</select>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="input-small">长度(px)：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="height" class="small" />
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="input-small">宽度(px)：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="width" class="small" />
+								</div>
+							</div>
+							<!-- <div class="field">
+								<div class="label">
+									<label for="file">广告位示意图：</label>
+								</div>
+								<div class="input input-file">
+									<input type="file" id="file" name="file" size="40" />
+								</div>
+							</div> -->
+							
+							<div class="field">
+								<div class="label label-textarea">
+									<label for="textarea">广告位介绍：</label>
+								</div>
+								<div class="textarea textarea-editor">
+									<textarea name="introduce" style='height:50px;' class="editor"></textarea>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="input-small">排序：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="listorder" class="small" />
+								</div>
+							</div>
+							<div class="field">
+								<div class="label label-radio">
+									<label>是否启用：</label>
+								</div>
+								<div class="radios">
+									<div class="radio">
+										<input type="radio" id="radio-1" name="enabled" value="1"/>
+										<label for="radio-1">启用</label>
+									
+										<input type="radio" id="radio-2" name="enabled" value="0"/>
+										<label for="radio-2">关闭</label>
+									</div>
+								</div>
+							</div> 
+							<div class="buttons">
+								<input type="reset" name="reset" value="Reset" />
+								<div class="highlight">
+									<input type="submit" name="submit.highlight" value="Submit" />
+								</div>
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

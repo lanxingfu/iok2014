@@ -1,0 +1,72 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Category/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- table -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title" style="margin-bottom:10px;">
+						<h5>{$model}</h5>
+						{include file="record.inc.htm"}
+					</div>
+					{include file="search.inc.htm"}
+					<!-- end box / title -->
+					<div class="table"> 
+						<table>
+							<thead>
+								<tr>
+									<th class="left">编号</th>
+									<th>所属模块</th>
+									<th>分类名</th>
+									<th>类别链接地址</th>
+									<th>父级分类</th>
+									<th>是否禁用</th>
+									<th>添加时间</th>
+									<th>添加用户</th>
+									<th class="selected last"><input type="checkbox" class="checkall" /></th>
+								</tr>
+							</thead>
+							<tbody>
+								{foreach from=$category item=id}
+								<tr>
+									<td class="price">{$id.id}</td>
+									<td class="price">{$id.categorytype}</td>
+									<td class="price">{$id.prettyname}</td>
+									<td class="price">{$id.linkurl}</td>
+									<td class="price">{$id.parentid}</td>
+									<td class="price">{$id.enabled}</td>
+									<td class="price">{$id.addtime}</td>
+									<td class="price">{$id.adduserid}</td>
+									<td class="price"><a href="?m=Category&a=edit&id={$id.id}">编辑</a>/<a href="?m=Banword&a=del">删除</a></td>
+									<td class="selected last"><input type="checkbox" /></td>
+								</tr>
+								{/foreach}
+							</tbody>
+						</table>
+						<!-- pagination -->
+						{$page|default:''}
+						<!-- end pagination -->
+						<!-- table action -->
+						<div class="action">
+							<select name="action">
+								<option value="" class="locked">Set status to Deleted</option>
+								<option value="" class="unlocked">Set status to Published</option>
+								<option value="" class="folder-open">Move to Category</option>
+							</select>
+							<div class="button">
+								<input type="submit" name="submit" value="Apply to Selected" />
+							</div>
+						</div>
+						
+						<!-- end table action -->
+					</div>
+				</div>
+				<!-- end table -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

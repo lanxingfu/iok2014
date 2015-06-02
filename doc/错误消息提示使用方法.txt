@@ -1,0 +1,36 @@
+消息提示的使用
+
+程序控制里写法：
+1、$postdata = $this->mget();
+这个函数的作用是接受mset所传送的错误消息并赋值到模板中，以及把传送的提交信息就收到$postdata里
+
+2、$this->mset($errorcode, $whereshow, $postdata);
+这个函数的作用是推送错误消息和提交信息，第一个参数为错误信息代码，第二个参数为要在哪里显示，第三个参数是把提交的信息回传回去
+
+模板写法：
+{tip id='whereshow' default='请输入用户名'}
+id的值与$whereshow相对应，表示要在这里显示错误信息，default为可选，如果有值的话就会在这里显示一个提示信息
+
+其中mset函数的第一个参数需要在Conf/errors.data.php中进行设置中文显示信息，设置方法规则如下：
+有两种方法：
+- 如果这个错误消息经常被多个模块调用，那么可以写到public里，
+$errors['public']['nopermission'] = '无此操作权限';
+程序：$this->mset('nopermission','showid');
+模板：{tip id='showid' default='默认消息'}
+上面实现的效果是，如果没有mset的时候，会显示‘默认消息’，如果有mset，则显示'无此操作权限'
+
+- 如果要针对某个模块进行设置，直接写到对应模块的数组里，
+$errors['Login']['errorpasswd'] = '密码错误';
+$this->mset('errorpasswd','showid');
+
+
+mset可以多次使用，mget一般只用一次就可以了，他会把之前所有mset的错误消息都提取出来。
+
+
+如果只要传提交的信息回去，可以直接用 $this->mset(null,null,$postdata)就可以了，接收端使用 $postdata = $this->mget();就可以了
+
+判断是否有错误消息使用isset($_SESSION['_TIPS_'])
+
+
+
+

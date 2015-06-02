@@ -1,0 +1,104 @@
+{include file="Public/header_room.html" }
+{include file="Public/room_top.html" }
+<link href="__CSS__/home/room/iokorderlist.css" rel="stylesheet" />
+<link href="__CSS__/home/room/sws_tradedetail.css" rel="stylesheet" />
+<link href="__CSS__/home/room/reset.css"  rel="stylesheet" >
+<link href="__CSS__/home/room/table_form.css" rel="stylesheet" >
+<!-- 中间部分 -->
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+            <div class="content_sws_nr_left">
+           		{include file="Public/room_menu.html" }
+            </div>
+            <div class="content_sws_nr_right">
+            	<div class="content_sws_nr_right_t">
+                   {include file="Public/welcom.html" }
+                </div> 
+				
+                <div class="content_sws_nr_right_b_t">
+					{if $smarty.session.member.id eq $info.buyerid}
+						{include file="Order/iokbuymenu.html"}
+					{elseif $smarty.session.member.id eq $info.sellerid }
+						{include file="Order/ioksellmenu.html"}
+					{else}
+					{/if}
+                  </div>
+                <div class="content_sws_nr_right_b">
+                    <div class="content_sws_nr_right_b_swdbxx">
+                    	<h3>当前订单状态：</h3><p style="color:#006199;"><span style="color:#c80000;">{$info.nowstatus}</span></p>
+                        <p>收货地址：{$info.delivery_address}</p>
+                    </div>
+					
+					{if $info.buyerusertype eq 6 && $smarty.session.member.id eq $info.sellerid }
+					{else}
+					<div class="content_sws_nr_right_b_swdbxx">
+						<h3>对方商务代表信息</h3>
+						<p>名称：{if $staffInfo.prettyname}{$staffInfo.prettyname}
+							{else}
+							{$staffInfo.acount}
+							{/if}</p>
+						<p>邮箱：{$staffInfo.email}</p>
+						<p>手机：{$staffInfo.mobile}</p>
+						<p>固话：{$staffInfo.telephone}</p>
+						{if $staffInfo.qq}
+						<p>QQ：{$staffInfo.qq|default:"无"}</p>
+						{/if} 
+					</div>
+					{/if}
+
+                    <div class="content_sws_nr_right_b_ddxx">
+                    	<h3>订单信息</h3>
+                        <p>订单编号：{$info.ordernumber}</p>
+                        <p>下单时间：{$info.addtime|date_format:"%Y-%m-%d %H:%M:%S"}</p>    
+						{if $info.confirmtime}<p>确认时间：{$info.confirmtime|date_format:"%Y-%m-%d %H:%M:%S"}</p>{/if}   
+                    </div>
+
+                    <table width="100%" border="1" bordercolor="#999999" class="tabg">
+                    	<tr>
+                        	<th >产品图</th>
+                        	<th >产品名称</th>
+                            <th >单价（元）</th>
+                            <th >数量</th>
+                            <th >运费</th>
+                            <th >优惠</th>
+                            <th >订单总额</th>
+                            <th >佣金</th>
+                            <th >状态</th>
+                        </tr>
+                        <tr>
+                            <td><a href="__APP__/Product/show/itemid/{$info.mallid}" title="{$info.title}" target="_blank">
+							<img src="{$info.thumb}" width="60" height="60" alt="产品图"></a></td>
+                        	<td class="cpmc"><a href="__APP__/Product/show/itemid/{$info.productid}" title="{$info.title}" target="_blank">{$info.title}</a></td>
+                            <td>{$info.price}</td>
+                            <td>{$info.number}</td>
+                            <td>{$info.shipfare}</td>
+                            <td>{$info.discountamount}</td>
+                            <td><a title="优惠金额：{$info.discountamount} | 物流费用：{$info.shipfare}">{$info.amount}</a></td>
+                            <td>{$info.comisstionmoney}</td>
+                            <td>{$info.nowstatus}</td>
+                        </tr>
+                    </table> 
+					<Form action="#" name="ModifyPriceForm" id="ModifyPriceForm" > 
+						<input type="hidden"  name="id" id="id" value="{$info.id}" />
+						  <div class="content_sws_nr_right_b_swdbxx">
+								<h3>修改价格</h3>
+								<p>运费金额：<input type="text" name="fee" id="fee" onkeyup="checkPrice(this.value,'fee')" value="{$info.shipfare}"   size="5" />元</p>
+								
+								<p>优惠金额：<input type="text" name="privilege" id="privilege" onkeyup="checkPrice(this.value,'privilege')" value="{$info.discountamount}"   size="5" />元</p>
+								<p>收款方式：<label><input name="receivables" id="receivables" type="radio" value="2" {if $info.receivables eq 2} checked='checked' {/if} />站内收款</label>
+								<label><input name="receivables" id="receivables" type="radio" value="1" {if $info.receivables eq 1} checked='checked' {/if} />对公账号收款</label>
+								</p>
+								<p style="color:#F00">*<sapn>&nbsp;金额较小时建议使用余额收款，卖货方交易结束收款时首信易会对每笔款项收取一定的手续费。 <a href="/Helps/index/itemid/200" target="_blank">首信易手续费收取标准</a></span></p>
+								<div class="table_button"> 
+									<input  type='button' id="confirmsubmit"  value="确定" />
+									<input  type='button' onclick="javascript:window.history.go(-1)" value="返回" /></div>
+							</div>
+					</Form>                      
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{include file="Public/footer.html" }
+<script src="__JS__/home/iokorder.js"></script>

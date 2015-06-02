@@ -1,0 +1,680 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Public/home_top.html'}
+<link href="/public/style/home/mall-show.css" rel="stylesheet" />
+<link href="/public/style/home/mall_da.css" rel="stylesheet" />
+<!--图片放大-->
+<script src="/public/script/mall/mall_base.js" type="text/javascript"></script>
+<script src="/public/script/mall/mall_lib.js" type="text/javascript"></script>
+<script src="/public/script/mall/mall_163css.js" type="text/javascript"></script>
+{literal}
+<script>
+	var t = window.location.href.split('#');
+	Mshow(t[1]);
+	function Mshow(i) {
+		if(i == 'introduce') {
+			$('#t_introduce').attr("class","taby_2");
+			$('#t_order').attr("class","taby_1");
+			$('#c_introduce').css("display",'block');
+			$('#c_order').css('display','none');
+			$("html, body").animate({scrollTop:$('.content_nr_lb_b_rjs').offset().top-40}, 200);
+		} else if(i == 'evaluate') {
+			$('#t_introduce').attr("class","taby_1");
+			$('#t_order').attr("class","taby_1");
+			$('#c_introduce').css('display','none');
+			$('#c_order').css('display','none');
+			$("html, body").animate({scrollTop:$('.content_nr_lb_b_rjs').offset().top-40}, 200);
+		} else if(i == 'order') {
+			$('#t_introduce').attr("class","taby_1");
+			$('#t_order').attr("class","taby_2");
+			$('#c_introduce').css('display','none');
+			$('#c_order').css('display','block');
+			$("html, body").animate({scrollTop:$('.content_nr_lb_b_rjs').offset().top-40}, 200);
+		}
+	}
+	function Tbt(id){
+		$("#trades_t_1").attr("class","tabs_1");
+		$("#trades_c_1").css("display",'none');
+		$("#trades_t_2").attr("class","tabs_1");
+		$("#trades_c_2").css("display",'none');
+		$("#trades_t_3").attr("class","tabs_1");
+		$("#trades_c_3").css("display",'none');
+		$("#trades_t_4").attr("class","tabs_1");
+		$("#trades_c_4").css("display",'none');
+		$("#trades_t_"+id).attr("class","tabs_2");
+		$("#trades_c_"+id).css("display",'block');
+	}
+	
+</script>
+{/literal}
+<!---->	
+<!-- 中间部分 -->
+<div class="content">
+	<div class="content_nr">
+    	<div class="content_nr_lb">
+        	<div class="zxejym_conter_nr_top"><strong><a href="/Mall">供应</a></strong>{$returnp}</div>
+            <div class="content_nr_lb_b">
+            	<div class="content_nr_lb_b_l">
+                	<div class="content_nr_lb_b_l_jj">
+                    	<h3>供应商信息</h3>
+                        <div class="content_nr_lb_b_l_jj_b">
+                        	<p>
+								我行网认证企业
+								<!-- 企业审核状态 todo -->
+							</p>
+                            <p>经营模式：{if $member[0]['mode'] eq ""}未知{else}{$member[0]['mode']}{/if}</p>
+                            <p>所在地区：{if $member[0]['agentareaid'] eq ""}未知{else}{$member[0]['agentareaid']}{/if}</p>
+                            <p>满意率：<span>100%</span></p>
+                        </div>
+                    </div>
+                    <div class="content_nr_lb_b_l_xxxx">
+                    	<h3>商务代表信息</h3>
+                        <div class="content_nr_lb_b_l_xxxx_b">
+                        	{if $represent eq ""}
+								<div class="content_nr_lb_b_l_xxxx_bt">
+									<div class="content_nr_lb_b_l_xxxx_btl">
+										<img src="/public/image/home/product/gy_qbcp_img_3.jpg" alt="我行网客服"  />
+									</div>
+									<ul class="content_nr_lb_b_l_xxxx_btr">
+										<li><p >姓 名:</p><span>我行网客服</span></li>
+									</ul>
+								</div>		
+								<ul class="content_nr_lb_b_l_xxxx_bb">
+									<li><p style="width:40px;">邮 箱:</p><span>service@iokokok.com</span></li>
+									<li><p style="width:40px;">电 话:</p><span>010-87162577</span></li>
+								</ul>
+							{else}
+								<div class="content_nr_lb_b_l_xxxx_bt">
+									<div class="content_nr_lb_b_l_xxxx_btl">
+										{if $represent.imageurl eq ""}
+											<img src="/public/image/home/product/tx_img.jpg" alt="用户头像"  />
+										{else}
+											<img src="{$represent.headpic}" alt="用户头像"  />
+										{/if}
+									</div>
+									<ul class="content_nr_lb_b_l_xxxx_btr">
+										<li>
+											<p>姓 名:</p><span>{$represent.truename}</span>
+										</li>
+										<li>
+											<p>星 级:</p>
+											<span>{if $represent.star eq ""}-{else}<img src="/public/image/home/product/xxx_{$represent.star}.png" alt="" style="margin-top:3px;"/>{/if}</span>
+										</li>
+										<li>
+											<p>好 评:</p><span style="color:#c70000;">100%</span>
+										</li>
+									</ul>
+								</div>							
+								<ul class="content_nr_lb_b_l_xxxx_bb">
+									<li>
+										<p>所在地：</p>
+										<span>{if $represent.addrareaid eq ""}不祥{else}{$represent.addrareaid}{/if}</span>
+									</li>
+									<li>
+										<p>邮&nbsp;&nbsp; 箱：</p>
+										<span style="width:124px;float:left;overflow:hidden;">
+										{if $represent.email eq ""}未填写{else}{$represent.email}{/if}</span>
+									</li>
+									<li>
+										<p>电&nbsp;&nbsp; 话：</p>
+										<span>{if $mobile.email eq ""}未填写{else}{$mobile.email}{/if}</span>
+									</li>
+									<li>
+										<p>当前状态：</p>
+										<span>在线 &nbsp;(<a class="faszz" href="/Message/mesadd/username/{$represent.prettyname}" title="点击发送站内信">发送站内信</a>)</span>
+									</li>
+								</ul>
+							{/if}
+                        </div>
+                    </div>
+                    <div class="content_nr_lb_b_l_cpfl">
+                    	<h3>本店产品分类</h3>
+                        <ul class="content_nr_lb_b_l_cpfl_b">
+							<li><a style="font-size:12px;float:left;" href="/Product/listy/seller/{$list['username']}" target="_blank">全部产品</a></li>
+							{foreach from=$custom item=cus}
+								<li><a href="/Product/listy/mycatid/{$cus.id}" title="{$cus.prettyname}">{$cus.prettyname}</a></li>
+							{/foreach}
+                        </ul>
+                    </div>
+                    <div class="content_nr_lb_b_l_xlph">
+                    	<h3>销售排行</h3>
+                        <ul class="content_nr_lb_b_l_xlph_b">
+							{foreach from=$selllist item=selll key=selk}
+								<li>
+									<div class="content_nr_lb_b_l_xlph_bl">
+										<a href="/Product/show/itemid/{$selll.id}">{if $selll.thumb neq ""}<img src="{$selll.thumb}"/>{else}<img src="/public/image/nopic_b.jpg">{/if}</a>
+									</div>
+									<div class="content_nr_lb_b_l_xlph_br">
+										<p><strong>{$selk+1}</strong>成交 {$selll.cnt} 笔</p>
+										<p><a href="/Product/show/itemid/{$selll.id}">{$selll.title}</a></p>
+										<p><span>&yen;{$selll.price}</span> {if $selll.unit}/{$selll.unit}/件{else}{/if}
+									</div>
+								</li>
+							{/foreach}
+                        </ul>
+                    </div>
+                    <div class="content_nr_lb_b_l_llls">
+                    	<h3>猜你喜欢</h3>
+                        <ul class="content_nr_lb_b_l_llls_b">
+						{foreach from=$gass item=ga}
+                        	<li>
+                            	<div class="content_nr_lb_b_l_llls_bt">
+                                	<a href="/Product/show/itemid/{$ga.id}">{if $ga.thumb  neq ""}<img style="width:125px;height:120px;" src="{$ga.thumb}" alt="" />{else}<img style="width:125px;height:120px;" src="/public/image/nopic_b.jpg" alt="" />{/if}</a>
+                                </div>
+                                <div class="content_nr_lb_b_l_llls_bb">
+                                	<h4><a href="/Product/show/itemid/{$ga.id}">{$ga.title}</a></h4>
+                                    <span>&yen;{$ga.price}{if $ga.unit}/{$ga.unit}/件{else}{/if}</span>
+                                </div>
+                            </li>
+						{/foreach}					
+                        </ul>
+                    </div>
+                </div>
+                <div class="content_nr_lb_b_r">
+                	<div class="content_nr_lb_b_rxx">
+                    	<div class="content_nr_lb_b_rxx_l">
+                        <!--onClick="window.open('{$list.thumb}')"-->
+                        	<div class="content_nr_lb_b_rxx_lt jqzoom" id="spec-n1" >
+								{if $list['thumb'] eq ""}
+									<img src="/public/image/nopic_b.jpg" jqimg="/public/image/nopic_b.jpg" alt="" />
+								{else}
+									<img src="{$list.thumb}" jqimg="{$list.thumb}" alt="" />
+								{/if}
+                            </div>
+                            <div class="content_nr_lb_b_rxx_lb">
+                                <div class="content_nr_lb_b_rxx_lbll">
+                                    <div class="content_nr_lb_b_rxx_lb_l" id="spec-left"><img src="/public/image/home/product/img_4.jpg" alt="" /></div>
+                                    <div id="spec-list">
+                                        <ul class="list-h">
+                                            <li>{if $list['thumb'] eq ""}<img src="/public/image/nopic_b.jpg">{else}<img src="{$list.thumb}">{/if}</li>
+                                            <li>{if $list['thumb1'] eq ""}<img src="/public/image/nopic_b.jpg">{else}<img src="{$list.thumb1}">{/if}</li>
+                                            <li>{if $list['thumb2'] eq ""}<img src="/public/image/nopic_b.jpg">{else}<img src="{$list.thumb2}">{/if}</li>
+                                        </ul>
+                                    </div>
+                                    <div class="content_nr_lb_b_rxx_lb_r" id="spec-right"><img src="/public/image/home/product/img_5.jpg" alt="" /></div>
+                                </div>
+                                <div class="content_nr_lb_b_rxx_lb_fx">
+                                	<div class="content_nr_lb_b_rxx_lb_fx_t">
+                                        <div class="content_nr_lb_b_rxx_lb_fx_tr">
+					<script type="text/javascript">
+					bShareOpt = {
+					    uuid: "6b1900b5-9617-4dd1-a75c-b85c0241df57", 
+					   url: "", //商品的永久链接
+					   title:"{$list.title}",
+					   summary: "非常不错的商品，我刚刚买过,大家一起来抢购吧!", //商品描述
+					   pic: "{$list.thumb}", //商品图片链接
+					   vUid: "{$_SESSION['userdata']['userid']}", //用户id，为了让您能够知道您网站的注册用户分享、喜欢了哪些商品
+					   product: "{$list.title}", //商品名称
+					   price: "{$list.price}", //商品价格
+					   brand: "{$list.prettyname}", //商品品牌
+					   //tag: "{$list.tag}", //商品标签
+					   //category: "{$catename}", //商品分类
+					   template: "1" 
+					};
+					</script>
+					<a class="bsLikeDiv" href="http://static.bshare.cn"></a>
+					<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bsync.js#uuid=6b1900b5-9617-4dd1-a75c-b85c0241df576b1900b5-9617-4dd1-a75c-b85c0241df57"></script>
+					<div class="bshare-custom" style="float:left;padding:3px;"><div class="bsPromo bsPromo2"></div><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到搜狐微博" class="bshare-sohuminiblog"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);"></a></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=1&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>		
+					</div>
+                                    </div>
+                                    <div class="content_nr_lb_b_rxx_lb_fx_b">
+                                        <a href="javascript:to_favorite({$list[id]});">加入收藏</a>
+                                    </div>
+                                </div>
+                            </div>							
+                        </div>
+						{literal}												
+						<script>
+						$(function(){			
+							$(".jqzoom").jqueryzoom({
+								xzoom:400,
+								yzoom:400,
+								offset:10,
+								position:"right",
+								preload:1,
+								lens:1
+								});
+								$("#spec-list").jdMarquee({
+								deriction:"left",
+								width:355,
+								height:56,
+								step:2,
+								speed:4,
+								delay:10,
+								control:true,
+								_front:"#spec-right",
+								_back:"#spec-left"
+							});
+							$("#spec-list img").bind("mouseover",function(){
+									var src=$(this).attr("src");
+									$("#spec-n1 img").eq(0).attr({
+									src:src.replace("\/n5\/","\/n1\/"),
+									jqimg:src.replace("\/n5\/","\/n0\/")
+							});
+							$(this).css({
+								"border":"2px solid #ff6600",
+								"padding":"1px"
+								});
+							}).bind("mouseout",function(){
+								$(this).css({
+									"border":"1px solid #ccc",
+									"padding":"2px"
+								});
+							});				
+						})
+						</script>
+						{/literal}						
+                        <div class="content_nr_lb_b_rxx_r">
+                        	<div class="content_nr_lb_b_rxx_rt">
+                            	<h2>{$list.title}</h2>
+                                <div class="content_nr_lb_b_rxx_rt_b">
+                                	<p>单&nbsp;价：<span>&yen;{$list.price}</span> /{if $list.unit eq ""}&nbsp;&nbsp;件{else}&nbsp;&nbsp;{$list.unit}{/if}</p>
+                                    <p>运&nbsp;费：<span style="color:#FF4802;">协商解决</span></p>
+									<p>品&nbsp;牌：{if $list.prettyname eq ""}未填写{else}{$list.prettyname}{/if}</p>
+                                    <p>发货地：{if $list.shipareaid eq ""}不详{else}{$list.shipareaid}{/if}</p>
+                                    <p>销&nbsp;量：累计{$list.xl} 个订单</p>
+                                    <p>库&nbsp;存：{$list.inventory}&nbsp;&nbsp;{$list.unit}</p>
+                                    <p>起订量：{$list.moq}&nbsp;&nbsp;{$list.unit}</p>
+                                    <p>评&nbsp;价：{$list.pj} 条评价</p>
+                                    <p>人&nbsp;气：{$list.hits} 人关注</p>
+                                    <p>更&nbsp;新：
+                                    
+                                    {if $list.updatetime}{$list.updatetime}{else}-{/if}</p>
+                                </div>
+                            </div>
+                            <div class="content_nr_lb_b_rxx_rb">
+							<form action='' method='post'>
+                            	<div class="content_nr_lb_b_rxx_rbt">
+                                	<span>购买数量</span>
+                                    <div class="content_nr_lb_b_rxx_rbta_l">
+                                    	<a href="javascript:void(0)" onclick='modifyNumber(0,{$list.moq},{$list.inventory})'><img src="/public/image/home/product/img_12.png" alt="减少数量" /></a>
+                                    </div>
+                                    <input id='goods_num' type='text' value='{$list.moq}' onblur='' class="content_nr_lb_b_rxx_rbta_c" onkeyup="value=value.replace(/[^\d]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" />
+                                    <div class="content_nr_lb_b_rxx_rbta_r">
+                                    	<a href="javascript:void(0)" onclick='modifyNumber(1,{$list.moq},{$list.inventory})'><img src="/public/image/home/product/img_13.png" alt="增加数量" /></a>
+                                    </div>
+                                </div>
+                                <div class="content_nr_lb_b_rxx_rbb">
+                                	<a href="javascript:void(0)" onclick="nowbuy({$list.id})"><img src="/public/image/home/product/img_10.png" alt="立即购买" /></a>
+                                    <a href="javascript:void(0)" onclick="addToCart({$list.id},{$list.moq},{$list.inventory},'{$list.status}' {if $smarty.session.member.id},{$smarty.session.member.id}{else},0{/if})"><img src="/public/image/home/product/img_1122.png" alt="加入购物车" /></a>
+                                </div>
+								
+                            </div>
+                        </div>
+                    </div>
+					{if $tongcate}
+                    <div class="content_nr_lb_b_rtltj">
+                    	<div class="content_nr_lb_b_rtltj_t">
+                        	<h3>商家推荐</h3>
+                        </div>
+						<ul class="content_nr_lb_b_rtltj_b">
+							{foreach from=$tongcate item=to}						
+								<li>
+									<div class="content_nr_lb_b_rtltj_bt">
+										<a href="/Product/show/itemid/{$to.id}">{if $to.thumb}<img src="{$to.thumb}" alt="{$to.title}" />{else}
+										<img src="/public/image/nopic_b.jpg">{/if}</a>
+									</div>
+									<h4><a href="/Product/show/itemid/{$to.id}" title="{$to.title}">{$to.title}</a></h4>
+									<span> &yen; {$to.price} / {if $to.unit eq ""} 件 {else}{$to.unit}{/if}</span>
+								</li>
+							{/foreach}						
+						</ul>
+                    </div>
+					{/if}
+                    <div class="content_nr_lb_b_rjs">
+                    	<div class="content_nr_lb_b_rjs_t">
+                        	<div class="content_nr_lb_b_rjs_tl">
+                            	<a href="#introduce" onclick="Mshow('introduce');" class="taby_2" id="t_introduce">商品介绍</a>
+                                <a href="#order" onclick="Mshow('order');" class="taby_1" id="t_order">交易记录</a>
+                            </div>
+                           
+                        </div>
+						<div id="c_introduce" style="display:block;">	
+							<ul class="content_nr_lb_b_rjs_c">
+								<li>商品名称：{$list.title}</li>
+								<li>商品编号：{$list.id}</li>
+								<li>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌：{if $list.prettyname eq ""}未填写{else}{$list.prettyname}{/if}</li>
+								<li>商品产地：{if $list.shipareaid eq ""}不详{else}{$list.shipareaid}{/if}</li>								
+							</ul>
+							<div class="content_nr_lb_b_rjs_b">{$list.content}</div>
+						</div>
+						<div id="c_order" style="display:none;">
+							{if $olist}
+								<div class="content_nr_lb_b_jyjl_b">
+									<span class="jyjl_b_mfpj">买方</span>
+									<span class="jyjl_b_dj">单价</span>
+									<span class="jyjl_b_sl">数量</span>
+									<span class="jyjl_b_sj">购买时间</span>
+									<span class="jyjl_b_zt">状态</span> 
+								</div>							
+								<ul class="content_nr_lb_b_jyjl_f">		
+									<li>
+										<ul class="content_nr_lb_b_jyjl_f_lis">
+											{foreach from=$olist item=ol}
+												<li style="border-bottom:1px dashed #c0c0c0;">
+													<div class="content_nr_lb_b_jyjl_f_lis_l">
+														买家&nbsp;（{$ol.account}）												
+													</div>
+													<div class="content_nr_lb_b_jyjl_f_lis_r">
+														<div class="content_nr_lb_b_jyjl_f_lis_rt">
+															<span class="jyjl_b_dj">{if $ol.price eq ""}<p class="nobold">不详</p>{else}&yen;{$ol.price}{/if}</span>
+															<span class="jyjl_b_sl">{if $ol.number eq ""}<p class="nobold">不详</p>{else}{$ol.number}{/if}</span>
+															<span class="jyjl_b_sj">{if $ol.addtime eq ""}-{else}{$ol.addtime}{/if}</span>
+															<span class="jyjl_b_zt">交易成功</span> 
+														</div>
+													</div>
+												</li>
+											{/foreach}
+										</ul>
+									<li>
+								</ul>
+								<div id="pages">{$dingShowpage}</div>	
+							{else}
+							<div style="padding:10px;font-size:12px;">暂无商品交易记录。</div>
+							{/if}
+						</div>
+                    </div>		
+
+					
+					<div class="content_nr_lb_b_rpj">
+                    	<div class="content_nr_lb_b_rpj_t">
+                        	<a href="javascript:void(0);" class="tabs_2" id="trades_t_1" onclick="Tbt(1);" class="a_ll">全部评价</a>
+                            <a href="javascript:void(0);" class="tabs_1" id="trades_t_2" onclick="Tbt(2);">好&nbsp; 评</a>
+							<a href="javascript:void(0);" class="tabs_1" id="trades_t_3" onclick="Tbt(3);">中&nbsp; 评</a>
+                            <a href="javascript:void(0);" class="tabs_1" id="trades_t_4" onclick="Tbt(4);">差&nbsp; 评</a>
+                        </div>						
+						<div id="trades_c_1" style="display:block;">
+							{if $pingjia}								
+								<div class="content_nr_lb_b_rpj_c">
+									<span class="rpj_c_mfpj">买方评价</span>
+									<span class="rpj_c_sj">时间</span>
+									<span class="rpj_c_dj">单价</span>
+									<span class="rpj_c_sl">数量</span>
+									<span class="rpj_c_cpymsxf">产品与描述相符</span>
+									<span class="rpj_c_qydfwtd">企业的服务态度</span>
+									<span class="rpj_c_qydfhsd">企业的发货速度</span>
+								</div>							
+								<ul class="content_nr_lb_b_rpj_b">							
+									{foreach from=$pingjia item=pj}
+										<li>
+											<ul class="content_nr_lb_b_rpj_b_lis">
+												
+												<li style="border-bottom:1px dashed #c0c0c0;">
+													<div class="content_nr_lb_b_rpj_b_lis_l">
+														买家&nbsp;（{$pj.account}）												
+													</div>
+													<div class="content_nr_lb_b_rpj_b_lis_r">
+														<div class="content_nr_lb_b_rpj_b_lis_rt">
+															<span class="rpj_c_sj">{if $pj.addtime}{$pj.addtime}{else}-{/if}</span>
+															<span class="rpj_c_dj">
+																{if $pj.price}
+																	&yen;{$pj.price}
+																{else}
+																	-
+																{/if}
+															</span>
+															<span class="rpj_c_sl">{$pj.number}</span>
+															<div class="rpj_c_cpymsxf">
+																{if $pj.tally}
+																	<img src="/public/image/home/product/xxx_{$pj.tally}.png" alt="" />
+																{else}
+																	<img src="/public/image/home/product/xxx_0.png" alt="" />
+																{/if}
+															</div>
+															<div class="rpj_c_qydfwtd">
+																{if $pj.attitude}
+																	<img src="/public/image/home/product/xxx_{$pj.attitude}.png" alt="" />
+																{else}
+																	<img src="/public/image/home/product/xxx_0.png" alt="" />
+																{/if}
+															</div>
+															<div class="rpj_c_qydfhsd">
+																{if $pj.speed}
+																	<img src="/public/image/home/product/xxx_{$pj.speed}.png" alt="" />
+																{else}
+																	<img src="/public/image/home/product/xxx_0.png" alt="" />
+																{/if}
+															</div>
+														</div>
+														<p>{if $pj.content}{$pj.content}{else}暂无评论{/if}</p>
+														{if $pj.grade eq "good"}<!--是3，好评，就不显示-->
+															{if $pj.reply}
+																<div class="pl_js"><span>解释：</span>{$pj.reply}</div>
+															{/if}
+														{/if}
+													</div>
+												</li>
+																						
+												
+											</ul>
+										</li>
+									{/foreach}
+								</ul>
+								{else}
+									<div style="padding:10px;font-size:12px;">暂无商品评价。</div>
+							{/if}
+						</div>
+						<div id="trades_c_2" style="display:none;">
+							{if $good}
+								<div class="content_nr_lb_b_rpj_c">
+									<span class="rpj_c_mfpj">买方评价</span>
+									<span class="rpj_c_sj">时间</span>
+									<span class="rpj_c_dj">单价</span>
+									<span class="rpj_c_sl">数量</span>
+									<span class="rpj_c_cpymsxf">产品与描述相符</span>
+									<span class="rpj_c_qydfwtd">企业的服务态度</span>
+									<span class="rpj_c_qydfhsd">企业的发货速度</span>
+								</div>							
+								<ul class="content_nr_lb_b_rpj_b">							
+									{foreach from=$good item=pjgood}
+										<li>
+											<ul class="content_nr_lb_b_rpj_b_lis">
+												
+												<li style="border-bottom:1px dashed #c0c0c0;">
+													<div class="content_nr_lb_b_rpj_b_lis_l">
+														买家&nbsp;（{$pjgood.account}）												
+													</div>
+													<div class="content_nr_lb_b_rpj_b_lis_r">
+														<div class="content_nr_lb_b_rpj_b_lis_rt">
+															<span class="rpj_c_sj">{if $pjgood.addtime}{$pjgood.addtime}{else}-{/if}</span>
+															<span class="rpj_c_dj">
+																{if $pjgood.price}
+																	&yen;{$pjgood.price}
+																{else}
+																	-
+																{/if}
+															</span>
+															<span class="rpj_c_sl">{$pjgood.number}</span>
+															<div class="rpj_c_cpymsxf">
+																{if $pjgood.tally}
+																	<img src="/public/image/home/product/xxx_{$pjgood.tally}.png" alt="" />
+																{else}
+																	<img src="/public/image/home/product/xxx_0.png" alt="" />
+																{/if}
+															</div>
+															<div class="rpj_c_qydfwtd">
+																{if $pjgood.attitude}
+																	<img src="/public/image/home/product/xxx_{$pjgood.attitude}.png" alt="" />
+																{else}
+																	<img src="/public/image/home/product/xxx_0.png" alt="" />
+																{/if}
+															</div>
+															<div class="rpj_c_qydfhsd">
+																{if $pjgood.speed}
+																	<img src="/public/image/home/product/xxx_{$pjgood.speed}.png" alt="" />
+																{else}
+																	<img src="/public/image/home/product/xxx_0.png" alt="" />
+																{/if}
+															</div>
+														</div>
+														<p>{if $pjgood.content}{$pjgood.content}{else}暂无评论{/if}</p>
+														{if $pjgood.grade eq "good"}<!--是3，好评，就不显示-->
+															{if $pjgood.reply}
+																<div class="pl_js"><span>解释：</span>{$pjgood.reply}</div>
+															{/if}
+														{/if}
+													</div>
+												</li>
+																						
+												
+											</ul>
+										</li>
+									{/foreach}
+								</ul>
+									{else}
+									<div style="padding:10px;font-size:12px;">暂无商品好评。</div>
+							{/if}
+						</div>
+						<div id="trades_c_3" style="display:none;">
+							{if $medium}
+								<div class="content_nr_lb_b_rpj_c">
+									<span class="rpj_c_mfpj">买方评价</span>
+									<span class="rpj_c_sj">时间</span>
+									<span class="rpj_c_dj">单价</span>
+									<span class="rpj_c_sl">数量</span>
+									<span class="rpj_c_cpymsxf">产品与描述相符</span>
+									<span class="rpj_c_qydfwtd">企业的服务态度</span>
+									<span class="rpj_c_qydfhsd">企业的发货速度</span>
+								</div>							
+								<ul class="content_nr_lb_b_rpj_b">							
+									{foreach from=$medium item=pjme}
+										<li>
+											<ul class="content_nr_lb_b_rpj_b_lis">
+												
+												<li style="border-bottom:1px dashed #c0c0c0;">
+													<div class="content_nr_lb_b_rpj_b_lis_l">
+														买家&nbsp;（{$pjme.account}）												
+													</div>
+													<div class="content_nr_lb_b_rpj_b_lis_r">
+														<div class="content_nr_lb_b_rpj_b_lis_rt">
+															<span class="rpj_c_sj">{if $pjme.addtime}{$pjme.addtime}{else}-{/if}</span>
+															<span class="rpj_c_dj">
+																{if $pjme.price}
+																	&yen;{$pjme.price}
+																{else}
+																	-
+																{/if}
+															</span>
+															<span class="rpj_c_sl">{$pjme.number}</span>
+															<div class="rpj_c_cpymsxf">
+																{if $pjme.tally}
+																	<img src="/public/image/home/product/xxx_{$pjme.tally}.png" alt="" />
+																{else}
+																	<img src="/public/image/home/product/xxx_0.png" alt="" />
+																{/if}
+															</div>
+															<div class="rpj_c_qydfwtd">
+																{if $pjme.attitude}
+																	<img src="/public/image/home/product/xxx_{$pjme.attitude}.png" alt="" />
+																{else}
+																	<img src="/public/image/home/product/xxx_0.png" alt="" />
+																{/if}
+															</div>
+															<div class="rpj_c_qydfhsd">
+																{if $pjme.speed}
+																	<img src="/public/image/home/product/xxx_{$pjme.speed}.png" alt="" />
+																{else}
+																	<img src="/public/image/home/product/xxx_0.png" alt="" />
+																{/if}
+															</div>
+														</div>
+														<p>{if $pjme.content}{$pjme.content}{else}暂无评论{/if}</p>
+														{if $pjme.grade eq "good"}<!--是3，好评，就不显示-->
+															{if $pjme.reply}
+																<div class="pl_js"><span>解释：</span>{$pjme.reply}</div>
+															{/if}
+														{/if}
+													</div>
+												</li>
+																						
+												
+											</ul>
+										</li>
+									{/foreach}
+								</ul>							
+							{else}
+							<div style="padding:10px;font-size:12px;">暂无商品中评。</div>
+							{/if}
+						</div>
+						<div id="trades_c_4" style="display:none;">
+							{if $bad}
+								
+								<div class="content_nr_lb_b_rpj_c">
+									<span class="rpj_c_mfpj">买方评价</span>
+									<span class="rpj_c_sj">时间</span>
+									<span class="rpj_c_dj">单价</span>
+									<span class="rpj_c_sl">数量</span>
+									<span class="rpj_c_cpymsxf">产品与描述相符</span>
+									<span class="rpj_c_qydfwtd">企业的服务态度</span>
+									<span class="rpj_c_qydfhsd">企业的发货速度</span>
+								</div>							
+								<ul class="content_nr_lb_b_rpj_b">							
+									{foreach from=$bad item=pjbad}
+										<li>
+											<ul class="content_nr_lb_b_rpj_b_lis">
+												
+												<li style="border-bottom:1px dashed #c0c0c0;">
+													<div class="content_nr_lb_b_rpj_b_lis_l">
+														买家&nbsp;（{$pjbad.account}）												
+													</div>
+													<div class="content_nr_lb_b_rpj_b_lis_r">
+														<div class="content_nr_lb_b_rpj_b_lis_rt">
+															<span class="rpj_c_sj">{if $pjbad.addtime}{$pjbad.addtime}{else}-{/if}</span>
+															<span class="rpj_c_dj">
+																{if $pjbad.price}
+																	&yen;{$pjbad.price}
+																{else}
+																	-
+																{/if}
+															</span>
+															<span class="rpj_c_sl">{$pjbad.number}</span>
+															<div class="rpj_c_cpymsxf">
+																{if $pjbad.tally}
+																	<img src="/public/image/home/product/xxx_{$pjbad.tally}.png" alt="" />
+																{else}
+																	<img src="/public/image/home/product/xxx_0.png" alt="" />
+																{/if}
+															</div>
+															<div class="rpj_c_qydfwtd">
+																{if $pjbad.attitude}
+																	<img src="/public/image/home/product/xxx_{$pjbad.attitude}.png" alt="" />
+																{else}
+																	<img src="/public/image/home/product/xxx_0.png" alt="" />
+																{/if}
+															</div>
+															<div class="rpj_c_qydfhsd">
+																{if $pjbad.speed}
+																	<img src="/public/image/home/product/xxx_{$pjbad.speed}.png" alt="" />
+																{else}
+																	<img src="/public/image/home/product/xxx_0.png" alt="" />
+																{/if}
+															</div>
+														</div>
+														<p>{if $pjbad.content}{$pjbad.content}{else}暂无评论{/if}</p>
+														{if $pjbad.grade eq "good"}<!--是3，好评，就不显示-->
+															{if $pjbad.reply}
+																<div class="pl_js"><span>解释：</span>{$pjbad.reply}</div>
+															{/if}
+														{/if}
+													</div>
+												</li>
+																						
+												
+											</ul>
+										</li>
+									{/foreach}
+								</ul>						
+							{else}
+							<div style="padding:10px;font-size:12px;">暂无商品差评。</div>
+							{/if}
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+</div>
+<script src="__JS__/home/cart.js"></script>
+{include file='Public/footer.html'}
+

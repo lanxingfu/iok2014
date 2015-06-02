@@ -1,0 +1,32 @@
+	<div class="header_top">
+	<!-- 头部的头部  -->      
+    	<div class="header_top_nr">
+            <div class="header_top_left">
+				{if $smarty.session.member.id eq ''}
+					<span class="one">您好 , 欢迎来到我行网</span>
+					<div class="header_top_L_dl">
+						<a href="/Login">登录</a>
+						<a href="/Register" style="background:none;">注册</a>
+					</div>
+				{else}
+					<span class="one">欢迎 , 
+						{if $smarty.session.member.membertype eq 'company'}
+							{$smarty.session.member.company|default:$smarty.session.member.account}
+						{else}
+							{$smarty.session.member.prettyname|default:$smarty.session.member.account}
+						{/if}
+					</span>
+					<div class="header_top_L_dl">
+						<a {if $smarty.session.member.gradeid|in_array:array(1,2,3,7,8,9)} href="/Company" {elseif $smarty.session.member.gradeid|in_array:array(4,5,6)} href="/Profile" {/if} >我的商务室</a>
+						<a href="/Misc/logout" style="background:none;">退出</a>
+					</div>
+				{/if}
+			</div>
+            <div class="header_top_right">
+				{if $smarty.session.member.id neq ''}<a href="__APP__/Cart" id="iokcartlink">购物车({if $productTotal|count gt 0}{$productTotal}{else}0{/if})</a>{/if}
+                <a href="/About">关于我们</a>
+                <a href="/Helps">帮助中心</a>
+				<a style="background:none;" onclick="addFavorite(this.href, this.title)" rel="sidebar" title="我行网-中国商品交易所" href="">收藏本页</a>	
+			</div>
+        </div>
+    </div>

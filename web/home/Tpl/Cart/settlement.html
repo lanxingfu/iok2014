@@ -1,0 +1,234 @@
+﻿{include file="Public/header.html"}
+{include file="Cart/carttop.html"}
+<link href="__CSS__/home/product-order.css" rel="stylesheet" />
+<link href="__CSS__/home/add_address_box.css" rel="stylesheet" />
+<script src="__JS__/base.js"></script>
+<div class='content'>
+<div class="conter_center">
+<div class="gwc_box">
+	<form method="post" name="orderform" id="orderform" onsubmit="return checkform()" >
+		<div class="gwc_conter">
+			<div class="gwc_conter_nr">
+				<div class="gwc_conter_nr_t">
+					<h2>我的购物车</h2>
+				</div>
+				<table>
+					<tbody>
+						<tr style="background:#eef0f1;height:28px;">
+							<th class="gwc_tp">缩略图</th>
+							<th class="gwc_sp">商品</th>
+							<th class="gwc_jg">价格</th>
+							<th class="gwc_kc">库存</th>
+							<th class="gwc_qdl">起订量</th>
+							<th class="gwc_sl">数量</th>
+							<th class="gwc_xj">小计</th>
+							<!--<th class="gwc_cz">操作</th>-->
+						</tr>
+						{if $mycart|count > 0}
+						{foreach key=key item=item from=$mycart}
+						<input name="productid[]" type="hidden" value="{$item.id}" />
+						<input id='price_{$item.id}' type="hidden" value="{$item.price}" />
+						<input id='inventory_{$item.id}' type="hidden" value="{$item.inventory}" />
+						<input id='moq_{$item.id}' type="hidden" value="{$item.moq}" />
+						<tr class="gwc_tr">
+							<td class="gwc_tp" align="center"> {if $item.thumb neq ''} <a href="__APP__/Product/show/id/{$item.id}" title="{$item.title}"><img src="{$item.thumb}" width='60px' height='60px' alt="商品图" /></a> {/if}
+								</td>
+							<td class="gwc_sp" valign="middle" style="padding-top:4px;"><a href="__APP__/Product/show/id/{$item.id}">{$item.title}</a></td>
+							<td class="gwc_jg"><strong>&yen;{$item.price}</strong></td>
+							<td class="gwc_kc"><span>{$item.inventory}</span></td>
+							<td class="gwc_qdl"><span>{$item.moq}</span></td>
+							<td class="gwc_sl"><div class="input_left">
+							<input type="button" id="goods_max_{$item.id}"  value="" onclick = "modifyNum(0,{$item.id})" />
+								</div>
+								<div class="input_conter">
+									<input type="text" id='quantity_{$item.id}' rel="{$item.id}" name="quantity[]" value="{$item.quantity}"  onkeyup="value=value.replace(/[^\d]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" />
+								</div>
+								<div class="input_right">
+									<input id="goods_min_{$item.id}" type="button" value="" onclick = "modifyNum(1,{$item.id})" />
+								</div></td>
+							<td class="gwc_xj"><strong id="small_note_{$item.id}">&yen;{$item.price*$item.quantity}</strong></td>
+							<!--<td class="gwc_cz"><a href="javascript:void(0);" onclick="deleteSingle({$item.id});">移出购物车</a></td>-->
+						</tr>
+						<tr class="gwc_tbz">
+							<td colspan="9"><div class="gwc_bottom_nr_td">
+									<div class="gwc_bottom_nr_c"> <span>给卖家留言：</span>
+										<input type="text" name="note[]" onchange="$('#goods_num_{$item.id}').trigger('change');" value="{$item.note}" />
+									</div>
+								</div></td>
+						</tr>
+						{/foreach}
+						{else}
+						<tr style="text-align:center; line-height=60px; width:938px; color:#C70000" >
+							<td   colspan='9' style="text-align:center; line-height=60px; width:938px; color:#C70000" ><h2>您的购物车还是空的，赶紧行动吧！</h2></td>
+						</tr>
+						{/if}
+						</tbody>
+					
+				</table>
+			</div>
+		</div>
+		<input name="ordertype" type="hidden" id="ordertype" value="{$ordertype}" />
+		<div class="gwc_bottom">
+			<div class="gwc_bottom_nr">
+				<div class="gwc_bottom_nr_r"> <span>费用总计</span> <strong id="total_price">&yen;{$price_total}</strong> </div>
+			</div>
+			<div class="hddym_qrshdz">
+				<div class="gwc_conter_nr_con_top">
+					<h3><img src="__IMAGES__/home/product/gwc_xtb_11.png" alt="" /><span>确定收货地址</span></h3>
+					<p><a href="/index.php/Address/companylist">管理收货地址</a></p>
+				</div>
+				<div class="hddym_qrshdz_nr" style="padding-top:0px;">
+					<div class="hddym_qrshdz_nr_l">常用地址：</div>
+					<div class="hddym_qrshdz_nr_r"> {if $addressInfo}
+						{foreach key=k item=vo from=$addressInfo}
+						<div class="hddym_qrshdz_nr_r_o">
+							<label>
+							<input type="radio" name="addrid"  value="{$vo.id}" {if $vo.isdefault eq 1 and ($k+1) eq 1 } checked="checked" {elseif ($k+1) eq 1} checked="checked" {else}{/if} />
+							<p>{$vo.areaid},{$vo.address}{if $vo.postcode neq '' },{$vo.postcode}{/if},{$vo.prettyname}{if $vo.telephone neq '' },{$vo.telephone}{/if},{$vo.mobile}</p>
+							</label>
+						</div>
+						{/foreach}
+						{else}
+						<div class="hddym_qrshdz_nr_r_o" >
+							<p> 暂无常用收货地址 <span style="color:#999">&nbsp;&nbsp;* 新增地址后，刷新当前页面。</span> </p>
+						</div>
+						{/if}
+						<div class="add_address" > <a href="javascript:void();" onclick="add_address({$smarty.session.member.id});">添加新地址</a> </div>
+					</div>
+				</div>
+			</div>
+			<div class="hddym_fpxx">
+				<div class="gwc_conter_nr_con_top">
+					<h3><img src="__IMAGES__/home/product/gwc_xtb_12.png" alt="" /><span>发票信息</span></h3>
+					<p id="fp_p"><a onclick="Isfa_piao()" id="_isfao_piao_" href="javascript:void(0);">[ + 发票信息]</a></p>
+				</div>
+				<div class="hddym_fpxx_nr" id="fpnr" style="display:none">
+					<div class="hddym_fpxx_nr_l"> <span>发票类型</span> </div>
+					<div class="hddym_fpxx_nr_r">
+						<div class="hddym_fpxx_nr_r_o" id="fapiaoleixing">
+							<label>
+								<input name="leixing" type="radio" id="_ptfp_" onclick="Ptongfp()" value="1" rel="普通发票" 
+								{if $invoice.invoicetype eq 1 } checked="checked" {/if} />
+								普通发票</label>
+							<label>
+								<input name="leixing" value="2" id="_zzsfp_" onclick="Zzsfp()" rel="增值税发票" type="radio"  
+								{if $invoice.invoicetype eq 2 } checked="checked" {/if} />
+								增值税发票</label>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 普通发票 -->
+				<div class="hddym_fpxx_nr" id="fpnr_0" style="display:none">
+					<div class="hddym_fpxx_nr_l"> <span>发票抬头</span> <span id="company_name" style="display:none">单位名称</span> <span>发票内容</span> </div>
+					<div class="hddym_fpxx_nr_r">
+						<div class="hddym_fpxx_nr_r_o" id="fapiaott">
+						    <input type="hidden" id="fid" name="fid" value="{$invoice.id}">
+							<label>
+								<input name="taitou" type="radio" id="_geren_" onclick="Ge_ren()" value="1" rel='个人' 
+								{if $invoice.headtitle eq 1 } checked="checked" {/if} />
+								个人</label>
+							<label>
+								<input name="taitou" type="radio" id="_danwei_" onclick="Dan_wei()" value="2" rel='单位' {if $invoice.headtitle eq 2 } checked='checked' {/if} />
+								单位</label>
+						</div>
+						<div class="hddym_fpxx_nr_r_o" id="company_detail" style="display:none">
+							<input size="50" id="danwei_mingcheng1" name="" value="{$invoice.company}" type="text">
+							<span id="danwei_mingcheng1" class="f_red"></span> </div>
+						<div class="hddym_fpxx_nr_r_o" id="fapiaonr">
+							<label>
+								<input name="neirong" value="1" id="_mingxi_" checked="checked" type="radio" rel='明细' 				{if $invoice.content eq 1 } checked='checked' {/if} />
+								明细</label>
+							<label>
+								<input name="neirong" value="2" id="_bangong_" type="radio" rel='明细办公用品' {if $invoice.content eq 2 }checked="checked" {/if} />
+								明细办公用品</label>
+							<label>
+								<input name="neirong" value="3" id="_peijian_" type="radio" rel='电脑配件' {if $invoice.content eq 3 } checked="checked" {/if} />
+								电脑配件</label>
+							<label>
+								<input name="neirong" value="4" id="_haocai_" type="radio" rel='耗材' {if $invoice.content eq 4 } checked="checked" {/if} />
+								耗材</label>
+						</div>
+						<div class="hddym_fpxx_nr_r_oy"> <a href="javascript:void(0);" id="fapiao_but"><img src="__IMAGES__/home/product/gwc_xtb_13.png" alt="保存发票" /></a> </div>
+					</div>
+				</div>
+				
+				<!-- 增值税发票 -->
+				<div class="hddym_fpxq_nr" id="fpnr_1" style="display:none;">
+					<div class="hddym_fpxq_nr_r_p">
+						<p> <span>单位名称</span>
+							<input type="text" id="danwei_mingcheng" value="{$invoice.company}" size="50">
+						</p>
+						<p> <span>纳税人识别号</span>
+							<input type="text" id="nashuiren" value="{$invoice.taxpayer}" size="50">
+						</p>
+						<p> <span>注册地址</span>
+							<input type="text" id="zhuce_dizhi" value="{$invoice.address}" size="50">
+						</p>
+						<p> <span>注册电话</span>
+							<input type="text" id="zhuce_dianhua" value="{$invoice.telephone}" size="50">
+						</p>
+						<p> <span>开户银行</span>
+							<input type="text" id="kaihu_yinhang" value="{$invoice.bank}" size="50">
+						</p>
+						<p> <span>银行账户</span>
+							<input type="text" id="yinhang_zhanghu" value="{$invoice.account}" size="50">
+						</p>
+						<h5>首次开具增值税专用发票的客户，请先联系卖家商务代表，确定卖家可以开具增值税发票前提下填写发票信息，然后提供加盖公章的营业执照副本、税务登记证副本、一般纳税人资格证明、银行开户许可证复印件，通过船政或邮件发送卖家商务代表，商务代表收到您的开票信息后，会尽快审核，联系卖家给您开具增值税发票。</h5>
+						<h5 style="color:#F00">注:有效增值税发票开票资质仅为一个</h5>	 
+					</div>
+					<div class="hddym_fpxq_nr_r_nr">
+						<p> <span>发票内容</span><input name="om" type="radio" value="1" rel='明细' checked="checked"	/>明细</p>
+					</div>
+					<div class="hddym_fpxq_nr_r_oy" style="padding-left:94px;"> <a href="javascript:void(0);" id="fapiao_but2"><img src="__IMAGES__/home/product/gwc_xtb_13.png" alt="保存发票" /></a> </div>
+				</div>
+				<div class="hddym_fpxx_nr" id="fpnr_2" style="display:none">
+					<div class="hddym_fpxx_nr_l"> <span>发票类型</span> <span>发票抬头</span> <span>发票内容</span> </div>
+					<div class="hddym_fpxx_nr_r">
+						<div class="hddym_fpxx_nr_r_o" id="fpnr_2_1">
+							<label> {if $invoice.invoicetype eq 1 }普通发票
+								{elseif $invoice.invoicetype eq 2 }增值税发票
+								{else}未知
+								{/if} </label>
+						</div>
+						<div class="hddym_fpxx_nr_r_o" id="fpnr_2_2">
+							<label> {if $invoice.headtitle eq 1 }个人
+								{elseif $invoice.headtitle eq 2 }单位
+								{else}未知
+								{/if} </label>
+						</div>
+						<div class="hddym_fpxx_nr_r_o" id="fpnr_2_3">
+							<label> {if $invoice.content eq 1 }明细
+										{elseif $invoice.content eq 2 }明细办公用品
+										{elseif $invoice.content eq 3 }电脑配件
+										{elseif $invoice.content eq 4 }耗材
+										{else}未知
+								{/if} </label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="gwc_bottom_b"> 
+			   <input type="image" name="" src="__IMAGES__/home/product/gwc_xtb_9.png"      />
+			  {if  $mycart|count > 0}
+				<input type="image" name="" src="__IMAGES__/home/product/gwc_xtb_8_2.png" style="float:left;" />
+			  {/if}
+				
+			</div>
+		</div>
+		<input type="hidden" name="form_tokenid" value="{$smarty.session.form_tokenid}">
+	</form>
+</div>
+</div>
+</div>
+{include file="Public/footer.html"}
+<script src="__JS__/home/cart.js"></script> 
+<script src="__JS__/home/order-invoice.js"></script> 
+<!--如果没有收货地址则强制弹出添加地址框--> 
+{if !$addressInfo} 
+<script> 
+	$(function($) {literal}{{/literal}
+	   add_address();
+	{literal}}{/literal});
+</script> 
+{/if} 

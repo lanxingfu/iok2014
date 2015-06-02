@@ -1,0 +1,167 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<script type="text/javascript">
+function change(data){
+	var  first = data;
+	$.ajax({
+	   type: "POST",
+	   dataType:"json",
+	   url: "/iokadmin.php?m=Parameter&a=find",
+	   data: "projectid=" + data,
+	   success: function(msg){
+		if(msg!=0){
+			$("#selright").find('option').remove();
+			$.each(msg, function(i, n){
+				$("#selright").append("<option value="+n.id+">"+n.prettyname+"</option>");
+				
+			});
+		}else{
+			alert('该项项目没有模块名还不能添加接口即将跳转添加项目模块页面');
+			gotoUrl('/iokadmin.php?m=Model&a=edit');
+		}
+   }
+});
+}
+function secchange(data){
+	var  first = data;
+	$.ajax({
+	   type: "POST",
+	   dataType:"json",
+	   url: "/iokadmin.php?m=Parameter&a=paramfind",
+	   data: "moduleid=" + data,
+	   success: function(msg){
+		if(msg!=0){
+			$("#secright").find('option').remove();
+			$.each(msg, function(i, n){
+				$("#secright").append("<option value="+n.id+">"+n.requesturl+"</option>");
+				
+			});
+		}else{
+			alert('该项项目没有模块名还不能添加接口即将跳转添加项目模块页面');
+			gotoUrl('/iokadmin.php?m=Interface&a=edit');
+		}
+   }
+});
+}
+</script>
+		<!-- content -->
+		<div id="content">
+			{include file="Parameter/leftmenu.inc.htm"}
+			<!-- end content / left -->
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>参数管理 》{if $res['id']!=''}编辑信息{else}添加参数{/if}</h5>
+					</div>
+					<!-- end box / title -->
+					<form id="frm" method="post">
+					<div class="form">
+						<div class="fields">
+							<div class="field  field-first">
+								<div class="label">项目名称</div>
+								<div class="input">
+								
+									<select name="projectid" onclick="change(this.value)" >
+										{if $res['id'] eq ''}<option value="">--请选择--</option>
+										
+											{foreach $rec as $v}
+												<option value="{$v['id']} ">{$v['prettyname']}</option>
+											{/foreach}
+										{else}
+											<option value="{$res['projectid']}" selected="selected">{$res['name']}</option>
+										{/if}
+									</select>
+								</div>
+							</div>
+							<div class="field field-first">
+							<div class="label">模块名称</div>
+								<div class="input">
+									<select name="sencend" id="selright"  {if $res['id'] eq ''}onclick="secchange(this.value)"{/if}>
+										{if $res['id'] eq ''}<option value="" selected="selected">--请选择--</option>{else}<option value="{$res['moduleid']}" selected="selected">{$res['mname']}</option>{/if}
+									</select>
+								</div>
+							</div>
+							<div class="field">
+							<div class="label">接口名称</div>
+								<div class="input">
+									<select name="secend" id="secright" >
+										{if $res['id'] eq ''}<option value="" selected="selected">--请选择--</option>{else}<option value="{$res['interfaceid']}" selected="selected">{$res['requesturl']}</option>{/if}
+									</select>
+								</div>
+							</div>
+							<div class="field">
+							<div class="label">参数字段</div>
+								<div class="input">
+									<input type="text" name="fieldname" value="{$res['fieldname']}" class="small"  />
+								</div>
+								<div class="tip">{tip id='nameid' default='请输入参数字段'}</div>
+							</div>
+							
+							<div class="field">
+								<div class="label label-textarea">参数字段类型</div>
+								<div class="radios">
+									<div class="radio">
+										<input id="radio-1" type="radio" {if {$res['paramtype']} eq '1'}checked="checked"{/if} value="1" name="support">
+										<label for="radio-1">请求</label>
+										<input id="radio-2" type="radio" {if {$res['paramtype']} eq '0'}checked="checked"{/if} value="0" name="support">
+										<label for="radio-2">返回</label>
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label label-textarea">参数字段类型</div>
+								<div class="radios">
+									<div class="radio">
+										<input id="radio-1" type="radio" value="1" name="meth" {if {$res['fieldtype']} eq '1'}checked="checked"{/if}/>
+										<label for="radio-1">string</label>
+										<input id="radio-2" type="radio" value="2" name="meth" {if {$res['fieldtype']} eq '2'}checked="checked"{/if}/>
+										<label for="radio-2">integer</label>
+										<input id="radio-3" type="radio" value="3" name="meth" {if {$res['fieldtype']} eq '3'}checked="checked"{/if}/>
+										<label for="radio-3">float</label>
+										<input id="radio-3" type="radio" value="4" name="meth" {if {$res['fieldtype']} eq '4'}checked="checked"{/if}/>
+										<label for="radio-3">bool</label>
+										<input id="radio-3" type="radio" value="5" name="meth" {if {$res['fieldtype']} eq '5'}checked="checked"{/if}/>
+										<label for="radio-3">dictionary</label>
+										<input id="radio-3" type="radio" value="6" name="meth" {if {$res['fieldtype']} eq '6'}checked="checked"{/if}/>
+										<label for="radio-3">array</label>
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label label-textarea">参数是否可选</div>
+								<div class="radios">
+									<div class="radio">
+										<input id="radio-1" type="radio" value="1"  {if {$res['isoptional']} eq '1'}checked="checked"{/if} name="isoptional"/>
+										<label for="radio-1">是</label>
+										<input id="radio-2" type="radio" value="0" {if {$res['isoptional']} eq '0'}checked="checked"{/if} name="isoptional"/>
+										<label for="radio-2">否</label>
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label label-textarea">备注</div>
+								<div class="textarea textarea-editor">
+									<textarea name="note" cols="50" rows="12" class="editor">{$res['note']|nl2br|escape:'html'}</textarea>
+								</div>
+							</div>	
+							<div class="buttons">
+								<input type="hidden" name="m" value="Parameter" />
+								<input type="hidden" name="a" value="submit" />
+								<input type="hidden" name="id" value="{$res['id']}" />
+								<input type="submit" name="submit" value="提交" />
+								<input type="reset" name="reset" value="返回" onclick="javascript:gotoUrl('/iokadmin.php?m=Parameter{if $res['id']}&a=detail&id={$res['id']}{/if}')" />
+							</div>
+						</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

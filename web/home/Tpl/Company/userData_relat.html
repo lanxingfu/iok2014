@@ -1,0 +1,151 @@
+{include file="Public/header_room.html" }
+{include file="Public/room_top.html" }
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html" }
+			</div>
+			<!-- css -->
+			<link href="/public/style/home/room/companydata.css" rel="stylesheet" />
+			<script type="text/javascript" src="/public/script/base.js"></script><!-- 地区 -->
+			<!-- document -->
+			<div class="content_sws_nr_right" id="iframe_main">
+				<div class="tabBar">
+					<div class="content_sws_nr_right_lgrzl">
+						<div class="content_sws_nr_r_lgrzl_t">
+							{include file="Public/welcom.html" }
+						</div>
+					</div>
+					<div class="hd">
+						{include file="Company/fare.html" }
+					</div>
+					<div class="bd">
+						<form method="post" action="/Company/submitcontact" onsubmit="return $.iokPlugin.validateCallback(this)" name="saveData" enctype="multipart/form-data">
+							<div class="conWrap" style="width: 1500px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: 0px;">
+								<div class="content_sws_nr_right_b">
+									<h3>联系人</h3>
+									<ul class="content_sws_nr_right_b_lxr">
+										<li>
+											<h4>真实姓名<span style="color:red">*</span> </h4>
+											<div class="content_sws_nr_right_b_lxr_xm">
+												<input type="text" value="{$relation_data.prettyname}" name="prettyname" />
+												<p>&nbsp;&nbsp;{tip id='tprettyname' default=''}</p>
+											</div>
+										</li>
+										<li>
+											<h4> 性别<span style="color:red">*</span> </h4>
+											<div class="content_sws_nr_right_b_lxr_xb">
+												<label>
+													<input type="radio" value="1" name="gender" {if $relation_data['gender'] neq 2} checked {/if}  /> 先生
+												</label>
+												<label>
+													<input type="radio" value="2" name="gender" {if $relation_data['gender'] eq 2} checked {/if} /> 女士
+												</label>
+												<p style="float: left;margin-left: 72px;">&nbsp;
+													{tip id='tgender' default=''}
+												</p>
+											</div>
+										</li>
+										<li>
+											<h4>部门</h4>
+											<div class="content_sws_nr_right_b_lxr_bm">
+												<input type="text" value="{$relation_data.department}" name="department" />
+												<p>&nbsp;&nbsp;{tip id='tdepartment' default=''}</p>
+											</div>
+										</li>
+										<li>
+											<h4>职位</h4>
+											<div class="content_sws_nr_right_b_lxr_zw">
+												<input type="text" value="{$relation_data.position}" name="position" />
+												<p>&nbsp;&nbsp;{tip id='tposition' default=''}</p>
+											</div>
+										</li>
+										<li>
+											<h4> 手机号码<span style="color:red">*</span> </h4>
+											<div class="content_sws_nr_right_b_lxr_sjhm">
+												<input type="text" value="{$relation_data.mobile}" name="mobile" />
+												<p>&nbsp;&nbsp;{tip id='tmobile' default=''}</p>
+											</div>
+										</li>
+										<li>
+											<h4> E-mail<span style="color:red">*</span> </h4>
+											<div class="content_sws_nr_right_b_lxr_yx">
+												<input type="text" value="{$relation_data.email}" name="email"/>
+												<p>&nbsp;&nbsp;{tip id='temail' default=''}</p>
+											</div>
+										</li>
+										<li>
+											<h4>QQ</h4>
+											<div class="content_sws_nr_right_b_lxr_QQ">
+												<input type="text" value="{$relation_data.qq}" name="qq" />
+												<p>&nbsp;&nbsp;{tip id='tqq' default=''}</p>
+											</div>
+										</li>
+									</ul>
+									<h3>企业</h3>
+									<ul class="content_sws_nr_right_b_qiye">
+										<li>
+											<h4>公司地址<span style="color:red">*</span> </h4>
+											<div class="content_sws_nr_right_b_rgsdq">
+												<div class="content_sws_nr_right_b_rgsdq_t"  style="padding:0px;">
+													{'addrareaid'|ajax_area_select:'请选择':$relation_data.addrareaid}
+												</div>
+												<p style="padding:5px;">&nbsp;&nbsp;{tip id='taddrareaid' default=''}</p>
+											</div>
+										</li>
+										<li>
+											<h4>详细地址<span style="color:red">*</span> </h4>
+											<div class="content_sws_nr_right_b_qiye_gsdh">
+												<div style="float:left;">
+													<input type="text" value="{$relation_data.address}" name="address" />
+												</div>
+												<p>&nbsp;&nbsp;{tip id='taddress' default=''}</p>
+											</div>
+										</li>
+										<li>
+											<h4>邮政编码</h4>
+											<div class="content_sws_nr_right_b_qiye_yb">
+												<input type="text" value="{$relation_data.postcode}" name="postcode" />
+											</div>
+										</li>
+										<li>
+											<h4>公司电话<span style="color:red">*</span> </h4>
+											<div class="content_sws_nr_right_b_qiye_gsdh">
+												<input type="text" value="{$relation_data.telephone}" name="telephone" />
+												<p>&nbsp;&nbsp;{tip id='ttelephone' default='格式：010-11111111'}</p>
+											</div>
+										</li>
+										<li>
+											<h4>公司传真</h4>
+											<div class="content_sws_nr_right_b_qiye_gscz">
+												<input type="text" value="{$relation_data.fax}" name="fax" />
+												<p>&nbsp;&nbsp;{tip id='tfax' default=''}</p>
+											</div>
+										</li>
+										<li>
+											<h4>公司网址</h4>
+											<div class="content_sws_nr_right_b_qiye_gswz">
+												<input type="text" value="{$relation_data.website}" name="website" />
+												<p>&nbsp;&nbsp;{tip id='twebsite' default=''}</p>
+												<div style="float:left;">例如：http://www.iokokok.com 或 www.iokokok.com</div>
+											</div>
+										</li>
+										<li>
+											<div class="content_sws_nr_right_b_rbcfh">
+												<input type="submit" name="submit" value="保  存" class="btn"/>
+											</div>
+										</li>
+									</ul>
+								</div>
+								
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+    </div>
+</div>
+{include file="Public/footer.html" }

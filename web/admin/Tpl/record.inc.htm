@@ -1,0 +1,9 @@
+<div class="search">
+	<span style="color:#fff">每页显示：</span>
+	<select id="record" onchange="javascript:recordchange()">
+		<option value="5"{if $smarty.get.record eq 5} selected{/if}>5</option>
+		<option value="10"{if empty($smarty.get.record) || $smarty.get.record eq 10} selected{/if}>10</option>
+		<option value="20"{if $smarty.get.record eq 20} selected{/if}>20</option>
+		<option value="50"{if $smarty.get.record eq 50} selected{/if}>50</option>
+	</select>
+</div>

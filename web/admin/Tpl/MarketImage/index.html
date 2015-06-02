@@ -1,0 +1,117 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+{literal} 
+<script language="javascript" type="text/javascript" src="/public/script/admin/thickbox.js" /></script>
+<link rel="stylesheet" href="/public/style/admin/thickbox.css" type="text/css" media="screen" />
+<script type="text/javascript">
+    KE.show({
+        id : 'infocontent' ,//TEXTAREA输入框的ID
+		minWidth:"650px",
+		minHeight:"400px",
+		resizeMode:0
+	});
+	<!-- js 编辑器-->
+	$(function(){
+		$("#istop-1").click(function(){
+			$("#uploaddiv").css("display","none");
+		});
+		$("#istop-2").click(function(){
+			var typeid=$("#categorytype option:selected").val();
+			
+			if(typeid == 8189 || typeid == 10002 || typeid == 10003 || typeid == 10004){
+				$("#uploaddiv").css("display","block");
+			}
+		});
+		$("#categorytype").change(function(){
+			var typeid=$(this).val();
+			if($("#istop-2").attr("checked") && (typeid == 8189 || typeid == 10002 || typeid == 10003 || typeid == 10004)){
+				$("#uploaddiv").css("display","block");
+			}else{
+				$("#uploaddiv").css("display","none");
+			}
+		});
+	});
+</script>
+{/literal}
+		<!-- content -->
+		<div id="content">
+			{include file="MarketImage/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- table -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title" style="margin-bottom:10px;">
+						<h5>焦点图列表</h5>
+						{include file="record.inc.htm"}
+					</div>
+					{include file="search.inc.htm"}
+					<!-- end box / title -->
+					<div class="table">
+						<table>
+							<thead>
+								<tr>
+									<th class="left">编号</th>
+									<th>标题</th>
+									<th>分类</th>
+									<th>添加会员</th>
+									<th>添加时间</th>
+									<th>更新时间</th>
+									<th>更新会员</th>
+									<th>状态</th>
+									<th>操作</th>
+									<th class="selected last"><input type="checkbox" class="checkall" /></th>
+								</tr>
+							</thead>
+							
+							<tbody>
+							{foreach from=$data item=item}
+								<tr>
+									<td>{$item.id}</td>
+									<td><a target="_blank" href="/Invest/show/itemid/{$item.id}">{$item.title}</a></td>
+									<td>{$item.categoryid}</td>
+									<!-- <td>
+										<div class="layout auto wenchua" id="wenchuan">
+											<div>
+												<a href="{$item.thumbd}"  title="" class="thickbox">
+												<img width="40px" height="20px" src="{$item.thumb}"/></a>
+											</div>
+										</div>
+									</td> -->
+									<td>{$item.adduserid.account}</td>
+									<td>{$item.addtime}</td>
+									<td>{$item.updatetime|default:'暂无'}</td>
+									<td>{$item.updateuserid.account|default:'暂无'}</td>
+									<td>{if $item.switchon eq 1}已开启{else}已关闭{/if}</td>
+									<td>
+										<a href="?m=MarketImage&a=add&id={$item.id}">编辑</a>/
+										<a href="javascript:del({$item.id});">删除</a>
+									</td>
+									<td class="selected last"><input type="checkbox" /></td>
+								</tr>
+							{/foreach}
+							</tbody>
+						</table>
+						<!-- pagination -->
+						{$page|default:''}
+						<!-- end pagination -->
+						<!-- table action -->
+						<div class="action">
+							<select id="action">
+								<option value="0">禁用</option>
+								<option value="1">启用</option>
+							</select>
+							<div class="button">
+								<input type="reset" value="执行操作" onclick="javascript:var ids = ischeckmore();alert(ids);" />
+							</div>
+						</div>
+						
+						<!-- end table action -->
+					</div>
+				</div>
+				<!-- end table -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

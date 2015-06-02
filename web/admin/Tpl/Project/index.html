@@ -1,0 +1,83 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<script language="javascript">
+function alllock(){	
+	var str='';
+	$("input:checkbox[name='alldel']:checked").each(function(){
+		str+=$(this).val()+",";
+	})
+	if(str){
+		if(confirm("确实锁定所有选中吗?"))
+		window.location.href='/iokadmin.php/Project/lock/id/'+str;
+	}else{
+		alert('请至少选中一项');
+	}
+
+}
+</script>
+		<!-- content -->
+		<div id="content">
+			{include file="Project/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- table -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title" style="margin-bottom:10px;">
+						<h5>项目管理 》项目列表</h5>
+						{include file="record.inc.htm"}
+					</div>
+					{include file="search.inc.htm"}
+					<!-- end box / title -->
+					<div class="table">
+						<table>
+							<thead>
+								<tr>
+								<th class="selected last" width="40"><input type="checkbox" class="checkall" /></th>
+									<th width="40">Id</th>
+									<th class="left">名称</th>
+									<th width="140">添加时间</th>
+									<th class="left">是否锁定</th>
+									<th width="60">操作</th>
+									
+								</tr>
+							</thead>
+							<tbody>
+								{foreach item=val from=$rec}
+								<tr>
+									
+									<td class="selected last"><input type="checkbox" name='alldel' value="{$val['id']}"/></td>
+									<td>{$val['id']}</td>
+									<td><a href="/iokadmin.php?m=Project&a=detail&id={$val['id']}">{$val['prettyname']}</a></td>
+									
+									<td>{$val['addtime']|date_format:'%Y-%m-%d %H:%M:%S'|default:'-'}</td>
+									<td>{if $val['islocked'] eq 1}禁用{else}正常{/if}</td>
+									<td>
+										
+										<a href="/iokadmin.php?m=Project&a=edit&id={$val['id']}">编辑</a>
+										
+									</td>
+									
+								</tr>
+								
+								{foreachelse}
+								<tr><td colspan="100%">没有记录</td></tr>
+								{/foreach}
+								<tr style='height:5px;'>
+									<td><input type="checkbox" class="checkall" /></td>
+									<td colspan='9'><a href='javascript:alllock();'>批量禁用</a></td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- pagination -->
+						{$page|default:''}
+						<!-- end pagination -->
+						
+					</div>
+				</div>
+				<!-- end table -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

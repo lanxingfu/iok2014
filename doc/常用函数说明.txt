@@ -1,0 +1,25 @@
+相关函数的应用：
+1、randcode($length=32, $type='all')
+函数作用：获取随机组合的字符串
+参数说明：$length，随机字符串的长度，$type字符串包含的字符类型，有
+	number：纯数字,
+	lower：纯小写字母,
+	upper：纯大写字母,
+	hex：数字加小写字母，类似16进制,
+	real：去掉容易混淆的数字字母组合，一般用于生成密码
+	all：所有数字、大小写字母的组合
+
+
+3、getvar($vartag, $dval = NULL, $vartype = "string")
+函数作用：获取$_GET或者$_POST指定变量
+参数说明：$vartag，变量名称，$dval，表示如果没有$vartag变量，返回的默认值，$vartype，表示变量的类型
+示例：getvar('id',0,'integer')表示获取类型为整型的$_GET['id']或者$_POST['id']变量，如果没有则返回0。
+	getvar('account')表示获取类型为字符串的$_GET['account']或者$_POST['account']变量，没有则返回null。
+
+4、getitems($searchitems)
+函数作用：获取items.data.php中对应的中文字符串，返回为一维数组
+
+
+5、
+
+

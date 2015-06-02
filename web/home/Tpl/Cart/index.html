@@ -1,0 +1,79 @@
+﻿{include file="Public/header.html"}
+{include file="Cart/carttop.html"}
+<div class='content'>
+<div class="conter_center">
+	<form method="post" name="cart_form" id="cart_form" onsubmit="return settlement();" >
+		<div class="gwc_conter">
+			<div class="gwc_conter_nr">
+				<div class="gwc_conter_nr_t">
+					<h2>我的购物车</h2>
+				</div>
+				<table>
+					<tbody>
+						<tr style="background:#eef0f1;height:28px; float:left;">
+							<th class="gwc_input"><input type="checkbox" name="chk_all" id="chk_all" />
+								&nbsp;&nbsp;</th>
+							<th class="gwc_tp">缩略图</th>
+							<th class="gwc_sp">商品</th>
+							<th class="gwc_jg">价格</th>
+							<th class="gwc_kc">库存</th>
+							<th class="gwc_qdl">起订量</th>
+							<th class="gwc_sl">数量</th>
+							<th class="gwc_xj">小计</th>
+							<th class="gwc_cz">操作</th>
+						</tr>
+					{if $mycart.cart_product_data|count > 0}
+					{foreach key=key item=item from=$mycart.cart_product_data}
+					<input name="productid[]" type="hidden" value="{$item.id}" />
+					<input id='price_{$item.id}' type="hidden" value="{$item.price}" />
+					<input id='moq_{$item.id}' type="hidden" value="{$item.moq}" />
+					<input id='inventory_{$item.id}' type="hidden" value="{$item.inventory}" />
+					<tr class="gwc_tr">
+						<td class="gwc_input"><input type="checkbox" name="itemids[]" value="{$item.id}" />
+							&nbsp;&nbsp;</td>
+						<td class="gwc_tp" align="center"> {if $item.thumb neq ''} <a href="__APP__/Product/show/id/{$item.id}" title="{$item.title}"><img src="{$item.thumb}" width='60px' height='60px' alt="商品图" /></a> {/if}
+							</td>
+						<td class="gwc_sp" valign="middle" style="padding-top:4px;"><a href="__APP__/Product/show/id/{$item.id}">{$item.title}</a></td>
+						<td class="gwc_jg"><strong>&yen;{$item.price}</strong></td>
+						<td class="gwc_kc"><span>{$item.inventory}</span></td>
+						<td class="gwc_qdl"><span>{$item.moq}</span></td>
+						<td class="gwc_sl"><div class="input_left">
+								<input id="goods_max_{$item.id}" type="button" value="" onclick = "modifyNum(0,{$item.id})" />
+							</div>
+							<div class="input_conter">
+								<input id='quantity_{$item.id}' rel="{$item.id}" name="quantity[]" type="text" onkeyup="value=value.replace(/[^\d]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" value="{$item.quantity}" />
+							</div>
+							<div class="input_right">
+								<input id="goods_min_{$item.id}" type="button" value="" onclick = "modifyNum(1,{$item.id})" />
+							</div></td>
+						<td class="gwc_xj"><strong id="small_note_{$item.id}">&yen;{$item.price*$item.quantity}</strong></td>
+						<td class="gwc_cz"><a href="javascript:void(0);" onclick="deleteSingle({$item.id});">删除</a>&nbsp;&nbsp; <a href="javascript:void(0);" onclick="singleSettlement({$item.id})">结算</a></td>
+					</tr>
+					{/foreach}
+					{else}
+					<tr style="text-align:center; line-height=60px; width:938px; color:#C70000" >
+						<td   colspan='9' style="text-align:center; line-height=60px; width:938px; color:#C70000" ><h2>您的购物车还是空的，赶紧行动吧！</h2></td>
+					</tr>
+					{/if}
+						</tbody>
+					
+				</table>
+			</div>
+		</div>
+		<div class="gwc_bottom"> {if  $mycart.cart_product_data|count > 0}
+			<div class="gwc_bottom_nr">
+				<div class="gwc_bottom_nr_l"> <img src="__IMAGES__/home/product/gwc_xtb_7.png" alt="删除图标" /> <a href="javascript:void(0);" id='delSeletectd'>删除被选中的商品</a> </div>
+				<div class="gwc_bottom_nr_r"> <span>费用总计</span> <strong id="total_price">&yen;{$mycart.product_price_total}</strong> </div>
+			</div>
+			{else}
+			{/if}
+			<div class="gwc_bottom_b"> <a href="__APP__/Product"><img src="__IMAGES__/home/product/gwc_xtb_9.png" alt="继续购物" /></a> {if  $mycart.cart_product_data|count > 0}
+				<input  src="__IMAGES__/home/product/gwc_xtb_8.png" id="goonbuy" onclick="ajaxOrder();" type="image" />
+				{else}
+				{/if} </div>
+		</div>
+		<input type="hidden" id="ordertype" name="ordertype" value="0" />
+	</form>
+</div>
+<script src="__JS__/home/cart.js"></script> 
+{include file="Public/footer.html"} 

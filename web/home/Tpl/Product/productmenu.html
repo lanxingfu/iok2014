@@ -1,0 +1,9 @@
+<div id="wrapper">
+	<a href="/Product/addproduct" {if $menus eq 1 } class="navigation"{/if} ><span>( + )</span> 添加商品</a>
+	<a href="/Product/productlist" {if $menus eq 2 } class="navigation"{/if} >已上架({$mall_status['3']})<span></span></a>
+	<a href="/Product/check" {if $menus eq 3 } class="navigation"{/if} >审核中({$mall_status['2']})<span></span></a>
+	<a href="/Product/nopass" {if $menus eq 4 } class="navigation"{/if} >未通过({$mall_status['1']})<span></span></a>
+	<a href="/Product/nosell" {if $menus eq 5 } class="navigation"{/if} >已下架({$mall_status['4']})<span></span></a>
+	<a href="/Order/ioksell" {if $menus eq 6 } class="navigation"{/if} >订单管理<span></span></a>
+	<a href="/Product/customcatelist" {if $menus eq 7 } class="navigation"{/if} >产品分类<span></span></a>
+</div>

@@ -1,0 +1,103 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Channel/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>渠道商管理 》详细信息</h5>
+					</div>
+					<!-- end box / title -->
+					<div class="form">
+						<div class="fields">
+							<div class="field field-first">
+								<div class="fname">账号</div>
+								<div class="fvalue">{$rec['account']}</div>
+							</div>
+							<div class="field">
+								<div class="fname">真实姓名</div>
+								<div class="fvalue">{$rec['prettyname']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">email</div>
+								<div class="fvalue">{$rec['email']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">手机号码</div>
+								<div class="fvalue">{$rec['mobile']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">QQ号码</div>
+								<div class="fvalue">{$rec['qq']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">职位名称</div>
+								<div class="fvalue">{$rec['position']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">所属部门</div>
+								<div class="fvalue">{$rec['department']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">用户组</div>
+								<div class="fvalue">{$rec['usergroup']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">角色</div>
+								<div class="fvalue">{$rec['rolename']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="label label-textarea">个人介绍</div>
+								<div class="textarea textarea-editor">
+									<textarea name="introduce" cols="50" rows="12" class="editor" disabled>{$rec['introduce']|nl2br|escape:'html'}</textarea>
+								</div>
+							</div>
+							<div class="field">
+								<div class="fname">登陆时间</div>
+								<div class="fvalue">{$rec['logintime']|date_format:'%Y-%m-%d %H:%M:%S'|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">登陆ip</div>
+								<div class="fvalue">{$rec['loginip']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">添加时间</div>
+								<div class="fvalue">{$rec['addtime']|date_format:'%Y-%m-%d %H:%M:%S'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">添加人员</div>
+								<div class="fvalue">{$rec['adduser']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">添加ip</div>
+								<div class="fvalue">{$rec['addip']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">更新时间</div>
+								<div class="fvalue">{$rec['updatetime']|date_format:'%Y-%m-%d %H:%M:%S'|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">更新人员</div>
+								<div class="fvalue">{$rec['updateuser']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">当前状态</div>
+								<div class="fvalue">{if $rec['enabled']}正常{else}禁用{/if}</div>
+							</div>
+							<div class="buttons">
+								<input type="reset" value="编辑" onclick="javascript:gotoUrl('/iokadmin.php?m=Channel&a=cadd&id={$rec['id']}')" />
+								<input type="reset" value="返回" onclick="javascript:gotoUrl('/iokadmin.php?m=Channel')" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

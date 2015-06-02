@@ -1,0 +1,65 @@
+{include file="Public/header.html"}
+<!-- top -->
+{include file="Public/home_top.html"}
+<link href="__CSS__/home/register-com-men.css" rel="stylesheet" />
+<!-- 中间内容部分 -->
+<div class="content">
+<div class="content_qyzc">
+	<div class="content_qyzc_nr">
+		<div class="content_qyzc_nr_t">找回密码</div>
+		<div class="content_qyzc_nr_b">
+			<div class="content_qyzc_nr_bb" style="padding-top:40px;">
+				<form action="/Misc/verifypword/" method="post">
+					<ul class="content_qyzc_nr_bbt zhaohui" style="padding-left:250px;">
+						<li>
+							{tip id='top' default=''}
+						</li>
+						<li>
+							<div class="zhaohuimima" style="padding-left:25px;">
+								<a href="/Misc/retrievepw" class="na"><img src="/public/image/public/u_byrelationon.png"></a>
+								<p><a href="/Misc/retrievepw" class="na">仅注册了用户名</a></p>
+							</div>
+							<div class="zhaohuimima">
+								<a href="/Misc/retrievebyemail" class="na"><img src="/public/image/public/u_byemailoff.png"></a>
+								<p><a href="/Misc/retrievebyemail" class="na">已绑定邮箱</a></p>
+							</div>
+						</li>
+						<li>
+							<h4>用户名<span>&nbsp;*&nbsp;</span></h4>
+							<div class="content_qyzc_nr_bbtr">
+								<input type="text" value="{$datas['username']}" name="username"/>
+							</div>
+							<div class="content_error" id="dusername">{tip id='tusername' default=''}</div>				
+							<div class="tishi">请填写您注册时的【会员名】</div>
+						</li>
+						<li>
+							<h4>联系方式<span>&nbsp;*&nbsp;</span></h4>
+							<div class="content_qyzc_nr_bbtr">
+								<input type="text" value="{$datas['mobile']}" name="mobile"/>
+							</div>
+							<div class="content_error" id="dmobile">{tip id='tmobile' default=''}</div>						
+							<div class="tishi">请填写您注册时的【联系方式】</div>
+						</li>
+						<li>
+							<h4>验证码<span>&nbsp;*&nbsp;</span></h4>
+							<div class="content_qyzc_nr_bbtr_o" style="width:117px;">
+								<input type="text" name='verify' value="" id="verify" onkeyup="validator('verify',this.value);" style="width:97px;"/>
+							</div>
+							<div class="content_qyzc_nr_bbtr_oi">
+								<a href="javascript:void(0);"><img id="yzm_pic" src="__APP__/Ajax/verify/ajax/0" alt="点击刷新" onclick="this.src='__APP__/Ajax/verify/?t='+new Date().getTime();" style="width:63px;height:23px"/></a>
+								<a href="javascript:void(0);" onclick="$('#yzm_pic').click();" style="width: 40px !important;">换一张</a>
+							</div>
+							<div class="content_error" id="dverify">{tip id='tverify' default=''}</div>
+						</li>
+						<li>						
+							<div class="newbutton" style="padding:20px 0 0 125px"><input type="submit" name="submit" value="确定" id="_submit"/></div>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- footer -->
+{include file="Public/footer.html"}

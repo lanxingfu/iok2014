@@ -1,0 +1,362 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Index/top.html'}
+<link href="/public/style/home/invest.css" rel="stylesheet" />
+<div class="conter_center">
+	<div class="content_top">
+    	<div class="barner">
+        
+        </div>
+    </div>
+    <div class="content_bottom">
+    	<div class="content_bottom_nr">
+        	<div class="content_bottom_nr_jdxw">
+            	<div class="content_bottom_nr_jdxw_left">
+                	<div class="content_b_nr_jdxw_left_t">
+                    	<div class="content_b_nr_wxdt_left_tl">
+                        	
+                        </div>
+                        <div class="content_b_nr_jdxw_left_tc">
+                        	<!-- <h3>煤电价格博弈仍在继续  电企或难讨大便宜</h3> -->
+                        </div>
+                        <div class="content_b_nr_jdxw_left_tr">
+                        	<a href="__APP__/Invest/listy/catid/8952" target="_blank">MORE&gt;</a>
+                        </div>
+                    </div>
+                    <div class="content_b_nr_jdxw_left_b">
+                    	<div class="content_b_nr_jdxw_left_bl">
+                        
+                        	<!-- <img src="/Public/images/invest/img_1.jpg" alt="" /> -->
+							<script type="text/javascript">
+								var config='5|0xFFFFFF|0x333333|80|0xFAFAFA|0x333333|0x000000';
+							</script>
+							<embed width="357" height="265" extendspage="http://get.adobe.com/flashplayer/" type="application/x-shockwave-flash" quality="high" false"="" flashvars="config=5|0xFFFFFF|0x333333|80|0xFAFAFA|0x333333|0x000000&amp;bcastr_flie="" menu="" wmode="opaque" src="__PUBLIC__/flash/slide.swf">
+                        </div>
+                        <ul class="content_b_nr_jdxw_left_br">
+							<foreach name="inv_news" item="v">
+								<li>
+									<h3><a href="/Invest/show/itemid/{$v.itemid}" target="_blank"></a></h3>
+									<p></p>
+								</li>
+							</foreach>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content_bottom_nr_jdxw_R">
+					<!-- 9月1号改的 -->
+                    <div class="content_bottom_nr_qdzs_cxqy">
+                        <ul class="content_b_n_qdzs_cxqy_n">
+							<li>
+								<h3><img src="/Public/image/invest/zs_tubiao_7.png" alt="" /><span>区域管理中心查询</span></h3>
+								<div class="content_b_n_qdzs_cxqy_glzx">
+									<form method="post" action="/Invest/areasearch" name="saveData">
+										<select name="areaid">
+											<option>请选择查询省份</option>
+											
+										</select>
+										<p style="display:none;"><input type="submit" id="_submit_"></p>
+										<p><a href="javascript:void(0);" onclick="DQ('_submit_').click();"></a></p>
+									</form>
+								</div>
+							</li>
+							<li>
+								<h3><img src="/Public/image/invest/zs_tubiao_8.png" alt="" /><span>商务服务站/商务代表查询</span></h3>
+								<div class="content_b_n_qdzs_cxqy_glzx">
+									<form method="post" action="/Invest/represearch" name="saveData">
+										<select name="areaid">
+											<option>请选择查询城市</option>
+											
+										</select>
+										<p style="display:none;"><input type="submit" id="_submit2_"></p>
+										<p><a href="javascript:void(0);" onclick="DQ('_submit2_').click();"></a></p>
+									</form>
+								</div>
+							</li>
+						</ul>
+                    </div>
+                    <div class="content_bottom_nr_jdxw_rtb"><a href="/Video"><img src="/Public/image/invest/img_3.png" alt="" /></a></div>
+                </div>
+            </div>
+            <div class="content_bottom_nr_wxdt">
+            	<div class="content_bottom_nr_wxdt_left">
+                	<div class="content_b_nr_wxdt_left_t">
+                    	<div class="content_b_nr_wxdt_left_tlt">
+                            <span>财富中国行</span>
+                        </div>
+                        <div class="content_b_nr_wxdt_left_tct">
+                        	<!-- <h3>煤电价格博弈仍在继续  电企或难讨大便宜</h3>-->
+                        </div>
+                        <div class="content_b_nr_wxdt_left_trt">
+                        	<a href="__APP__/Invest/listy/catid/8953" target="_blank">MORE&gt;</a>
+                        </div>
+                    </div>
+                    <div class="content_b_nr_wxdt_left_b">
+                    	<ul class="content_b_nr_wxdt_left_bl">
+							
+							<foreach name="inv_heima" item="v">
+								<if condition="$v.status neq 3">
+									<li>									
+										<p class="p_1">{$v.title}<span class="span_1">【已截止】</span></p>
+										<a href="javascript:void(0);" style="cursor:default " class="a_1"><img src="/Public/images/invest/imgyy_4.png" alt="" /></a>
+									</li>
+								</if>								
+							</foreach>
+							<foreach name="inv_heima" item="v">
+								<if condition="$v.status eq 3">
+									<li>
+										<p>{$v.title}<span>【报名中】</span></p>
+										<a target="_blak" href="/Invest/seminar"><img src="/Public/images/invest/imgyy_5.png" alt="" /></a>
+									</li>
+								</if>								
+							</foreach>
+                        </ul>
+                        <div class="content_b_nr_wxdt_left_br">
+                        	
+                        	<!-- <img src="/Public/images/invest/img_3.jpg" alt="" /> -->
+							<script type="text/javascript">
+								var config='5|0xFFFFFF|0x333333|80|0xFAFAFA|0x333333|0x000000';
+							</script>
+							<embed width="325" height="210" extendspage="http://get.adobe.com/flashplayer/" type="application/x-shockwave-flash" quality="high" false"="" flashvars="config=5|0xFFFFFF|0x333333|80|0xFAFAFA|0x333333|0x000000&amp;bcastr_flie="" menu="" wmode="opaque" src="__PUBLIC__/flash/slide.swf">
+                        </div>
+                    </div>
+                </div>
+				<!-- 9月1号改的 -->
+                <div class="content_bottom_nr_wxdt_zsyc">
+                <a href="{$vo.image_url}" title="{$vo.image_alt}" >
+                </volist>
+                </div>
+            </div>
+		
+            <div class="content_bottom_nr_qdyy">
+            	<div class="content_bottom_nr_qdyy_left">
+                	<div class="content_b_nr_qdyy_left_t">
+                    	<div class="content_b_nr_qdyy_left_tlt">
+                            <span>渠道运营</span>
+                        </div>
+                        <div class="content_b_nr_qdyy_left_tct">
+                        	<!-- <h3>煤电价格博弈仍在继续  电企或难讨大便宜</h3>-->
+                        </div>
+                        <div class="content_b_nr_qdyy_left_trt">
+                        	<a href="__APP__/Invest/listy/catid/8954" target="_blank">MORE&gt;</a>
+                        </div>
+                    </div>
+                    <div class="content_b_nr_qdyy_left_b">
+                    	<div class="content_b_nr_qdyy_left_br">
+                        
+                        	<!-- <img src="/Public/images/invest/img_3.jpg" alt="" /> -->
+							<script type="text/javascript">
+								var config='5|0xFFFFFF|0x333333|80|0xFAFAFA|0x333333|0x000000';
+							</script>
+							<embed width="345" height="200" extendspage="http://get.adobe.com/flashplayer/" type="application/x-shockwave-flash" quality="high" false"="" flashvars="config=5|0xFFFFFF|0x333333|80|0xFAFAFA|0x333333|0x000000&amp;bcastr_flie="" menu="" wmode="opaque" src="__PUBLIC__/flash/slide.swf">
+                        </div>
+                        <ul class="content_b_nr_qdyy_left_bl">
+							<foreach name="inv_yunying" item="v">
+								<li>
+									<p>{$v.title}</span></p>
+									<if condition="$v.level eq 1">
+										<a href="javascript:void(0);" style="cursor:default " class="yes"></a>
+									<elseif condition="$v.level eq 2"/>
+										<a href="javascript:void(0);" style="cursor:default " class="yes">圆满成立</a>
+										<elseif condition="$v.level eq 5"/>
+										<a href="javascript:void(0);" style="cursor:default " class="no">11月23日</a>
+										<elseif condition="$v.level eq 4"/>
+										<a href="javascript:void(0);" style="cursor:default " class="no">12月21日</a>
+									<else />
+										<a href="javascript:void(0);" style="cursor:default " class="no">敬请期待</a>
+									</if>
+								</li>
+							</foreach>
+                        </ul>
+                    </div>
+                </div>
+				<!-- 9月1号改的 -->
+                <div class="content_bottom_nr_qdyy_zsglzx">
+                	<div class="content_bottom_nr_zszx_rtt">
+						<h3>地方管理中心</h3>
+						<!--<p><a href="/News/listy/catid/8188" target="_blank">MORE&gt;</a></p>-->
+					</div>
+					<ul class="content_bottom_nr_qdyy_zsglzx_nnr">
+						<li style="padding-bottom:15px;">
+							<div class="content_bottom_nr_qdyy_zsglzx_limg">
+								<a href="http://www.iokokok.com/Subject/hm9" target="_blank"><img src="/Public/images/invest/zsyc_img2.jpg" alt="" /></a>
+							</div>
+							<a href="http://www.iokokok.com/Subject/hm9" target="_blank"><h4>青岛管理中心</h4></a>
+						</li>
+						<li style="padding-bottom:18px;">
+							<div class="content_bottom_nr_qdyy_zsglzx_limg">
+								<a href="http://www.iokokok.com/Subject/tszt2" target="_blank"><img src="/Public/images/invest/zsyc_img3.jpg" alt="" /></a>
+							</div>
+							<a href="http://www.iokokok.com/Subject/tszt2" target="_blank"><h4>唐山管理中心</h4></a>
+						</li>
+						<li style="padding-bottom:18px;">
+							<div class="content_bottom_nr_qdyy_zsglzx_limg">
+								<a href="http://www.iokokok.com/Subject/tjhm" target="_blank"><img src="/Public/images/invest/zsyc_img4.jpg" alt="" /></a>
+							</div>
+							<a href="http://www.iokokok.com/Subject/tjhm" target="_blank"><h4>天津滨海新区管理中心</h4></a>
+						</li>
+					</ul>
+                </div>
+            </div>
+			<!-- 蜜蜂计划  9月1号增加的 -->
+			<div class="content_bottom_nr_wxdt">
+            	<div class="content_bottom_nr_wxdt_left">
+                	<div class="content_b_nr_wxdt_left_t">
+                    	<div class="content_b_nr_wxdt_left_tlt">
+                            <span>蜜蜂计划</span>
+                        </div>
+                        <div class="content_b_nr_wxdt_left_tct">
+                        	<!-- <h3>煤电价格博弈仍在继续  电企或难讨大便宜</h3>-->
+                        </div>
+                        <div class="content_b_nr_wxdt_left_trt">
+                        	<!-- <a href="__APP__/Invest/listy/catid/8850" target="_blank">MORE&gt;</a> -->
+                        </div>
+                    </div>
+                    <div class="content_b_nr_wxdt_left_mfjh">
+                    	<div class="content_b_nr_wxdt_left_mfjh_l">
+							<div class="content_b_nr_wxdt_left_mfjh_lt">
+								<img src="/Public/image/invest/zs_tubiao_11.png" alt="" />
+							</div>
+							<div class="content_b_nr_wxdt_left_mfjh_lb">
+								<p style="float: left;text-indent: 2em;line-height: 25px;">蜜蜂计划"是财富黑马星火工程的延续和拓展，
+									主题是建立基层商务服务站和招募商务代表，为第四代电子商务招兵买马，加快全国各地中小企业入驻我行网平台，
+									推动第四代电子商务的应用与发展。"蜜蜂计划"取义于蜜蜂的勤劳和媒介作用，寓意我行网的商务代表将为中小企业牵线搭桥，
+									主动促成企业交易。
+								</p>
+							</div>
+						</div>
+						<div class="content_b_nr_wxdt_left_mfjh_r">
+                        	
+							<!-- <img src="/Public/images/invest/zsyc_img6.jpg" alt="" /> -->
+							<script type="text/javascript">
+								var config='5|0xFFFFFF|0x333333|80|0xFAFAFA|0x333333|0x000000';
+							</script>
+							<embed width="325" height="210" extendspage="http://get.adobe.com/flashplayer/" type="application/x-shockwave-flash" quality="high" false"="" flashvars="config=5|0xFFFFFF|0x333333|80|0xFAFAFA|0x333333|0x000000&amp;bcastr_flie="" menu="" wmode="opaque" src="__PUBLIC__/flash/slide.swf">
+						</div>
+                    </div>
+                </div>
+                <div class="content_bottom_nr_wxdt_zsyc">
+              
+                <a href="{$vo.image_url}" title="{$vo.image_alt}" ><img src="{$vo.image_src}" alt="{$vo.image_alt}" /></a>
+                </volist></div>
+            </div>
+            <div class="content_bottom_nr_zsal">
+            	<div class="content_b_nr_zsal_left_t">
+					<div class="content_b_nr_zsal_left_tlt">
+						<span>招商案例</span>
+					</div>
+					<div class="content_b_nr_zsal_left_tct">
+				    	<!-- <h3>煤电价格博弈仍在继续  电企或难讨大便宜</h3>-->
+					</div>
+					<div class="content_b_nr_zsal_left_trt">
+						<!-- <a href="#" target="_blank">MORE&gt;</a> -->
+					</div>
+				</div>
+
+				<div id="demo">
+					<div id="indemo">
+						<div class="lmboxb" id="demo1">
+							<ul>
+                                
+                                <li>
+									<div><a href="{$vo.image_url}" title="{$vo.image_alt}" <img src="{$vo.image_src}" width="215" height="157" alt="{$vo.image_alt}" /></a></div>
+									<div class="qyys"><a href="{$vo.image_url}" title="{$vo.image_alt}">{$vo.image_alt}</a></div>
+								</li>
+                               
+                            	
+							</ul>
+						</div>
+						<div class="lmboxb" id="demo2"></div>
+					</div>
+				</div>
+				<div style="width:100%;"></div>			
+            </div>
+
+            <div class="content_bottom_nr_zszx">
+            	<div class="content_bottom_nr_zszx_left">
+                	<div class="content_b_nr_zszx_left_t">
+                    	<div class="content_b_nr_zszx_left_tlt">
+                            <span>招商咨询</span>
+                        </div>
+                        <div class="content_b_nr_zszx_left_tct">
+                        	<!-- <h3>煤电价格博弈仍在继续  电企或难讨大便宜</h3>-->
+                        </div>
+                        <div class="content_b_nr_zszx_left_trt">
+                        	<!--<a href="#" target="_blank">MORE&gt;</a>-->
+                        </div>
+                    </div>
+                    <div class="content_b_nr_zszx_left_b">
+                    	<div class="content_b_nr_zszx_left_bl">
+                        	<div class="content_b_nr_zszx_left_blt">
+                            	<img src="/Public/images/invest/img_20.png" alt="" />
+                                <h3>招商政策</h3>
+                            </div>
+                            <ul class="content_b_nr_zszx_left_blb">
+								<foreach name="inv_zhengce" item="v">
+									<if condition="$v['islink'] eq 1">
+										<li><a href="{$v.linkurl}" target="_blank">{$v.title}</a></li>
+									<else />
+										<li><a href="__APP__/Invest/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></li>
+									</if>
+								</foreach>
+                            </ul>
+                        </div>
+                        <div class="content_b_nr_zszx_left_bc">
+                        	<div class="content_b_nr_zszx_left_bct">
+                            	<img src="/Public/images/invest/img_21.png" alt="" />
+                                <h3>加盟说明</h3>
+                            </div>
+                            <ul class="content_b_nr_zszx_left_bcb">
+                            	<foreach name="inv_liyou" item="v">
+									<if condition="$v['islink'] eq 1">
+										<li><a href="{$v.linkurl}" target="_blank">{$v.title}</a></li>
+									<else />
+										<li><a href="__APP__/Invest/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></li>
+									</if>
+								</foreach>
+                            </ul>
+                        </div>
+                        <div class="content_b_nr_zszx_left_br">
+                        	<div class="content_b_nr_zszx_left_brt">
+                            	<img src="/Public/images/invest/img_22.png" alt="" />
+                                <h3>运营支持</h3>
+                            </div>
+                            <ul class="content_b_nr_zszx_left_brb">
+                            	<foreach name="inv_zhichi" item="v">
+									<if condition="$v['islink'] eq 1">
+										<li><a href="{$v.linkurl}" target="_blank">{$v.title}</a></li>
+									<else />
+										<li><a href="__APP__/Invest/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></li>
+									</if>
+								</foreach>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_bottom_nr_zszx_reght">
+					<div class="content_bottom_nr_zszx_rtt">
+						<h3>下载专区</h3>
+						<!--<p><a href="javascript:void(0);" target="_blank">MORE&gt;</a></p>-->
+					</div>
+					<ul class="content_bottom_nr_zszx_rbt">
+						<foreach name="downs" item="v">
+							<li><a href="{$v.fileurl}" target="_blank" title="{$v.title}" ></a></li>
+						</foreach>
+						<!-- <li><a href="javascript:void(0);">家电售后服务投诉多 视售后成</a></li> -->
+					</ul>
+                </div>
+            </div>
+	     <div class="content_bottom_nr_zsal">
+		<!--<img src="__PUBLIC__/images/invest/d4.jpg">-->
+		
+                <volist name="arr" id="vo" key="k" >
+                <if condition="$vo.image_url neq '' "><a href="{$vo.image_url}" title="{$vo.image_alt}"></if><img src="{$vo.image_src}" alt="{$vo.image_alt}" /><if condition="$vo.image_url neq '' "></a></if>
+                </volist>
+	     </div>
+            </div>
+        </div>
+    </div>
+	{include file="Public/footer_2.html"}
+</div>
+
+{include file='Public/footer.html'}

@@ -1,0 +1,131 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Product/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>订单管理 >>订单详情</h5>
+					</div>
+					<!-- end box / title -->
+					<div class="form">
+						<div class="fields">
+							<div class="field field-first">
+								<div class="fname">订单单号：</div>
+								<div class="fvalue">{$data.ordernumber}</div>
+							</div>
+							<div class="field">
+								<div class="fname">商品名称：</div>
+								<div class="fvalue">{$data.title|default:'-'}</div>
+							</div>
+							<div class="field" style="height:150px;">
+								<div class="fname">商品图片：</div>
+								<div class="fvalue" style="float:left;width: 150px;height:150px;"><img src="{$data.thumb}"></div>
+								<div class="fvalue" style="float:left;width: 150px;height:150px;"><img src="{$data.thumb1}"></div>
+								<div class="fvalue" style="float:left;width: 150px;height:150px;"><img src="{$data.thumb2}"></div>
+							</div>
+							<div class="field">
+								<div class="fname">卖家：</div>
+								<div class="fvalue">{$data.seller|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">买家：</div>
+								<div class="fvalue">{$data.buyer|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">邮编：</div>
+								<div class="fvalue">{$data['delivery_postcode']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">地址：</div>
+								<div class="fvalue">{$data['delivery_address']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">收货人：</div>
+								<div class="fvalue">{$data['delivery_truename']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">电话：</div>
+								<div class="fvalue">{$data['delivery_phone']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">手机：</div>
+								<div class="fvalue">{$data['delivery_mobile']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">下单时间：</div>
+								<div class="fvalue">{$data['addtime']|date_format:'%Y-%m-%d %H:%M:%S'|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">更新时间：</div>
+								<div class="fvalue">{$data['confirmtime']|date_format:'%Y-%m-%d %H:%M:%S'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">备注说明：</div>
+								<div class="fvalue">{$data['note']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">商品金额：</div>
+								<div class="fvalue">{$data['price']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">运费：</div>
+								<div class="fvalue">{$data['shipfare']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">优惠金额：</div>
+								<div class="fvalue">{$data['discountamount']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">数量：</div>
+								<div class="fvalue">{$data['number']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">付款总额：</div>
+								<div class="fvalue">{$data['amount']-$data['discountamount']+$data['shipfare']}</div>
+							</div>
+							<div class="field">
+								<div class="fname">物流类型：</div>
+								<div class="fvalue">{$data['delivery_logistics']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">物流号码：</div>
+								<div class="fvalue">{$data['delivery_number']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">发货时间：</div>
+								<div class="fvalue">{$data['deliverytime']|date_format:'%Y-%m-%d %H:%M:%S'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">交易状态：</div>
+								<div class="fvalue">{$data['state']}</div>
+							</div>
+							<div class="field">
+								<div class="label label-textarea">买家评论</div>
+								<div class="textarea textarea-editor">
+									<textarea name="seller_c" cols="50" rows="12" class="editor" disabled>{$seller_c|nl2br|escape:'html'|default:'暂无'}</textarea>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label label-textarea">卖家评论</div>
+								<div class="textarea textarea-editor">
+									<textarea name="buyer_c" cols="50" rows="12" class="editor" disabled>{$buyer_c|nl2br|escape:'html'|default:'暂无'}</textarea>
+								</div>
+							</div>
+							<div class="buttons">
+								<input type="reset" value="编辑" onclick="javascript:gotoUrl('/iokadmin.php?m=Order&a=edit&id={$data['id']}')" />
+								<input type="reset" value="返回" onclick="javascript:gotoUrl('/iokadmin.php?m=Order')" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

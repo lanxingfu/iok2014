@@ -1,0 +1,78 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Interface/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>接口管理 》详细信息</h5>
+					</div>
+					<!-- end box / title -->
+					<div class="form">
+						<div class="fields">
+							<div class="field field-first">
+								<div class="fname">项目名称</div>
+								<div class="fvalue">{$rec['prettyname']}</div>
+							</div>
+							<div class="field">
+								<div class="fname">模块名称</div>
+								<div class="fvalue">{$rec['name']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">接口名称</div>
+								<div class="fvalue">{$rec['requesturl']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">支持格式</div>
+								<div class="fvalue">{$rec['returnformat']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">请求方式</div>
+								<div class="fvalue">{$rec['requestmethod']|default:'-'}</div>
+							</div>
+							<div class="field">
+								<div class="fname">是否需要登录</div>
+								<div class="fvalue">{if $rec['needlogin'] eq 1}是{else}否{/if}</div>
+							</div>
+							<div class="field ">
+								<div class="label label-textarea">接口说明</div>
+								<div class="textarea textarea-editor">
+									<textarea name="explain" cols="50" rows="12" class="editor">{$rec['intro']|nl2br|escape:'html'}</textarea>
+								</div>
+							</div>
+							<div class="field ">
+								<div class="label label-textarea">返回示例</div>
+								<div class="textarea textarea-editor">
+									<textarea name="sample" cols="50" rows="12" class="editor">{$rec['sample']|nl2br|escape:'html'}</textarea>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label label-textarea">备注</div>
+								<div class="textarea textarea-editor">
+									<textarea name="note" cols="50" rows="12" class="editor" disabled>{$rec['note']|nl2br|escape:'html'}</textarea>
+								</div>
+							</div>
+							
+							<div class="field">
+								<div class="fname">添加时间</div>
+								<div class="fvalue">{$rec['addtime']|date_format:'%Y-%m-%d %H:%M:%S'}</div>
+							</div>							
+							<div class="buttons">
+								{if $rec['id'] ne '1'}
+								<input type="reset" value="编辑" onclick="javascript:gotoUrl('/iokadmin.php?m=Interface&a=edit&id={$rec['id']}')" />
+								{/if}
+								<input type="reset" value="返回" onclick="javascript:gotoUrl('/iokadmin.php?m=Interface')" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

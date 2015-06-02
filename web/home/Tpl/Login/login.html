@@ -1,0 +1,101 @@
+{include file="Public/header.html"}
+<!-- top -->
+{include file="Login/logintop.html"}
+<link href="__PUBLIC__/style/home/login.css" rel="stylesheet" />
+<!-- 中间内容部分 -->
+<div class='content'>
+	<div class="content_qyzc">
+    	<div class="content_qyzc_nr">
+        	<div class="content_qyzc_nr_left">
+				<form action="/Login/login" method="post" ID='log'>
+					<ul class="content_qyzc_nr_leftT">
+						<li>
+							<h3>用户名<span> * </span></h3>
+							<div class="hym_right">
+								<input id="username" type="text" name="username" value="{$data['username']}" onblur="validator('username',this.value);"/>
+							</div>
+							<reminder id="dusername">{tip id='tusername' default=''}</reminder>
+						</li>
+						<li>
+							<h3>密&nbsp;&nbsp;&nbsp;码<span> * </span></h3>
+							<div class="hym_right">
+								<input id="password" type="password" name="password" value="" onblur="validator('password',this.value);" style="font-size:12px;"/>
+								<!-- <span><a href="#">找回密码</a></span> -->
+							</div>
+							<reminder id="dpassword">{tip id='tpassword' default=''}</reminder>
+						</li>
+						<li>
+							<h3>验证码<span> * </span></h3>
+							<div class="yzm_right">
+								<input id="verify" type="text" name="verify" value="" onblur="validator('verify',this.value);" onkeyup="validator('verify',this.value);"/>
+								<a href="javascript:void(0);"><img src="/Ajax/verify/ajax/0" alt="点击刷新" onclick="this.src='/Ajax/verify/?t='+new Date().getTime();" /></a>
+							</div>
+							<reminder id="dverify">{tip id='verifycode' default=''}</reminder>
+						</li>
+						<li>
+							<h3></h3>
+							<div class="dxx_right">
+								<label><input type="checkbox" name="enterhome" value="1" />进入商务室</label>
+								<label><input name="login_cookietime" type="checkbox" value="1" checked="checked" />一周内免登录</label>
+							</div>
+						</li>
+					</ul>
+					<div class="content_qyzc_nr_leftB">
+						<input type="submit" value="登录" id="_submit"/>
+						<a href="/Misc/retrievepw" style="line-height: 28px;margin-left: 20px;color:red;cursor:pointer;">忘记密码？找回！</a>
+					</div>					
+				</form>
+            </div>
+            <div class="content_qyzc_nr_right">
+            	<div class="content_qyzc_nr_right_top">
+                	<h3>还不是我行网用户？</h3>
+                    <p>现在免费注册成为我行网用户，便能立刻享受便宜又放心的购物乐趣。</p>
+                    <div class="zcxyh">
+                    	<a href="/Public/register"><img src="__PUBLIC__/image/public/dlimg_10.png" alt="" /></a>
+                    </div>
+                </div>
+                <ul class="content_qyzc_nr_right_bottom">
+                	<li>
+                    	<div class="content_qyzc_nr_right_B_img">
+                        	<img src="__PUBLIC__/image/public/dlimg_7.png" alt="" />
+                        </div>
+                        <div class="content_qyzc_nr_right_B_text">
+                        	<h3><a href="javascript:void(0);" style="cursor:default;">找商机</a></h3>
+                            <p>拓宽产品渠道</p>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="content_qyzc_nr_right_B_img">
+                        	<img src="__PUBLIC__/image/public/dlimg_8.png" alt="" />
+                        </div>
+                        <div class="content_qyzc_nr_right_B_text">
+                        	<h3><a href="javascript:void(0);" style="cursor:default;">交商友</a></h3>
+                            <p>打造商业人脉</p>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="content_qyzc_nr_right_B_img">
+                        	<img src="__PUBLIC__/image/public/dlimg_9.png" alt="" />
+                        </div>
+                        <div class="content_qyzc_nr_right_B_text">
+                        	<h3><a href="javascript:void(0);" style="cursor:default;">建公司</a></h3>
+                            <p>宣传企业形象</p>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="content_qyzc_nr_right_B_img">
+                        	<img src="__PUBLIC__/image/public/dlimg_11.png" alt="" />
+                        </div>
+                        <div class="content_qyzc_nr_right_B_text">
+                        	<h3><a href="javascript:void(0);" style="cursor:default;">看商情</a></h3>
+                            <p>紧跟商业潮流</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+	
+<!-- footer -->
+{include file="Public/footer.html"}

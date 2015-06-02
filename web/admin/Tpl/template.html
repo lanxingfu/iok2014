@@ -1,0 +1,641 @@
+{include file="header.inc.htm"}
+		<div id="colors-switcher" class="color">
+			<a href="" class="blue" title="Blue"></a>
+			<a href="" class="green" title="Green"></a>
+			<a href="" class="brown" title="Brown"></a>
+			<a href="" class="purple" title="Purple"></a>
+			<a href="" class="red" title="Red"></a>
+			<a href="" class="greyblue" title="GreyBlue"></a>
+		</div>
+		<!-- dialogs -->
+		<div id="dialog" title="Basic Dialog">
+			<p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+		</div>
+		<div id="dialog-modal" title="Basic Modal Dialog">
+			<p>Adding the modal overlay screen makes the dialog look more prominent because it dims out the page content.</p>
+		</div>
+		<div id="dialog-message" title="Download Complete">
+			<p><span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>Your files have downloaded successfully into the My Downloads folder.</p>
+			<p>Currently using <b>36% of your storage space</b>.</p>
+		</div>
+		<div id="dialog-confirm" title="Empty the Recycle Bin?">
+			<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>These items will be permanently deleted and cannot be recovered. Are you sure?</p>
+		</div>
+		<div id="dialog-form" title="Create new user">
+			<p>All form fields are required.</p>
+			<form action="" method="post">
+			<div class="form">
+				<div class="fields">
+					<div class="field field-first">
+						<div class="label">
+							<label for="input">Name:</label>
+						</div>
+						<div class="input">
+							<input type="text" id="user-name" name="user.name" />
+						</div>
+					</div>
+					<div class="field">
+						<div class="label">
+							<label for="input">Email:</label>
+						</div>
+						<div class="input">
+							<input type="text" id="user-email" name="user.email" />
+						</div>
+					</div>
+					<div class="field">
+						<div class="label">
+							<label for="input">Password:</label>
+						</div>
+						<div class="input">
+							<input type="text" id="user-password" name="user.password" />
+						</div>
+					</div>
+				</div>
+			</div>
+			</form>
+		</div>
+		<!-- end dialogs -->
+		<!-- header -->
+		<div id="header">
+			<!-- logo -->
+			<div id="logo">
+				<h1><a href="/" target="_blank" title="我行网"><img src="/public/image/logo.png" alt="我行网后台管理系统" /></a></h1>
+			</div>
+			<!-- end logo -->
+			<!-- user -->
+			<ul id="user">
+				<li class="first"><a href="">我的账号</a></li>
+				<li><a href="">站内消息 (0)</a></li>
+				<li><a href="">退出系统</a></li>
+				<li class="highlight last"><a href="">进入主站</a></li>
+			</ul>
+			<!-- end user -->
+			<div id="header-inner">
+				<div id="home">
+					<a href="" title="Home"></a>
+				</div>
+				<!-- quick -->
+				<ul id="quick">
+					<li>
+						<a href="#" title="Products"><span class="normal">Examples</span></a>
+						<ul>
+							<li><a href="index.html">Full, Column</a></li>
+							<li><a href="index-no-column.html">Full, No Column</a></li>
+							<li><a href="index-fixed.html">Fixed, Column</a></li>
+							<li class="last"><a href="index-fixed-no-column.html">Fixed, No Column</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" title="Products"><span class="icon"><img src="/public/image/agency/icons/application_double.png" alt="Products" /></span><span>Products</span></a>
+						<ul>
+							<li><a href="#">Manage Products</a></li>
+							<li><a href="#">Add Product</a></li>
+							<li>
+								<a href="#" class="childs">Sales</a>
+								<ul>
+									<li><a href="">Today</a></li>
+									<li class="last"><a href="">Yesterday</a></li>
+								</ul>
+							</li>
+							<li class="last">
+								<a href="#" class="childs">Offers</a>
+								<ul>
+									<li><a href="">Coupon Codes</a></li>
+									<li class="last"><a href="">Rebates</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="" title="Events"><span class="icon"><img src="/public/image/agency/icons/calendar.png" alt="Events" /></span><span>Events</span></a>
+						<ul>
+							<li><a href="#">Manage Events</a></li>
+							<li class="last"><a href="#">New Event</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="" title="Pages"><span class="icon"><img src="/public/image/agency/icons/page_white_copy.png" alt="Pages" /></span><span>Pages</span></a>
+						<ul>
+							<li><a href="#">Manage Pages</a></li>
+							<li><a href="#">New Page</a></li>
+							<li class="last">
+								<a href="#" class="childs">Help</a>
+								<ul>
+									<li><a href="#">How to Add a New Page</a></li>
+									<li class="last"><a href="#">How to Add a New Page</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="" title="Links"><span class="icon"><img src="/public/image/agency/icons/world_link.png" alt="Links" /></span><span>Links</span></a>
+						<ul>
+							<li><a href="#">Manage Links</a></li>
+							<li class="last"><a href="#">Add Link</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="" title="Settings"><span class="icon"><img src="/public/image/agency/icons/cog.png" alt="Settings" /></span><span>Settings</span></a>
+						<ul>
+							<li><a href="#">Manage Settings</a></li>
+							<li class="last"><a href="#">New Setting</a></li>
+						</ul>
+					</li>
+				</ul>
+				<!-- end quick -->
+				<div class="corner tl"></div>
+				<div class="corner tr"></div>
+			</div>
+		</div>
+		<!-- end header -->
+		<!-- content -->
+		<div id="content">
+			<!-- end content / left -->
+			<div id="left">
+				<div id="menu">
+					<h6 id="h-menu-products" class="selected"><a href="#products"><span>Products</span></a></h6>
+					<ul id="menu-products" class="opened">
+						<li><a href="">Manage Products</a></li>
+						<li><a href="">Add Product</a></li>
+						<li class="collapsible">
+							<a href="#" class="plus">Sales</a>
+							<ul class="collapsed">
+								<li><a href="">Today</a></li>
+								<li class="last"><a href="">Yesterday</a></li>
+							</ul>
+						</li>
+						<li class="collapsible last">
+							<a href="#" class="plus">Offers</a>
+							<ul class="collapsed">
+								<li><a href="">Coupon Codes</a></li>
+								<li class="last"><a href="">Rebates</a></li>
+							</ul>
+						</li>
+					</ul>
+					<h6 id="h-menu-pages"><a href="#pages"><span>Pages</span></a></h6>
+					<ul id="menu-pages" class="closed">
+						<li><a href="">Manage Pages</a></li>
+						<li><a href="">New Page</a></li>
+						<li class="collapsible last">
+							<a href="#" class="plus">Help</a>
+							<ul class="collapsed">
+								<li><a href="">How to Add a New Page</a></li>
+								<li class="last"><a href="">How to Add a New Page</a></li>
+							</ul>
+						</li>
+					</ul>
+					<h6 id="h-menu-events"><a href="#events"><span>Events</span></a></h6>
+					<ul id="menu-events" class="closed">
+						<li><a href="">Manage Events</a></li>
+						<li class="last"><a href="">New Event</a></li>
+					</ul>
+					<h6 id="h-menu-links"><a href="#links"><span>Links</span></a></h6>
+					<ul id="menu-links" class="closed">
+						<li><a href="">Manage Links</a></li>
+						<li class="last"><a href="">Add Link</a></li>
+					</ul>
+					<h6 id="h-menu-settings"><a href="#settings"><span>Settings</span></a></h6>
+					<ul id="menu-settings" class="closed">
+						<li><a href="">Manage Settings</a></li>
+						<li class="last"><a href="">New Setting</a></li>
+					</ul>
+				</div>
+				<div id="date-picker"></div>
+			</div>
+			<!-- end content / left -->
+			<!-- content / right -->
+			<div id="right">
+				<!-- table -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>Products</h5>
+						<div class="search">
+							<form action="#" method="post">
+								<div class="input">
+									<input type="text" id="search" name="search" />
+								</div>
+								<div class="button">
+									<input type="submit" name="submit" value="Search" />
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- end box / title -->
+					<div class="table">
+						<form action="" method="post">
+						<table>
+							<thead>
+								<tr>
+									<th class="left">Title</th>
+									<th>Price</th>
+									<th>Added</th>
+									<th>Category</th>
+									<th class="selected last"><input type="checkbox" class="checkall" /></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="title">24" LED Monitor</td>
+									<td class="price">$110.00</td>
+									<td class="date">April 25th, 2010 at 4:15 PM</td>
+									<td class="category">Monitors</td>
+									<td class="selected last"><input type="checkbox" /></td>
+								</tr>
+								<tr>
+									<td class="title">27" LCD Flat Panel</td>
+									<td class="price">$150.00</td>
+									<td class="date">April 25th, 2010 at 4:15 PM</td>
+									<td class="category">Monitors</td>
+									<td class="selected last"><input type="checkbox" /></td>
+								</tr>
+								<tr>
+									<td class="title">6GB 240-Pin DDR3 SDRAM DDR3 1600</td>
+									<td class="price">$80.00</td>
+									<td class="date">April 25th, 2010 at 4:15 PM</td>
+									<td class="category">Memory</td>
+									<td class="selected last"><input type="checkbox" /></td>
+								</tr>
+								<tr>
+									<td class="title">500GB 7200 RPM 16MB Cache SATA 3.0Gb/s 3.5</td>
+									<td class="price">$92.00</td>
+									<td class="date">April 25th, 2010 at 4:15 PM</td>
+									<td class="category">Hard Drives</td>
+									<td class="selected last"><input type="checkbox" /></td>
+								</tr>
+								<tr>
+									<td class="title">2GB 240-Pin DDR3 SDRAM DDR3 1600</td>
+									<td class="price">$52.00</td>
+									<td class="date">April 25th, 2010 at 4:15 PM</td>
+									<td class="category">Memory</td>
+									<td class="selected last"><input type="checkbox" /></td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- pagination -->
+						{include file="page.inc.htm"}
+						<!-- end pagination -->
+						<!-- table action -->
+						<div class="action">
+							<select name="action">
+								<option value="" class="locked">Set status to Deleted</option>
+								<option value="" class="unlocked">Set status to Published</option>
+								<option value="" class="folder-open">Move to Category</option>
+							</select>
+							<div class="button">
+								<input type="submit" name="submit" value="Apply to Selected" />
+							</div>
+						</div>
+						<!-- end table action -->
+						</form>
+					</div>
+				</div>
+				<!-- end table -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>Product Sales</h5>
+						<ul class="links">
+							<li><a href="">Full Report</a></li>
+						</ul>
+					</div>
+					<!-- end box / title -->
+					<div class="sales">
+						<div class="legend">
+							<h6>Units Sold (April 1st to April 15th)</h6>
+							<ul>
+								<li class="monitors">Monitors</li>
+								<li class="memory">Memory</li>
+							</ul>
+						</div>
+						<div id="sales"></div>
+					</div>
+				</div>
+				<!-- messages -->
+				<div id="box-tabs" class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>Content Box</h5>
+						<ul class="links">
+							<li><a href="#box-messages">Messages</a></li>
+							<li><a href="#box-other">Typography</a></li>
+							<li><a href="#box-dialogs">Dialogs</a></li>
+						</ul>
+					</div>
+					<!-- box / title -->
+					<div id="box-messages">
+						<div class="messages">
+							<div id="message-error" class="message message-error">
+								<div class="image">
+									<img src="/public/image/agency/icons/error.png" alt="Error" height="32" />
+								</div>
+								<div class="text">
+									<h6>Error Message</h6>
+									<span>This is the error message.</span>
+								</div>
+								<div class="dismiss">
+									<a href="#message-error"></a>
+								</div>
+							</div>
+							<div id="message-warning" class="message message-warning">
+								<div class="image">
+									<img src="/public/image/agency/icons/warning.png" alt="Warning" height="32" />
+								</div>
+								<div class="text">
+									<h6>Warning Message</h6>
+									<span>This is the warning message.</span>
+								</div>
+								<div class="dismiss">
+									<a href="#message-warning"></a>
+								</div>
+							</div>
+							<div id="message-notice" class="message message-notice">
+								<div class="image">
+									<img src="/public/image/agency/icons/notice.png" alt="Notice" height="32" />
+								</div>
+								<div class="text">
+									<h6>Notice Message</h6>
+									<span>This is the notice message.</span>
+								</div>
+								<div class="dismiss">
+									<a href="#message-notice"></a>
+								</div>
+							</div>
+							<div id="message-success" class="message message-success">
+								<div class="image">
+									<img src="/public/image/agency/icons/success.png" alt="Success" height="32" />
+								</div>
+								<div class="text">
+									<h6>Success Message</h6>
+									<span>This is the success message.</span>
+								</div>
+								<div class="dismiss">
+									<a href="#message-success"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="box-other">
+						<!-- paragraphs -->
+						<p class="start"><img src="/public/image/agency/misc/ginger.jpg" alt="Ginger" class="right" />Lorem ipsum dolor sit amet, consectetur <a href="">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<!-- end paragraphs -->
+						<!-- headings -->
+						<h5>Heading</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<blockquote><p>Lorem ipsum dolor sit amet, consectetur <a href="">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></blockquote>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<!-- end headings -->
+					</div>
+					<div id="box-dialogs">
+						<p><a id="dialog-open" href="#">Open Dialog</a></p>
+						<p><a id="dialog-modal-open" href="#">Open Modal Dialog</a></p>
+						<p><a id="dialog-message-open" href="#">Open Modal Message Dialog</a></p>
+						<p><a id="dialog-confirm-open" href="#">Open Modal Confirmation Dialog</a></p>
+						<p><a id="dialog-form-open" href="#">Open Form Dialog</a></p>
+					</div>
+				</div>
+				<!-- end messages -->
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>Forms</h5>
+					</div>
+					<!-- end box / title -->
+					<form id="form" action="" method="post">
+					<div class="form">
+						<div class="fields">
+							<div class="field  field-first">
+								<div class="label">
+									<label for="input-small">Small Input:</label>
+								</div>
+								<div class="input">
+									<input type="text" id="input-small" name="input.small" class="small" />
+									<div class="button highlight">
+										<input type="submit" name="submit.highlight" value="Submit Empathized" />
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="input-medium">Medium Input:</label>
+								</div>
+								<div class="input">
+									<input type="text" id="input-medium" name="input.medium" class="medium" />
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="input-large">Large Input:</label>
+								</div>
+								<div class="input">
+									<input type="text" id="input-large" name="input.large" class="large" />
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="autocomplete">Auto Complete:</label>
+								</div>
+								<div class="input">
+									<input type="text" id="autocomplete" name="input.autocomplete" value="start typing for example: java" class="small focus" />
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="date">Date Picker:</label>
+								</div>
+								<div class="input">
+									<input type="text" id="date" name="input.date" class="date" />
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="input-error">Error Input:</label>
+								</div>
+								<div class="input">
+									<input type="text" id="input-error" name="input.error" class="small error" />
+									<span class="error">This is a required field.</span>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="input-valid">Valid Input:</label>
+								</div>
+								<div class="input">
+									<input type="text" id="input-valid" name="input.valid" class="small valid" />
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="select">Select:</label>
+								</div>
+								<div class="select">
+									<select id="select" name="select">
+										<option value="1">Option #1</option>
+										<option value="2">Option #2</option>
+										<option value="3">Option #3</option>
+									</select>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label label-checkbox">
+									<label>Checkboxes:</label>
+								</div>
+								<div class="checkboxes">
+									<div class="checkbox">
+										<input type="checkbox" id="checkbox-1" name="checkboxex" />
+										<label for="checkbox-1">Option #1</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="checkbox-2" name="checkboxex" />
+										<label for="checkbox-2">Option #2</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="checkbox-3" name="checkboxex" />
+										<label for="checkbox-3">Option #3</label>
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label label-radio">
+									<label>Radios:</label>
+								</div>
+								<div class="radios">
+									<div class="radio">
+										<input type="radio" id="radio-1" name="radioex" />
+										<label for="radio-1">Option #1</label>
+									</div>
+									<div class="radio">
+										<input type="radio" id="radio-2" name="radioex" />
+										<label for="radio-2">Option #2</label>
+									</div>
+									<div class="radio">
+										<input type="radio" id="radio-3" name="radioex" />
+										<label for="radio-3">Option #3</label>
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="file">File:</label>
+								</div>
+								<div class="input input-file">
+									<input type="file" id="file" name="file" size="40" />
+								</div>
+							</div>
+							<div class="field">
+								<div class="label label-textarea">
+									<label for="textarea">Textarea:</label>
+								</div>
+								<div class="textarea textarea-editor">
+									<textarea id="textarea" name="textarea" cols="50" rows="12" class="editor"></textarea>
+								</div>
+							</div>
+							<div class="buttons">
+								<input type="submit" name="submit" value="Submit" />
+								<input type="reset" name="reset" value="Reset" />
+								<div class="highlight">
+									<input type="submit" name="submit.highlight" value="Submit Empathized" />
+								</div>
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				<!-- end forms -->
+				<!-- box / left -->
+				<div id="box-left-tabs" class="box box-left box-padding">
+					<!-- box / title -->
+					<div class="title">
+						<h5>Left Column</h5>
+						<ul class="links">
+							<li><a href="#box-left-forms">Tab #1</a></li>
+							<li><a href="#box-left-other">Tab #2</a></li>
+						</ul>
+					</div>
+					<!-- end box / title -->
+					<div id="box-left-forms">
+						<form action="" method="post">
+						<div class="form">
+							<div class="fields">
+								<div class="field field-first">
+									<div class="label">
+										<label for="input">Textbox:</label>
+									</div>
+									<div class="input">
+										<input type="text" id="input" name="input" />
+									</div>
+								</div>
+								<div class="field">
+									<div class="label label-textarea">
+										<label for="textarea">Textarea:</label>
+									</div>
+									<div class="textarea">
+										<textarea id="textarea1" name="textarea" cols="50" rows="8"></textarea>
+									</div>
+								</div>
+								<div class="buttons">
+									<input type="submit" name="submit" value="Submit" />
+									<input type="reset" name="reset" value="Reset" />
+								</div>
+							</div>
+						</div>
+						</form>
+					</div>
+					<div id="box-left-other">
+						<!-- paragraphs -->
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></blockquote>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<!-- end paragraphs -->
+					</div>
+				</div>
+				<!-- end box / left -->
+				<!-- box / right -->
+				<div class="box box-right">
+					<!-- box / title -->
+					<div class="title">
+						<h5>Right Column</h5>
+					</div>
+					<!-- end box / title -->
+					<!-- paragraphs -->
+					<p class="start"><img src="/public/image/agency/misc/ginger.jpg" alt="Ginger" class="right" />Lorem ipsum dolor sit amet, consectetur <a href="">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<!-- end paragraphs -->
+					<!-- headings -->
+					<h1>Heading</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></blockquote>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<h2>Heading</h2>
+					<ol class="decimal">
+						<li>List Item 1</li>
+						<li>List Item 2</li>
+						<li>List Item 3</li>
+					</ol>
+					<h3>Heading</h3>
+					<ul class="disc">
+						<li>List Item 1</li>
+						<li>List Item 2</li>
+						<li>List Item 3</li>
+					</ul>
+					<h4>Heading</h4>
+					<ul class="square">
+						<li>List Item 1</li>
+						<li>List Item 2</li>
+						<li>List Item 3</li>
+					</ul>
+					<h5>Heading</h5>
+					<dl>
+						<dt>Definition List Title</dt>
+						<dd>This is a definition list division.</dd>
+					</dl>
+					<!-- end headings -->
+				</div>
+				<!-- end box / right -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

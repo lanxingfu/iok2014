@@ -1,0 +1,79 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Profile/leftmenu.inc.htm"}
+			<!-- end content / left -->
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>我的账号 》编辑信息</h5>
+					</div>
+					<!-- end box / title -->
+					<form id="frm" method="post">
+					<div class="form">
+						<div class="fields">
+							<div class="field  field-first">
+								<div class="fname">账号</div>
+								<div class="fvalue">{$smarty.session.user.account}</div>
+							</div>
+							<div class="field">
+								<div class="label">真实姓名</div>
+								<div class="input">
+									<input type="text" name="prettyname" value="{$rec['prettyname']}" class="small" />
+								</div>
+								<div class="tip">{tip id='prettyname' default='请输入真实姓名'}</div>
+							</div>
+							<div class="field">
+								<div class="label">email</div>
+								<div class="input">
+									<input type="text" name="email" value="{$rec['email']}" class="small" />
+								</div>
+								<div class="tip">{tip id='email' default='请输入您的email'}</div>
+							</div>
+							<div class="field">
+								<div class="label">手机号码</div>
+								<div class="input">
+									<input type="text" name="mobile" value="{$rec['mobile']}" class="small" />
+								</div>
+								<div class="tip">{tip id='mobile' default='请输入您的手机号码'}</div>
+							</div>
+							<div class="field">
+								<div class="label">QQ</div>
+								<div class="input">
+									<input type="text" name="qq" value="{$rec['qq']}" class="small" />
+								</div>
+								<div class="tip">{tip id='qq' default='请输入您的qq号码'}</div>
+							</div>
+							<div class="field">
+								<div class="label">职位名称</div>
+								<div class="input">
+									<input type="text" name="position" value="{$rec['position']}" class="small" />
+								</div>
+								<div class="tip">{tip id='position' default='请输入您的职位'}</div>
+							</div>
+							<div class="field">
+								<div class="label label-textarea">个人介绍</div>
+								<div class="textarea textarea-editor">
+									<textarea name="introduce" cols="50" rows="12" class="editor">{$rec['introduce']|nl2br|escape:'html'}</textarea>
+								</div>
+							</div>
+							<div class="buttons">
+								<input type="hidden" name="m" value="Profile" />
+								<input type="hidden" name="a" value="submit" />
+								<input type="submit" value="提交" />
+								<input type="reset" value="返回" onclick="javascript:gotoUrl('/iokadmin.php?m=Profile')" />
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

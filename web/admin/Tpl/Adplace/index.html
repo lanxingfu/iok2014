@@ -1,0 +1,108 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<script language="javascript">
+ function del(id)
+{
+   if(confirm("确实要删除吗?"))
+	 window.location.href='/iokadmin.php/Adplace/delete/id/'+id;
+}
+function alldel(){	
+	var str='';
+	$("input:checkbox[name='alldel']:checked").each(function(){
+		str+=$(this).val()+",";
+	})
+	if(str){
+		if(confirm("确实删除所有选中吗?"))
+		window.location.href='/iokadmin.php/Adplace/delete/id/'+str;
+	}else{
+		alert('请至少选中一项');
+	}
+
+}
+</script>
+		<!-- content -->
+		<div id="content">
+			{include file="Adplace/leftmenu.inc.html"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- table -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title" style="margin-bottom:10px;">
+						<h5>广告位列表</h5>
+						{include file="record.inc.htm"}
+					</div>
+					<div id="search_div">
+						<div style="padding:10px 20px;">
+							<form action="/iokadmin.php/Adplace/index" method="get">
+								广告位名称：
+								<input name="prettyname" type="text" style="width:120px;" value="{$prettyname|escape:'html'|nl2br}" />
+								<select name="adtype">
+									<option {if $adtype eq "image"} selected {/if} value="image">图片</option>
+									<option {if $adtype eq "slideshow"} selected {/if} value="slideshow">幻灯片</option>
+									<option {if $adtype eq "text"} selected {/if} value="text">文字、文本</option>
+									<option {if $adtype eq "mobile"} selected {/if} value="mobile">手机类</option>
+								</select>
+								宽度：<input name="width" type="text" style="width:30px;" value="{$width}" />
+								高度：<input name="height" type="text" style="width:30px;" value="{$height}" />
+								<span>						
+									<input type="submit" name="submit" value="搜索" />
+								</span>
+							</form>
+						</div>
+					</div>
+					<!-- end box / title -->
+					<div class="table">
+						<table>
+							<thead>
+								<tr>
+									<th class="selected last"><input type="checkbox" class="checkall" /></th>
+									<th class="left">Id</th>
+									<th>广告类型</th>
+									<th style='width:156px;'>广告位名称</th>
+									<th>别名</th>
+									<th>宽度(px)</th>
+									<th>高度(px)</th>
+									<th>添加时间</th>
+									<th>是否启用</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								{foreach from=$listarr item=l}
+								<tr>
+									<td class="selected last"><input type="checkbox" name='alldel' value="{$l['id']}"/></td>
+									<td style='width:20px;' class="title">{$l['id']}</td>
+									<td>{$l['adtype']}</td>
+									<td>{$l['prettyname']}</td>
+									<td>{$l['name']}</td>
+									<td>{$l['width']}</td>
+									<td>{$l['height']}</td>
+									<td>{$l['addtime']}</td>
+									<td>{$l['enabled']}</td>
+									<td>
+										<!-- <a href="/iokadmin.php/Adplace/addad/id/{$l['id']}">添加</a> 
+										<a href="/iokadmin.php/Adplace/detail/adplaceid/{$l['id']}">列表  -->
+										<a href="/iokadmin.php/Adplace/edit/id/{$l['id']}">编辑</a> 
+										<a href="javascript:del({$l['id']});">删除</a></td>
+								</tr>
+								{/foreach}
+								<tr style='height:5px;'>
+									<td><input type="checkbox" class="checkall" /></td>
+									<td colspan='9'><a href='javascript:alldel();'>批量删除</a></td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- pagination -->
+						{$page|default:''}
+						<!-- end pagination -->
+						<!-- table action -->
+						<!-- end table action -->
+					</div>
+				</div>
+				<!-- end table -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

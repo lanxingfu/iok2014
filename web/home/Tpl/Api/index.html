@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html dir="ltr" class="client-js" lang="zh-cn">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>我行-API</title>
+<link rel="stylesheet" href="__PUBLIC__/style/home/wiki_main_lumpsugar.css" media="screen">
+</head>
+<body class="mediawiki ltr sitedir-ltr B_wiki_main  skin-monobook">
+<!--主内容开始-->
+<div class="wiki_wrap">
+	<div class="wiki_con">
+		<div class="con_box">
+			<div class="wiki_body">
+				<div class="wiki_inner">
+					<div class="main_content clearfix">
+						<div class="wiki_side noprint">
+						<!--左侧导航-->
+							{include file="Api/left.html"}
+						<!--/左侧导航结束-->
+						</div>
+						<div class="wiki_bodyContent" id="bodyContent">
+							<div id="mw-js-message" class="js-messagebox" style="display:none"></div>
+							<h1 id="firstHeading" class="firstHeading">我行API</h1>
+							<div dir="ltr" class="mw-content-ltr" lang="zh-cn">
+								<h2 class="wiki_title">
+									<span class="mw-headline" id=".E5.BE.AE.E5.8D.9AAPI">我行API</span>
+								</h2>
+								<div class="wiki_kit">
+									<div class="wiki_taglist">
+										<ul class="clearfix">
+											{if $list eq ''}<li><a href="#">暂无接口</a></li>
+											{else}
+											{foreach $list as $vo}
+												<li><a href="/Api/interfacefind/interfaceid/{$vo['id']}">{$vo['prettyname']}</a></li>
+											{/foreach}  
+											{/if}
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="printfooter">
+							<div id="catlinks" class="catlinks catlinks-allhidden"></div>
+							<div class="wiki_plus_area"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--/主内容开始-->
+</body>
+</html>

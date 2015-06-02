@@ -1,0 +1,67 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Syscfg/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- table -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title" style="margin-bottom:10px;">
+						<h5>节点管理</h5>
+						{include file="record.inc.htm"}
+					</div>
+					{include file="search.inc.htm"}
+					<!-- end box / title -->
+					<div class="table">
+						<table>
+							<thead>
+								<tr>
+									<th class="left">编号</th>
+									<th>名称</th>
+									<th>显示名</th>
+									<th>分组</th>
+									<th>序号</th>
+									<th>状态</th>
+									<th>操作</th>
+									<th class="selected last"><input type="checkbox" class="checkall" /></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="category">325</td>
+									<td class="category">Common</td>
+									<td class="category">公用模块</td>
+									<td class="category">未分组</td>
+									<td class="category">90</td>
+									<td class="category">正常</td>
+									<td class="category"><a href="#">编辑</a>/<a href="#">删除</a></td>
+									<td class="selected last"><input type="checkbox" /></td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- pagination -->
+						{$page|default:''}
+						<!-- end pagination -->
+						<!-- table action -->
+						<div class="action">
+							<select name="action">
+								<option value="" class="locked">Set status to Deleted</option>
+								<option value="" class="unlocked">Set status to Published</option>
+								<option value="" class="folder-open">Move to Category</option>
+							</select>
+							<div class="button">
+								<input type="submit" name="submit" value="Apply to Selected" />
+							</div>
+						</div>
+						
+						<!-- end table action -->
+					</div>
+				</div>
+				<!-- end table -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

@@ -1,0 +1,80 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Syscfg/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- table -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title" style="margin-bottom:10px;">
+						<h5>禁止IP</h5>
+						{include file="record.inc.htm"}
+					</div>
+					{include file="search.inc.htm"}
+					<!-- end box / title -->
+					<div class="table">
+						<table>
+							<thead>
+								<tr>
+									<th class="left">编号</th>
+									<th>IP地址/段</th>
+									<th>地区</th>
+									<th>有效期至</th>
+									<th>状态</th>
+									<th>操作人</th>
+									<th>禁止时间</th>
+									<th>操作</th>
+									<th class="selected last"><input type="checkbox" class="checkall" /></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="category">1</td>
+									<td class="category">221.45.156.90</td>
+									<td class="category">河北沧州</td>
+									<td class="category">2013-12-11</td>
+									<td class="category">已禁止</td>
+									<td class="category">admin</td>
+									<td class="category">2013-10-13</td>
+									<td class="category"><a href="#">编辑</a>/<a href="#">删除</a></td>
+									<td class="selected last"><input type="checkbox" /></td>
+								</tr>
+								<tr>
+									<td class="category">2</td>
+									<td class="category">221.85.156.90</td>
+									<td class="category">河北唐山</td>
+									<td class="category">2014-02-11</td>
+									<td class="category">已禁止</td>
+									<td class="category">admin</td>
+									<td class="category">2013-11-13</td>
+									<td class="category"><a href="#">编辑</a>/<a href="#">删除</a></td>
+									<td class="selected last"><input type="checkbox" /></td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- pagination -->
+						{$page|default:''}
+						<!-- end pagination -->
+						<!-- table action -->
+						<div class="action">
+							<select name="action">
+								<option value="" class="locked">Set status to Deleted</option>
+								<option value="" class="unlocked">Set status to Published</option>
+								<option value="" class="folder-open">Move to Category</option>
+							</select>
+							<div class="button">
+								<input type="submit" name="submit" value="Apply to Selected" />
+							</div>
+						</div>
+						
+						<!-- end table action -->
+					</div>
+				</div>
+				<!-- end table -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

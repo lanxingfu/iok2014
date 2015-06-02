@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,h1,h2,h3,h4,h5,h6,p,span,strong,ul,li,b{ margin:0; padding:0;}
+li{ list-style:none;}
+a{ text-decoration:none;}
+img{ border:none;}
+
+
+/* 公用部分 */
+.sxyddb_sy{width:100%; float:left;}
+.sxyddb_sy_top{width:100%; float:left; background:#e6e6e6;}
+.sxyddb_sy_top_nr{width:1001px; margin:0 auto;}
+.sxyddb_sy_top_box{width:1001px; float:left;}
+
+.sxyddb_sy_top_box_t{width:994px;height:67px; float:left; padding-top:28px; padding-left:7px; background:url(../../image/school/sxy_sy_t.jpg) no-repeat;}
+.sxyddb_sy_top_box_t_l{width:314px; float:left;}
+.sxyddb_sy_top_box_t_r{width:462px; float:right;}
+.sxyddb_sy_top_box_t_rnr{width:462px; float:left; padding-top:11px;height:28px;}
+.sxyddb_sy_top_box_t_rnr li{ padding:0 22px 0 18px; float:left; background:url(../../image/school/top_4.png) no-repeat right center; font-family:"微软雅黑"; font-size:16px; line-height:28px;}
+.sxyddb_sy_top_box_t_rnr li span{ padding-right:9px; float:left; vertical-align:middle;}
+.sxyddb_sy_top_box_t_rnr li a{ float:left; color:#6e6e6e;}
+.sxyddb_sy_top_box_t_rnr li a:hover{ text-decoration:underline; color:#c70000;}
+
+.sxyddb_sy_top_box_nav{width:1001px;height:36px; float:left; background:url(../../image/school/nav_bg.png) repeat-x; font-family:"微软雅黑"; font-size:16px;}
+.sxyddb_sy_top_box_nav a{width:101px;height:36px; float:left; text-align:center; color:#fff; line-height:36px;}
+.sxyddb_sy_top_box_nav a:hover{ background:url(../../image/school/nav_hover.jpg) no-repeat;}
+.sxyddb_sy_top_box_nav a.page_hover{ background:url(../../image/school/nav_hover.jpg) no-repeat;}
+
+/* 底部 */
+.sxyddb_sy_footer{width:100%; float:left; background:#6e6e6e; padding-top:8px;}
+.sxyddb_sy_footer_nr{width:980px; margin:0 auto;}
+.sxyddb_sy_footer_nr p{width:100%; font-family:"宋体"; font-size:12px; color:#fff; float:left; text-align:center; line-height:36px;}
+.sxyddb_sy_footer_nr p a{ padding:0 8px; color:#fff; background:url(../../image/school/footer_1.png) no-repeat left center; display:inline-block;}
+.sxyddb_sy_footer_nr p a:hover{ color:#c70000; text-decoration:underline;}
+
+/* 公用部分结束 */

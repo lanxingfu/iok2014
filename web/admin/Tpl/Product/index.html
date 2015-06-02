@@ -1,0 +1,108 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+{literal} 
+<script language="javascript" type="text/javascript" src="/public/script/admin/thickbox.js" /></script>
+<link rel="stylesheet" href="/public/style/admin/thickbox.css" type="text/css" media="screen" />
+<script type="text/javascript">
+	function del(id){
+		var submit = function (v, h, f) {
+		if (v == 'ok')
+			window.location.href='/iokadmin.php?m=Product&a=del&id='+id;
+			//jBox.tip(v, 'info');
+		else if (v == 'cancel')
+			jBox.tip('已取消', 'info');
+
+			return true; //close
+		};
+
+		$.jBox.confirm("确定删除吗？", "提示", submit);
+	}
+</script>
+{/literal}
+		<!-- content -->
+		<div id="content">
+			{include file="Product/leftmenu.inc.htm"}
+			<!-- content / right -->
+			<div id="right">
+				<!-- table -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title" style="margin-bottom:10px;">
+						<h5>产品列表</h5>
+						{include file="record.inc.htm"}
+					</div>
+					{include file="search.inc.htm"}
+					<!-- end box / title -->
+					<div class="table">
+						<table>
+							<thead>
+								<tr>
+									<th class="left">编号</th>
+									<th>分类</th>
+									<th>图片</th>
+									<th>商品标题</th>
+									<th>供应商</th>
+									<th>商务代表</th>
+									<th>价格</th>
+									<th>佣金</th>
+									<th>库存</th>
+									<th>添加时间</th>
+									<th>状态</th>
+									<th>操作</th>
+									<th class="selected last"><input type="checkbox" class="checkall" /></th>
+								</tr>
+							</thead>
+							
+							<tbody>
+							{foreach from=$data item=item}
+								<tr>
+									<td>{$item.id}</td>
+									<td>{$item.categoryid}</td>
+									<td>
+										<div class="layout auto wenchua" id="wenchuan">
+											<div>
+												<a href="{$item.thumbd}"  title="" class="thickbox">
+												<img width="40px" height="20px" src="{$item.thumb}"/></a>
+											</div>
+										</div>
+									</td>
+									<td>{$item.title}</td>
+									<td>{$item.memberid}</td>
+									<td>{$item.servicestaff|default:'暂无'}</td>
+									<td>{$item.price}</td>
+									<td>{$item.commission*0.01}</td>
+									<td>{$item.inventory}</td>
+									<td>{$item.addtime}</td>
+									<td>{$item.status}</td>
+									<td>
+										<a href="?m=Product&a=add&id={$item.id}">编辑</a>/
+										<a href="javascript:del({$item.id});">删除</a>
+									</td>
+									<td class="selected last"><input type="checkbox" /></td>
+								</tr>
+							{/foreach}
+							</tbody>
+						</table>
+						<!-- pagination -->
+						{$page|default:''}
+						<!-- end pagination -->
+						<!-- table action -->
+						<div class="action">
+							<select id="action">
+								<option value="0">禁用</option>
+								<option value="1">启用</option>
+							</select>
+							<div class="button">
+								<input type="reset" value="执行操作" onclick="javascript:var ids = ischeckmore();alert(ids);" />
+							</div>
+						</div>
+						
+						<!-- end table action -->
+					</div>
+				</div>
+				<!-- end table -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

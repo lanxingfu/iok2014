@@ -1,0 +1,128 @@
+﻿{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			<!-- end content / left -->
+			{include file="Ad/leftmenu.inc.html"}
+			<!-- end content / left -->
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>修改广告</h5>
+					</div>
+					<!-- end box / title -->
+					<form id="form" action="/iokadmin.php/Ad/doedit" method="post">
+					<div class="form">
+						<div class="fields">
+							<div class="field  field-first">
+								<div class="label">
+									<label for="input-small">广告位：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="adplaceid" class="small" value="{$arr['adplaceid']}"/>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="select">广告价格：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="price" class="small" value="{$arr['price']}"/>元
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">
+									<label for="input-medium">广告名称：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="prettyname" class="medium" value="{$arr['prettyname']}"/>
+								</div>
+							</div>
+							
+							<div class="field">
+								<div class="label label-textarea">
+									<label for="textarea">广告介绍：</label>
+								</div>
+								<div class="textarea textarea-editor">
+									<textarea name="introduce" style='height:50px;' class="editor">{$arr['introduce']}</textarea>
+								</div>
+							</div>
+							<!-- <div class="field">
+								<div class="label">
+									<label for="date">投放时段：</label>
+								</div>
+								<div class="input">
+									<input style='width:80px;' type="text" name="fromtime" class="date" />
+								
+								至
+								
+									<input style='width:80px;float:none' type="text" name="totime" class="date" />
+								</div>
+							</div> -->
+							<div class="field">
+								<div class="label">
+									<label for="input-small">备注：</label>
+								</div>
+								<div class="input">
+									<input type="text" class="medium" name="note" value="{$arr['note']}"/>
+								</div>
+							</div>
+							<!-- <div class="field">
+								<div class="label label-radio">
+									<label>点击统计：</label>
+								</div>
+								<div class="radios">
+									<div class="radio">
+										<input type="radio" id="radio-1" name="radioex" />
+										<label for="radio-1">开启</label>
+									
+										<input type="radio" id="radio-2" name="radioex" />
+										<label for="radio-2">关闭</label>
+									</div>
+								</div>
+							</div> -->
+							
+								
+							
+							<div class="field">
+								<div class="label">
+									<label for="input-small">排序：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="listorder" class="small" value="{$arr['listorder']}" />
+								</div>
+							</div>
+							<div class="field">
+								<div class="label label-radio">
+									<label>是否启用：</label>
+								</div>
+								<div class="radios">
+									<div class="radio">
+										<input type="radio" id="radio-1" name="enabled" value="1" {if $arr['enabled'] eq 1} checked="checked" {/if}/>
+										<label for="radio-1">启用</label>
+									
+										<input type="radio" id="radio-2" name="enabled" value="0" {if $arr['enabled'] eq 0} checked="checked" {/if}/>
+										<label for="radio-2">关闭</label>
+									</div>
+								</div>
+							</div> 
+							<div class="buttons">
+								<input type='hidden' name='id' value="{$arr['id']}">
+								<input type="reset" name="reset" value="Reset" />
+								<div class="highlight">
+									<input type="submit" name="submit.highlight" value="Submit" />
+								</div>
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

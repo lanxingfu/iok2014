@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+.gwc_conter_nr_con{width:995px; float:left; padding-top:23px;}
+.gwc_conter_nr_con_top{height:22px; line-height:22px; font-family:"宋体"; padding-bottom:8px;}
+.gwc_conter_nr_con_top h3{ float:left; font-weight:normal;height:22px; font-size:14px;}
+.gwc_conter_nr_con_top img{width:28px;hieght:22px; float:left;}
+.gwc_conter_nr_con_top span{ float:left; color:#000000; padding-left:6px;}
+.gwc_conter_nr_con_top p{ float:right; padding-right:5px; font-size:12px;}
+.gwc_conter_nr_con_top p a{ color:#0064a0; margin-right:6px; float:left;}
+.gwc_conter_nr_con_top p a:hover{ color:#c80000; text-decoration:underline;}
+.add_address a { color:#0064a0; font-size:12px; font-family:"宋体"; float:left; }
+.hddym_qrshdz{ padding-top:9px; float:left; width:100%; padding-bottom:11px; border-bottom:1px dashed #c0c0c0;}
+.hddym_qrshdz_nr{ padding-top:12px; float:left; padding-left:36px;width:100%;}
+.hddym_qrshdz_nr_l{width:93px; float:left;height:32px; line-height:32px; font-size:12px; color:#6e6e6e;}
+.hddym_qrshdz_nr_r{ float:left;}
+.hddym_qrshdz_nr_r_o{height:32px; line-height:32px; vertical-align:middle;}
+.hddym_qrshdz_nr_r_o input{ vertical-align:middle; margin-right:10px; float:left; margin-top:9px;}
+.hddym_qrshdz_nr_r_o p{ float:left; line-height:32px; color:#6e6e6e; font-size:12px;}
+.hddym_fpxx{ padding-top:9px; float:left; width:100%; padding-bottom:11px; border-bottom:1px dashed #c0c0c0;}
+.hddym_fpxx_nr{ padding-top:12px; float:left; padding-left:36px;width:100%;}
+.hddym_fpxx_nr_l{width:93px; float:left; line-height:28px; font-size:12px; color:#6e6e6e;}
+.hddym_fpxx_nr_l span{ float:left;width:93px;height:28px;}
+.hddym_fpxx_nr_r{ float:left;}
+.hddym_fpxx_nr_r_o{height:28px; line-height:28px; vertical-align:middle;}
+.hddym_fpxx_nr_r_o input{ vertical-align:middle; margin-right:10px; float:left; margin-top:9px;}
+.hddym_fpxx_nr_r_o p{ float:left; line-height:28px; color:#6e6e6e; font-size:12px;}
+.hddym_fpxx_nr_r_o label{ float:left; width:119px; font-family:"宋体"; font-size:12px; color:#6e6e6e; line-height:28px;}
+
+.hddym_fpxx_nr_r_oy{width:89px;height:24px; float:left; padding-top:15px;}
+
+.hddym_fpxq{ padding-top:10px; float:left; width:100%; padding-bottom:11px; border-bottom:1px dashed #c0c0c0;}
+.hddym_fpxq{ padding-top:9px; float:left; width:100%; padding-bottom:11px; border-bottom:1px dashed #c0c0c0;}
+.hddym_fpxq_nr{ padding-top:12px; float:left; padding-left:36px;width:100%;}
+.hddym_fpxq_nr_l{width:93px; float:left; line-height:28px; font-size:12px; color:#6e6e6e;}
+.hddym_fpxq_nr_l span{ float:left;width:93px;height:28px;}
+.hddym_fpxq_nr_r{ float:left;}
+.hddym_fpxq_nr_r_o{height:28px; line-height:28px; vertical-align:middle;}
+.hddym_fpxq_nr_r_o input{ vertical-align:middle; margin-right:10px; float:left; margin-top:8px;}
+.hddym_fpxq_nr_r_o p{ float:left; line-height:28px; color:#6e6e6e; font-size:12px;}
+.hddym_fpxq_nr_r_o label{ float:left; width:119px; font-family:"宋体"; font-size:12px; color:#6e6e6e; line-height:28px;}
+
+.hddym_fpxq_nr_r_oy{width:89px;height:24px; float:left; padding-top:15px;}
+.hddym_fpxq_nr_f{ float:left;width:100%;}
+.hddym_fpxq_nr_r_p{width:100%; float:left; padding-top:10px;}
+.hddym_fpxq_nr_r_p p{ font-family:"宋体"; font-size:12px; color:#6e6e6e;height:22px; line-height:22px; padding-bottom:10px; font-weight:normal; float:left; width:100%;}
+.hddym_fpxq_nr_r_p p span{width:94px;height:22px; line-height:22px; padding-left:12px; background:url(../../image/home/product/gwc_xtb_14.png) no-repeat left center; float:left;}
+.hddym_fpxq_nr_r_p p input{width:392px;height:22px; float:left; font-family:"宋体"; font-size:12px; line-height:22px; color:#6e6e6e;}
+
+.hddym_fpxq_nr_r_nr p{ font-family:"宋体"; font-size:12px; color:#6e6e6e;height:22px; line-height:22px; padding-bottom:10px; font-weight:normal; float:left; width:100%;}
+.hddym_fpxq_nr_r_nr p span{width:94px;height:22px; line-height:22px; padding-left:12px; background:url(../../image/home/product/gwc_xtb_14.png) no-repeat left center; float:left;}
+.hddym_fpxq_nr_r_nr p input:radio{width:60px;height:22px; float:left; font-family:"宋体"; font-size:12px; line-height:22px; color:#6e6e6e;}
+.hddym_fpxq_nr_r_p h5{width:396px; float:left; font-family:"宋体"; line-height:22px;  padding-left:105px;}
+
+.gwc_bottom_b input{ height: 32px; width: 94px; border:none;float:left; margin-left:5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

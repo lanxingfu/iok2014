@@ -1,0 +1,73 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Usergroup/leftmenu.inc.htm"}
+			<!-- end content / left -->
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>用户组管理 》{if $rec['id']}编辑信息{else}添加用户组{/if}</h5>
+					</div>
+					<!-- end box / title -->
+					<form id="frm" method="post">
+					<div class="form">
+						<div class="fields">
+							<div class="field  field-first">
+								<div class="label">用户组名称</div>
+								<div class="input">
+									<input type="text" name="prettyname" value="{$rec['prettyname']}" class="small" />
+								</div>
+								<div class="tip">{tip id='prettyname' default='请输入用户组名称'}</div>
+							</div>
+							<div class="field">
+								<div class="label">所属部门</div>
+								<div class="select">
+									<select name="departmentid">
+									{html_options values=$department['id'] output=$department['prettyname'] selected=$rec['departmentid']}
+									</select>
+								</div>
+								<div class="tip">{tip id="department" default="请选择所属部门"}</div>
+							</div>
+							<div class="field">
+								<div class="label">所属角色</div>
+								<div class="select">
+									<select name="roleid">
+									{html_options values=$role['id'] output=$role['prettyname'] selected=$rec['roleid']}
+									</select>
+								</div>
+								<div class="tip">{tip id="role" default="请选择所属角色"}</div>
+							</div>
+							<div class="field">
+								<div class="label">列表序号</div>
+								<div class="input">
+									<input type="text" name="listorder" value="{$rec['listorder']}" class="small" />
+								</div>
+								<div class="tip">{tip id='listorder' default='请输入列表序号'}</div>
+							</div>
+							<div class="field">
+								<div class="label label-textarea">部门简介</div>
+								<div class="textarea textarea-editor">
+									<textarea name="introduce" cols="50" rows="12" class="editor">{$rec['introduce']|nl2br|escape:'html'}</textarea>
+								</div>
+							</div>
+							<div class="buttons">
+								<input type="hidden" name="m" value="Usergroup" />
+								<input type="hidden" name="a" value="submit" />
+								<input type="hidden" name="id" value="{$rec['id']}" />
+								<input type="submit" name="submit" value="提交" />
+								<input type="reset" name="reset" value="返回" onclick="javascript:gotoUrl('/iokadmin.php?m=Usergroup{if $rec['id']}&a=detail&id={$rec['id']}{/if}')" />
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

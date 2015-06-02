@@ -1,0 +1,129 @@
+{include file="Public/header.html"}
+{include file="Public/top.html"}
+<link href="__PUBLIC__/style/home/common.css" rel="stylesheet" />
+<link href="__PUBLIC__/style/home/mall-listy.css" rel="stylesheet" /><!-- 中间内容部分 -->
+
+<div class="qglby_box">
+	<div class="qglby_nr">
+    	<div class="qglby_top searchbottom">
+        	<div class="zxejym_conter_nr_top" style="border-bottom:none;">
+				<strong>搜索</strong>
+				<span>：&nbsp;<a href="/Search/listy/keyword/{$keyword}">{$keyword}</a></span>
+			</div>
+        </div>
+        <div class="qglby_conter">
+        	<div class="qglby_conter_left searchlist">
+            	<div class="qglby_conter_left_top">
+                	<div class="qglby_conter_left_top_l">
+                    	<strong>所有产品</strong>
+                    </div>
+                    <div class="qglby_conter_left_top_input">
+                  
+                    </div>
+                   <ul class="qglby_conter_left_top_sx" style="width:203px;float:right;">
+                    	<li><a href="/Search/listy/type/{$type}/keyword/{$keyword}/sortby/price/orderby/{$orderby}">价 格 {if $sortby eq 'price'}{if $orderby eq 'desc'}<img src="/Public/image/mall/qglby_img_1.png" alt="" />{else}<img src="/Public/images/mall/qglby_img_3.png" alt="" />{/if}{/if}</a></li>
+                        <!-- <li><a target="_blank"href="#">价 格 <img src="/Public/images/mall/qglby_img_3.png" alt="" /></a></li> -->
+                        <li><a href="/Search/listy/type/{$type}/keyword/{$keyword}/sortby/sales/orderby/{$orderby}">销 量 {if $sortby eq 'sales'}{if $orderby eq 'desc'}<img src="/Public/image/mall/qglby_img_1.png" alt="" />{else}<img src="/Public/images/mall/qglby_img_3.png" alt="" />{/if}{/if}</a></li>
+                        <li><a href="/Search/listy/type/{$type}/keyword/{$keyword}/sortby/editdate/orderby/desc">更新时间</a></li>
+                    </ul>                  
+                </div>
+				{if $data neq ''}
+					<ul class="qglby_conter_left_list">
+						{foreach $data as $v}	
+							<li>
+								<div class="qglby_conter_left_list_img">
+									<a href="/Mall/show/id/{$v.id}">
+										{if $v.thumb eq ''}
+											<img src="/Public/image/nopic_l.jpg" jqimg="/Public/image/nopic_b.jpg" alt="" />
+										{else}
+											<img src="{$v.thumb}" alt="{$v.title}" onError='this.src="/Public/image/nopic_l.jpg"'/>
+										{/if}
+									</a>
+								</div>
+								<div class="qglby_conter_left_list_btjs">
+									<h3><a href="/Mall/show/id/{$v.id}">{$v.title}</a></h3>
+									<p>最低起批量：{if $v.moq eq ''}-{else}{$v.moq}{/if} /{if $v.unit  eq ''}件{else}{$v.unit}{/if}</p>
+									<p>产地：{if $v.areaname eq ''}-{else}{$v.areaname}{/if}</p>								
+									<!-- <div class="qglby_conter_left_list_btjs_lj">
+										<a href="#"><img src="/Public/images/mall/qglby_img_6.png" alt="" /></a>
+										<a href="#"><img src="/Public/images/mall/qglby_img_7.png" alt="" /></a>
+									</div> -->
+								</div>
+								<div class="qglby_conter_left_list_jgxq">
+									<p>单价：
+										{if $v.price eq ''}
+											暂无报价
+										{else}
+											<span>&yen;{$v.price}</span> /{if $v.unit eq ''}件{else}{$v.unit}{/if}
+										{/if}
+									</p>
+									<p>
+										<!--{if $v.groupid eq 4}
+											待审核企业
+										{elseif $v.groupid eq 6}
+											企业会员
+										{elseif $v.groupid eq 8}
+											我行网认证企业
+										{else}
+											未知状态
+										{/if}-->
+									</p>
+								</div>
+								<div class="qglby_conter_left_list_r">
+									<p>库存：<span>{if $v.inventory eq ''}-{else}{$v.inventory}{/if}</span>{if $v.unit eq ''}件{else}{$v.unit}{/if}</p>
+									<p>人气： <span>{if $v.hits eq ''}-{else}{$v.hits}{/if}</span> </p>
+									<p class="m_t7"><a target="_blank" href="/Mall/show/id/{$v.id}">详 &nbsp情</a></p>
+									<!-- <p class="m_t7"><a onclick='nowbuy({$v.itemid},{$v.minamount})' href="javascript:void(0)">购 买</a></p> -->
+								</div>
+							</li>
+						{/foreach}
+					</ul>
+					<div id="pages">{$showpage}</div>
+				{else}
+					<span class="zanwu">对不起，没有检索到您想要找的商品！ 试试 <a href="/Mall" style="color:#30C">查看更多的商品</a> 有没有您要找的宝贝 O(∩_∩)O~</span>
+				{/if}
+            </div>
+            <div class="qglby_conter_right searchright">
+            	<div class="qglby_conter_right_top">
+                	<h3>热销商品</h3>
+                    <!--<a target="_blank"href="#">MORE&gt;</a>-->
+                </div>				
+				{if $tongcate eq ''}
+					<span class="zanwuj">暂无同类推荐</span>
+				{else}
+					<ul class="qglby_conter_right_bot">
+						{foreach $tongcate as $v}	
+							<li>
+								<div class="qglby_conter_right_bot_img">
+									<a href="/Mall/show/id/{$v.id}">
+										{if $v.thumb eq ''}
+											<img src="/Public/image/nopic_b.jpg">
+										{else}
+											<img src="{$v.thumb}" alt="{$v.title}" onError='this.src="/Public/image/zanwu.jpg"'/>
+										{/if}	
+									</a>
+								</div>
+								<h4><a href="/Mall/show/id/{$v.id}">{$v.title}</a></h4>
+								<p>单价：<span>&yen;{$v.price}</span> {if $v.unit eq ''}件{else}{$v.unit}{/if}</p>								
+							</li>
+						{/foreach}
+					</ul>
+				{/if}
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	//立即购买
+	function nowbuy(id,num){
+		var islogin = "{$_SESSION['userdata']['userid']}";
+		if(!islogin){
+			alert('您当前还未登录，请登录后继续购买');
+			window.location='/Public/login/';
+		}else{
+			window.location='/Mall/order/itemid/'+id+'/num/'+num;
+		}
+		
+	}
+</script>
+{include file='Public/footer.html'}

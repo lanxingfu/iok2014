@@ -1,0 +1,369 @@
+{include file="Public/header_room.html"}
+{include file="Public/room_top.html"}
+
+<link href="/public/style/home/room/table_form.css" rel="stylesheet" />
+<link href="/public/style/home/room/supply.css" rel="stylesheet" />
+<!--编辑器开始-->
+<script type="text/javascript" charset="utf-8" src="/public/script/admin/editor/kindeditor.js"></script>
+<script type="text/javascript">
+	KE.show({
+		id : 'content_1' ,//TEXTAREA输入框的ID
+		minWidth:"650px",
+		minHeight:"300px",
+		resizeMode:0
+	});
+</script>
+<!--编辑器结束-->
+
+<!-- 上传 start -->
+<link id="skin" rel="stylesheet" href="/public/script/jbox/Skins/Gray/jbox.css" />
+<script type="text/javascript" src="/public/script/jbox/jquery.jBox-2.3.min.js"></script>
+<script type="text/javascript" src="/public/script/jbox/i18n/jquery.jBox-zh-CN.js"></script>
+<!-- 上传 end -->
+
+<!--改变计量单位-->
+{literal}
+<script language="javascript" type="text/javascript">
+$(function($) {
+	$("#unit").blur( function () { 
+		 var unit_val = $('#unit').val();
+		 var regexp = /^[0-9]$/g;
+		 if(regexp.test(unit_val)) {
+			 $(this).val('');
+			 unit_val = '';
+		 }
+		 $('.unit').text(unit_val);
+	});
+});
+ 
+function checkPrice(price,id) {
+	var val = price;
+	var inputId = id;
+	var regexp = /^[0-9.]{1,15}?$/g;
+	if(!regexp.test(val)) {
+		$("#"+inputId).val('');
+	}
+} 
+
+</script>
+{/literal}
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html" }
+			</div>
+			<div class="content_sws_nr_right" id="iframe_main">
+				<div class="content_sws_nr_right_lgrzl">
+					<div class="content_sws_nr_r_lgrzl_t">
+						{include file="Public/welcom.html" }
+					</div>
+				</div>
+				<div class="content_sws_nr_right_b">
+					<div class="content_sws_nr_right_b_t"  >
+						{include file="Product/productmenu.html" }
+					</div>
+				</div>
+				{if $smarty.session.inspect_product_id neq ''}
+				<form action="/Product/editsave"  method="POST" class="registerform" >
+				{else}
+				<form action="/Product/editsubmit"  method="POST" class="registerform" >
+				{/if}
+				<div style="float:left;margin-top:11px;">{tip id='toperror' default=''}</div>
+				<div class="content_sws_nr_right_b_t_spfl">
+					<h3>商品分类<span style="color:red">*</span></h3>
+					<ul class="content_sws_nr_right_b_t_spfl_li">
+						{'categoryid'|ajax_category_select:'':$postdata.categoryid:8:'size="2" style="height:180px;width:140px;"'}
+					</ul>
+					<ul><span style="float:left;font-size:12px" id="categoryid">{tip id='tcategory' default=''}</span></ul>
+				</div>
+				<div class="content_sws_nr_right_b_t_xxlb">
+					<table class="table_form">
+						<tr>
+							<th>商品名称<span style="color:red">*</span></th>
+							<td class="table_spmc">
+								<input type="text" name="title" class="inputxt" value="{$postdata.title}" style="float:left;" />
+									<span style="float:left;font-size:12px" >{tip id='ttitle' default=''}</span>
+							</td>
+						</tr>
+						<tr>
+							<th>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌<span style="color:red">*</span></th>
+							<td class="table_pp">
+								<select name="custombrandid">
+									<option value=''>--请选择--</option>
+									{foreach $brandlist as $v }
+										<option value="{$v.id}" {if $postdata.custombrandid eq $v.id} selected {/if} >{$v.prettyname}</option>
+									{/foreach}
+								</select>
+								<span>{tip id='tbrand' default=''}</span>
+							</td>
+						</tr>
+						<tr>
+							<th>货号/型号<span style="color:red">*</span></th>
+							<td class="table_hhxh">
+								<input type="text" value="{$postdata.model}" name="model" />
+								<span>{tip id='tmodel' default=''}</span>
+							</td>
+						</tr>
+						<tr>
+							<th>成分/材质<span style="color:red">*</span></th>
+							<td class="table_cfcz">
+								<input type="text" value="{$postdata.material}" name="material" />
+								<span>{tip id='tmaterial' default=''}</span>
+							</td>
+						</tr>
+						<tr>
+							<th>原产地<span style="color:red">*</span></th>
+							<td class="table_hhxh">
+								<div class="content_sws_nr_right_b_rgsdq">
+									<div class="content_sws_nr_right_b_rgsdq_t">
+										{'placeareaid'|ajax_area_select:'请选择':$postdata.placeareaid}
+									</div>
+								</div>
+								<span>{tip id='tplaceareaid' default=''}</span>
+							</td>
+							
+						</tr>
+						<tr>
+							<th>发货地<span style="color:red">*</span></th>
+							<td class="table_hhxh">
+								<div class="content_sws_nr_right_b_rgsdq">
+									<div class="content_sws_nr_right_b_rgsdq_t">
+										{'shipareaid'|ajax_area_select:'请选择':$postdata.shipareaid}
+									</div>
+								</div>
+								<span>{tip id='tshipareaid' default=''}</span>
+							</td>
+							
+						</tr>
+						<!-- <tr>
+							<th>适用范围<span style="color:red">*</span></th>
+							<td class="table_hhxh">
+								<input type="text" value="" id="domain" name="domain" />
+							</td>
+						</tr> -->
+						<tr>
+							<th>计量单位<span style="color:red">*</span></th>
+							<td class="table_hhxh">
+								<input type="text" value="{$postdata.unit}" id="unit" name="unit" />
+								<span id="unit_result">{tip id='tunit' default=''}</span>
+							</td>
+						</tr>
+						<tr>
+							<th>产品单价<span style="color:red">*</span></th>
+							<td class="table_hhxh">
+								<input type="text" value="{$postdata.price}" id="price" name="price" /><span>&nbsp;元/</span><span class='unit' >单位</span>
+								<span>{tip id='tprice' default=''}</span>
+							</td>
+						</tr>
+						<tr>
+							<th>产品参考价</th>
+							<td class="table_hhxh">
+								<input type="text" value="{$postdata.referenceprice}" name="referenceprice"  /><span>&nbsp;元/</span><span class='unit' >单位</span><span style="color:red">&nbsp;&nbsp;{tip id='ttitle' default='*仅在商品参与活动时填写,非活动商品可以为空'}</span>
+							</td>
+						</tr>
+						<tr>
+							<th>最小起订量<span style="color:red">*</span></th>
+							<td class="table_hhxh">
+								<input type="text" value="{$postdata.moq}" name="moq"  />&nbsp;<span class='unit' >单位</span>
+								<span>{tip id='tmoq' default=''}</span>
+							</td>
+						</tr>
+						<tr>
+							<th>供货总量<span style="color:red">*</span></th>
+							<td class="table_hhxh">
+								<input type="text" value="{$postdata.inventory}" name="inventory" />&nbsp;<span class='unit' >单位</span>
+								<span>{tip id='tinventory' default=''}</span>
+							</td>
+						</tr>
+						<tr>
+							<th>发货期限<span style="color:red">*</span></th>
+							<td class="table_cpdj">
+								<span>自买家付款之日起</span><input type="text" name="deliverydays" value="{$postdata.deliverydays}" />
+								<span>天内发货</span>&nbsp;
+								<span>{tip id='tdeliverydays' default=''}</span>
+							</td>
+						</tr>
+						<tr>
+							<th>促单佣金<span style="color:red">*</span></th>
+							<td class="table_cpdj">
+								<input type="text" name="commission" value="{$postdata.commission}" />%
+								<span>{tip id='tcommission' default=''}</span>
+							</td>
+						</tr>
+						<tr>
+							<th>商品图片<span style="color:red">*</span></th>
+							<td class="table_sptp">
+								<div  class="table_sptps">
+									<div class="images">
+										<img onclick="loadlayer('titleimg','imgurl');" id="titleimg" src="{if $postdata.thumb neq ''}{$postdata.thumb}{else}/public/image/public/uploadimg.jpg{/if}">
+										<input type='hidden' name="thumb" id="imgurl" value='{$postdata.thumb}' >
+									</div>
+									<div class="tests">
+										<a onclick="loadlayer('titleimg','imgurl');" >【上传】</a>
+										<a onclick="delurl('titleimg','imgurl');" >【删除】</a>  
+									</div>
+								</div>
+								<div class="table_sptps">
+									<img onclick="loadlayer('titleimg1','imgurl1');" id="titleimg1" src="{if $postdata.thumb1 neq ''}{$postdata.thumb1}{else}/public/image/public/uploadimg.jpg{/if}">
+									<input type='hidden' name="thumb1" id="imgurl1" value='{$postdata.thumb1}' >
+									<div class="tests">
+										<a onclick="loadlayer('titleimg1','imgurl1');" >【上传】</a>
+										<a onclick="delurl('titleimg1','imgurl1');" >【删除】</a>
+									</div>
+								</div>
+								<div class="table_sptps">
+									<img onclick="loadlayer('titleimg2','imgurl2');" id="titleimg2" src="{if $postdata.thumb2 neq ''}{$postdata.thumb2}{else}/public/image/public/uploadimg.jpg{/if}">
+									<input type='hidden' name="thumb2" id="imgurl2" value='{$postdata.thumb2}' >
+									<div class="tests">
+										<a onclick="loadlayer('titleimg2','imgurl2');" >【上传】</a>
+										<a onclick="delurl('titleimg2','imgurl2');" >【删除】</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr ><th HEIGHT='35PX;'></th><td STYLE='COLOR:#FF0000;line-height: 24px !important;font-family: "微软雅黑";font-size: 12px;'>&nbsp;&nbsp;上传格式：.JPG、JPEG、PNG、GIF；图片最大2M；建议上传800*600像素图片</td></tr>
+						<tr><th></th><td><span id="upimg">{tip id='tthumb' default=''}</span></td></tr>
+						<tr>
+							<th>商品详情<span style="color:red">*</span></th>
+							<td style="padding-left:10px;">
+								<textarea id="content_1" name="content" style="width:100%;height:400px;">{$postdata.content}</textarea>
+							</td>
+						</tr>
+						<tr>
+							<th></th>
+							<td><span id="content" style='margin-left:10px;'>{tip id='tcontent' default=''}</span></td>
+						</tr>
+						<tr>
+							<th>自定义分类</th>
+							<td class="table_zdyfl">
+								<select name="mycate">
+								<option value=''>--请选择--</option>
+								{foreach $catelist as $vo}
+									<option value="{$vo.id}" {if $postdata['customcategoryid'] eq $vo.id} selected {/if}>{$vo.prettyname}</option>
+								{/foreach}
+								</select>
+								<a href="/Product/customcatelist">分类管理</a>
+							</td>
+						</tr>
+						<tr>
+							<th>验证码<span style="color:red">*</span></th>
+							<td class="table_sryzm">
+								<input type="text" name="verifycode" id="verify" onblur="send_verify()" />
+								<a href="javascript:void(0);">
+									<img id='codeid' src="/Ajax/verify/ajax/0" alt="点击刷新" onclick="this.src='/Ajax/verify/?t='+new Date().getTime();" />
+									<span id="code">{tip id='tverify' default=''}</span>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+							<td class="table_button">
+								<input type="submit" id="Submit1" value="提交" />
+								<input type="button" onclick="javascript:window.location.href='{$_SERVER['HTTP_REFERER']}' " value="返回" />
+							</td>
+						</tr>
+						<tr><th></th><td>&nbsp;</td></tr>
+					</table>
+				</div>
+				</form>
+			</div>
+		</div>
+    </div>
+</div>
+{include file="Public/footer.html" }
+
+<!--图片上传开始-->
+<script type="text/javascript">
+	var closedlayerfunc = function(upimgid,imgurls){
+		var  savesrc = window.frames["jbox-iframe"].document.getElementById("savedata").value;
+		$("#"+upimgid).attr("src",savesrc);
+		$("#"+imgurls).val(savesrc);
+		return true;
+	}
+	function loadlayer(upimgid,imgurls){
+		
+		$.jBox("iframe:/Uploadfile/upload/", {
+			title: "上传图片",
+			width: 500,
+			height: 350,
+			showClose: false,
+			buttons: { '确定': 1 ,'取消':2},
+			submit:function(v,h,f){
+				if(v==1){
+					closedlayerfunc(upimgid,imgurls);
+				}else if(v==2){
+					delurl_t(upimgid,imgurls);
+					return true;
+				}else{
+					alert("出错了，Sorry ~");
+				}
+			}
+		});
+	}
+	//删除图片
+	function delurl(upimgid,imgurls){
+		if(confirm('您真的要删除这张吗?')){
+			var srcurl=$("#"+upimgid).attr("src");
+			
+			$.ajax({
+				type: "POST",
+				url: "/Uploadfile/imgdel/",
+				data: "imgurl="+srcurl,
+				success: function(msg){
+					if(msg==1 || msg==2){
+						$("#"+upimgid).attr("src","/public/image/public/uploadimg.jpg");
+						$("#"+imgurls).attr('value',"/public/image/public/uploadimg.jpg");
+						alert('删除成功');
+					}else{
+						alert('删除失败');
+					}
+				}
+			});
+		}
+	}
+	/*删除图片，未保存时*/
+	function delurl_t(upimgid,imgurls){
+
+		var  up_src = window.frames["jbox-iframe"].document.getElementById("savedata").value;
+		if(up_src){
+			$.ajax({
+				type: "POST",
+				url: "/Uploadfile/imgdel/",
+				data: "imgurl="+up_src,
+				success: function(msg){
+					if(msg==1 || msg==2){
+						alert('删除成功');
+					}else{
+						alert('删除失败');
+					}
+				}
+			});
+		}
+	}
+	/*图片上传结束*/
+	/*商品上传验证js开始*/
+	function send_verify(){
+		var value = $("#verify").val();
+		if(value!=''){
+			$.ajax({
+				type: "POST",
+				url: "/Ajax/verify",
+				data: "verify=" + value + "&ajax=1",
+				success: function(msg){
+					if(msg.status==1){
+						$("#code").html('<span class="Validform_right">输入正确</span>');
+						return true;
+					}else{
+						$("#code").html('<span class="Validform_wrong">验证码错误</span>');
+						return false;
+					}
+				}
+			});	
+		}else{
+			$("#code").html('<span class="Validform_wrong">您还未填写验证码!</span>');
+			return false;
+		}
+	}
+/*商品上传验证js结束*/
+</script>

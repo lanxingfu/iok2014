@@ -1,0 +1,97 @@
+﻿{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+<!-- js 编辑器-->
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/script/admin/editor/kindeditor.js"></script>
+
+<script type="text/javascript">
+    KE.show({
+        id : 'infocontent' ,//TEXTAREA输入框的ID
+		minWidth:"650px",
+		minHeight:"400px",
+		resizeMode:0
+	});
+</script>
+<style>
+.ke-iframe {
+	width: 750px;
+}
+</style>
+<!-- js 编辑器-->
+		<!-- content -->
+		<div id="content">
+			<!-- end content / left -->
+			{include file="Help/leftmenu.inc.html"}
+			<!-- end content / left -->
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>增加信息</h5>
+					</div>
+					<!-- end box / title -->
+					<form id="form" action="/iokadmin.php/Help/doedit" method="post">
+					<div class="form">
+						<div class="fields">
+							<div class="field  field-first">
+								<div class="label">
+									<label for="input-small">信息分类：</label>
+								</div>
+								<div class="select">
+									<select name="categoryid">
+									{foreach from=$type item=t}
+										<option value="{$t['id']}" {if $info['categoryid'] eq {$t['id']}} selected {/if}>{$t['prettyname']}</option>
+									{/foreach}
+									</select>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label label-radio">
+									<label>是否启用：</label>
+								</div>
+								<div class="radios">
+									<div class="radio">
+										<input type="radio" id="radio-1" name="enabled" value="1" {if $info['enabled'] eq 1} checked {/if}/>
+										<label for="radio-1">启用</label>
+									
+										<input type="radio" id="radio-2" name="enabled" value="0" {if $info['enabled'] eq 0} checked {/if}/>
+										<label for="radio-2">关闭</label>
+									</div>
+								</div>
+							</div> 
+							
+							<div class="field">
+								<div class="label">
+									<label for="select">信息标题：</label>
+								</div>
+								<div class="input">
+									<input type="text" name="title" class="small" value="{$info['title']}"/>
+								</div>
+							</div>
+							
+							<div class="field">
+								<div class="label">
+									<label for="input-medium">信息内容：</label>
+								</div>
+								<div class="textarea textarea-editor">
+									<textarea id="infocontent" name="content">{$info['content']}</textarea>
+								</div>
+							</div>
+							<input type="hidden" name="helpid" value="{$info['id']}">
+							<div class="buttons">
+								<input type="reset" name="reset" value="Reset" />
+								<div class="highlight">
+									<input type="submit" name="submit.highlight" value="Submit" />
+								</div>
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

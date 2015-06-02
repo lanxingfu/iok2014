@@ -1,0 +1,353 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Index/top.html'}
+<link href="/public/style/home/buy.css" rel="stylesheet" />
+<div class="conter_center">
+	<div class="content_nr_xqnr">        
+			<!-- 内容第一部分的左边 -->
+        	<div class="content_nr_xqnr_left">
+            	<div class="content_nr_xqnr_Ln">
+                	<h3>
+                    	<a href="/Buy">最新求购</a>
+                    </h3>
+                   <ul class="content_xqnr_Ln_B">
+							<li>
+								<img src="/Public/images/mall/img_9.png" alt="" />
+								<h4><a href="/Buy/show/itemid/{$v.itemid}" title="{$v.title}" target="_blank"></a></h4>
+								<span>等待报价</span>
+							</li>
+						
+                  </ul>
+                </div>
+                    <div class="content_nr_xqnr_img">
+                    	<!--供应广告展位-->
+                    	<div class="slideBox">
+							<div class="hd">
+								<ul>
+                                
+                                <li>{$k}</li>
+                               
+                                </ul>
+							</div>
+							<div class="bd">
+								<ul>
+                               
+                                <li><a href="{$vo.image_url}" title="{$vo.image_alt}" style="cursor:default;"><img src='{$vo.image_src}' alt="{$vo.image_alt}" ></a></li>
+                                </volist>
+								</ul>
+							</div>
+							<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+							<a class="prev" href="javascript:void(0)"></a>
+							<a class="next" href="javascript:void(0)"></a>
+						</div>				
+					 
+                    <!--
+                    <div class="content_nr_xqnr_img_b">
+                    	<div class="picScroll-left">
+							<div class="hd">
+								<a class="next"></a>
+								<ul></ul>
+								<a class="prev"></a>
+								<span class="pageState"></span>
+							</div>
+							<div class="bd">
+								<ul>
+									<li>
+										<div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="/Public/images/index/banner/pic2.jpg" /></a></div>
+										<div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图1</a></div>
+									</li>
+									<li>
+										<div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="/Public/images/index/banner/pic3.jpg" /></a></div>
+										<div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图2</a></div>
+									</li>
+									<li>
+										<div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="/Public/images/index/banner/pic4.jpg" /></a></div>
+										<div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图3</a></div>
+									</li>
+									<li>
+										<div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="/Public/images/index/banner/pic5.jpg" /></a></div>
+										<div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图4</a></div>
+									</li>
+									<li>
+										<div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="/Public/images/index/banner/pic6.jpg" /></a></div>
+										<div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图5</a></div>
+									</li>
+									<li>
+										<div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="/Public/images/index/banner/pic6.jpg" /></a></div>
+										<div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图6</a></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					
+                    </div>
+					-->
+                </div>
+				
+				<div class="conter_b_qgnr_left">
+					<div class="conter_b_qgnr_left_bt">
+						<h3>按行业选择</h3>
+					</div>
+					<ul class="conter_b_qgnr_left_xx">		
+						
+							<li><a href="/Buy/listy/catid/{$v.catid}" class="tabbuy_1" id="trade_t_{$k}" onMouseOver="Tb({$k}, 6, 'trade', 'tabbuy');">{$v.catname}</a></li>
+						
+						<li style="display:none;"><a href="javascript:void(0);" class="tabbuy_1" id="trade_t_6"></a></li>
+					</ul>										
+					
+						<ul class="conter_b_qgnr_left_xxnr" id="trade_c_{$k}" style="display:none;">
+							
+								<li>
+									<div class="conter_b_qgnr_left_xxnr_l">
+										<a target="_blank" href="/Buy/show/itemid/{$m.itemid}">{$m.title}</a>
+										<p>采购数量：{$m.amount}个</p>
+									</div>
+									<div class="conter_b_qgnr_left_xxnr_r">
+										<p>过期时间：											
+											
+												<span>长期有效</span>
+																							
+												<span style="color:red;">已过期</span>
+											
+												<span>至 </span>
+											
+										</p>
+										<a target="_blank" href="/Buy/toQuote/itemid/{$m.itemid}">立即报价</a>
+									</div>
+								</li>
+							
+						</ul>
+					
+					<ul class="conter_b_qgnr_left_xxnr" id="trade_c_6" style="display:block;">
+						
+							<li>
+								<div class="conter_b_qgnr_left_xxnr_l">
+									<a target="_blank" href="/Buy/show/itemid/{$m.itemid}" title="{$m.title}"></a>
+									<p>采购数量：{$m.amount}个</p>
+								</div>
+								<div class="conter_b_qgnr_left_xxnr_r">
+									<p>过期时间：											
+										
+											<span>长期有效</span>
+																					
+											<span style="color:red;">已过期</span>
+										
+											<span>至 </span>
+										
+									</p>
+									<a target="_blank" href="/Buy/toQuote/itemid/{$m.itemid}">立即报价</a>
+								</div>
+							</li>
+						
+					</ul>
+				</div>				
+			</div>
+        	<div class="content_nr_xqnr_right">
+            	<div class="gy_content_right_t">
+                	<a target="_blank" href="/Public/login/">登录</a><span>|</span>
+                    <a target="_blank" href="/Need/sendneed/menu/1">发布求购</a>
+                </div>
+                <div class="gy_content_right_o">
+                	<h2 class="gy_Cright_bt">仅需<span>4步</span>实现快速报价</h2>
+                    <ul class="gy_content_right_oli">
+                    	<li>
+                        	<div class="gy_content_right_oli_img">
+                            	<img src="/Public/image/mall/gyimg_12.png" alt="" />
+                            </div>
+                            <div class="gy_content_right_oli_R">
+                            	<h3>注册</h3>
+								<p>登录<a target="_blank" href="/Public/register">www.iokokok.com</a>进行用户注册</p>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="gy_content_right_oli_img">
+                            	<img src="/Public/image/mall/gyimg_13.png" alt="" />
+                            </div>
+                            <div class="gy_content_right_oli_R">
+                            	<h3>通过审核</h3>
+                                <p>分配商务代表实地审核</p>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="gy_content_right_oli_img">
+                            	<img src="/Public/image/mall/gyimg_14.png" alt="" />
+                            </div>
+                            <div class="gy_content_right_oli_R">
+                            	<h3>查看求购</h3>
+                                <p>进入求购页查看信息</p>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="gy_content_right_oli_img">
+                            	<img src="/Public/image/mall/gyimg_15.png" alt="" />
+                            </div>
+                            <div class="gy_content_right_oli_R">
+                            	<h3>报价</h3>
+                                <p>针对求购信息报价</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gy_content_nr_Re_Ro">
+					<div class="gy_content_nr_Re_Ro_top">
+						<h3>安全交易</h3>
+						<div class="gy_content_nr_Re_Ro_topIMG">
+							<img src="/Public/image/index/img_11.png" alt="" />
+						</div>
+					</div>
+					<ul class="gy_content_nr_Re_Ro_ul">
+													
+							<li>								
+								<div class="gy_content_nr_Re_Ro_ul_img">
+									<img src="/Public/images/index/anquan_{$k}.png" alt="" />
+								</div>
+								<h4><a href="__APP__/Helps/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></h4>
+							</li>
+						
+					</ul>
+				</div>
+				<div class="conter_b_qgnr_right">
+					<div class="conter_b_qgnr_right_g">
+                    	 
+						  <a href="{$vo.image_url}" title="{$vo.image_alt}" ><img src="{$vo.image_src}" alt="{$vo.image_alt}" /></a>
+                         
+					</div>
+				</div>
+            </div>
+            <div class="conter_b">
+                <div class="conter_b_yzggcp">
+                	<div class="conter_b_yzggcp_top">
+                    	<div class="conter_b_yzggcp_top_l">
+                            <h3>商务服务站</h3>
+                        </div>
+						<!--
+                        <div class="conter_b_yzggcp_top_r">
+                            <span><a target="_blank" href="#">MORE&gt;</a></span>
+                        </div>
+						-->
+                    </div>
+                    <div class="conter_b_yzggcp_bottom">
+                        <div class="txtScroll-top">
+                            <div class="bd">
+                                <ul class="infoList">
+                                
+                                    <li>
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                 
+                                        <td align="center" valign="top">
+                                          <div class="conter_b_yzggcp_bottom_rli_div1">										
+                                            
+                                                <img src="/Public/images/buy/tx_img00.jpg" alt="" />
+                                           
+                                                <img src="{$v.headpic}" width="60" height="60" />
+                                           
+                                          </div>  
+                                          <div class="conter_b_yzggcp_bottom_rli_div2">
+                                                <dl>
+                                                    <dt>姓名：</dt>
+                                                    <dd class="normal">{$v.truename}</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>地址：</dt>
+                                                    <dd class="normal">{$v.diqu}</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>星级：</dt>
+                                                    <dd class="stars"><img src="/Public/images/mall/xxx_{$v.star}.png" alt="" /></dd>
+                                                </dl>
+                                            </div>
+									    
+                                        </td>
+                                    
+                                    </tr>
+                                    </table>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                  <!--<ul class="conter_b_yzggcp_bottom_r" style="display:none">
+							<foreach name="repredata" item="v">
+								<li>
+									<div class="conter_b_yzggcp_bottom_rli_t">										
+										<empty name="v.headpic">
+											<img src="/Public/images/buy/tx_img00.jpg" alt="" />
+										<else />
+											<img src="{$v.headpic}" width="60" height="60" />
+										</empty>
+									</div>
+									<ul class="conter_b_yzggcp_bottom_rli_b">
+										<li>
+											<p>姓名：</p>
+											<span>{$v.truename}</span>
+										</li>
+										<li>
+											<p>地址：</p>
+											<span>{$v.diqu}</span>
+										</li>
+										<li>
+											<p>星级：</p>
+											<span><img src="/Public/images/mall/xxx_{$v.star}.png" alt="" /></span>
+										</li>
+									</ul>
+								</li>
+							</foreach>
+                        </ul>-->
+                    </div>
+					
+                </div>
+                
+				<!--
+                <div class="conter_b_sjft">
+                	<div class="conter_b_sjft_top">
+                    	<div class="conter_b_sjft_top_l">
+                            <h3><a target="_blank" target="_blank" href="#">商家访谈</a></h3>
+                        </div>
+                        <div class="conter_b_sjft_top_r">
+                            <span><a target="_blank" target="_blank" href="#">MORE&gt;</a></span>
+                        </div>
+                    </div>
+                    <div class="conter_b_sjft_bottom">
+                        <ul class="conter_b_sjft_bottom_r">
+                        	<li>
+                            	<div class="conter_b_sjft_bottom_rli_t"><a target="_blank" target="_blank" href="#"><img src="/Public/images/buy/qgimg_27.jpg" alt="" /></a></div>
+                                <div class="conter_b_sjft_bottom_rli_b">
+                                	<h4><a target="_blank" target="_blank" href="#">姓 名</a></h4>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="conter_b_sjft_bottom_rli_t"><a target="_blank" target="_blank" href="#"><img src="/Public/images/buy/qgimg_27.jpg" alt="" /></a></div>
+                                <div class="conter_b_sjft_bottom_rli_b">
+                                	<h4><a target="_blank" target="_blank" href="#">姓 名</a></h4>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="conter_b_sjft_bottom_rli_t"><a target="_blank" target="_blank" href="#"><img src="/Public/images/buy/qgimg_27.jpg" alt="" /></a></div>
+                                <div class="conter_b_sjft_bottom_rli_b">
+                                	<h4><a target="_blank" target="_blank" href="#">姓 名</a></h4>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="conter_b_sjft_bottom_rli_t"><a target="_blank" target="_blank" href="#"><img src="/Public/images/buy/qgimg_27.jpg" alt="" /></a></div>
+                                <div class="conter_b_sjft_bottom_rli_b">
+                                	<h4><a target="_blank" target="_blank" href="#">姓 名</a></h4>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="conter_b_sjft_bottom_rli_t"><a target="_blank" target="_blank" href="#"><img src="/Public/images/buy/qgimg_27.jpg" alt="" /></a></div>
+                                <div class="conter_b_sjft_bottom_rli_b">
+                                	<h4><a target="_blank" target="_blank" href="#">姓 名</a></h4>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+				-->
+            </div>
+    	</div>
+	{include file="Public/footer_2.html"}
+</div>
+
+{include file='Public/footer.html'}

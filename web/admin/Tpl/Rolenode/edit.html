@@ -1,0 +1,91 @@
+{include file="header.inc.htm"}
+{include file="top.inc.htm"}
+		<!-- content -->
+		<div id="content">
+			{include file="Rolenode/leftmenu.inc.htm"}
+			<!-- end content / left -->
+			<!-- content / right -->
+			<div id="right">
+				<!-- forms -->
+				<div class="box">
+					<!-- box / title -->
+					<div class="title">
+						<h5>节点管理 》{if $rec['id']}编辑信息{else}添加节点{/if}</h5>
+					</div>
+					<!-- end box / title -->
+					<form id="frm" method="post">
+					<div class="form">
+						<div class="fields">
+							<div class="field  field-first">
+								<div class="label">节点名称</div>
+								<div class="input">
+									<input type="text" name="prettyname" value="{$rec['prettyname']}" class="small" />
+								</div>
+								<div class="tip">{tip id='name' default='请输入节点名称'}</div>
+							</div>
+							<div class="field">
+								<div class="label">节点编码</div>
+								<div class="input">
+									<input type="text" name="code" value="{$rec['code']}" class="small" />
+								</div>
+								<div class="tip">{tip id='code' default='请输入节点编码'}</div>
+							</div>
+							<div class="field">
+								<div class="label">父节点</div>
+								<div class="select">
+									<select name="parentid">
+									{html_options values=$parent['id'] output=$parent['prettyname'] selected=$rec['parentid']}
+									</select>
+								</div>
+								<div class="tip">{tip id="parent" default="请选择父节点"}</div>
+							</div>
+							<div class="field">
+								<div class="label label-radio">是否记录日志</div>
+								<div class="radios">
+									<div class="radio">
+										<input type="radio" id="radio-1" name="isloged" value="1"{if $rec['isloged'] eq '1'} checked{/if} />
+										<label for="radio-1">是</label>
+									</div>
+									<div class="radio">
+										<input type="radio" id="radio-2" name="isloged" value="0"{if $rec['isloged'] ne '1'} checked{/if} />
+										<label for="radio-2">否</label>
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="label">列表序号</div>
+								<div class="input">
+									<input type="text" name="listorder" value="{$rec['listorder']}" class="small" />
+								</div>
+								<div class="tip">{tip id='listorder' default='请输入列表序号'}</div>
+							</div>
+							<div class="field">
+								<div class="label label-radio">节点类型</div>
+								<div class="radios">
+									<div class="radio">
+										<input type="radio" id="radio-3" name="actiontype" value="1"{if $rec['actiontype'] eq '1'} checked{/if} />
+										<label for="radio-3">菜单</label>
+									</div>
+									<div class="radio">
+										<input type="radio" id="radio-4" name="actiontype" value="2"{if $rec['actiontype'] ne '1'} checked{/if} />
+										<label for="radio-4">按钮</label>
+									</div>
+								</div>
+							</div>
+							<div class="buttons">
+								<input type="hidden" name="m" value="Rolenode" />
+								<input type="hidden" name="a" value="submit" />
+								<input type="hidden" name="id" value="{$rec['id']}" />
+								<input type="submit" name="submit" value="提交" />
+								<input type="reset" name="reset" value="返回" onclick="javascript:gotoUrl('/iokadmin.php?m=Rolenode{if $rec['id']}&a=detail&id={$rec['id']}{/if}')" />
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				<!-- end forms -->
+			</div>
+			<!-- end content / right -->
+		</div>
+		<!-- end content -->
+{include file="footer.inc.htm"}

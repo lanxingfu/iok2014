@@ -1,0 +1,79 @@
+{include file='Public/header_room.html'}
+{include file='Public/room_top.html'}
+<link href="/public/style/home/room/buylist.css" rel="stylesheet" />
+<div class="content">
+	<div class="content_nr">
+        <div class="content_sws_nr">
+			<div class="content_sws_nr_left">
+				{include file="Public/room_menu.html" }
+			</div>
+            <div class="content_sws_nr_right" id="iframe_main">
+            	<div class="content_sws_nr_right_lgrzl">
+					<div class="content_sws_nr_r_lgrzl_t">
+						{include file="Public/welcom.html" }
+					</div>
+				</div>
+                <div class="content_sws_nr_right_b">
+					<form action="/Need/checkneed" name="form1" method="GET">
+                	<div class="content_sws_nr_right_b_t">
+                    	{include file="Buy/buy_room_menu.html" }
+                    </div>
+                    <div class="content_sws_nr_right_b_t_dwy">
+                    	<div class="content_sws_nr_right_b_t_dwy_t">
+                            <textarea name="kw"></textarea>
+                            <a href="javascript:void(0)" onclick="form1.submit()">搜 索</a>
+                        </div>
+                    </div>
+					</form>
+                    <div class="content_sws_nr_right_b_t_spxq">
+					<form action="" method="post" width="100%" name="form2">
+                    	<table width='747px'>
+                        	<tr class="spxq_table_th">
+                            	<th class="spxq_table_th_xk"><input type="checkbox"  name="decideid" onclick="javascript:checkalls('id[]','decideid');" /></th>
+                                <th class="spxq_table_th_tp">标题</th>
+                                <th class="spxq_table_th_spmc">行业</th>
+                                <th class="spxq_table_th_jg">更新时间</th>
+                                <th class="spxq_table_th_yj">浏览</th>
+                                <th class="spxq_table_th_gl">管理</th>
+                            </tr>
+							{foreach $list as $vo}
+                            <tr class="spxq_table_td">
+                            	<td class="spxq_table_th_xk"><input type="checkbox" value="{$vo.id}" name="id[]" id="id[]"></td>
+                                <td class="spxq_table_th_spmc">
+									<a target="_blank" href="/Buy/show/id/{$vo.id}">{$vo.title}</a>
+								</td>
+                                <td class="spxq_table_th_spmc">
+                                   {if $vo.catname eq '' }暂无此分类{else}{$vo.catname}{/if}
+                                </td>
+                                <td class="spxq_table_th_jg">{$vo.updatetime}</td>
+                                <td class="spxq_table_th_yj">{$vo.hits}</td>
+                                <td class="spxq_table_th_gl">
+                                    <a href="/Buy/edit/id/{$vo.id}">
+										<img src="/public/image/home/business_room/httb_10.png" alt="" title='修改' />
+									</a>
+                                </td>
+                            </tr>
+							{/foreach}
+                        </table>
+						<div id="pages">{$page}</div>
+                        <div class="content_sws_nr_right_b_t_spxq_b">
+                        	<div class="content_sws_nr_right_b_t_spxq_b_l">
+                            	<div class="content_sws_nr_right_b_t_spxq_b_la">
+									{literal}<a onclick="javascript:if(confirm('确定要删除该条信息吗？此操作将不可撤销'){Moreval_new('/Need/delete/','id[]','/Need/checkneed/menu/3/');}" style="background:url(/public/image/public/room_but.png) no-repeat;width:64px;">批量删除</a>{/literal}
+                                </div>
+                                <div class="content_sws_nr_right_b_t_spxq_b_lsp">
+                                	
+                                </div>
+                            </div>
+                            <div class="content_sws_nr_right_b_t_spxq_b_r">
+                            
+                            </div>
+                        </div>
+					</form>
+                    </div>
+                </div>
+            </div>
+		</div>
+    </div>
+</div>
+{include file="Public/footer.html" }

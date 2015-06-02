@@ -1,0 +1,265 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* 首页 */
+
+.sxyddb_sy_top_box_banner{width:1001px;height:300px; float:left;}
+.sxyddb_sy_top_box_banner a{ float:left;}
+.sxyddb_sy_top_box_banner img{width:1001px;height:300px;}
+
+/*中间部分*/
+.sxyddb_sy_content{width:1001px; margin:0 auto;}
+.sxyddb_sy_content_nr{width:1001px; float:left; padding-top:20px; padding-bottom:120px;}
+.sxyddb_sy_content_nr_one{width:1001px; float:left; padding-bottom:6px;}
+.sxyddb_sy_content_nr_one_l{width:766px; float:left;}
+.sxyddb_sy_content_nr_one_l_l{width:290px; float:left;}
+.sxyddb_sy_content_nr_one_l_ltop{width:290px;height:42px; float:left;}
+.sxyddb_sy_content_nr_one_l_ltop_l{width:126px; float:left;}
+.sxyddb_sy_content_nr_one_l_ltop_l b{ font-family:"黑体"; font-size:38px; line-height:42px; color:#000000; float:left;}
+.sxyddb_sy_content_nr_one_l_ltop_lbh{ float:left; font-size:16px; font-family:"宋体"; line-height:15px; padding-top:5px;}
+.sxyddb_sy_content_nr_one_l_ltop_lbh p{ color:#c70000;}
+.sxyddb_sy_content_nr_one_l_ltop_lbh span{ color:#000000;}
+.sxyddb_sy_content_nr_one_l_ltop_r{width:82px; float:right;height:25px; padding-top:17px; font-family:"微软雅黑"; font-size:12px;}
+.sxyddb_sy_content_nr_one_l_ltop_r a{ color:#6e6e6e; float:right;}
+.sxyddb_sy_content_nr_one_l_ltop_r a:hover{ color:#c70000; text-decoration:underline;}
+.sxyddb_sy_content_nr_one_l_llieb{ padding-top:10px;width:290px; float:left;}
+.sxyddb_sy_content_nr_one_l_llieb li{width:100%; font-family:"宋体"; font-size:12px; float:left; line-height:22px; padding-bottom:1px;}
+.sxyddb_sy_content_nr_one_l_llieb li a{ color:#6e6e6e;}
+.sxyddb_sy_content_nr_one_l_llieb li a:hover{ color:#c70000; text-decoration:underline;}
+
+.sxyddb_sy_content_nr_one_l_r{width:420px; float:right; padding-right:18px;}
+.sxyddb_sy_content_nr_one_l_rtop{width:420px; float:left;height:42px;}
+.sxyddb_sy_content_nr_one_l_rtop_l{width:126px; float:left;}
+.sxyddb_sy_content_nr_one_l_rtop_l b{ font-family:"黑体"; font-size:38px; line-height:42px; color:#000000; float:left;}
+.sxyddb_sy_content_nr_one_l_rtop_lbh{ float:left; font-size:16px; font-family:"宋体"; line-height:15px; padding-top:5px;}
+.sxyddb_sy_content_nr_one_l_rtop_lbh p{ color:#c70000;}
+.sxyddb_sy_content_nr_one_l_rtop_lbh span{ color:#000000;}
+.sxyddb_sy_content_nr_one_l_rtop_r{width:82px; float:right;height:25px; padding-top:17px; font-family:"微软雅黑"; font-size:12px;}
+.sxyddb_sy_content_nr_one_l_rtop_r a{ color:#6e6e6e; float:right;}
+.sxyddb_sy_content_nr_one_l_rtop_r a:hover{ color:#c70000; text-decoration:underline;}
+
+.sxyddb_sy_content_nr_one_l_rnr{ padding-top:10px;width:420px; float:left;}
+.sxyddb_sy_content_nr_one_l_rnr_l{width:151px;height:121px; float:left; padding:5px; border:1px solid #dbdbdb;}
+.sxyddb_sy_content_nr_one_l_rnr_l img{width:151px;height:121px;}
+.sxyddb_sy_content_nr_one_l_rnr_r{width:240px; float:right;}
+.sxyddb_sy_content_nr_one_l_rnr_r p{ font-family:"宋体"; width:100%; float:left; font-size:12px; line-height:23px; color:#6e6e6e;}
+
+.sxyddb_sy_content_nr_one_r{width:215px; float:right; padding-top:7px;}
+.sxyddb_sy_content_nr_one_r_t{width:215px;height:124px; float:left; padding-bottom:5px;}
+.sxyddb_sy_content_nr_one_r_t img{width:215px;height:124px;}
+.sxyddb_sy_content_nr_one_r_b{width:215px;height:47px; float:left;}
+.sxyddb_sy_content_nr_one_r_b img{width:215px;height:47px;}
+
+
+/* 资深讲师团 */
+.sxyddb_sy_content_nr_two{width:1001px; float:left; padding-bottom:10px;}
+.sxyddb_sy_content_nr_two_l{width:766px; float:left;}
+.sxyddb_sy_content_nr_two_l_bt{width:100%;height:34px; float:left;}
+.sxyddb_sy_content_nr_two_l_bt h3{ float:left; line-height:34px; font-family:"微软雅黑"; font-size:16px; color:#c70000; font-weight:normal;}
+.sxyddb_sy_content_nr_two_l_bt span{ float:right; padding-right:18px; padding-top:7px;height:27px; line-height:27px; font-family:"微软雅黑"; font-size:12px;}
+.sxyddb_sy_content_nr_two_l_bt span a{ color:#6e6e6e;}
+.sxyddb_sy_content_nr_two_l_bt span a:hover{ color:#c70000; text-decoration:underline;}
+.sxyddb_sy_content_nr_two_l_nr{width:764px;height:156px; float:left; border:1px solid #d4d4d4; background:#f2f2f2;}
+.sxyddb_sy_content_nr_two_l_nr_js{width:756px; float:left; padding:14px 0 17px 8px;}
+.sxyddb_sy_content_nr_two_l_nr_js li{width:241px; height:125px; float:left; padding-right:10px;}
+.sxyddb_sy_content_nr_two_l_nr_js_l{width:101px;height:125px; float:left;}
+.sxyddb_sy_content_nr_two_l_nr_js_l img{width:101px;height:125px;}
+.sxyddb_sy_content_nr_two_l_nr_js_r{width:130px; float:right; text-align:left; padding-top:36px;}
+.sxyddb_sy_content_nr_two_l_nr_js_r p{ font-family:"宋体"; font-size:13px; line-height:20px; color:#6e6e6e; float:left;width:100%; padding-bottom:18px;}
+.sxyddb_sy_content_nr_two_l_nr_js_r p span{width:100%; float:left;}
+.sxyddb_sy_content_nr_two_l_nr_js_r h4{width:100%; float:left; line-height:20px; font-family:"宋体"; font-size:13px; color:#000000;}
+
+.sxyddb_sy_content_nr_two_r{width:217px; float:right;}
+.sxyddb_sy_content_nr_two_r_bt{width:100%;height:34px; float:left;}
+.sxyddb_sy_content_nr_two_r_bt h3{ float:left; line-height:34px; font-family:"微软雅黑"; font-size:16px; color:#000000; font-weight:normal;}
+.sxyddb_sy_content_nr_two_r_bt h3 span{ color:#c70000; font-weight:bold;}
+.sxyddb_sy_content_nr_two_r_nr{width:100%; padding-top:15px; float:left;}
+.sxyddb_sy_content_nr_two_r_nr_l{width:111px;height:135px; float:left;}
+.sxyddb_sy_content_nr_two_r_nr_l img{width:111px;height:135px;}
+.sxyddb_sy_content_nr_two_r_nr_r{width:94px; float:right;}
+.sxyddb_sy_content_nr_two_r_nr_r p{width:100%; float:left; font-family:"宋体"; font-size:12px; color:#6e6e6e; line-height:22px;}
+.sxyddb_sy_content_nr_two_r_nr_r a{width:67px;height:22px; float:right; background:url(../../image/school/sy/sxy_sy_img9.jpg) no-repeat; font-family:"宋体"; color:#fff; font-size:13px; line-height:22px; margin-top:10px; text-align:center;}
+.sxyddb_sy_content_nr_two_r_nr_r a:hover{ text-decoration:underline;}
+
+
+/* 热门视频课程 */
+.sxyddb_sy_content_nr_three{width:1001px; float:left; padding-bottom:10px;}
+.sxyddb_sy_content_nr_three_l{width:766px; float:left;}
+.sxyddb_sy_content_nr_three_l_nr{width:100%; float:left;}
+.sxyddb_sy_content_nr_three_l_nr li{width:242px; padding:0 10px; float:left;}
+.sxyddb_sy_content_nr_three_l_nr_li{width:224px;height:202px; float:left; border:1px solid #dbdbdb; padding:4px 8px 0 8px;}
+.sxyddb_sy_content_nr_three_l_nr_li_video{width:224px;height:172px; float:left;}
+.sxyddb_sy_content_nr_three_l_nr_li_video img{width:224px;height:172px;}
+.sxyddb_sy_content_nr_three_l_nr_li h5{ float:left; text-align:center;width:100%; line-height:26px; font-family:"宋体"; font-size:14px; color:#000;}
+
+.sxyddb_sy_content_nr_three_r{width:217px; float:right; padding-top:34px;}
+.sxyddb_sy_content_nr_three_r_t{width:100%; float:left;}
+.sxyddb_sy_content_nr_three_r_t li{width:100%; float:left; border-top:1px solid #dbdbdb;}
+.sxyddb_sy_content_nr_three_r_t_zlxz{width:205px; padding:12px 6px; float:left;}
+.sxyddb_sy_content_nr_three_r_t_zlxz_l{width:35px;height:34px; float:left; padding-right:14px;}
+.sxyddb_sy_content_nr_three_r_t_zlxz_l img{width:35px;height:34px;}
+.sxyddb_sy_content_nr_three_r_t_zlxz span{ float:left;height:34px; line-height:34px; font-family:"微软雅黑"; font-size:16px;}
+.sxyddb_sy_content_nr_three_r_t_zlxz span a{ color:#6e6e6e;}
+.sxyddb_sy_content_nr_three_r_t_zlxz span a:hover{ text-decoration:underline;}
+.sxyddb_sy_content_nr_three_r_t_zxbm{width:205px; padding:10px 6px; float:left;}
+.sxyddb_sy_content_nr_three_r_t_zxbm_l{width:35px;height:23px; float:left; padding-right:14px;}
+.sxyddb_sy_content_nr_three_r_t_zxbm_l img{width:35px;height:23px;}
+.sxyddb_sy_content_nr_three_r_t_zxbm span{ float:left;height:23px; line-height:23px; font-family:"微软雅黑"; font-size:16px;}
+.sxyddb_sy_content_nr_three_r_t_zxbm span a{ color:#6e6e6e;}
+.sxyddb_sy_content_nr_three_r_t_zxbm span a:hover{ text-decoration:underline;}
+.sxyddb_sy_content_nr_three_r_b{width:217px;height:101px; float:left;}
+.sxyddb_sy_content_nr_three_r_b img{width:215px;height:101px;}
+
+/* 首页结束 */
+ 
+ 
+ 
+/* 公开课程 */
+
+.sxyddb_gkkc_content_l{width:780px; float:left; padding-bottom:10px;}
+.sxyddb_gkkc_content_l_bt{width:100%;height:32px; border-bottom:1px dotted #c0c0c0; float:left;}
+.sxyddb_gkkc_content_l_bt h3{ padding-left:10px; float:left; line-height:32px; font-family:"微软雅黑"; font-size:16px; color:#c70000; font-weight:normal;}
+.sxyddb_gkkc_content_l_nr{width:100%; float:left; padding-top:15px;}
+.sxyddb_gkkc_content_l_nr_list{width:100%; float:left;}
+.sxyddb_gkkc_content_l_nr_list li{width:242px;height:246px; float:left;} 
+.sxyddb_gkkc_content_l_nr_list_li{width:242px;height:246px; float:left; padding-right:26px; padding-bottom:23px;}
+.sxyddb_gkkc_content_l_nr_list_lir{width:242px;height:246px; float:left;}
+.sxyddb_gkkc_content_l_nr_list_li_nr{width:226px;height:239px; border:1px solid #dbdbdb; padding:5px 7px 0 7px; float:left;}
+.sxyddb_gkkc_content_l_nr_list_li_video{width:226px;height:173px; float:left;}
+.sxyddb_gkkc_content_l_nr_list_li_video img{width:226px;height:173px;}
+.sxyddb_gkkc_content_l_nr_list_li_nr h4{width:100%; float:left; line-height:22px; font-family:"宋体"; font-size:14px; color:#000000; font-weight:normal;}
+.sxyddb_gkkc_content_l_nr_list_li_nr p{width:100%; float:left; line-height:20px;font-family:"宋体"; font-size:14px; color:#6e6e6e;}
+
+.sxyddb_gkkc_content_r{width:196px; float:right;}
+.sxyddb_gkkc_content_r_bt{width:196px;height:33px; float:left; background:#8c8c8c;}
+.sxyddb_gkkc_content_r_bt h3{ float:left; line-height:33px; font-family:"微软雅黑"; font-size:16px; color:#fff; padding-left:20px;}
+.sxyddb_gkkc_content_r_nr{width:194px; padding:9px 0 15px 0; float:left; border:1px solid #d1d1d1; background:#f2f2f2;}
+.sxyddb_gkkc_content_r_nr_list{width:173px; float:left; padding:0 10px;}
+.sxyddb_gkkc_content_r_nr_list li{width:173px;height:193px; float:left;}
+.sxyddb_gkkc_content_r_nr_video{width:173px;height:132px; float:left; padding-bottom:5px;}
+.sxyddb_gkkc_content_r_nr_video img{width:173px;height:132px;}
+.sxyddb_gkkc_content_r_nr_list li p{width:100%; line-height:20px; font-family:"宋体"; font-size:12px; color:#6e6e6e; float:left;}
+
+/* 翻页 */
+.sxyddb_gkkc_content_l_fy{width:100%; float:left; text-align:center; padding-bottom:10px;}
+.sxyddb_gkkc_content_l_fy a{ padding:0 6px; font-family:"宋体";height:20px; line-height:20px; font-size:12px; color:#6e6e6e; text-align:center; border:1px solid #c4c4c4; display:inline-block;}
+.sxyddb_gkkc_content_l_fy a:hover{ color:#c70000;}
+.sxyddb_gkkc_content_l_fy a.a_list_l{width:41px;height:21px; line-height:21px; display:inline-block; background:url(../../image/school/gkkc/fy_1.png) no-repeat; padding-left:8px; padding-right:0; margin-right:6px;}
+.sxyddb_gkkc_content_l_fy a.a_list_r{width:41px;height:21px; line-height:21px; display:inline-block; background:url(../../image/school/gkkc/fy_2.png) no-repeat; padding-right:8px; padding-left:0; margin-left:6px;}
+
+
+/* 公开课程——商学动态_1 */
+
+.sxyddb_gkkc_1_content_l{width:780px; float:left; padding-bottom:10px;}
+.sxyddb_gkkc_1_content_l_bt{width:100%;height:32px; border-bottom:1px dotted #c0c0c0; float:left;}
+.sxyddb_gkkc_1_content_l_bt h3{ padding-left:10px; float:left; line-height:32px; font-family:"微软雅黑"; font-size:16px; color:#c70000; font-weight:normal;}
+.sxyddb_gkkc_1_content_l_nr{width:100%; float:left; padding-top:15px;}
+.sxyddb_gkkc_1_content_l_nr_list{width:764px; padding-left:15px; float:left;}
+.sxyddb_gkkc_1_content_l_nr_list li{width:752px; padding-left:12px; background:url(../../image/school/gkkc/gkkc_1.png) no-repeat left center; float:left;} 
+.sxyddb_gkkc_1_content_l_nr_list li a{ font-family:"宋体"; font-size:12px; line-height:28px; float:left;width:100%; color:#6e6e6e;}
+.sxyddb_gkkc_1_content_l_nr_list li a:hover{ color:#c70000; text-decoration:underline;}
+
+
+/* 公开课程——商学动态_2 */
+
+.sxyddb_gkkc_2_content_l_nr{width:721px; float:left; padding-top:15px; padding-left:12px; padding-right:46px;}
+.sxyddb_gkkc_2_content_l_nr_list{width:721; float:left;}
+.sxyddb_gkkc_2_content_l_nr_list h1{width:100%; font-family:"微软雅黑"; font-size:24px; text-align:center; line-height:68px; float:left; color:#6e6e6e;}
+.sxyddb_gkkc_2_content_l_nr_list span{width:100%; font-family:"宋体"; font-size:12px; float:left; text-align:center; line-height:24px; color:#6e6e6e; margin-bottom:18px;}
+.sxyddb_gkkc_2_content_l_nr_list p{width:100%; font-family:"宋体"; font-size:12px; float:left; text-indent:2em; line-height:24px; color:#6e6e6e; padding:10px 0;}
+
+
+
+/* 讲师团 */
+
+.sxyddb_jst_content_l{width:196px; float:left; padding-bottom:10px;}
+.sxyddb_jst_content_l{width:196px; float:left;}
+.sxyddb_jst_content_l_top{width:196px; float:left; padding-bottom:12px;}
+.sxyddb_jst_content_l_top_bt{width:196px;height:33px; float:left; background:#8c8c8c;}
+.sxyddb_jst_content_l_top_bt h3{ padding-left:12px; font-family:"微软雅黑"; font-size:16px; color:#fff; line-height:33px; float:left;}
+.sxyddb_jst_content_l_top_list{width:178px; float:left; padding:8px; border:1px solid #d1d1d1; background:#f2f2f2;}
+.sxyddb_jst_content_l_top_list li{width:166px; padding-left:12px;height:35px; border-bottom:1px solid #c8c8c8; float:left; font-family:"微软雅黑"; font-size:14px; line-height:35px; background:url(../../image/school/jst/jst.png) no-repeat left center;}
+.sxyddb_jst_content_l_top_list li a{ color:#6e6e6e; font-weight:bold;}
+.sxyddb_jst_content_l_top_list li a:hover{ color:#c70000;}
+.sxyddb_jst_content_l_top_list li a.a_two{ color:#c70000;}
+.sxyddb_jst_content_l_bt{width:196px;height:33px; float:left; background:#8c8c8c;}
+.sxyddb_jst_content_l_bt h3{ float:left; line-height:33px; font-family:"微软雅黑"; font-size:16px; color:#fff; padding-left:20px;}
+.sxyddb_jst_content_l_nr{width:194px; padding:9px 0 15px 0; float:left; border:1px solid #d1d1d1; background:#f2f2f2;}
+.sxyddb_jst_content_l_nr_list{width:173px; float:left; padding:0 10px;}
+.sxyddb_jst_content_l_nr_list li{width:173px;height:193px; float:left;}
+.sxyddb_jst_content_l_nr_video{width:173px;height:132px; float:left; padding-bottom:5px;}
+.sxyddb_jst_content_l_nr_video img{width:173px;height:132px;}
+.sxyddb_jst_content_l_nr_list li p{width:100%; line-height:20px; font-family:"宋体"; font-size:12px; color:#6e6e6e; float:left;}
+
+.sxyddb_jst_content_r{width:780px; float:right;}
+.sxyddb_jst_content_r_bt{width:100%;height:32px; border-bottom:1px dotted #c0c0c0; float:left;}
+.sxyddb_jst_content_r_bt h3{ padding-left:12px; float:left; line-height:32px; font-family:"微软雅黑"; font-size:16px; color:#6e6e6e;}
+.sxyddb_jst_content_r_nr{width:100%; padding-top:30px; float:left;}
+.sxyddb_jst_content_r_nr_li{width:100%; float:left;}
+.sxyddb_jst_content_r_nr_li li{width:280px; float:left;height:134px; padding-left:82px; padding-bottom:80px;}
+.sxyddb_jst_content_r_nr_li_l{width:109px;height:134px; float:left;}
+.sxyddb_jst_content_r_nr_li_l img{width:109px;height:134px;}
+.sxyddb_jst_content_r_nr_li_r{width:140px; float:right; padding-top:30px;}
+.sxyddb_jst_content_r_nr_li_r p{width:100%; line-height:20px; font-family:"宋体"; font-size:13px; color:#6e6e6e; padding-bottom:18px; float:left;}
+.sxyddb_jst_content_r_nr_li_r p span{width:100%; float:left;}
+.sxyddb_jst_content_r_nr_li_r h4{width:100%; line-height:20px; color:#000; font-family:"宋体"; font-size:13px; float:left;}
+
+
+/* 讲师团-资深讲师详情 */
+.sxyddb_jst_1_content_r_nr_li{width:722px; float:left; padding:0 29px;}
+.sxyddb_jst_1_content_r_nr_li_top{width:378px; float:left; padding:0 172px;}
+.sxyddb_jst_1_content_r_nr_li_top_l{width:213px;height:261px; padding-bottom:39px; float:left;}
+.sxyddb_jst_1_content_r_nr_li_top_l img{width:213px;height:261px;}
+.sxyddb_jst_1_content_r_nr_li_top_r{width:130px; float:right; padding-top:74px;}
+.sxyddb_jst_1_content_r_nr_li_top_r p{width:100%; line-height:20px; font-family:"宋体"; font-size:13px; color:#6e6e6e; padding-bottom:18px; float:left;}
+.sxyddb_jst_1_content_r_nr_li_top_r p span{width:100%; float:left;}
+.sxyddb_jst_1_content_r_nr_li_top_r h4{width:100%; line-height:20px; color:#000; font-family:"宋体"; font-size:13px; float:left;}
+.sxyddb_jst_1_content_r_nr_li_jj{width:722px; float:left;}
+.sxyddb_jst_1_content_r_nr_li_jj p{ font-family:"宋体";width:100%; line-height:22px; font-size:12px; color:#6e6e6e; float:left; text-indent:2em;}
+
+
+
+
+/* 关于我们-商学院简介 */
+.sxyddb_gywm_content_r_nr_li{width:722px; float:left; padding:0 29px;}
+.sxyddb_gywm_content_r_nr_li_top{width:100%; text-align:center; float:left;height:194px; padding-bottom:30px;}
+.sxyddb_gywm_content_r_nr_li_top img{width:449px;height:194px; vertical-align:middle;}
+.sxyddb_gywm_content_r_nr_li_jj{width:722px; float:left;}
+.sxyddb_gywm_content_r_nr_li_jj p{ font-family:"宋体";width:100%; line-height:22px; font-size:12px; color:#6e6e6e; float:left; text-indent:2em;}
+
+/* 关于我们-商学院简介-1 */
+.sxyddb_gywm_1_content_r_nr_li{width:735px; float:left; padding-left:45px;}
+.sxyddb_gywm_1_content_r_nr_li_top{width:600px;height:400px; float:left;}
+.sxyddb_gywm_1_content_r_nr_li_top img{width:600px;height:400px;}
+.sxyddb_gywm_1_content_r_nr_li_jj{width:100%; float:left; padding-top:8px;}
+.sxyddb_gywm_1_content_r_nr_li_jj p{width:100%; line-height:24px; font-family:"宋体"; font-size:12px; float:left; color:#000;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

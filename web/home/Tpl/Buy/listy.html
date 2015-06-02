@@ -1,0 +1,114 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Public/home_top.html'}
+<link href="/public/style/home/mall-listy.css" rel="stylesheet" />
+<div class="qglby_box">
+	<div class="qglby_nr">
+		
+    	<div class="qglby_top">
+        	<div class="zxejym_conter_nr_top" style="border-bottom:none;"><strong><a href="/Buy">求购</a></strong>{$nav}</div>
+			
+            <ul class="qglby_top_b">
+            	{foreach from=$sonlist item=son}
+					<li><a href="/Buy/listy/catid/{$son.id}" class="c_7">{$son.prettyname}</a></li>
+				{/foreach}
+            </ul>
+			
+        </div>
+        <div class="qglby_conter">
+        	<div class="qglby_conter_left">
+            	<div class="qglby_conter_left_top">
+                	<div class="qglby_conter_left_top_l">
+                    	<strong>所有产品</strong>
+                    </div>
+                    <div class="qglby_conter_left_top_input">
+                    
+                    </div>
+                    <ul class="qglby_conter_left_top_sx" style="width:203px;float:right;">
+						<li><a href="/Buy/listy/catid/{$cateid}/sortby/price/orderby/{$orderby}">价格
+						{if $sortby eq 'price'}{if $orderby eq 'asc'}<img src="/Public/image/home/product/gy_qbcp_2.png" alt="" />{else}
+						<img src="/Public/image/home/product/qglby_img_1.png" alt="" />{/if}{/if}</a></li>
+						<li><a href="/Buy/listy/catid/{$cateid}/sortby/hits/orderby/{$orderby}">人气
+						{if $sortby eq 'hits'}{if $orderby eq 'asc'}<img src="/Public/image/home/product/gy_qbcp_2.png" alt="" />{else}
+						<img src="/Public/image/home/product/qglby_img_1.png" alt="" />{/if}{/if}</a></li>
+						<li><a href="/Buy/listy/catid/{$cateid}/sortby/updatetime/orderby/{$orderby}">更新时间</a></li>
+                    </ul>
+                  
+                </div>
+				{if $list}
+					<ul class="qglby_conter_left_list">
+						{foreach from=$list item=l}
+							<li>
+								<div class="qglby_conter_left_list_img">
+									<a href="/Buy/show/itemid/{$l.id}" target="_blank">
+										{if $l['thumb']}
+											<img src="/Public/image/nopic_l.jpg" jqimg="/Public/images/nopic_b.jpg" alt="" />
+										{else}
+											<img src="{$l.thumb}" title="{$l.title}" alt="{$l.title}"/>
+										{/if}
+									</a>
+								</div>
+								<div class="qglby_conter_left_list_btjs">
+									<h3><a href="/Buy/show/itemid/{$l.id}" target="_blank">{$l.title}</a></h3>
+									<p>需求数量：{if $l.amount eq 0 }无限{else}{$l.amount}{/if}</p>
+									<p>所在地：{$l.areaid}</p>
+									<div class="qglby_conter_left_list_btjs_lj"></div>
+								</div>
+								<div class="qglby_conter_left_list_jgxq">
+									<p>单价：<span>¥{if $l.price eq 0}面议{else}{$l.price}{/if}</span></p>
+									<p>我行网认证企业</p>
+								</div>
+								<div class="qglby_conter_left_list_r">
+									<p>关注度：<span>{$l.hits}</span></p>
+									<p>有效期：<span class="f_green">{$l.expiredtime}</span></p>
+									<p class="m_t7"><a target="_blank" href="/Buy/toQuote/itemid/{$l.id}">报 价</a></p>
+								</div>
+						</li>
+						{/foreach}
+						
+					</ul>
+					<div id="pages">{$showpage}</div>
+				{else}
+					<span class="zanwu">对不起，没有检索到您想要找的商品！ 试试 <a href="/Buy" style="color:#30C">查看更多的商品</a> 有没有您要找的宝贝 O(∩_∩)O~</span>
+				{/if}
+            </div>
+            <div class="qglby_conter_right">
+            	<div class="qglby_conter_right_top">
+                	<h3>热销产品</h3>
+                   
+                </div>				
+				{if $hotlist}
+					<ul class="qglby_conter_right_bot">
+						{foreach from=$hotlist item=hot}
+							<li>
+								<div class="qglby_conter_right_bot_img">
+									<a href="/Product/show/itemid/{$hot.id}">{if $hot.thumb}<img src="{$hot.thumb}" alt="{$hot.title}">{else}<img src="/Public/image/zanwu.jpg">{/if}</a>
+								</div>
+								<h4><a href="/Product/show/itemid/{$hot.id}">{$hot.title}</a></h4>
+								<p>单价：<span>&yen;{$hot.price}</span>{if $hot.unit}{$hot.unit}{else}件{/if}</p>								
+							</li>
+						{/foreach}
+					</ul>
+					{else}
+					<span class="zanwuj">暂无热销产品</span>
+					{/if}
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	//立即购买
+	function nowbuy(id,num){
+		var islogin = "{$_SESSION['userdata']['userid']}";
+		if(!islogin){
+			alert('您当前还未登录，请登录后继续购买');
+			window.location='/Public/login/';
+		}else{
+			window.location='/Buy/order/itemid/'+id+'/num/'+num;
+		}
+		
+	}
+</script>
+
+{include file='Public/footer.html'}

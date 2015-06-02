@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script type="Text/Javascript" src="/public/script/jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript" src="__PUBLIC__/script/swfupload/js/handlers.js"></script>
+<script type="text/javascript" src="__PUBLIC__/script/swfupload/swfupload.js"></script>
+<script type="text/javascript" src="__PUBLIC__/script/swf_loadin.js"></script>
+<body>
+{literal}
+<style>
+.newones{border: 1px solid #DDDDDD;float: left;height: 23px;margin-left: 12px;margin-top: 2px;padding-left: 18px;padding-top: 3px;width: 82px;}
+.newdesll{border: 1px solid #DDDDDD;float: left;font-size: 12px;height: 26px;line-height: 26px;margin-left: 12px;margin-top: 2px;text-align: center;width: 100px;}
+.newdesll a{color:#333;text-decoration: none;}
+.newdesll a:hover{color:#c70000;}
+</style>
+{/literal}
+<form method="post" action="/Uploadfile/upload/" enctype="multipart/form-data">
+<hr/>
+<div style="width: 500px;height: 25px;">
+	<div style="float:left;height: 30px;padding-top: 2px;margin-left: 20px;">
+		<input type="text" value='' size='30' id="savedata" name='savedata' style="height:22px;" readonly />
+	</div>	
+	<div class="newones">
+		<div id="selbut"></div>
+	</div>
+	<div class="newdesll">
+		<a href="javascript:void(0);" onclick="javascript:delimg('thumbnails','savedata');">删 除</a>
+	</div>
+</div>
+<br/>
+
+<div id="thumbnails" style="text-align:center;">
+
+</div>
+<div id="divFileProgressContainer" style="height: 75px;text-align:center;"></div>
+</form>
+
+</body>
+{literal}
+<script type="text/javascript">
+	swfloadin("/Uploadfile/upload/","__PUBLIC__/script/swfupload/Flash/swfupload.swf",'phones',10,1,"selbut",'82','20','<a class="butstyle">浏览并上传</a>',".butstyle {font-size:12px;}",0,"thumbnails","divFileProgressContainer","savedata");
+	//删除图片，未保存时
+	function delimg(upimgid,imgurls){
+		var srcurl=$("#"+imgurls).attr("value");
+
+		if(srcurl){
+			$.ajax({
+				type: "POST",
+				url: "/Uploadfile/imgdel/",
+				data: "imgurl="+srcurl,
+				success: function(msg){
+					if(msg==1 || msg==2 || msg==3){
+						$("#"+imgurls).attr("value",'');
+						$("#"+upimgid).html('');
+						$("#divFileProgressContainer").html('');
+					}else{
+						alert('请重试');
+					}
+				}
+			});
+		}else{
+			alert('没有图片，请先上传');
+			return false;
+		}
+	}
+</script>
+{/literal}

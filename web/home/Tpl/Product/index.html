@@ -1,0 +1,337 @@
+<!-- header -->
+{include file="Public/header.html"}
+<!-- top -->
+{include file='Public/home_top.html'}
+<link href="/public/style/home/mall.css" rel="stylesheet" />
+<link href="/public/style/home/gyeq_cp.css" rel="stylesheet" />
+<script src="/public/script/home/common.js"></script>
+<script src="/public/script/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/public/script/SuperSlide/jquery.SuperSlide.2.1.js"></script>
+<div class="conter_center">
+	<div class="content_nr_xqnr">        
+		<!-- 内容第一部分的左边 -->
+		<div class="content_nr_xqnr_left">
+			<div class="content_nr_xqnr_Ln">
+				<h3>
+					<a target="_blank" href="/Product" target="_blank">最新供应</a>
+				</h3>
+				<ul class="content_xqnr_Ln_B">
+					{foreach from=$gylist item=gy}
+						<li>
+							<img src="/Public/image/index/img_8.png" alt="" />
+							<h4><a href="/Product/show/itemid/{$gy.id}" target="_blank">{$gy.title}</a></h4>
+							<span>￥{$gy.price}</span>
+						</li>
+					{/foreach}
+				</ul>
+			</div>
+			<div class="gy_content_left_t">
+				<div class="content_nr_xqnr_img">
+					<div class="slideBox">
+						<div class="hd">
+							<ul>
+							{foreach from=$adb1 item=adb1item key=b1k}
+							<li>{$b1k}</li>
+							{/foreach}
+							</ul>
+							
+						</div>
+						<div class="bd">
+							<ul>
+						   {foreach from=$adb1 item=b1}
+							<li><a href="{$b1.linkurl}" title="{$b1.title}" ><img src='/file/upload/{$b1.imageurl}' alt="{$b1.title}" ></a></li>
+							{/foreach}
+						</ul>
+						</div>
+						<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+						<a class="prev" href="javascript:void(0)"></a>
+						<a class="next" href="javascript:void(0)"></a>
+					</div>				
+					{literal}<script type="text/javascript">jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});</script>{/literal}
+				</div>
+				<div class="content_nr_xqnr_img_b">
+					<div class="picScroll-left">
+						<div class="hd">
+							<a class="next"></a>
+							<ul></ul>
+							<a class="prev"></a>
+							<!--<span class="pageState"></span>-->
+						</div>
+						<div class="bd">
+							<ul>
+								{foreach from=$adb1 item=b1}
+								<li>
+									<div class="pic"><a href="{$b1.linkurl}" title="{$b1.title}"  ><img src="/file/upload/{$b1.imageurl}" alt="{$b1.title}" /></a></div>
+									<div class="title"><a href="{$b1.linkurl}">{$b1.title}</a></div>
+								</li>
+								{/foreach}
+							</ul>
+						</div>
+					</div>
+					{literal}<script id="jsID" type="text/javascript">jQuery(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:4});</script>{/literal}
+				</div>
+			</div>
+		</div>
+		<div class="content_nr_xqnr_right">
+			<div class="gy_content_right_t">
+				<a target="_blank" href="/Public/login">登录</a><span>|</span>
+				<a target="_blank" href="/Supply/supply">发布供应</a>
+			</div>
+			<div class="gy_content_right_o">
+				<h2 class="gy_Cright_bt">仅需<span>4步</span>实现快速采购</h2>
+				<ul class="gy_content_right_oli">
+					<li>
+						<div class="gy_content_right_oli_img">
+							<img src="/Public/image/home/product/gyimg_12.png" alt="" />
+						</div>
+						<div class="gy_content_right_oli_R">
+							<h3>注册</h3>
+							<p>登录<a target="_blank" href="/Public/register">www.iokokok.com</a>进行用户注册</p>
+						</div>
+					</li>
+					<li>
+						<div class="gy_content_right_oli_img">
+							<img src="/Public/image/home/product/gyimg_13.png" alt="" />
+						</div>
+						<div class="gy_content_right_oli_R">
+							<h3>通过审核</h3>
+							<p>分配商务代表实地审核</p>
+						</div>
+					</li>
+					<li>
+						<div class="gy_content_right_oli_img">
+							<img src="/Public/image/home/product/gyimg_14.png" alt="" />
+						</div>
+						<div class="gy_content_right_oli_R">
+							<h3>寻找商机</h3>
+							<p>查看供应或商务代表撮合交易</p>
+						</div>
+					</li>
+					<li>
+						<div class="gy_content_right_oli_img">
+							<img src="/Public/image/home/product/gyimg_15.png" alt="" />
+						</div>
+						<div class="gy_content_right_oli_R">
+							<h3>下订单</h3>
+							<p>购买选中产品</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="gy_content_nr_Re_Ro">
+				<div class="gy_content_nr_Re_Ro_top">
+					<h3>安全交易</h3>
+					<div class="gy_content_nr_Re_Ro_topIMG">
+						<img src="/Public/image/index/img_11.png" alt="" />
+					</div>
+				</div>
+				<ul class="gy_content_nr_Re_Ro_ul">
+											
+						<li>								
+							<div class="gy_content_nr_Re_Ro_ul_img">
+								<img src="/Public/image/index/anquan_{$k}.png" alt="" />
+							</div>
+							<h4><a href="/Helps/show/itemid/{$v.itemid}" target="_blank">{$v.title}</a></h4>
+						</li>
+					
+				</ul>
+			</div>
+		</div>
+		<div class="gyeq_cp_con_x">
+        
+		{foreach from=$malldata item=ma key=k}
+        <div class="gyeq_cp_con_x_f1">
+        	<div class="gyeq_cp_con_x_f1_top">
+                <div class="gyeq_cp_con_x_f1_top_l">
+                    <span>{$k+1}F</span>
+                    <h3><a target="_blank" href="/Product/listy/catid/{$ma.id}">{$ma.catname}</a></h3>
+                </div>
+                <div class="gyeq_cp_con_x_f1_top_r">
+                    <div class="gyeq_cp_con_x_f1_top_r_a">
+                       {foreach from=$ma.child item=ch key=chk}
+							<a target="_blank" href="/Product/listy/catid/{$ch.id}" >{$ch.prettyname}</a>
+						{/foreach}
+                    </div>
+                    <span><a target="_blank" href="/Product/listy/catid/{$ma.catid}">查看更多</a></span>
+                </div>
+            </div>
+			{if $k is not odd}
+            <div class="gyeq_cp_con_x_f1_bottom">
+            	<div class="gyeq_cp_con_x_f1_bottom_nr">
+                	<div class="gyeq_cp_con_x_f1_bottom_nr_img1">
+                    	<a href="#"><img src="/public/image/home/product/gycp_eq_1.jpg" alt="" /></a>
+                        <a href="#"><img src="/public/image/home/product/gycp_eq_2.jpg" alt="" /></a>
+                    </div>
+                    <div class="gyeq_cp_con_x_f1_bottom_nr_imgduli">
+                    	<div class="gyeq_cp_con_x_f1_bottom_nr_imgduli_img">
+                        	<a href="#"><img src="/public/image/home/product/gycp_eq_3.jpg" alt="" /></a>
+                        </div>
+                        <div class="gyeq_cp_con_x_f1_bottom_nr_imgduli_text">
+                        	<a href="#">黛施玉青春能量液，活动期间低至...</a>
+                            <p>
+                            	<span>￥</span>
+                                800.
+                                <span>00</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="gyeq_cp_con_x_f1_bottom_nr_img3">
+                    	<div class="gyeq_cp_con_x_f1_bottom_nr_img3_t">
+                             <ul class="gyeq_cp_con_x_f1_bottom_nr_img3_timg">
+                                <li>
+                                    <a href="#"><img src="/public/image/home/product/gycp_eq_4.jpg" alt="" /></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/public/image/home/product/gycp_eq_5.jpg" alt="" /></a>
+                                </li>
+                             </ul>
+                             <div class="gyeq_cp_con_x_f1_bottom_nr_img3_t_lh">
+                             	<a href="#"></a>
+                                <a href="#"></a>
+                                <a class="red_bg" href="#"></a>
+                             </div>
+                        </div>
+                        <ul class="gyeq_cp_con_x_f1_bottom_nr_img3_xiimg">
+							{foreach from=$ma.list item=mali key=lima}
+                        	<li {if $lima eq 0}style="padding-right:17px;"{/if}>
+                            	<div class="gyeq_cp_con_x_f1_bottom_nr_img3_xiimg_img">
+                                	<a href="/Product/show/itemid/{$mali.id}"><img src="{$mali.thumb}" alt="" /></a>
+                                </div>
+                                <h4><a href="/Product/show/itemid/{$mali.id}">{$mali.title|truncate:15:"...":true}</a></h4>
+                                <p>
+                                	<span>￥</span>
+                                    {$mali.price}
+                                    <span>00</span>
+                                </p>
+                            </li>
+							{/foreach}
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+			{else}
+			<div class="gyeq_cp_con_x_f1_bottom">
+            	<div class="gyeq_cp_con_x_f1_bottom_nr">
+                	<div class="gyeq_cp_con_x_f1_bottom_nr_img1">
+                    	<a href="#"><img src="/public/image/home/product/gycp_eq_1.jpg" alt="" /></a>
+                        <a href="#"><img src="/public/image/home/product/gycp_eq_2.jpg" alt="" /></a>
+                    </div>
+                    <div class="gyeq_cp_con_x_f2_bottom_nr_img3">
+                        <div class="gyeq_cp_con_x_f2_bottom_nr_img3_t">
+                             <ul class="gyeq_cp_con_x_f2_bottom_nr_img3_timg">
+                                <li>
+                                    <a href="#"><img src="/public/image/home/product/gycp_eq_4.jpg" alt="" /></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/public/image/home/product/gycp_eq_5.jpg" alt="" /></a>
+                                </li>
+                             </ul>
+                             <div class="gyeq_cp_con_x_f2_bottom_nr_img3_t_lh">
+                             	<a href="#"></a>
+                                <a href="#"></a>
+                                <a class="red_bg" href="#"></a>
+                             </div>
+                        </div>
+                        <ul class="gyeq_cp_con_x_f2_bottom_nr_img3_xiimg">
+                        	{foreach from=$ma.list item=mali key=lima}
+                        	<li>
+                            	<div class="gyeq_cp_con_x_f1_bottom_nr_img3_xiimg_img">
+                                	<a href="/Product/show/itemid/{$mali.id}"><img src="{$mali.thumb}" alt="" /></a>
+                                </div>
+                                <h4><a href="/Product/show/itemid/{$mali.id}">{$mali.title|truncate:15:"...":true}</a></h4>
+                                <p>
+                                	<span>￥</span>
+                                    {$mali.price}
+                                    <span>00</span>
+                                </p>
+                            </li>
+							{/foreach}
+                        </ul>
+                    </div>
+                    <div class="gyeq_cp_con_x_f1_bottom_nr_imgduli">
+                    	<div class="gyeq_cp_con_x_f1_bottom_nr_imgduli_img">
+                        	<a href="#"><img src="/public/image/home/product/gycp_eq_3.jpg" alt="" /></a>
+                        </div>
+                        <div class="gyeq_cp_con_x_f1_bottom_nr_imgduli_text">
+                        	<a href="#">黛施玉青春能量液，活动期间低至...</a>
+                            <p>
+                            	<span>￥</span>
+                                800.
+                                <span>00</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			{/if}
+        </div>
+		{/foreach}
+        <div class="gyeq_cp_con_x_yzgycp">
+        	<div class="gyeq_cp_con_x_yzgycp_top">
+                <div class="gyeq_cp_con_x_yzgycp_top_l">
+                    <span>优质供应产品</span>
+                </div>
+            </div>
+            <ul class="gyeq_cp_con_x_yzgycp_nr">
+				{foreach from=$goodpro item=gp}
+            	<li>
+                	<div class="gyeq_cp_con_x_yzgycp_nr_img">
+                    	<a href="/Product/show/itemid/{$gp.id}"><img src="{$gp.thumb}" alt="" /></a>
+                    </div>
+                    <h4><a href="/Product/show/itemid/{$gp.id}">{$gp.title|truncate:15:"...":true}</a></h4>
+                    <p><span>￥{$gp.price}</span>/{if $gp.unit}{$gp.unit}{else}件{/if}</p>
+                </li>
+				{/foreach}
+            </ul>
+        </div>
+        <!-- <div class="gyeq_cp_con_x_yzgycp">
+        	<div class="gyeq_cp_con_x_yzgycp_top">
+                <div class="gyeq_cp_con_x_yzgycp_top_l">
+                    <span>商家访谈</span>
+                </div>
+            </div>
+            <ul class="gyeq_cp_con_x_yzgycp_nr">
+            	<li>
+                	<div class="gyeq_cp_con_x_yzgycp_nr_img">
+                    	<a href="#"><img src="/public/image/home/product/gycp_eq_7.jpg" alt="" /></a>
+                    </div>
+                    <h4><a href="#">绒沙金工艺礼品摆件S_L</a></h4>
+                    <p><span>￥298.00</span>/件</p>
+                </li>
+                <li>
+                	<div class="gyeq_cp_con_x_yzgycp_nr_img">
+                    	<a href="#"><img src="/public/image/home/product/gycp_eq_7.jpg" alt="" /></a>
+                    </div>
+                    <h4><a href="#">绒沙金工艺礼品摆件S_L</a></h4>
+                    <p><span>￥298.00</span>/件</p>
+                </li>
+                <li>
+                	<div class="gyeq_cp_con_x_yzgycp_nr_img">
+                    	<a href="#"><img src="/public/image/home/product/gycp_eq_7.jpg" alt="" /></a>
+                    </div>
+                    <h4><a href="#">绒沙金工艺礼品摆件S_L</a></h4>
+                    <p><span>￥298.00</span>/件</p>
+                </li>
+                <li>
+                	<div class="gyeq_cp_con_x_yzgycp_nr_img">
+                    	<a href="#"><img src="/public/image/home/product/gycp_eq_7.jpg" alt="" /></a>
+                    </div>
+                    <h4><a href="#">绒沙金工艺礼品摆件S_L</a></h4>
+                    <p><span>￥298.00</span>/件</p>
+                </li>
+                <li>
+                	<div class="gyeq_cp_con_x_yzgycp_nr_img">
+                    	<a href="#"><img src="/public/image/home/product/gycp_eq_7.jpg" alt="" /></a>
+                    </div>
+                    <h4><a href="#">绒沙金工艺礼品摆件S_L</a></h4>
+                    <p><span>￥298.00</span>/件</p>
+                </li>
+            </ul>
+        </div> -->
+    </div>
+	</div>
+	{include file="Public/footer_2.html"}
+</div>
+
+{include file='Public/footer.html'}
